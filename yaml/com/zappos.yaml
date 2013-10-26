@@ -1,3 +1,4 @@
+name: Zappos.com
 password: 
   reset: https://secure-www.zappos.com/password/reset
   change: https://secure-www.zappos.com/account/updateEmailAndPassword
@@ -7,4 +8,3 @@ https: partial optional mismatch
 notes:
 - Orders and account logins are directed through a separate secure server.
   The main site is served by Akamai and does not use a Zappos certificate when browsing with HTTPS.
-  
