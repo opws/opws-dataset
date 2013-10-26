@@ -1,0 +1,5 @@
+name: Ink File Picker
+password:
+  reset: https://developers.inkfilepicker.com/password_reset/
+  change: https://developers.inkfilepicker.com/account/#password-reset
+https: enforced
