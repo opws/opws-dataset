@@ -1,0 +1,7 @@
+name: Freelancer
+password:
+  reset: https://www.freelancer.com/#forgot-password-toggle
+  change: https://www.freelancer.com/users/settings.php#AccountSettings
+redflags:
+  - Password selection rejects any password without numbers as "weak".
+https: optional
