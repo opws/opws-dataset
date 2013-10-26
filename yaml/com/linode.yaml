@@ -1,0 +1,8 @@
+name: Linode
+password:
+  reset: https://manager.linode.com/session/forgot/password
+  change: https://manager.linode.com/profile/index#password
+  rules:
+  - "must contain at least two of these four character classes: lower case letters - upper case letters - numbers - punctuation"
+totp: optional
+https: enforced

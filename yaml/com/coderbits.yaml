@@ -1,0 +1,5 @@
+name: coderbits
+password:
+  reset: https://coderbits.com/passwordreset/initiate
+  change: https://coderbits.com/account/settings#tab-account
+https: enforced

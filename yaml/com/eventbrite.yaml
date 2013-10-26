@@ -1,0 +1,5 @@
+name: Eventbrite
+password:
+  reset: https://www.eventbrite.com/resetpassword
+  change: https://www.eventbrite.com/password
+https: enforced

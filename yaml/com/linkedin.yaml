@@ -1,0 +1,5 @@
+name: LinkedIn
+password:
+  reset: https://www.linkedin.com/uas/request-password-reset
+  change: https://www.linkedin.com/uas/change-password
+https: optional

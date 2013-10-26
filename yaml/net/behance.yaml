@@ -1,0 +1,10 @@
+name: Behance
+password:
+  reset: http://www.behance.net/account/reset_password
+  change: http://www.behance.net/account/settings#block-account-password
+  length:
+    min: 6
+    max: 32
+redflags:
+- Passwords with spaces trigger a "Password must be between 6 and 32 characters" error message.
+https: downgraded

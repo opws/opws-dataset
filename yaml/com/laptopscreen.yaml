@@ -1,0 +1,7 @@
+name: LaptopScreen.com
+password:
+  reset: https://www.laptopscreen.com/English/section/password-recovery/
+  change: https://www.laptopscreen.com/English/profile/
+  length:
+    min: 6
+https: enforced

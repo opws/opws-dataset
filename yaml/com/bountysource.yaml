@@ -1,0 +1,13 @@
+name: Bountysource
+password:
+  change: https://www.bountysource.com/settings/accounts
+  rules:
+  - Password must contain a letter and a number
+profile:
+- email
+- city
+- organization
+- website
+https: enforced
+notes:
+- Password reset can be triggered on either the signin page at https://www.bountysource.com/signin or the accounts page once logged in.

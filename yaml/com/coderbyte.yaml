@@ -1,0 +1,5 @@
+name: Coderbyte
+password:
+  reset: http://coderbyte.com/sl/forgotPassword/
+  change: http://coderbyte.com/CodingArea/Settings/
+https: unsupported

@@ -1,0 +1,4 @@
+name: Twitter
+password:
+  reset: https://twitter.com/account/resend_password
+https: enforced

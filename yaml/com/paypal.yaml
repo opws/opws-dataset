@@ -1,0 +1,10 @@
+name: PayPal
+password:
+  reset: https://www.paypal.com/us/cgi-bin/webscr?cmd=_account-recovery
+  change: https://www.paypal.com/us/cgi-bin/webscr?cmd=_profile-password-start
+  length:
+    min: 8
+    max: 20
+redflags:
+- Passwords are not allowed to contain spaces or unprintable characters.
+https: enforced

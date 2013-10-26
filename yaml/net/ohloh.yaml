@@ -1,0 +1,5 @@
+name: Ohloh
+password:
+  reset: https://www.ohloh.net/password_reset/new
+  change: https://www.ohloh.net/accounts/ + username + /password/edit
+https: optional

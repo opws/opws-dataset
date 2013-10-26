@@ -1,0 +1,11 @@
+name: Fluid UI
+password:
+  reset: https://www.fluidui.com/editor/live/
+  change: https://www.fluidui.com/editor/live/
+https: optional
+notes: >
+  http requests to fluidui.com redirect to the equivalent path on
+  https://www.fluidui.com, but HTTP requests to www.fluidui.com are not
+  upgraded to HTTPS.
+
+  The editor interface is the only way to change or reset passwords.

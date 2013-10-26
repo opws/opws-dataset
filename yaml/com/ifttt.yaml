@@ -1,0 +1,5 @@
+name: IFTTT
+password:
+  reset: https://ifttt.com/forgot
+  change: https://ifttt.com/settings/password
+https: enforced

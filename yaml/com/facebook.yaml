@@ -1,0 +1,5 @@
+name: Facebook
+password:
+  reset: https://www.facebook.com/login/identify
+  change: https://www.facebook.com/settings?tab=account&section=password
+tls: enforced

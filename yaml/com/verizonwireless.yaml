@@ -1,0 +1,13 @@
+name: Verizon Wireless
+password:
+  length:
+    min: 8
+    max: 20
+  rules:
+  - 8-20 characters. At least 1 number and 1 letter.
+  - No spaces or special characters (*, &, $, etc.)
+redflags:
+- Passwords cannot contain spaces or special characters.
+https: partial
+notes:
+- HTTPS is only supported for login pages.

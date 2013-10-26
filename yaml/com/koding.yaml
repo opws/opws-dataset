@@ -1,0 +1,5 @@
+name: Koding
+password:
+  reset: https://koding.com/Recover
+  change: https://koding.com/Account
+https: enforced

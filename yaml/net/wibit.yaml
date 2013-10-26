@@ -1,0 +1,5 @@
+name: WiBit.Net
+password:
+  reset: https://www.wibit.net/user/password
+  change: https://www.wibit.net/user/ + user number + /edit
+https: enforced

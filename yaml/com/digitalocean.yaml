@@ -1,0 +1,10 @@
+name: DigitalOcean
+password:
+  reset: https://www.digitalocean.com/forgot_password/new
+  change: https://www.digitalocean.com/settings#edit-password
+  length:
+    min: 6
+  rules:
+    - Must be at least 6 characters long and it must contain at least one letter
+topt: optional
+https: enforced

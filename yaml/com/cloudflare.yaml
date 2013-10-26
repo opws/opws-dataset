@@ -1,0 +1,6 @@
+name: CloudFlare
+password:
+  reset: https://www.cloudflare.com/forgot-password
+  length:
+    min: 6
+https: enforced

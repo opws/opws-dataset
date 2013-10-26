@@ -1,0 +1,4 @@
+name: WorkFlowy
+password:
+  reset: https://workflowy.com/accounts/password_reset/
+https: enforced

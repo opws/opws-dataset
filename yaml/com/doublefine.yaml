@@ -1,0 +1,6 @@
+password:
+  reset: http://www.doublefine.com/forums/member/forgot_password/
+  change: http://www.doublefine.com/forums/member/edit_userpass/
+  length:
+    min: 5
+https: optional blockedhttp

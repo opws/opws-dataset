@@ -1,0 +1,7 @@
+name: CenturyLink
+password:
+  reset: https://eam.centurylink.com/eam/loginTrouble/forgotPassword.do
+  change: https://shop.centurylink.com/MasterWebPortal/freeRange/acctMgmt/ManageMyProfile_goToChangeProfilePassword.action
+redflags:
+- Passwords are not allowed to contain certain characters (such as spaces).
+https: enforced

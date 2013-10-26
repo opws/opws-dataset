@@ -1,0 +1,9 @@
+name: Rolling Stone
+password:
+  length:
+    min: 6
+  rules:
+  - Must not contain any spaces or special characters
+redflags:
+- Restricted character set for password.
+https: enforced

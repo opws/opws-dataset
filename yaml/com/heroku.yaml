@@ -1,0 +1,5 @@
+name: Heroku
+password:
+  reset: https://id.heroku.com/account/password/reset
+  change: https://dashboard.heroku.com/account
+https: enforced

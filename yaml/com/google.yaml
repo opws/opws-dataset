@@ -1,0 +1,8 @@
+name: Google
+password:
+  reset: https://accounts.google.com/EditPasswd
+  change: https://www.google.com/accounts/recovery
+  length:
+    minimum: 8
+https: enforced
+  

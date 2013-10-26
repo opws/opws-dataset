@@ -1,0 +1,4 @@
+name: Freesound.org
+password:
+  reset: http://www.freesound.org/home/resetpassword/
+https: unsupported

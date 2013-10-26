@@ -1,0 +1,4 @@
+name: vLine
+password:
+  reset: https://vline.com/#_vline_forgotpassword
+https: enforced

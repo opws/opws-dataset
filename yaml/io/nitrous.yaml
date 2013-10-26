@@ -1,0 +1,5 @@
+name: Nitrous.IO
+password:
+  reset: https://www.nitrous.io/users/password/new
+  change: https://www.nitrous.io/users/edit#user_password
+https: enforced

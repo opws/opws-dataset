@@ -1,0 +1,6 @@
+name: Yahoo
+password:
+  reset: https://edit.yahoo.com/forgotroot
+  change: https://edit.yahoo.com/config/change_pw
+reportbreach: https://edit.yahoo.com/forgotroot
+https: partial

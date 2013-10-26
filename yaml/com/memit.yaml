@@ -1,0 +1,8 @@
+name: Memit
+password:
+  reset: https://memit.com/user/resetpassword
+  change: https://memit.com/user/profile/#password_reset
+  length:
+    min: 6
+    max: 30
+https: optional

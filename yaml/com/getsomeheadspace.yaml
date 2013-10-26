@@ -1,0 +1,7 @@
+name: Headspace
+password:
+  reset: http://www.getsomeheadspace.com/pages/account/ForgottenPW.aspx
+  change: http://www.getsomeheadspace.com/pages/account/profile.aspx
+  length:
+    min: 5
+https: unsupported

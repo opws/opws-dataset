@@ -1,0 +1,4 @@
+name: XirSys
+password:
+  reset: https://manage.xirsys.com/forgotten
+https: enforced

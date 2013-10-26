@@ -1,0 +1,5 @@
+name: The A.V. Club
+password:
+  reset: http://www.avclub.com/login/reset_password/
+  change: http://www.avclub.com/login/edit_profile/
+https: unsupported

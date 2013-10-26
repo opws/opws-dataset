@@ -1,0 +1,7 @@
+name: afraid.org FreeDNS
+password:
+  reset: https://freedns.afraid.org/password/
+  change: https://freedns.afraid.org/profile/password.php
+  length:
+    max: 16
+https: optional

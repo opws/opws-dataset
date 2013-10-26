@@ -1,0 +1,5 @@
+name: npm
+password:
+  reset: https://npmjs.org/forgot
+  change: https://npmjs.org/password
+https: enforced

@@ -1,0 +1,5 @@
+name: Path
+password:
+  reset: https://path.com/forgot-password
+  change: https://path.com/settings
+https: enforced

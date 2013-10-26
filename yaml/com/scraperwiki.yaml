@@ -1,0 +1,5 @@
+name: ScraperWiki
+password:
+  reset: https://scraperwiki.com/accounts/password/reset/
+  change: https://scraperwiki.com/accounts/password/change/
+https: enforced

@@ -1,0 +1,5 @@
+name: AngelList
+password:
+  reset: https://angel.co/users/password/new
+  change: https://angel.co/settings/password
+https: enforced

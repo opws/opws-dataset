@@ -1,0 +1,5 @@
+name: MapBox
+password:
+  reset: https://tiles.mapbox.com/reset-password
+  change: https://tiles.mapbox.com/account/password
+https: partial

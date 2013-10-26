@@ -1,0 +1,4 @@
+name: Tarsnap
+password:
+  change: https://www.tarsnap.com/manage.cgi?action=chpassform
+https: enforced
