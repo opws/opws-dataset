@@ -1,0 +1,4 @@
+name: Coinbase
+password:
+  reset: https://coinbase.com/password_resets/new
+https: enforced
