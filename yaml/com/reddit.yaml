@@ -1,0 +1,6 @@
+name: Reddit
+password:
+  reset: http://www.reddit.com/password
+  change: https://ssl.reddit.com/prefs/update/
+https: mismatch partial
+notes: Main site served by Akamai. Preferences are directed to a special SSL server.
