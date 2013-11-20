@@ -1,0 +1,3 @@
+password:
+  reset: http://www.guru.com/forgotsignin.aspx
+tls: mixed downgraded
