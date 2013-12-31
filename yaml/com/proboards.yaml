@@ -1,0 +1,8 @@
+name: ProBoards
+password:
+  length:
+    min: 6
+    max: 100
+  reset: https://www.proboards.com/forgot
+  change: http://www.proboards.com/account/settings#password
+https: partial
