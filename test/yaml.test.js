@@ -8,7 +8,7 @@ var assert = require('assert');
 
 describe('YAML files', function() {
   it('should be valid', function(next) {
-    glob('yaml/*/*.yaml', {cwd: __dirname}, function(err, matches) {
+    glob('yaml/*/*.yaml', {cwd: __dirname + '/..'}, function(err, matches) {
       if (err) return next(err);
       var q = queue();
 
@@ -31,9 +31,9 @@ describe('YAML files', function() {
     });
   });
   it('should follow correct naming conventions', function(next) {
-    glob('yaml/**', {cwd: __dirname}, function(err, matches) {
+    glob('yaml/*/*', {cwd: __dirname + '/..'}, function(err, matches) {
       if (err) return next(err);
-      
+
       for (var i = 0; i < matches.length; i++) {
         assert(/^yaml\/[a-z0-9\-\.]+\/[a-z0-9\-\.]+\.yaml$/.exec(matches[i]),
           matches[i] + ' does not fit the filename pattern for domain profiles');
