@@ -4,7 +4,7 @@ Profiles of the security support and user account systems of various sites.
 
 ## Where you would use this
 
-On sites or in browser eextensions that deal with user accounts across sites. For instance, this was originally curated as a component of [blot.pw](http://blot.pw).
+On sites or in browser extensions that deal with user accounts across sites. For instance, this was originally curated as a component of [blot.pw](http://blot.pw).
 
 ## Further info
 
