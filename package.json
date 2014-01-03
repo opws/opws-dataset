@@ -1,0 +1,22 @@
+{
+  "name": "domainprofiles",
+  "version": "0.0.0",
+  "description": "Profiles of the security support and user account systems of various sites.",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/opensets/domainprofiles.git"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/opensets/domainprofiles/issues"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.2",
+    "js-yaml": "~3.0.1",
+    "queue-async": "~1.0.4",
+    "glob": "~3.2.7"
+  }
+}
