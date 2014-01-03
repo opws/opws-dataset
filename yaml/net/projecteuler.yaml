@@ -12,5 +12,5 @@ username:
 redflags:
 - Restricted character set for passwords.
 - Restricted password length.
-- "Remember Me" creates a p_key cookie rather than changing your session.
+- '"Remember Me" creates a p_key cookie rather than changing your session.'
 https: optional
