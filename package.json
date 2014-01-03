@@ -1,9 +1,8 @@
 {
   "name": "domainprofiles",
-  "version": "0.0.0",
   "description": "Profiles of the security support and user account systems of various sites.",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha --reporter list"
   },
   "repository": {
     "type": "git",
@@ -17,6 +16,7 @@
     "grunt": "~0.4.2",
     "js-yaml": "~3.0.1",
     "queue-async": "~1.0.4",
-    "glob": "~3.2.7"
+    "glob": "~3.2.7",
+    "mocha": "~1.16.2"
   }
 }
