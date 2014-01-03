@@ -68,7 +68,7 @@ A string containing space-separated tokens (usually only one) describing the sit
 - optional: The site responds to HTTPS requests, but doesn't upgrade HTTP requests.
 - unsupported: The site does not respond to HTTPS requests.
 - only: The site *only* responds to HTTPS requests (and does not respond to HTTP requests).
-- downgraded: The site actually *downgrades* HTTPS connections to HTTP (a baffling behavior only seen on behance.net).
+- downgraded: The site actually *downgrades* HTTPS connections to HTTP.
 - partial: Some parts / subdomains of the site support HTTPS, while others do not. (May be explained further in notes.)
 
 These values describe issues with a site's use of HTTPS and usually follow "optional":
