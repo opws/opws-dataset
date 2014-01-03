@@ -2,7 +2,7 @@
   "name": "domainprofiles",
   "description": "Profiles of the security support and user account systems of various sites.",
   "scripts": {
-    "test": "mocha --reporter list"
+    "test": "mocha --reporter dot"
   },
   "repository": {
     "type": "git",
