@@ -12,7 +12,7 @@ Information on the subject of deleting accounts on sites can be found at account
 
 ## Layout
 
-Entries for domains are in [YAML](http://yaml.org/) files in the "yaml" directory, in sub-directories based on their top-level domain. The filename of each file, minus the .yaml extension, is the remaining domain component(s).
+Entries for domains are in [YAML](http://yaml.org/) files in the "yaml" directory, in sub-directories based on their [public suffix](http://publicsuffix.org/). The filename of each file, minus the .yaml extension, is the remaining domain component(s).
 
 Domains are listed by the least-specific component of the domain necessary to distinguish it from others: therefore, most sites are listed simply by the second-level domain (regardless of whether or not they use a further domain like www).
 
