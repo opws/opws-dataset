@@ -1,0 +1,7 @@
+name: AYTM
+password:
+  length:
+    min: 5
+  reset: https://aytm.com/users/restore-password
+  change: https://aytm.com/users/account-setting?current_tab=change_password
+https: mixed
