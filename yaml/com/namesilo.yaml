@@ -1,0 +1,19 @@
+name: NameSilo
+password:
+  rules:
+    blacklist: ' '
+    length:
+      min: 6
+      max: 32
+  reset: https://www.namesilo.com/lost_password.php
+  change: https://www.namesilo.com/account_maintenance.php
+questions:
+- What is your pet's name?
+- Who was your childhood hero?
+- What was the name of your first school?
+- What is your all-time favorite sports team?
+- What is your fathers middle name?
+- What was your high school's mascot?
+- What make was your first car or bike?
+- Where did you first meet your spouse?
+https: enforced
