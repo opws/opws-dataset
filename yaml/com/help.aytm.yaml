@@ -1,0 +1,7 @@
+name: AYTM Resource Center
+password:
+  length:
+    min: 5
+  reset: http://help.aytm.com/access/help
+https: mismatch downgraded
+platform: zendesk
