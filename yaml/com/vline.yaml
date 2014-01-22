@@ -1,4 +1,6 @@
 name: vLine
 password:
-  reset: https://vline.com/#_vline_forgotpassword
+  reset:
+    url: https://vline.com/#_vline_forgotpassword
+    accept: email
 https: enforced

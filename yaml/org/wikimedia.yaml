@@ -1,5 +1,8 @@
 name: Wikimedia Foundation
 password:
-  reset: https://commons.wikimedia.org/wiki/Special:PasswordReset
-  change: https://commons.wikimedia.org/wiki/Special:ChangePassword
+  reset:
+    url: https://commons.wikimedia.org/wiki/Special:PasswordReset
+    accept: username email
+  change:
+    url: https://commons.wikimedia.org/wiki/Special:ChangePassword
 https: optional

@@ -1,5 +1,8 @@
 name: Coinbase
 password:
-  reset: https://coinbase.com/password_resets/new
-  change: https://coinbase.com/account#change_password_modal
+  reset:
+    url: https://coinbase.com/password_resets/new
+    accept: email
+  change:
+    url: https://coinbase.com/account#change_password_modal
 https: enforced

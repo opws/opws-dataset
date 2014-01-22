@@ -1,5 +1,8 @@
 name: npm
 password:
-  reset: https://npmjs.org/forgot
-  change: https://npmjs.org/password
+  reset:
+    url: https://npmjs.org/forgot
+    accept: username email
+  change:
+    url: https://npmjs.org/password
 https: enforced

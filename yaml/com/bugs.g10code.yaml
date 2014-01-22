@@ -1,4 +1,6 @@
 name: g10 Code's BTS
 password:
-  reset: https://bugs.g10code.com/gnupg/user?@template=forgotten
+  reset:
+    url: https://bugs.g10code.com/gnupg/user?@template=forgotten
+    accept: email username
 https: optional selfsigned

@@ -1,4 +1,6 @@
 name: XirSys
 password:
-  reset: https://manage.xirsys.com/forgotten
+  reset:
+    url: https://manage.xirsys.com/forgotten
+    accept: username email
 https: enforced

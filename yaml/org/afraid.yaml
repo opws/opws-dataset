@@ -1,7 +1,11 @@
 name: afraid.org FreeDNS
 password:
-  reset: https://freedns.afraid.org/password/
-  change: https://freedns.afraid.org/profile/password.php
-  length:
-    max: 16
+  rules:
+    length:
+      max: 16
+  reset:
+    url: https://freedns.afraid.org/password/
+    accept: username email
+  change:
+    url: https://freedns.afraid.org/profile/password.php
 https: optional

@@ -1,9 +1,12 @@
 name: Zappos.com
-password: 
-  reset: https://secure-www.zappos.com/password/reset
-  change: https://secure-www.zappos.com/account/updateEmailAndPassword
-  length:
-    min: 6
+password:
+  rules:
+    length:
+      min: 6
+  reset:
+    url: https://secure-www.zappos.com/password/reset
+  change:
+    url: https://secure-www.zappos.com/account/updateEmailAndPassword
 https: partial optional mismatch
 notes:
 - Orders and account logins are directed through a separate secure server.

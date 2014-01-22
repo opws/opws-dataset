@@ -1,5 +1,8 @@
 name: Mammoth
 password:
-  reset: https://mammothhq.com/users/password/new
-  change: https://mammothhq.com/users/edit
+  reset:
+    url: https://mammothhq.com/users/password/new
+    accept: email
+  change:
+    url: https://mammothhq.com/users/edit
 https: enforced

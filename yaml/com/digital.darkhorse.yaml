@@ -1,5 +1,8 @@
 name: Dark Horse Digital Comics
 password:
-  reset: https://digital.darkhorse.com/accounts/password_reset/
-  change: https://digital.darkhorse.com/accounts/manage/password_change/
+  reset:
+    url: https://digital.darkhorse.com/accounts/password_reset/
+    accept: email
+  change:
+    url: https://digital.darkhorse.com/accounts/manage/password_change/
 https: enforced

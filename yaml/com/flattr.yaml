@@ -1,5 +1,8 @@
 name: Flattr
 password:
-  change: https://flattr.com/authaccounts/editpassword
-  reset: https://flattr.com/forgot
+  reset:
+    url: https://flattr.com/forgot
+    accept: email
+  change:
+    url: https://flattr.com/authaccounts/editpassword
 https: enforced

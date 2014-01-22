@@ -1,7 +1,10 @@
 name: Fluid UI
 password:
-  reset: https://www.fluidui.com/editor/live/
-  change: https://www.fluidui.com/editor/live/
+  reset:
+    url: https://www.fluidui.com/editor/live/
+    accept: email
+  change:
+    url: https://www.fluidui.com/editor/live/
 https: optional
 notes: >
   http requests to fluidui.com redirect to the equivalent path on

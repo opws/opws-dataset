@@ -1,14 +1,19 @@
 name: Diigo
 password:
-  length:
-    min: 6
-    max: 32
-  reset: https://www.diigo.com/user_mana2/forgot
-  change: https://www.diigo.com/setting#account_setting
-username:
-  length:
-    min: 6
-    max: 16
   rules:
-  - Must begin with a letter.
+    length:
+      min: 6
+      max: 32
+  reset:
+    url: https://www.diigo.com/user_mana2/forgot
+    accept: username email
+  change:
+    url: https://www.diigo.com/setting#account_setting
+username:
+  rules:
+    length:
+      min: 6
+      max: 16
+    must:
+    - begin with a letter
 https: enforced

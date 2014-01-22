@@ -1,4 +1,6 @@
 name: WordPress
 password:
-  reset: https://en.wordpress.com/wp-login.php?action=lostpassword
+  reset:
+    url: https://en.wordpress.com/wp-login.php?action=lostpassword
+    accept: username email
 https: optional

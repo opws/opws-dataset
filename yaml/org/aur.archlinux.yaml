@@ -1,5 +1,8 @@
 name: AUR
 password:
-  reset: https://aur.archlinux.org/passreset/
-  change: https://aur.archlinux.org/account/ + username + /edit/
+  reset:
+    url: https://aur.archlinux.org/passreset/
+    accept: email
+  change:
+    url: https://aur.archlinux.org/account/ + username + /edit/
 https: enforced

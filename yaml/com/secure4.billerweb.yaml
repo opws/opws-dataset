@@ -1,12 +1,14 @@
 password:
-  reset: https://secure4.billerweb.com/csg/inetSrv
-  rules: >
-    The password must be 8 characters or more, contain at least 1 letter and 1
-    number, no more than 7 numbers and no more than 2 consecutive identical
-    characters.
-  length:
-    min: 8
-    max: 16
+  rules:
+    length:
+      min: 8
+      max: 16
+    must:
+    - contain at least 1 letter and 1 number
+    mustnot:
+    - contain more than 7 numbers
+    - contain more than 2 consecutive identical characters
+  reset:
+    url: https://secure4.billerweb.com/csg/inetSrv
+    notes: Reset must be triggered through the main page's links.
 https: only
-notes: >
-  Password reset must be triggered through the main page's links.

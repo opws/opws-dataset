@@ -1,15 +1,18 @@
 name: Merrill Edge
 password:
-  reset: https://olui2.fs.ml.com/login/ForgotPassword.aspx
-  length:
-    min: 8
-    max: 20
-    rules:
-    - Your password is a case sensitive and must be between 8 and 20 characters,
-      have at least one letter and one number, and contain no spaces.
+  rules:
+    blacklist: ' '
+    length:
+      min: 8
+      max: 20
+    must:
+    - contain at least one letter and one number
+  reset:
+    url: https://olui2.fs.ml.com/login/ForgotPassword.aspx
+    accept: username
 username:
-  reset: https://olui2.fs.ml.com/login/ForgotUserId.aspx      
+  reset: https://olui2.fs.ml.com/login/ForgotUserId.aspx
 https: enforced
-redflags:
-- Passwords cannot contain spaces.
-notes: Redirects to subdomains on ml.com for login (not sure if ml.com is a shared login across sites)
+notes: >
+  Redirects to subdomains on ml.com for login
+  (not sure if ml.com is a shared login across sites)

@@ -1,7 +1,12 @@
 name: AYTM - Ask Your Target Market
 password:
-  length:
-    min: 5
-  reset: https://aytm.com/users/restore-password
-  change: https://aytm.com/users/account-setting?current_tab=change_password
+  rules:
+    length:
+      min: 5
+  reset:
+    url: https://aytm.com/users/restore-password
+    accept: email
+    response: token
+  change:
+    url: https://aytm.com/users/account-setting?current_tab=change_password
 https: partial downgraded

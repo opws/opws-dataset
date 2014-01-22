@@ -1,5 +1,8 @@
 name: The A.V. Club
 password:
-  reset: http://www.avclub.com/login/reset_password/
-  change: http://www.avclub.com/login/edit_profile/
+  reset:
+    url: http://www.avclub.com/users/reset_password/
+    accept: email
+  change:
+    url: http://www.avclub.com/users/me/settings/
 https: unsupported

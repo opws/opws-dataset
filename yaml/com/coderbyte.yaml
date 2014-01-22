@@ -1,5 +1,8 @@
 name: Coderbyte
 password:
-  reset: http://coderbyte.com/sl/forgotPassword/
-  change: http://coderbyte.com/CodingArea/Settings/
+  reset:
+    url: http://coderbyte.com/sl/forgotpassword/
+    accept: email
+  change:
+    url: http://coderbyte.com/CodingArea/Settings/
 https: unsupported

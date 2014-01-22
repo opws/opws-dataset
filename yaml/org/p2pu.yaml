@@ -1,9 +1,13 @@
 name: P2PU
 password:
-  length:
-    min: 8
-  reset: https://p2pu.org/en/forgot/
-  change: https://p2pu.org/en/profile/edit/password/
   rules:
-  - Passwords must be at least 8 characters and contain numbers and letters.
+    length:
+      min: 8
+    must:
+    - contain numbers and letters
+  reset:
+    url: https://p2pu.org/en/forgot/
+    accept: username email
+  change:
+    url: https://p2pu.org/en/profile/edit/password/
 https: enforced

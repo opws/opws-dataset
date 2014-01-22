@@ -1,5 +1,8 @@
 name: Path
 password:
-  reset: https://path.com/forgot-password
-  change: https://path.com/settings
+  reset:
+    url: https://path.com/forgot-password
+    accept: email
+  change:
+    url: https://path.com/settings
 https: enforced

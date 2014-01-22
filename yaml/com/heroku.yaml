@@ -1,5 +1,12 @@
 name: Heroku
 password:
-  reset: https://id.heroku.com/account/password/reset
-  change: https://dashboard.heroku.com/account
+  rules:
+    length:
+      min: 8
+  reset:
+    url: https://id.heroku.com/account/password/reset
+    accept: email
+  change:
+    url: https://dashboard.heroku.com/account
+    reenter: true
 https: enforced

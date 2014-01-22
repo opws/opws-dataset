@@ -1,5 +1,8 @@
 name: Twilio
 password:
-  reset: https://www.twilio.com/reset-password
-  change: https://www.twilio.com/user/settings#password-row
+  reset:
+    url: https://www.twilio.com/reset-password
+    accept: email
+  change:
+    url: https://www.twilio.com/user/settings#password-row
 https: enforced

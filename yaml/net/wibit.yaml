@@ -1,5 +1,10 @@
 name: WiBit.Net
 password:
-  reset: https://www.wibit.net/user/password
-  change: https://www.wibit.net/user/ + user number + /edit
+  reset:
+    url: https://www.wibit.net/forgotPassword
+    accept: email
+    captcha: true
+    response: temp
+  change:
+    url: https://www.wibit.net/myAccount
 https: enforced

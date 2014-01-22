@@ -1,5 +1,8 @@
 name: ScraperWiki
 password:
-  reset: https://scraperwiki.com/accounts/password/reset/
-  change: https://scraperwiki.com/accounts/password/change/
+  reset:
+    url: https://scraperwiki.com/accounts/password/reset/
+    accept: email
+  change:
+    url: https://scraperwiki.com/accounts/password/change/
 https: enforced

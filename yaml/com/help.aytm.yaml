@@ -1,7 +1,10 @@
 name: AYTM Resource Center
 password:
-  length:
-    min: 5
-  reset: http://help.aytm.com/access/help
+  rules:
+    length:
+      min: 5
+  reset:
+    url: http://help.aytm.com/access/help
+    accept: email
 https: mismatch downgraded
 platform: zendesk

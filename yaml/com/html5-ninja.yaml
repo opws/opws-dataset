@@ -1,4 +1,6 @@
 name: HTML5 Ninja
 password:
-  reset: http://www.html5-ninja.com/#/account
+  reset:
+    url: http://www.html5-ninja.com/#/account
+    accept: email
 https: unsupported

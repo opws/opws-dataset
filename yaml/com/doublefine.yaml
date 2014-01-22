@@ -1,6 +1,11 @@
+name: Double Fine
 password:
-  reset: http://www.doublefine.com/forums/member/forgot_password/
-  change: http://www.doublefine.com/forums/member/edit_userpass/
-  length:
-    min: 5
+  rules:
+    length:
+      min: 5
+  reset:
+    url: http://www.doublefine.com/forums/member/forgot_password/
+    accept: email
+  change:
+    url: http://www.doublefine.com/forums/member/edit_userpass/
 https: optional blockedhttp

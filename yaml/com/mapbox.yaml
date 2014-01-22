@@ -1,5 +1,12 @@
 name: MapBox
 password:
-  reset: https://tiles.mapbox.com/reset-password
-  change: https://tiles.mapbox.com/account/password
+  rules:
+    length:
+      min: 1
+  reset:
+    url: https://www.mapbox.com/#active1
+    accept: email
+  change:
+    url: https://www.mapbox.com/account/
+    reenter: false
 https: partial

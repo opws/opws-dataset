@@ -1,5 +1,8 @@
 name: Udemy
 password:
-  reset: https://www.udemy.com/user/forgot-password
-  change: https://www.udemy.com/user/edit-account#password
+  reset:
+    url: https://www.udemy.com/user/forgot-password
+    accept: email
+  change:
+    url: https://www.udemy.com/user/edit-account#password
 https: enforced

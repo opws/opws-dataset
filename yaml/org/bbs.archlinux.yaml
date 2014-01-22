@@ -1,5 +1,8 @@
 name: Arch Linux Forums
 password:
-  reset: https://bbs.archlinux.org/login.php?action=forget
-  change: https://bbs.archlinux.org/profile.php?action=change_pass&id= + usernumber
+  reset:
+    url: https://bbs.archlinux.org/login.php?action=forget
+    accept: email
+  change:
+    url: https://bbs.archlinux.org/profile.php?action=change_pass&id= + usernumber
 https: enforced

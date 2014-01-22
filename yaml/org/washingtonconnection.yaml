@@ -1,14 +1,22 @@
 name: Washington Connection
 password:
-  length:
-    min: 10
-    max: 25
   rules:
-  - must contain letter
-  - must contain number
-  - must contain special character
-  - no spaces
-  reset: https://www.washingtonconnection.org/authservice/resetpassword.go
+    blacklist: " "
+    length:
+      min: 10
+      max: 25
+    must:
+    - contain letter
+    - contain number
+    - contain special character
+  reset:
+    url: https://www.washingtonconnection.org/authservice/resetpassword.go
+    captcha: true
+    accept: username+email
+username:
+  reminder:
+    url: https://www.washingtonconnection.org/authservice/forgotusername.go
+    captcha: true
 questions:
 - What was your first teachers last name?
 - What city were you born in?
@@ -18,6 +26,5 @@ questions:
 - By what nickname did your friends call you when you were a child?
 - What was the mascot of your high school football team?
 redflags:
-- Passwords cannot contain spaces.
 - There is no page for changing passwords once logged in.
 https: enforced

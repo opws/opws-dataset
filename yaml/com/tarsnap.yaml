@@ -1,4 +1,6 @@
 name: Tarsnap
 password:
-  change: https://www.tarsnap.com/manage.cgi?action=chpassform
+  change:
+    url: https://www.tarsnap.com/manage.cgi?action=chpassform
+    reenter: true
 https: enforced

@@ -1,13 +1,12 @@
 name: Spike Your Juice
 password:
-  reset: http://spikeyourjuice.com/ecart/index.php?option=com_user&view=reset
-  length:
-    min: 6
-    max: 100
   rules:
-  - "No spaces"
+    blacklist: " "
+    length:
+      min: 6
+      max: 100
+  reset:
+    url: http://spikeyourjuice.com/ecart/index.php?option=com_user&view=reset
 username:
   remind: http://spikeyourjuice.com/ecart/index.php?option=com_user&view=remind
-redflags:
-- Passwords cannot contain spaces.
 https: unsupported

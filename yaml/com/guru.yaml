@@ -1,3 +1,6 @@
+name: Guru.com
 password:
-  reset: http://www.guru.com/forgotsignin.aspx
+  reset:
+    url: http://www.guru.com/forgotsignin.aspx
+    accept: email
 https: partial downgraded

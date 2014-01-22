@@ -1,4 +1,6 @@
 name: Freesound.org
 password:
-  reset: http://www.freesound.org/home/resetpassword/
+  reset:
+    url: http://www.freesound.org/home/resetpassword/
+    accept: email
 https: unsupported

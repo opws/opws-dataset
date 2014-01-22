@@ -1,5 +1,8 @@
 name: Facebook
 password:
-  reset: https://www.facebook.com/login/identify
-  change: https://www.facebook.com/settings?tab=account&section=password
-tls: enforced
+  reset:
+    url: https://www.facebook.com/login/identify
+    accept: email phone username fullname
+  change:
+    url: https://www.facebook.com/settings?tab=account&section=password
+https: enforced

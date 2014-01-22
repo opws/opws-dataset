@@ -1,5 +1,8 @@
 name: iWantMyName
 password:
-  reset: https://iwantmyname.com/reset_password
-  change: https://iwantmyname.com/dashboard/account/login
+  reset:
+    url: https://iwantmyname.com/reset_password
+    accept: email domain
+  change:
+    url: https://iwantmyname.com/dashboard/account/login
 https: enforced

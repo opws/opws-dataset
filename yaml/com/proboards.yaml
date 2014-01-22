@@ -1,8 +1,12 @@
 name: ProBoards
 password:
-  length:
-    min: 6
-    max: 100
-  reset: https://www.proboards.com/forgot
-  change: http://www.proboards.com/account/settings#password
+  rules:
+    length:
+      min: 6
+      max: 100
+  reset:
+    url: https://www.proboards.com/forgot
+    accept: email
+  change:
+    url: http://www.proboards.com/account/settings#password
 https: partial

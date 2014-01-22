@@ -1,16 +1,18 @@
 name: Project Euler
 password:
-  reset: https://projecteuler.net/reset_password
-  change: https://projecteuler.net/account
-  length:
-    min: 1
-    max: 32
   rules:
-  - "Passwords cannot contain more than 32 characters and they only contain upper/lower case alphanumeric characters (A-Z, a-z, 0-9), dot (.), hyphen (-), and underscore (_)."
+    length:
+      min: 1
+      max: 32
+    must:
+    - "only contain upper/lower case alphanumeric characters (A-Z, a-z, 0-9), dot (.), hyphen (-), and underscore (_)"
+  reset:
+    url: https://projecteuler.net/reset_password
+    accept: username+email
+  change:
+    url: https://projecteuler.net/account
 username:
   reminder: https://projecteuler.net/username_reminder
 redflags:
-- Restricted character set for passwords.
-- Restricted password length.
 - '"Remember Me" creates a p_key cookie rather than changing your session.'
 https: optional

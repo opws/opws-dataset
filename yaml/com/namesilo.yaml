@@ -5,8 +5,11 @@ password:
     length:
       min: 6
       max: 32
-  reset: https://www.namesilo.com/lost_password.php
-  change: https://www.namesilo.com/account_maintenance.php
+  reset:
+    url: https://www.namesilo.com/lost_password.php
+    accept: username domain
+  change:
+    url: https://www.namesilo.com/account_maintenance.php
 questions:
 - What is your pet's name?
 - Who was your childhood hero?

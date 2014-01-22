@@ -5,7 +5,8 @@ password:
       min: 6
   reset:
     url: https://launchpad.37signals.com/forgot_password
+    accept: email
   change:
-    reenter: false
     url: user url + /identity/edit
+    reenter: false
 https: optional
