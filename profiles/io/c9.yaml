@@ -1,0 +1,9 @@
+name: Cloud9 IDE
+password:
+  reset:
+    url: https://c9.io/#resetPasswordForm
+    accept: username email
+  change:
+    url: https://c9.io/dashboard.html
+    reenter: false
+https: enforced
