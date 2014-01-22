@@ -1,0 +1,9 @@
+name: Namecheap
+password:
+  reset:
+    url: https://manage.www.namecheap.com/myaccount/rememberpwd.asp
+    accept: username email domain
+  change:
+    url: https://manage.www.namecheap.com/myaccount/modify-profile-changepassword.aspx
+    reenter: true
+https: enforced
