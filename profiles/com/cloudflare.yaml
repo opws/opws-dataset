@@ -2,8 +2,12 @@ name: CloudFlare
 password:
   rules:
     length:
-      min: 6
+      min: 1
   reset:
     url: https://www.cloudflare.com/forgot-password
     accept: email
+    response: token
+  change:
+    url: https://www.cloudflare.com/my-account
+    reenter: true
 https: enforced
