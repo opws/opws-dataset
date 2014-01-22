@@ -12,7 +12,7 @@ Information on the subject of deleting accounts on sites can be found at account
 
 ## Layout
 
-Entries for domains are in [YAML](http://yaml.org/) files in the "yaml" directory, in sub-directories based on their [public suffix](http://publicsuffix.org/). The filename of each file, minus the .yaml extension, is the remaining domain component(s).
+Entries for domains are in [YAML](http://yaml.org/) files in the "profiles" directory, in sub-directories based on their [public suffix](http://publicsuffix.org/). The filename of each file, minus the .yaml extension, is the remaining domain component(s).
 
 Domains are listed by the least-specific component of the domain necessary to distinguish it from others: therefore, most sites are listed simply by the second-level domain (regardless of whether or not they use a further domain like www).
 
@@ -32,23 +32,47 @@ When URLs include a variable (such as a username), the URL will be separated by 
 
 The name of the site at this domain, as it would be used in a sentence.
 
-### password
+### password.reset
 
-#### reset
+The "reset password" page for that site.
 
-The URL of the "reset password" page for that site.
+#### url
 
-#### change
+URL of the page.
 
-The URL of the "change password" page for users on that site.
+#### accept
+
+A space-separated token string of what identifiers the site needs to reset passwords. (Usually some combination od "email" and/or "username".)
+
+When sites *require multiple* identifiers, they are joined with a plus (`+`).
+
+### password.change
+
+The "change password" page for users on that site.
+
+#### url
+
+URL of the page.
+
+### password.rules
+
+Rules and requirements the site imposes on passwords.
+
+#### blacklist
+
+Blacklisted characters (usually just ' ' (space); other blacklists are usually non-specific and listed under "mustnot").
 
 #### length
 
 The `min` and `max` lengths permitted for passwords.
 
-#### rules
+#### must
 
-A list of rules and requirements the site imposes on passwords (this includes lengths when the site mentions them in their description of the rules).
+Other restrictions on what passwords *must* do (usually "contain" some class of character).
+
+#### mustnot
+
+Other restrictions on what passwords *must not* do (usually "contain" some class of character).
 
 ### username
 
@@ -93,9 +117,10 @@ Notes on quirks of the site that make it difficult to map to the standard format
 
 List of quirks that demonstrate a lack of understanding on the behalf of the site's security construction, things like:
 
-- Restricted sets of characters allowed in passwords
-- Insecure maximum password lengths
 - Cookies that suggest session isn't stored on the server
+- Partial page renders that may expose information to outside observers
+
+Note that factors documented in other fields that should raise red flags, such as restricted password lengths or character sets, are not included in this list.
 
 ### platform
 
