@@ -1,7 +1,7 @@
 name: NameSilo
 password:
   rules:
-    blacklist: ' '
+    blacklist: spaces
     length:
       min: 6
       max: 32
