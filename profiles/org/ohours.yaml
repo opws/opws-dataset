@@ -1,0 +1,14 @@
+name: Ohours
+password:
+  rules:
+    length:
+      min: 6
+      max: 128
+  reset:
+    url: http://ohours.org/users/password/new
+    accept: email
+    response: token
+  change:
+    url: http://ohours.org/users/edit#user_password
+    reenter: false
+https: optional mismatch
