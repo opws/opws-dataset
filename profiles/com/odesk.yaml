@@ -1,0 +1,34 @@
+name: oDesk
+password:
+  rules:
+    length:
+      min: 8
+      max: 60
+    must:
+    - contain 1 letter and 1 number or symbol
+  reset:
+    url: https://www.odesk.com/reset/password
+    accept: email
+    captcha: true
+    response: token
+  change:
+    url: https://www.odesk.com/UserSettings/change-password
+    reenter: true
+questions:
+- Your mother's maiden name
+- Your first pet's name
+- The name of your elementary school
+- Your elementary school mascot
+- Your best friend's nickname
+- Your favorite sports team
+- Your favorite writer
+- Your favorite actor
+- Your favorite singer
+- Your favorite song
+- The name of the street you grew up on
+- Make and model of your first car
+- The city where you first met your spouse
+- Other...
+https: enforced
+redflags:
+- Password entry in account creation does not enforce length limit.
