@@ -1,0 +1,14 @@
+name: Pave
+password:
+  rules:
+    length:
+      min: 7
+    must:
+    - contain at least 1 number and 1 letter
+  reset:
+    url: https://www.pave.com/forgot_password
+    accept: email
+  change:
+    url: https://www.pave.com/settings
+    reenter: false
+https: partial enforced
