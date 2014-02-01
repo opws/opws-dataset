@@ -115,7 +115,7 @@ Notes on quirks of the site that make it difficult to map to the standard format
 
 ### redflags
 
-List of quirks that demonstrate a lack of understanding on the behalf of the site's security construction, things like:
+List of quirks that demonstrate a lack of understanding on the behalf of the site's security construction, sort of like @Defuse's [Password Policy Hall of Shame](https://defuse.ca/password-policy-hall-of-shame.htm). Examples of things that merit red flags:
 
 - Cookies that suggest session isn't stored on the server
 - Partial page renders that may expose information to outside observers
