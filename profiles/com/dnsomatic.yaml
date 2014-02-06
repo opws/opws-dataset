@@ -1,0 +1,13 @@
+name: DNS-O-Matic
+password:
+  rules:
+    length:
+      min: 6
+  reset:
+    url: https://www.dnsomatic.com/account/#pwdreset
+    accept: email
+    response: token
+  change:
+    url: https://www.dnsomatic.com/account/
+    reenter: false
+https: enforced
