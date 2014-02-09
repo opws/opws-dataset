@@ -101,6 +101,8 @@ These values describe issues with a site's use of HTTPS and usually follow "opti
 - mismatch: The site uses an HTTPS certificate that does not match the domain it uses it on.
 - blockedhttp: The site hotlinks blocked assets (CSS, JS, iframes) from HTTP sources when serving HTTPS.
 
+For more detail about a site's support for HTTPS, see the [HTTPS Everywhere Atlas](https://www.eff.org/https-everywhere/atlas/).
+
 ### totp
 
 A string describing a site's support of Time-based One Time Password (RFC 6238), as used by Google Authenticator, for two-factor authentication security. (Rare.)
