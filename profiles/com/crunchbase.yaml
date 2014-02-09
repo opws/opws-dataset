@@ -1,0 +1,13 @@
+name: CrunchBase
+password:
+  rules:
+    length:
+      min: 3
+      max: 40
+  reset:
+    url: http://www.crunchbase.com/recovery/new
+  change:
+    url: http://www.crunchbase.com/user/ + username + /edit#change-pw
+redflags:
+- Passwords consisting entirely of spaces raise "Password cannot be blank" errors.
+https: unsupported
