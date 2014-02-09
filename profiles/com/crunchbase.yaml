@@ -6,8 +6,10 @@ password:
       max: 40
   reset:
     url: http://www.crunchbase.com/recovery/new
+    accept: email
   change:
     url: http://www.crunchbase.com/user/ + username + /edit#change-pw
+    reenter: false
 redflags:
 - Passwords consisting entirely of spaces raise "Password cannot be blank" errors.
 https: unsupported
