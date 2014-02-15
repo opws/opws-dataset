@@ -1,0 +1,17 @@
+name: GOG.com
+password:
+  rules:
+    length:
+      min: 6
+      max: 64
+  reset:
+    url: http://www.gog.com/#reset_holder
+    accept: email
+    response: token
+  change:
+    url: https://secure.gog.com/account/settings
+    reenter: true
+https: optional mismatch blockedhttp
+redflags:
+- Resetting a password can fail with a "must be at least 6 chars" error,
+  even when the password is significantly longer than 6 chars.
