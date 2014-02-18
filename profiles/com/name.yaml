@@ -1,0 +1,20 @@
+name: Name.com
+password:
+  rules:
+    length:
+      min: 7
+      max: 60
+    must:
+    - contain one letter
+    - contain at least 1 number or symbol
+  reset:
+    url: https://www.name.com/tools/get_password
+    accept: domain username
+    response: token
+  change:
+    url: https://www.name.com/account/settings/
+    reenter: true
+https: optional
+redflags:
+- Maximum password length only disclosed when exceeded.
+notes: Only upgrades to HTTPS on checkout.
