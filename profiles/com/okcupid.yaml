@@ -1,0 +1,14 @@
+name: OkCupid
+password:
+  rules:
+    length:
+      min: 4
+      max: 16
+  reset:
+    url: http://www.okcupid.com/lostpassword
+    accept: username email
+    response: token
+  change:
+    url: https://www.okcupid.com/settings
+    reenter: true
+https: partial downgraded
