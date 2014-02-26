@@ -42,7 +42,7 @@ URL of the page.
 
 #### accept
 
-A space-separated token string of what identifiers the site needs to reset passwords. (Usually some combination od "email" and/or "username".)
+A space-separated token string of what identifiers the site needs to reset passwords. (Usually some combination of "email" and/or "username".)
 
 When sites *require multiple* identifiers, they are joined with a plus (`+`).
 
