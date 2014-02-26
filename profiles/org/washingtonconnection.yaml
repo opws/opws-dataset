@@ -1,14 +1,15 @@
 name: Washington Connection
 password:
   rules:
-    blacklist: " "
     length:
       min: 10
       max: 25
-    must:
-    - contain letter
-    - contain number
-    - contain special character
+    contain:
+    - letters: 1
+    - numbers: 1
+    - specials: 1
+    blacklist:
+    - spaces
   reset:
     url: https://www.washingtonconnection.org/authservice/resetpassword.go
     captcha: true

@@ -4,8 +4,9 @@ password:
     length:
       min: 9
       max: 1000 # it's somewhere over 200, I know it failed when I tried 1000
-    must:
-    - contain an upper-case letter and a number
+    contain:
+    - uppers: 1
+    - numbers: 1
     mustnot:
     - begin or end with a space
   reset:

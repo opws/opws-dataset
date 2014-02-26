@@ -3,8 +3,8 @@ password:
   rules:
     length:
       min: 6
-    must:
-    - contain at least one letter
+    contain:
+    - letters: 1
   reset:
     url: https://www.digitalocean.com/forgot_password/new
     accept: email

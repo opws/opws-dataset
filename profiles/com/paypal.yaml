@@ -4,8 +4,9 @@ password:
     length:
       min: 8
       max: 20
-    mustnot:
-    - contain spaces or unprintable characters
+    blacklist:
+    - spaces
+    - unprintable characters
   reset:
     url: https://www.paypal.com/us/cgi-bin/webscr?cmd=_account-recovery
     accept: email

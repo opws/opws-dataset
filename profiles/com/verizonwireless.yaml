@@ -4,10 +4,12 @@ password:
     length:
       min: 8
       max: 20
-    must:
-    - contain at least 1 number and 1 letter
-    mustnot:
-    - contain spaces or special characters (*, &, $, etc.)
+    contain:
+    - numbers: 1
+    - letters: 1
+    blacklist:
+    - spaces
+    - special characters (*, &, $, etc.)
 https: partial
 notes:
 - HTTPS is only supported for login pages.

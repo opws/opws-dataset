@@ -3,9 +3,9 @@ password:
   rules:
     length:
       min: 8
-    must:
-    - contain at least one letter
-    - contain at least one number
+    contain:
+    - letters: 1
+    - numbers: 1
   reset:
     url: https://secure.mashery.com/member/lost/
     accept: email+username

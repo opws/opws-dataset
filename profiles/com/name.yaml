@@ -4,9 +4,10 @@ password:
     length:
       min: 7
       max: 60
-    must:
-    - contain one letter
-    - contain at least 1 number or symbol
+    contain:
+    - letters: 1
+    - numbers: 1
+      symbols: 1
   reset:
     url: https://www.name.com/tools/get_password
     accept: domain username

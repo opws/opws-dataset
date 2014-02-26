@@ -1,10 +1,11 @@
 name: Spike Your Juice
 password:
   rules:
-    blacklist: " "
     length:
       min: 6
       max: 100
+    blacklist:
+    - spaces
   reset:
     url: http://spikeyourjuice.com/ecart/index.php?option=com_user&view=reset
 username:

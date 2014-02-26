@@ -3,8 +3,9 @@ password:
   rules:
     length:
       min: 8
-    must:
-    - contain numbers and letters
+    contain:
+    - numbers: 1
+    - letters: 1
   reset:
     url: https://p2pu.org/en/forgot/
     accept: username email

@@ -4,8 +4,11 @@ password:
     length:
       min: 1
       max: 32
-    must:
-    - "only contain upper/lower case alphanumeric characters (A-Z, a-z, 0-9), dot (.), hyphen (-), and underscore (_)"
+    whitelist:
+    - upper/lower case alphanumeric characters (A-Z, a-z, 0-9)
+    - dot (.)
+    - hyphen (-)
+    - underscore (_)
   reset:
     url: https://projecteuler.net/reset_password
     accept: username+email

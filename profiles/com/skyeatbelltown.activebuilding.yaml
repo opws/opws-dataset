@@ -3,8 +3,9 @@ password:
   rules:
     length:
       min: 6
-    must:
-    - contain at least 1 letter and 1 non-letter
+    contain:
+    - letters: 1
+    - nonletters: 1
   reset:
     url: https://skyeatbelltown.activebuilding.com#password
     accept: email

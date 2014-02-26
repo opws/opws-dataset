@@ -1,8 +1,9 @@
 name: Bountysource
 password:
   rules:
-    must:
-    - contain a letter and a number
+    contain:
+    - letters: 1
+    - numbers: 1
   change:
     url: https://www.bountysource.com/settings/accounts
   reset:

@@ -1,10 +1,11 @@
 name: NameSilo
 password:
   rules:
-    blacklist: spaces
     length:
       min: 6
       max: 32
+    blacklist:
+    - spaces
   reset:
     url: https://www.namesilo.com/lost_password.php
     accept: username domain

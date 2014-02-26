@@ -1,8 +1,13 @@
 name: Linode
 password:
   rules:
-    must:
-    - "contain at least two of these four character classes: lower case letters - upper case letters - numbers - punctuation"
+    classes:
+    - required: 2
+      from:
+      - lowers
+      - uppers
+      - numbers
+      - punctuation
   reset:
     url: https://manager.linode.com/session/forgot/password
     accept: username

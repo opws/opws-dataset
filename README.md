@@ -58,21 +58,49 @@ URL of the page.
 
 Rules and requirements the site imposes on passwords.
 
-#### blacklist
-
-Blacklisted characters (usually just ' ' (space); other blacklists are usually non-specific and listed under "mustnot").
-
 #### length
 
 The `min` and `max` lengths permitted for passwords.
 
+#### blacklist
+
+Array of character types not allowed (such as those from rules that begin "must not contain").
+
+#### whitelist
+
+Array of character types that are the *only* types supported.
+
+#### contain
+
+Array of objects describing what classes of character (and at least how many) must be present. Usually of the form `[{letters: 1}, {numbers: 1}]`, but can be different.
+
+(When an object lists more than one character class, it means only one of the classes must be met.)
+
+Character class names used:
+
+- uppers (upper case letters)
+- lowers (lower case letters)
+- numbers (digits)
+- letters
+- nonletters
+- specials (when sites list "special characters": assumed to be non-alphanumeric)
+- punctuation (likely contains all non-alphanumeric-or-space characters)
+
+Note that `blacklist` and `whiltelist` usually list the character class as described in the posted rules rather than using these class names.
+
+#### classes
+
+Array of advanced class satisfaction rules: contains objects with `required`, as the number of classes required, and `from`, as an array of `contain` class names that can be included.
+
+Currently, this is only used for linode.com.
+
 #### must
 
-Other restrictions on what passwords *must* do (usually "contain" some class of character).
+Array of other restrictions on what passwords *must* do (if not coverable by `contain` or `classes`).
 
 #### mustnot
 
-Other restrictions on what passwords *must not* do (usually "contain" some class of character).
+Array of other restrictions on what passwords *must not* do.
 
 ### username
 

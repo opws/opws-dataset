@@ -3,8 +3,9 @@ password:
   rules:
     length:
       min: 7
-    must:
-    - contain at least 1 number and 1 letter
+    contain:
+    - numbers: 1
+    - letters: 1
   reset:
     url: https://www.pave.com/forgot_password
     accept: email

@@ -3,6 +3,7 @@ password:
   rules:
     length:
       min: 6
-    mustnot:
-    - contain any spaces or special characters
+    blacklist:
+    - spaces
+    - special characters
 https: enforced
