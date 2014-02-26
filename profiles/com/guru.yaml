@@ -3,4 +3,5 @@ password:
   reset:
     url: http://www.guru.com/forgotsignin.aspx
     accept: email
+    response: token nologin
 https: partial downgraded
