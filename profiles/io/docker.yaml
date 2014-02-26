@@ -1,0 +1,12 @@
+name: Docker
+password:
+  rules:
+    length:
+      min: 5
+  reset:
+    url: https://www.docker.io/account/forgot-password/
+    accept: email
+  change:
+    url: https://www.docker.io/account/change-password/
+    reenter: true
+https: enforced
