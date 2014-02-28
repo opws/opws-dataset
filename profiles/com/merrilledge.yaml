@@ -13,7 +13,8 @@ password:
     url: https://olui2.fs.ml.com/login/ForgotPassword.aspx
     accept: username
 username:
-  reset: https://olui2.fs.ml.com/login/ForgotUserId.aspx
+  remind:
+    url: https://olui2.fs.ml.com/login/ForgotUserId.aspx
 https: enforced
 notes: >
   Redirects to subdomains on ml.com for login

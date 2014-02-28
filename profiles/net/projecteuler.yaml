@@ -15,8 +15,9 @@ password:
   change:
     url: https://projecteuler.net/account
 username:
-  reminder:
+  remind:
     url: https://projecteuler.net/username_reminder
+    accept: email
 redflags:
 - '"Remember Me" creates a p_key cookie rather than changing your session.'
 https: optional

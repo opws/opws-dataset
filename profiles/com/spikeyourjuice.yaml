@@ -9,5 +9,8 @@ password:
   reset:
     url: http://spikeyourjuice.com/ecart/index.php?option=com_user&view=reset
 username:
-  remind: http://spikeyourjuice.com/ecart/index.php?option=com_user&view=remind
+  remind:
+    url: http://spikeyourjuice.com/ecart/index.php?option=com_user&view=remind
+    accept: email
+platform: virtuemart
 https: unsupported

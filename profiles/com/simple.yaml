@@ -16,7 +16,7 @@ password:
     twice: false
     reenter: false
 username:
-  reminder:
+  remind:
     url: https://bank.simple.com/forgot-username
     accept: email+phone
 https: enforced

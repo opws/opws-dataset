@@ -15,8 +15,9 @@ password:
     captcha: true
     accept: username+email
 username:
-  reminder:
+  remind:
     url: https://www.washingtonconnection.org/authservice/forgotusername.go
+    accept: email
     captcha: true
 questions:
 - What was your first teachers last name?
