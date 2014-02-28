@@ -1,0 +1,10 @@
+name: UltraHook
+password:
+  rules:
+    length:
+      min: 1
+api:
+  key:
+    retrieve:
+      url: http://www.ultrahook.com/resend
+https: optional mismatch
