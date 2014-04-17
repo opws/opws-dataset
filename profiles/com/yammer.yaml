@@ -1,0 +1,12 @@
+name: Yammer
+password:
+  rules:
+    length:
+      min: 6
+  reset:
+    url: https://www.yammer.com/forgotten_password/new
+    accept: email
+  change:
+    url: https://www.yammer.com/account/password
+    reenter: true
+https: enforced
