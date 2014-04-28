@@ -102,7 +102,9 @@ The "change password" page for users on that site.
 
 #### url
 
-URL of the page.### password.reset
+URL of the page.
+
+### password.reset
 
 The "reset password" page for that site.
 
