@@ -104,28 +104,6 @@ The "change password" page for users on that site.
 
 URL of the page.
 
-### password.reset
-
-The "reset password" page for that site.
-
-#### url
-
-URL of the page.
-
-#### accept
-
-A space-separated token string of what identifiers the site needs to reset passwords. (Usually some combination of "email" and/or "username".)
-
-When sites *require multiple* identifiers, they are joined with a plus (`+`).
-
-### password.change
-
-The "change password" page for users on that site.
-
-#### url
-
-URL of the page.
-
 ### username
 
 #### rules
