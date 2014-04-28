@@ -85,8 +85,10 @@ Character class names used:
 - nonletters
 - specials (when sites list "special characters": assumed to be non-alphanumeric)
 - punctuation (likely contains all non-alphanumeric-or-space characters)
-
-Note that `blacklist` and `whiltelist` usually list the character class as described in the posted rules rather than using these class names.
+- dot (".")
+- hyphen ("-")
+- underscore ("_")
+- at ("@")
 
 #### classes
 
@@ -112,6 +114,18 @@ The `min` and `max` lengths permitted for usernames.
 
 The page to send a username reminder to an email address (when separate from password resetting).
 
+### register
+
+#### url
+
+The URL of the page to create a new user account.
+
+### login
+
+#### url
+
+The URL of the page to log in, as a user.
+
 ### https
 
 A string containing space-separated tokens (usually only one) describing the site's HTTPS support. Known values:
@@ -134,6 +148,10 @@ For more detail about a site's support for HTTPS, see the [HTTPS Everywhere Atla
 ### totp
 
 A string describing a site's support of Time-based One Time Password (RFC 6238), as used by Google Authenticator, for two-factor authentication security. (Rare.)
+
+### questions
+
+List of security questions. Each item that is a string should be interpreted as a required question: each item that is an object may have "required" or "optional" fields with the number of questions that may or must have answers given, and an "options" list of options that may be chosen.
 
 ### profile
 
