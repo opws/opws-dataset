@@ -32,28 +32,6 @@ When URLs include a variable (such as a username), the URL will be separated by 
 
 The name of the site at this domain, as it would be used in a sentence.
 
-### password.reset
-
-The "reset password" page for that site.
-
-#### url
-
-URL of the page.
-
-#### accept
-
-A space-separated token string of what identifiers the site needs to reset passwords. (Usually some combination of "email" and/or "username".)
-
-When sites *require multiple* identifiers, they are joined with a plus (`+`).
-
-### password.change
-
-The "change password" page for users on that site.
-
-#### url
-
-URL of the page.
-
 ### password.rules
 
 Rules and requirements the site imposes on passwords.
@@ -104,25 +82,63 @@ Array of other restrictions on what passwords *must* do (if not coverable by `co
 
 Array of other restrictions on what passwords *must not* do.
 
-### username
+### password.reset
 
-#### length
-
-The `min` and `max` lengths permitted for usernames.
-
-#### remind
-
-The page to send a username reminder to an email address (when separate from password resetting).
-
-### register
+The "reset password" page for that site.
 
 #### url
+
+URL of the page.
+
+#### accept
+
+A space-separated token string of what identifiers the site needs to reset passwords. (Usually some combination of "email" and/or "username".)
+
+When sites *require multiple* identifiers, they are joined with a plus (`+`).
+
+### password.change
+
+The "change password" page for users on that site.
+
+#### url
+
+URL of the page.### password.reset
+
+The "reset password" page for that site.
+
+#### url
+
+URL of the page.
+
+#### accept
+
+A space-separated token string of what identifiers the site needs to reset passwords. (Usually some combination of "email" and/or "username".)
+
+When sites *require multiple* identifiers, they are joined with a plus (`+`).
+
+### password.change
+
+The "change password" page for users on that site.
+
+#### url
+
+URL of the page.
+
+### username
+
+#### rules
+
+Rules on the format of usernames. See `password.rules`.
+
+#### remind.url
+
+The URL of the page to send a username reminder to an email address (when separate from password resetting).
+
+### register.url
 
 The URL of the page to create a new user account.
 
-### login
-
-#### url
+### login.url
 
 The URL of the page to log in, as a user.
 
