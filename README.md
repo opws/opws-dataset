@@ -38,7 +38,7 @@ Rules and requirements the site imposes on passwords.
 
 #### length
 
-The `min` and `max` lengths permitted for passwords.
+An object with the `min` and `max` lengths permitted for passwords.
 
 #### blacklist
 
