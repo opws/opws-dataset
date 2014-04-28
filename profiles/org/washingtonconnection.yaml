@@ -15,18 +15,35 @@ password:
     captcha: true
     accept: username+email
 username:
+  rules:
+    length:
+      min: 4
+      max: 32
+    whitelist:
+    - letters
+    - numbers
+    - dot
+    - hyphen
+    - underscore
+    - at
   remind:
     url: https://www.washingtonconnection.org/authservice/forgotusername.go
     accept: email
     captcha: true
+register:
+  url: https://www.washingtonconnection.org/authservice/createaccount.go
+login:
+  url: https://www.washingtonconnection.org/authservice/login.go
 questions:
-- What was your first teachers last name?
-- What city were you born in?
-- What city did your first airplane ride take you to?
-- Who was your best childhood friend?
-- What was the name of your first permanent employer?
-- By what nickname did your friends call you when you were a child?
-- What was the mascot of your high school football team?
+- require: 1
+  options:
+  - What was your first teachers last name?
+  - What city were you born in?
+  - What city did your first airplane ride take you to?
+  - Who was your best childhood friend?
+  - What was the name of your first permanent employer?
+  - By what nickname did your friends call you when you were a child?
+  - What was the mascot of your high school football team?
 redflags:
 - There is no page for changing passwords once logged in.
 https: enforced
