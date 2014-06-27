@@ -1,0 +1,8 @@
+name: Uplay Connect
+password:
+  rules:
+    length:
+      min: 8
+      max: 16
+    reset:
+      url: https://uplayconnect.ubi.com/Default/ForgotPassword?appId=c5783e71-1f25-4dc3-bf5b-c5dc83be637e
