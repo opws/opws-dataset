@@ -1,0 +1,10 @@
+name: Tumblr
+password:
+  reset:
+    url: https://www.tumblr.com/forgot_password
+    accept: email
+  change:
+    url: https://www.tumblr.com/settings/account#changepassword
+    reauth: true
+    reenter: false
+https: enforced
