@@ -8,5 +8,5 @@ password:
     accept: email
   change:
     url: https://www.yammer.com/account/password
-    reenter: true
+    reauth: password
 https: enforced

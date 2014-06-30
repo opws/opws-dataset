@@ -9,5 +9,5 @@ password:
     response: token
   change:
     url: https://www.dnsomatic.com/account/
-    reenter: false
+    reauth: no
 https: enforced

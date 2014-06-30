@@ -9,5 +9,5 @@ password:
     response: token
   change:
     url: https://www.cloudflare.com/my-account
-    reenter: true
+    reauth: password
 https: enforced

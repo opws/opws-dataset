@@ -8,5 +8,5 @@ password:
     accept: email
   change:
     url: user url + /identity/edit
-    reenter: false
+    reauth: no
 https: optional

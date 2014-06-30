@@ -10,8 +10,8 @@ password:
   reset:
     url: https://www.paypal.com/us/cgi-bin/webscr?cmd=_account-recovery
     accept: email
-    captcha: true
+    captcha: yes
   change:
     url: https://www.paypal.com/us/cgi-bin/webscr?cmd=_profile-password-start
-    reenter: true
+    reauth: password
 https: enforced

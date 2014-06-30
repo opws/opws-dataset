@@ -3,7 +3,7 @@ password:
   reset:
     url: https://www.wibit.net/forgotPassword
     accept: email
-    captcha: true
+    captcha: yes
     response: temp
   change:
     url: https://www.wibit.net/myAccount

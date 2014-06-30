@@ -5,6 +5,6 @@ password:
     accept: email
   change:
     url: https://www.tumblr.com/settings/account#changepassword
-    reauth: true
-    reenter: false
+    reauth: password
+    usability: single
 https: enforced

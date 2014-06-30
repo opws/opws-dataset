@@ -96,6 +96,16 @@ A space-separated token string of what identifiers the site needs to reset passw
 
 When sites *require multiple* identifiers, they are joined with a plus (`+`).
 
+#### captcha
+
+What kind of captcha (if any) is used to deter automated password resets ("yes" if unknown).
+
+Known captchas:
+
+- recaptcha (http://www.google.com/recaptcha)
+- botdetect (see http://captcha.com/captcha-examples.html) - when possible, the specific style in use is listed instead:
+  - botdetect-vertigo
+
 ### password.change
 
 The "change password" page for users on that site.
@@ -103,6 +113,19 @@ The "change password" page for users on that site.
 #### url
 
 URL of the page.
+
+#### reauth
+
+"no" if you can change password without reauthenticating, "password" if you have to enter the old password.
+
+#### usability
+
+A space-separated token string describing how the password set UI differs from double-blind-entry.
+
+Tokens:
+
+- "single": Does not require password to be entered twice.
+- "showable": Password can be toggled to plaintext.
 
 ### username
 

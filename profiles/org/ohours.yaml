@@ -10,5 +10,5 @@ password:
     response: token
   change:
     url: http://ohours.org/users/edit#user_password
-    reenter: false
+    reauth: no
 https: optional mismatch

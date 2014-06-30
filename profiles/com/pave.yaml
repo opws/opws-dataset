@@ -11,5 +11,5 @@ password:
     accept: email
   change:
     url: https://www.pave.com/settings
-    reenter: false
+    reauth: no
 https: partial enforced

@@ -12,7 +12,7 @@ password:
     - spaces
   reset:
     url: https://www.washingtonconnection.org/authservice/resetpassword.go
-    captcha: true
+    captcha: yes
     accept: username+email
 username:
   rules:
@@ -29,7 +29,7 @@ username:
   remind:
     url: https://www.washingtonconnection.org/authservice/forgotusername.go
     accept: email
-    captcha: true
+    captcha: yes
 register:
   url: https://www.washingtonconnection.org/authservice/createaccount.go
 login:

@@ -10,5 +10,5 @@ password:
     response: token
   change:
     url: https://www.okcupid.com/settings
-    reenter: true
+    reauth: password
 https: partial downgraded

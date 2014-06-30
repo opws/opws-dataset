@@ -10,7 +10,7 @@ password:
     response: token
   change:
     url: https://secure.gog.com/account/settings
-    reenter: true
+    reauth: password
 https: optional mismatch blockedhttp
 redflags:
 - Resetting a password can fail with a "must be at least 6 chars" error,

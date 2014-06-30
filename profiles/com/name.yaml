@@ -14,7 +14,7 @@ password:
     response: token
   change:
     url: https://www.name.com/account/settings/
-    reenter: true
+    reauth: password
 https: optional
 redflags:
 - Maximum password length only disclosed when exceeded.

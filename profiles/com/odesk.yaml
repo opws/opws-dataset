@@ -11,11 +11,11 @@ password:
   reset:
     url: https://www.odesk.com/reset/password
     accept: email
-    captcha: true
+    captcha: yes
     response: token
   change:
     url: https://www.odesk.com/UserSettings/change-password
-    reenter: true
+    reauth: password
 questions:
 - Your mother's maiden name
 - Your first pet's name

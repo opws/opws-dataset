@@ -11,6 +11,6 @@ password:
     notes: See http://support.mozilla.org/en-US/kb/how-do-i-manage-my-persona-account
   change:
     url: https://login.persona.org/
-    reenter: true
+    reauth: password
     notes: see http://support.mozilla.org/en-US/kb/how-do-i-manage-my-persona-account
 https: enforced

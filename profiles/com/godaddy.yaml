@@ -12,10 +12,10 @@ password:
   reset:
     url: https://idp.godaddy.com/Account/AccountRetrieval.aspx
     accept: username+email accountno+email
-    captcha: true
+    captcha: botdetect-vertigo
   change:
     url: https://mya.godaddy.com/settings.aspx#settsecurity
-    reenter: true
+    reauth: password
 username:
   rules:
     length:
