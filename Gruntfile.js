@@ -29,7 +29,7 @@ module.exports = function(grunt) {
       q.awaitAll(function(err) {
         if (err) return next(err);
         fs.writeFile('domainprofiles.json',
-          JSON.stringify(domainprofiles, null, json.space), 'utf8', next);
+          JSON.stringify(domainprofiles, null, json.space)+'\n', 'utf8', next);
       });
     });
   }
