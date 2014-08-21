@@ -1,0 +1,18 @@
+name: Headspace
+password:
+  rules:
+    length:
+      min: 8
+      max: 50
+    blacklist:
+    - spaces
+  reset:
+    url: https://www.headspace.com/login/forgotten-password
+    accept: email
+  change:
+    url: https://www.headspace.com/my/settings/about-you#user_profile_password_first
+    reauth: no
+redflags:
+- Going to the "Forgotten Password" page when logged in results in a partial
+  page render.
+https: enforced
