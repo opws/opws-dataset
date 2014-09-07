@@ -1,0 +1,11 @@
+name: Assembly
+password:
+  length:
+    min: 8
+  reset:
+    url: https://assembly.com/users/password/new
+    accept: email
+  change:
+    url: https://assembly.com/settings
+    reauth: no
+https: enforced
