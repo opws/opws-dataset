@@ -1,7 +1,8 @@
 name: Assembly
 password:
-  length:
-    min: 8
+  rules:
+    length:
+      min: 8
   reset:
     url: https://assembly.com/users/password/new
     accept: email
