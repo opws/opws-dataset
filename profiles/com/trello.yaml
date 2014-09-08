@@ -1,0 +1,9 @@
+name: Trello
+password:
+  change:
+    url: https://trello.com/me/account
+    reauth: no
+  reset:
+    url: https://trello.com/forgot
+    accept: email
+https: enforced
