@@ -1,0 +1,16 @@
+name: QFC
+password:
+  rules:
+    length:
+      min: 6
+      max: 12
+    contain:
+    - letters: 1
+    - numbers: 1
+  reset:
+    url: https://www.qfc.com/resetPassword
+    accept: email
+    response: token
+    token:
+      expires: 24h
+      login: no
