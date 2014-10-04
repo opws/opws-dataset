@@ -5,5 +5,5 @@ password:
     accept: username email
   change:
     url: https://c9.io/dashboard.html
-    reenter: false
+    reauth: no
 https: enforced
