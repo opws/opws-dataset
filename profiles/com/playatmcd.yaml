@@ -1,0 +1,13 @@
+name: PlayatMcD.com
+password:
+  rules:
+    length:
+      min: 6
+      max: 15
+    whitelist:
+    - letters
+    - numbers
+  reset:
+    url: https://www.playatmcd.com/ForgotPassword
+    accept: email
+https: enforced
