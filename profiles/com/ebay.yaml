@@ -1,0 +1,20 @@
+password:
+  rules:
+    length:
+      min: 6
+      max: 64
+    classes:
+    - required: 2
+      from:
+      - letters
+      - numbers
+      - symbols
+    blacklist: [ spaces, "[", "]", "<", ">" ]
+    notes: http://pages.ebay.com/help/new/contextual/create_password.html
+  reset:
+    url: https://fyp.ebay.com/EnterUserInfo
+    accept: email username
+  change:
+    url: https://signin.ebay.com/ws/eBayISAPI.dll?ChangePasswordAndCreateHint
+    reauth: password
+https: partial
