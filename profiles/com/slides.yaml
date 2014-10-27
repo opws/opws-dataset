@@ -1,9 +1,11 @@
+name: Slides
 password:
   rules:
     length:
       min: 6
       max: 128
-      notes: "Can't be blank (all spaces)"
+    mustnot:
+    - be blank (all spaces)
   change:
     url: https://slides.com/users/edit#user_password
     reauth: password
@@ -13,4 +15,5 @@ password:
     accept: email
     response: link
     token:
-      login: yes
+      login: after
+https: enforced
