@@ -12,3 +12,5 @@ password:
     url: https://slides.com/users/password/new
     accept: email
     response: link
+    token:
+      login: yes
