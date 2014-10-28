@@ -2,7 +2,7 @@ name: CondoInternet.net
 password:
   rules:
     must:
-      - satisfy the formula ((length*10)-20)+(numbers*10)+(specials*15)+(uppers*10))>=30
+    - satisfy the formula ((length*10)-20)+(numbers*10)+(specials*15)+(uppers*10))>=30
   reset:
     url: https://billing.condointernet.net/pwreset.php
     accept: email
