@@ -106,6 +106,27 @@ Known captchas:
 - botdetect (see http://captcha.com/captcha-examples.html) - when possible, the specific style in use is listed instead:
   - botdetect-vertigo
 
+#### response
+
+A space-separated token string of data the reset mechanism responds with (usually via email):
+
+- username: Your username on the site.
+- url: a URL (possibly linked) to the page to reset the password.
+- link: A link (without the URL visible) to reset the password.
+- token: A token that can be typed on a page (may also be part of a link/URL) to bring you to the reset screen.
+
+#### token.expires
+
+How long after issuance the reset token is valid for, as a human-abbreviated string ("24h" is common).
+
+#### token.login
+
+Whether the reset token works as login credentials. Valid values:
+
+- "before" (the token logs you in before resetting the password)
+- "after" (the token logs you in after resetting the password)
+- "no" (the token does not log you in)
+
 ### password.change
 
 The "change password" page for users on that site.
@@ -144,6 +165,10 @@ The URL of the page to create a new user account.
 ### login.url
 
 The URL of the page to log in, as a user.
+
+### sessions.manage.url
+
+The URL of a page to view and revoke logged-in sessions.
 
 ### https
 
