@@ -72,7 +72,7 @@ Character class names used:
 
 Array of advanced class satisfaction rules: contains objects with `required`, as the number of classes required, and `from`, as an array of `contain` class names that can be included.
 
-Currently, this is only used for linode.com.
+Currently, this is only used for a couple of sites whose rules can't be better explained with a `contain` list.
 
 ### password.rules.must
 
