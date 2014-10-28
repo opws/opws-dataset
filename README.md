@@ -36,19 +36,19 @@ The name of the site at this domain, as it would be used in a sentence.
 
 Rules and requirements the site imposes on passwords.
 
-#### length
+### password.rules.length
 
 An object with the `min` and `max` lengths permitted for passwords.
 
-#### blacklist
+### password.rules.blacklist
 
 Array of character types not allowed (such as those from rules that begin "must not contain").
 
-#### whitelist
+### password.rules.whitelist
 
 Array of character types that are the *only* types supported.
 
-#### contain
+### password.rules.contain
 
 Array of objects describing what classes of character (and at least how many) must be present. Usually of the form `[{letters: 1}, {numbers: 1}]`, but can be different.
 
@@ -68,35 +68,31 @@ Character class names used:
 - underscore ("_")
 - at ("@")
 
-#### classes
+### password.rules.classes
 
 Array of advanced class satisfaction rules: contains objects with `required`, as the number of classes required, and `from`, as an array of `contain` class names that can be included.
 
 Currently, this is only used for linode.com.
 
-#### must
+### password.rules.must
 
 Array of other restrictions on what passwords *must* do (if not coverable by `contain` or `classes`).
 
-#### mustnot
+### password.rules.mustnot
 
 Array of other restrictions on what passwords *must not* do.
 
-### password.reset
+### password.reset.url
 
-The "reset password" page for that site.
+The URL of the site's "reset password" page.
 
-#### url
-
-URL of the page.
-
-#### accept
+### password.reset.accept
 
 A space-separated token string of what identifiers the site needs to reset passwords. (Usually some combination of "email" and/or "username".)
 
 When sites *require multiple* identifiers, they are joined with a plus (`+`).
 
-#### captcha
+### password.reset.captcha
 
 What kind of captcha (if any) is used to deter automated password resets ("yes" if unknown).
 
@@ -106,7 +102,7 @@ Known captchas:
 - botdetect (see http://captcha.com/captcha-examples.html) - when possible, the specific style in use is listed instead:
   - botdetect-vertigo
 
-#### response
+### password.reset.response
 
 A space-separated token string of data the reset mechanism responds with (usually via email):
 
@@ -115,11 +111,11 @@ A space-separated token string of data the reset mechanism responds with (usuall
 - link: A link (without the URL visible) to reset the password.
 - token: A token that can be typed on a page (may also be part of a link/URL) to bring you to the reset screen.
 
-#### token.expires
+### password.reset.token.expires
 
 How long after issuance the reset token is valid for, as a human-abbreviated string ("24h" is common).
 
-#### token.login
+### password.reset.token.login
 
 Whether the reset token works as login credentials. Valid values:
 
@@ -129,17 +125,13 @@ Whether the reset token works as login credentials. Valid values:
 
 ### password.change
 
-The "change password" page for users on that site.
+The URL of the "change password" page for the logged-in user. If the site doesn't have a URL for the logged-in user, this will be in a space-and-plus-separated string denoting where to insert the variable components (such as "username").
 
-#### url
+### password.change.reauth
 
-URL of the page.
+"no" if users can change password without reauthenticating, "password" if they have to enter the old password.
 
-#### reauth
-
-"no" if you can change password without reauthenticating, "password" if you have to enter the old password.
-
-#### usability
+### password.change.usability
 
 A space-separated token string describing how the password set UI differs from double-blind-entry.
 
@@ -148,13 +140,11 @@ Tokens:
 - "single": Does not require password to be entered twice.
 - "showable": Password can be toggled to plaintext.
 
-### username
-
-#### rules
+### username.rules
 
 Rules on the format of usernames. See `password.rules`.
 
-#### remind.url
+### username.remind.url
 
 The URL of the page to send a username reminder to an email address (when separate from password resetting).
 
