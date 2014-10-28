@@ -40,6 +40,8 @@ Rules and requirements the site imposes on passwords.
 
 An object with the `min` and `max` lengths permitted for passwords.
 
+`min` should only be missing if the site legitimately allows blank passwords (or allows passwords to be disabled). `max` should only be missing if the site will allow passwords over 9000 characters in length. (This can usually be tested by inspecting the password element, then entering `$0.value='Aa'+new Array(9001).join('A')` before submitting.)
+
 ### password.rules.blacklist
 
 Array of character types not allowed (such as those from rules that begin "must not contain").
