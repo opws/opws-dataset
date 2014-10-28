@@ -3,9 +3,8 @@ password:
   rules:
     length:
       min: 7
-    contain:
-    - lowers: 1
-    - numbers: 1
+    must:
+    - contain a lowercase letter and number if shorter than 16 characters
   reset:
     url: https://github.com/password_reset
     accept: email
