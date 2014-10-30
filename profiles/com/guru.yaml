@@ -3,7 +3,7 @@ password:
   reset:
     url: http://www.guru.com/forgotsignin.aspx
     accept: email
-    response: token
+    response: username link
     token:
       login: no
 https: partial downgraded
