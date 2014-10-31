@@ -8,9 +8,9 @@ password:
     - letters: 1
     - numbers: 1
   reset:
-    url: https://www.qfc.com/resetPassword
+    url: https://www.qfc.com/forgotPassword
     accept: email
-    response: token
+    response: url link
     token:
       expires: 24h
       login: no
