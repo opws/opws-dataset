@@ -1,0 +1,17 @@
+name: Hacker News
+password:
+  rules:
+    length:
+      min: 8
+  reset:
+    url: https://news.ycombinator.com/forgot
+    accept: username
+  change:
+    url: https://news.ycombinator.com/changepw
+    reauth: password
+    usability: single
+register:
+  url: https://news.ycombinator.com/login
+login:
+  url: https://news.ycombinator.com/login
+https: enforced
