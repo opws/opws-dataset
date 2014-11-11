@@ -11,10 +11,10 @@ password:
     accept: email # Does the reset page accept email address, or username?
   change:
     url: https://example.com/account/changepassword
-    reauth: password
+    reauth: password # Do you have to enter the old password? ("no" if not)
 register:
   url: https://example.com/register
 login:
-  url: https://example.com/login 
+  url: https://example.com/login
 https: enforced # What happens if you start a url with "http:"? With "https:"?
 ```
