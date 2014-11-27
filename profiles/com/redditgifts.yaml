@@ -1,0 +1,12 @@
+name: RedditGifts
+password:
+  rules:
+    length:
+      min: 1
+  reset:
+    url: http://redditgifts.com/profiles/password/reset/
+    accept: email
+  change:
+    url: http://redditgifts.com/profiles/update/#js-change-password
+    reauth: password
+https: unsupported
