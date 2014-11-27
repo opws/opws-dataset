@@ -1,5 +1,8 @@
 name: Reddit
 password:
+  rules:
+    length:
+      min: 6
   reset:
     url: http://www.reddit.com/password
     accept: username
