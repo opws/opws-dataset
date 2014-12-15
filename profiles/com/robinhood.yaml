@@ -1,0 +1,8 @@
+name: Robinhood
+password:
+  rules:
+    length:
+      min: 10
+register:
+  url: https://www.robinhood.com/signup/
+https: enforced
