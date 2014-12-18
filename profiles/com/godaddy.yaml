@@ -3,7 +3,7 @@ password:
   rules:
     length:
       min: 9
-      max: 1000 # it's somewhere over 200, I know it failed when I tried 1000
+      max: 255
     contain:
     - uppers: 1
     - numbers: 1
@@ -13,6 +13,10 @@ password:
     url: https://idp.godaddy.com/Account/AccountRetrieval.aspx
     accept: username+email accountno+email
     captcha: botdetect-vertigo
+    response: link token
+    token:
+      expires: 2h
+      login: no
   change:
     url: https://mya.godaddy.com/settings.aspx#settsecurity
     reauth: password
