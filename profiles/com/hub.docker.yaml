@@ -1,0 +1,10 @@
+name: Docker Hub
+password:
+  reset:
+    url: https://hub.docker.com/account/forgot-password/
+    accept: email
+login:
+  url: https://hub.docker.com/account/login/
+register:
+  url: https://hub.docker.com/account/signup/
+https: enforced
