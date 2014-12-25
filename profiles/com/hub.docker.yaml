@@ -1,8 +1,17 @@
 name: Docker Hub
 password:
+  rules:
+    length:
+      min: 5
   reset:
     url: https://hub.docker.com/account/forgot-password/
     accept: email
+    response: url
+    token:
+      login: no
+  change:
+    url: https://hub.docker.com/account/change-password/
+    reauth: password
 login:
   url: https://hub.docker.com/account/login/
 register:
