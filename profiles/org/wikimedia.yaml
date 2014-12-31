@@ -3,6 +3,11 @@ password:
   reset:
     url: https://commons.wikimedia.org/wiki/Special:PasswordReset
     accept: username email
+    response: temp
+    token:
+      expires: 7d
+      login: yes
+      reset: enforced
   change:
     url: https://commons.wikimedia.org/wiki/Special:ChangePassword
 https: optional
