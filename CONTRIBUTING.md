@@ -1,4 +1,6 @@
-Profiles should have this information at the very least (see README.md for details):
+Profiles should have this information at the very least (see [README.md][] for details):
+
+[README.md]: README.md
 
 ```yaml
 name: Site Name Here # How would you refer to this site in a sentence?
