@@ -1,0 +1,21 @@
+name: Dynadot
+password:
+  rules:
+    length:
+      min: 6
+      max: 100
+username:
+  rules:
+    length:
+      min: 3
+      max: 16
+    whitelist:
+    - letters
+    - numbers
+    - hyphen
+    - underscore
+register:
+  url: https://www.dynadot.com/create_account.html
+login:
+  url: https://www.dynadot.com/account/signin.html
+https: enforced
