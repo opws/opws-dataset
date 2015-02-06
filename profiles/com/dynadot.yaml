@@ -4,6 +4,8 @@ password:
     length:
       min: 6
       max: 100
+    blacklist:
+    - spaces
 username:
   rules:
     length:
