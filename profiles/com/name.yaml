@@ -11,11 +11,18 @@ password:
   reset:
     url: https://www.name.com/tools/get_password
     accept: domain username
-    response: token
+    response: url username requester-ip
+    token:
+      expires: 24h
+      expects: requester-ip
+      login: after
   change:
     url: https://www.name.com/account/settings/
     reauth: password
-https: optional
+register:
+  url: https://www.name.com/account/create
+login:
+  url: https://www.name.com/account/login
+https: enforced
 redflags:
 - Maximum password length only disclosed when exceeded.
-notes: Only upgrades to HTTPS on checkout.
