@@ -140,6 +140,10 @@ A space-separated token string of what identifiers the site needs to send a user
 
 When sites *require multiple* identifiers, they are joined with a plus (`+`). (For example, simple.com requires an email *and* phone number, so its `username.remind.accept` value is "email+phone".)
 
+## username.remind.captcha
+
+What kind of captcha (if any) is used to deter automated username reminders. See `password.reset.captcha`.
+
 ## register.url
 
 The URL of the page to create a new user account.
