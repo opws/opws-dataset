@@ -6,7 +6,6 @@ var glob = require('glob');
 var assert = require('assert');
 
 var documentedFields = new Object(null);
-
 (function populateDocumentedFields() {
   var $ = require('cheerio').load(
     require('marked')(fs.readFileSync('docs/fields.md','utf8')));
@@ -20,6 +19,7 @@ var documentedFields = new Object(null);
 })();
 
 function validateDocumentedFields(doc) {
+  var failures = [];
   function checkKeys(prefix, obj) {
     var keys = Object.keys(obj);
     for (var i=0; i < keys.length; i++) {
@@ -30,12 +30,14 @@ function validateDocumentedFields(doc) {
         && path != 'username.rules') {
         checkKeys(path + '.', val);
       } else {
-        if (!documentedFields[path])
-          throw new Error(path + ' is not documented');
+        if (!documentedFields[path]) failures.push(path);
       }
     }
   }
   checkKeys('', doc);
+  assert(failures.length == 0, failures.length == 1?
+    failures[0] + ' is not documented' :
+    'The following fields are not documented: \n- ' + failures.join('\n- '));
 }
 
 describe('YAML file', function() {
