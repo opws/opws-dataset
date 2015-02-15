@@ -97,6 +97,12 @@ Whether the reset token works as login credentials. Valid values:
 - "after" (the token logs you in after resetting the password)
 - "no" (the token does not log you in)
 
+## password.reset.token.reset
+
+In the rare case that a site's password reset mechanism is something like a temporary password, this value denotes whether you are then *required* to reset the password. Valid values:
+
+- "enforced" (you must reset the password before you can do anything else)
+
 ## password.change.url
 
 The URL of the "change password" page for the logged-in user. If the site doesn't have a URL for the logged-in user, this will be in a space-and-plus-separated string denoting where to insert the variable components (such as "username").
