@@ -9,6 +9,13 @@ password:
   reset:
     url: https://secure.mashery.com/member/lost/
     accept: email+username
-  change:
+username:
+  remind:
+    url: https://secure.mashery.com/member/lost-username/
+    accept: email
+register:
+  url: http://developer.mashery.com/member/register
+login:
+  url: https://secure.mashery.com/login/
 https: partial
 notes: User management is on the "secure" subdomain, the only one that supports HTTPS.
