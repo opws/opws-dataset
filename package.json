@@ -18,5 +18,9 @@
     "queue-async": "~1.0.4",
     "glob": "~3.2.7",
     "mocha": "~1.16.2"
+  },
+  "dependencies": {
+    "marked": "^0.3.3",
+    "cheerio": "^0.18.0"
   }
 }
