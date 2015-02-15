@@ -5,14 +5,17 @@ var fs = require('fs');
 var glob = require('glob');
 var assert = require('assert');
 
-var documentedFields = [];
+var documentedFields = new Object(null);
 
 (function populateDocumentedFields() {
   var $ = require('cheerio').load(
     require('marked')(fs.readFileSync('docs/fields.md','utf8')));
 
   $('h2').each(function(i, elem) {
-    [].push.apply(documentedFields, $(elem).text().split(/,? +/g));
+    var fields = $(elem).text().split(/,? +/g);
+    for (var i = 0; i < fields.length; i++) {
+      documentedFields[fields[i]] = true;
+    }
   });
 })();
 
@@ -27,7 +30,7 @@ function validateDocumentedFields(doc) {
         && path != 'username.rules') {
         checkKeys(path + '.', val);
       } else {
-        if (documentedFields.indexOf(path) == -1)
+        if (!documentedFields[path])
           throw new Error(path + ' is not documented');
       }
     }
