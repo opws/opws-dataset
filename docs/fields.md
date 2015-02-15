@@ -164,6 +164,14 @@ Tokens:
 
 The URL of a page to view and revoke logged-in sessions.
 
+## api.key.retrieve.url
+
+The URL of a page to retrieve API key(s).
+
+## report.breach.url
+
+The URL of a page to report security breaches to.
+
 ## https
 
 A string containing space-separated tokens (usually only one) describing the site's HTTPS support. Known values:
