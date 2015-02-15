@@ -18,7 +18,7 @@ var documentedFields = new Object(null);
   });
 })();
 
-function validateDocumentedFields(doc) {
+function validateDocumentedFields(doc,done) {
   var failures = [];
   function checkKeys(prefix, obj) {
     var keys = Object.keys(obj);
@@ -35,9 +35,10 @@ function validateDocumentedFields(doc) {
     }
   }
   checkKeys('', doc);
-  assert(failures.length == 0, failures.length == 1?
+  if (failures.length != 0) done(new Error(failures.length == 1?
     failures[0] + ' is not documented' :
-    'The following fields are not documented: \n- ' + failures.join('\n- '));
+    'The following fields are not documented: \n- ' + failures.join('\n- ')));
+    else done();
 }
 
 describe('YAML file', function() {
@@ -53,8 +54,8 @@ describe('YAML file', function() {
         function(done) {
           fs.readFile(filename, 'utf8', function(err, content) {
             if (err) return done(err);
-            validateDocumentedFields(yaml.load(content, {filename: filename}));
-            done();
+            validateDocumentedFields(yaml.load(content, {filename: filename}),
+            done);
           });
       });
 
