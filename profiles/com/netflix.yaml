@@ -4,9 +4,9 @@ password:
     length:
       min: 4
       max: 60
-    reset:
-      url: https://www.netflix.com/LoginHelp
-      accept: email firstname+lastname+creditcard
-    change:
-      url: https://www.netflix.com/YourAccount#updateProfile
+  reset:
+    url: https://www.netflix.com/LoginHelp
+    accept: email firstname+lastname+creditcard
+  change:
+    url: https://www.netflix.com/YourAccount#updateProfile
 https: enforced
