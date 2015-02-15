@@ -8,7 +8,8 @@ password:
     url: https://bank.simple.com/forgot-password
     accept: username+phone email+phone
     response: token
-    valid: 30m
+    token:
+      expires: 30m
     notes: Sends tokens via email and SMS, both are needed.
   change:
     url: https://bank.simple.com/activity/preferences/account-settings
