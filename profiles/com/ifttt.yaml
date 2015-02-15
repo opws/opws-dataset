@@ -3,5 +3,6 @@ password:
   reset:
     url: https://ifttt.com/forgot
     accept: email
-  change: https://ifttt.com/settings/password
+  change:
+    url: https://ifttt.com/settings/password
 https: enforced
