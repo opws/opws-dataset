@@ -142,6 +142,14 @@ The URL of the page to create a new user account.
 
 The URL of the page to log in, as a user.
 
+## login.usability
+
+A space-separated token string describing how the password set UI differs from traditional blind-entry.
+
+Tokens:
+
+- "showable": Password can be toggled to plaintext.
+
 ## sessions.manage.url
 
 The URL of a page to view and revoke logged-in sessions.
