@@ -122,6 +122,12 @@ Rules on the format of usernames. See `password.rules`.
 
 The URL of the page to send a username reminder to an email address (when separate from password resetting).
 
+## username.remind.accept
+
+A space-separated token string of what identifiers the site needs to send a username reminder. (Usually just "email".)
+
+When sites *require multiple* identifiers, they are joined with a plus (`+`). (For example, simple.com requires an email *and* phone number, so its `username.remind.accept` value is "email+phone".)
+
 ## register.url
 
 The URL of the page to create a new user account.
