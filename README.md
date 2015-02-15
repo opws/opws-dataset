@@ -2,7 +2,7 @@
 
 Profiles of the security support and user account systems of various sites.
 
-[![Test Status](https://img.shields.io/travis/opensets/domainprofiles.svg?style=flat&label=tests)](https://travis-ci.org/opensets/domainprofiles) [![Gitter Chat](https://img.shields.io/badge/gitter-discuss-1dce73.svg?style=flat)](https://gitter.im/opensets/domainprofiles)
+[![Test Status](https://img.shields.io/travis/opensets/domainprofiles.svg?style=flat&label=tests)](https://travis-ci.org/opensets/domainprofiles) [![Gitter Chat](https://img.shields.io/badge/gitter-discuss_%E2%86%92-1dce73.svg?style=flat)](https://gitter.im/opensets/domainprofiles)
 
 ## Where you would use this
 
