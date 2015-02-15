@@ -89,6 +89,12 @@ A space-separated token string of data the reset mechanism responds with (usuall
 
 How long after issuance the reset token is valid for, as a human-abbreviated string ("24h" is common).
 
+## password.reset.token.expects
+
+Space-separated string of things the password reset page expects before resetting the password. Tokens:
+
+- "requester-ip" (IP requesting the page must be the same IP the email was requested from)
+
 ## password.reset.token.login
 
 Whether the reset token works as login credentials. Valid values:
