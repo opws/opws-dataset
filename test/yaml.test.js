@@ -30,7 +30,7 @@ function validateDocumentedFields(doc,done) {
         && path != 'username.rules') {
         checkKeys(path + '.', val);
       } else {
-        if (!documentedFields[path]) failures.push(path);
+        if (!documentedFields[path] && key != 'notes') failures.push(path);
       }
     }
   }
