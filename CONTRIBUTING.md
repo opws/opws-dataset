@@ -1,6 +1,11 @@
-Profiles should have this information at the very least (see [README.md][] for details):
+Any new domain profiles should be in the appropriate location, as described in
+the "Layout" section of [README.md][].
+
+Profiles should have this information at the very least (see [docs/fields.md][]
+for details):
 
 [README.md]: README.md
+[docs/fields.md]: docs/fields.md
 
 ```yaml
 name: Site Name Here # How would you refer to this site in a sentence?
