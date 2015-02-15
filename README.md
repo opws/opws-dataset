@@ -2,6 +2,8 @@
 
 Profiles of the security support and user account systems of various sites.
 
+[![Test Status](https://img.shields.io/travis/opensets/domainprofiles.svg?style=flat&label=tests)](https://travis-ci.org/opensets/domainprofiles)
+
 ## Where you would use this
 
 On sites or in browser extensions that deal with user accounts across sites. For instance, this was originally curated as a component of [blot.pw](http://blot.pw).
