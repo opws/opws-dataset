@@ -11,6 +11,7 @@ password:
     accept: username domain
   change:
     url: https://www.namesilo.com/account_maintenance.php
+    reauth: password
 questions:
 - required: 1
   options:
