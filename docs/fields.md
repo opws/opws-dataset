@@ -226,6 +226,6 @@ A service or software package the site is based on, as a token-esque name. May b
 
 An alternate domain used as the account provider (for instance, Google services use google.com). Unless a field is specified here (for instance, https), values should be inherited from the specified domain, and records to do with account providers should be fetched according to the used domain.
 
-## reviewed
+## reviewed.date
 
 The date and time that the profiled data was last reviewed for accuracy.
