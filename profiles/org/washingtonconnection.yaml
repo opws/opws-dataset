@@ -35,7 +35,7 @@ register:
 login:
   url: https://www.washingtonconnection.org/authservice/login.go
 questions:
-- require: 1
+- required: 1
   options:
   - What was your first teachers last name?
   - What city were you born in?
