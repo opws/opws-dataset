@@ -218,6 +218,8 @@ Note that factors documented in other fields that should raise red flags, such a
 
 ## platform
 
+*(The structure of this field is currently under review, see [issue #5](https://github.com/opensets/domainprofiles/issues/5).)*
+
 A service or software package the site is based on, as a token-esque name. May be used in the future to provide defaults based on known characteristics and patterns of various platforms (similar to "use").
 
 ## use
