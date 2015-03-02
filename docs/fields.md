@@ -126,7 +126,7 @@ Tokens:
 - "single": Does not require password to be entered twice.
 - "showable": Password can be toggled to plaintext.
 
-## username.rules
+## username.rules.\*
 
 Rules on the format of usernames. See `password.rules`.
 
@@ -203,9 +203,11 @@ List of security questions. Each item that is a string should be interpreted as 
 
 List of fields included in profiles on that site. (Currently not widely used.)
 
-## notes
+## notes, \*.notes
 
 Notes on quirks of the site that make it difficult to map to the standard format (usually a URL scheme that doesn't permit easy linking).
+
+Note that nearly any object may have a "notes" field alongside its other documented fields.
 
 ## redflags
 

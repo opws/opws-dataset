@@ -5,18 +5,22 @@ var fs = require('fs');
 var glob = require('glob');
 var assert = require('assert');
 
-var documentedFields = new Object(null);
+// start documentedFields as an array of regex components
+var documentedFields = [];
 (function populateDocumentedFields() {
   var $ = require('cheerio').load(
     require('marked')(fs.readFileSync('docs/fields.md','utf8')));
 
   $('h2').each(function(i, elem) {
-    var fields = $(elem).text().split(/,? +/g);
-    for (var i = 0; i < fields.length; i++) {
-      documentedFields[fields[i]] = true;
-    }
+    // Push each header's component of the overall regex
+    documentedFields.push($(elem).text()
+      .replace(/\./g,'\\.')
+      .replace(/[\*]/g,'.*')
+      .replace(/,? +/g,'|'));
   });
 })();
+// Convert documentedFields to a regular expression
+documentedFields = new RegExp('^('+documentedFields.join('|')+')$');
 
 function validateDocumentedFields(doc,done) {
   var failures = [];
@@ -26,11 +30,16 @@ function validateDocumentedFields(doc,done) {
       var key = keys[i];
       var path = prefix + key;
       var val = obj[key];
-      if (typeof(val) == 'object' && val != null && !Array.isArray(val)
-        && path != 'username.rules') {
+
+      // if this is an object (that isn't a value like null or an array)
+      if (typeof(val) == 'object'
+        && val != null && !Array.isArray(val)) {
+        // recurse into it
         checkKeys(path + '.', val);
+      // if this is one of our end value types
       } else {
-        if (!documentedFields[path] && key != 'notes') failures.push(path);
+        // if it's not documented, list it as unrecognized
+        if (!documentedFields.test(path)) failures.push(path);
       }
     }
   }
