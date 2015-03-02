@@ -38,10 +38,10 @@ function validateDocumentedFields(doc,done) {
       var val = obj[key];
 
       // if this is one of the types we expect to be documented,
-      // and there's no heading for a section documenting it
-      if (isLeafType(val) && !documentedFields.test(path)) {
-        //note that it was a failure
-        failures.push(path);
+      if (isLeafType(val)) {
+        // if there's no heading for a section documenting it,
+        // note that it was a failure to document
+        if(!documentedFields.test(path)) failures.push(path);
       // otherwise, if this is an object
       } else if (typeof(val) == 'object') {
         // recurse into it
