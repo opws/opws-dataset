@@ -15,24 +15,33 @@ password:
     response:
       sender: donotreply@odesk.com
       body: url
+    token:
+      expires: 1h
+      expects: question-answer
+      login: no
   change:
     url: https://www.odesk.com/UserSettings/change-password
     reauth: password
+    notes: >
+      Security question answer required to authorize account changes from new
+      machine.
 questions:
-- Your mother's maiden name
-- Your first pet's name
-- The name of your elementary school
-- Your elementary school mascot
-- Your best friend's nickname
-- Your favorite sports team
-- Your favorite writer
-- Your favorite actor
-- Your favorite singer
-- Your favorite song
-- The name of the street you grew up on
-- Make and model of your first car
-- The city where you first met your spouse
-- Other...
+- required: 1
+  options:
+  - Your mother's maiden name
+  - Your first pet's name
+  - The name of your elementary school
+  - Your elementary school mascot
+  - Your best friend's nickname
+  - Your favorite sports team
+  - Your favorite writer
+  - Your favorite actor
+  - Your favorite singer
+  - Your favorite song
+  - The name of the street you grew up on
+  - Make and model of your first car
+  - The city where you first met your spouse
+  - Other...
 https: enforced
 redflags:
 - Password entry in account creation does not enforce length limit.
