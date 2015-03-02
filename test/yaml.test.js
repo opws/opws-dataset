@@ -33,7 +33,7 @@ function validateDocumentedFields(doc,done) {
 
       // if this is an object (that isn't a value like null or an array)
       if (typeof(val) == 'object'
-        && val != null && !Array.isArray(val)) {
+        && val != null && !Array.isArray(val) && !(val instanceof Date)) {
         // recurse into it
         checkKeys(path + '.', val);
       // if this is one of our end value types
