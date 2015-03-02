@@ -6,7 +6,9 @@ password:
   reset:
     url: https://billing.condointernet.net/pwreset.php
     accept: email
-    response: token
+    response:
+      sender: billing@condointernet.net
+      body: url
   change:
     url: https://billing.condointernet.net/clientarea.php?action=changepw
     reauth: password

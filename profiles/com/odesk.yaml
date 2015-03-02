@@ -12,7 +12,9 @@ password:
     url: https://www.odesk.com/reset/password
     accept: email
     captcha: yes
-    response: token
+    response:
+      sender: donotreply@odesk.com
+      body: url
   change:
     url: https://www.odesk.com/UserSettings/change-password
     reauth: password

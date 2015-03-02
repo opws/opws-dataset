@@ -76,7 +76,11 @@ Known captchas:
 - botdetect (see http://captcha.com/captcha-examples.html) - when possible, the specific style in use is listed instead:
   - botdetect-vertigo
 
-## password.reset.response
+## password.reset.response.sender
+
+What email address the password reset response comes from.
+
+## password.reset.response.body
 
 A space-separated token string of data the reset mechanism responds with (usually via email):
 

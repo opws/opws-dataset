@@ -8,7 +8,8 @@ password:
   reset:
     url: https://github.com/password_reset
     accept: email
-    response: url
+    response:
+      body: url
     token:
       expires: 24h
       login: no

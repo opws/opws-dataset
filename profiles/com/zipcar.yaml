@@ -10,5 +10,6 @@ password:
   reset:
     url: https://members.zipcar.com/register/forgot-password
     accept: email
-    response: username token
+    response:
+      body: username token
 https: partial

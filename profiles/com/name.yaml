@@ -11,7 +11,8 @@ password:
   reset:
     url: https://www.name.com/tools/get_password
     accept: domain username
-    response: url username requester-ip
+    response:
+      body: url username requester-ip
     token:
       expires: 24h
       expects: requester-ip

@@ -13,7 +13,8 @@ password:
     url: https://idp.godaddy.com/Account/AccountRetrieval.aspx
     accept: username+email accountno+email
     captcha: botdetect-vertigo
-    response: link token
+    response:
+      body: link token
     token:
       expires: 2h
       login: no

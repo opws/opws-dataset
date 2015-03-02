@@ -4,7 +4,9 @@ password:
     url: https://www.wibit.net/forgotPassword
     accept: email
     captcha: yes
-    response: temp
+    response:
+      sender: no-reply@wibit.net
+      body: temp
   change:
     url: https://www.wibit.net/myAccount
 https: enforced

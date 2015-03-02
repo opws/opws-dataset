@@ -7,7 +7,8 @@ password:
   reset:
     url: http://www.guru.com/forgotsignin.aspx
     accept: email
-    response: username link
+    response:
+      body: username link
     token:
       login: no
   change:

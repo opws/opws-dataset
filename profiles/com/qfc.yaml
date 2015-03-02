@@ -10,7 +10,8 @@ password:
   reset:
     url: https://www.qfc.com/forgotPassword
     accept: email
-    response: url link
+    response:
+      body: url link
     token:
       expires: 24h
       login: no

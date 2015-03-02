@@ -7,7 +7,8 @@ password:
   reset:
     url: http://www.gog.com/#reset_holder
     accept: email
-    response: token
+    response:
+      body: token
   change:
     url: https://secure.gog.com/account/settings
     reauth: password

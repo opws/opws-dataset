@@ -7,7 +7,8 @@ password:
   reset:
     url: http://www.okcupid.com/lostpassword
     accept: username email
-    response: token
+    response:
+      body: token
   change:
     url: https://www.okcupid.com/settings
     reauth: password

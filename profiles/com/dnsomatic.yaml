@@ -6,7 +6,8 @@ password:
   reset:
     url: https://www.dnsomatic.com/account/#pwdreset
     accept: email
-    response: token
+    response:
+      body: url
   change:
     url: https://www.dnsomatic.com/account/
     reauth: no

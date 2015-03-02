@@ -6,7 +6,8 @@ password:
   reset:
     url: https://www.cloudflare.com/forgot-password
     accept: email
-    response: token
+    response:
+      body: url token
   change:
     url: https://www.cloudflare.com/my-account
     reauth: password

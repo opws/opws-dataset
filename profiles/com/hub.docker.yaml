@@ -6,7 +6,8 @@ password:
   reset:
     url: https://hub.docker.com/account/forgot-password/
     accept: email
-    response: url
+    response:
+      body: url
     token:
       login: no
   change:

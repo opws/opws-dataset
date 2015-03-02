@@ -3,7 +3,8 @@ password:
   reset:
     url: https://commons.wikimedia.org/wiki/Special:PasswordReset
     accept: username email
-    response: temp
+    response:
+      body: temp
     token:
       expires: 7d
       login: yes

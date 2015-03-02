@@ -7,7 +7,8 @@ password:
   reset:
     url: https://my.gocurb.com/signin#resetPassword
     accept: email
-    response: link
+    response:
+      body: link
   change:
     url: https://my.gocurb.com/myaccount#password
     reauth: no

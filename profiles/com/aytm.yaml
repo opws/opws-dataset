@@ -6,7 +6,8 @@ password:
   reset:
     url: https://aytm.com/users/restore-password
     accept: email
-    response: link url
+    response:
+      body: link url
   change:
     url: https://aytm.com/users/account-setting?current_tab=change_password
 https: partial downgraded
