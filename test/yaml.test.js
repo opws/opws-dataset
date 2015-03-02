@@ -22,6 +22,12 @@ var documentedFields = [];
 // Convert documentedFields to a regular expression
 documentedFields = new RegExp('^('+documentedFields.join('|')+')$');
 
+function isLeafType(val) {
+  return typeof val == 'string' || typeof val == 'boolean' ||
+    typeof val == 'number' || val == null || Array.isArray(val) ||
+    val instanceof Date;
+}
+
 function validateDocumentedFields(doc,done) {
   var failures = [];
   function checkKeys(prefix, obj) {
@@ -31,15 +37,15 @@ function validateDocumentedFields(doc,done) {
       var path = prefix + key;
       var val = obj[key];
 
-      // if this is an object (that isn't a value like null or an array)
-      if (typeof(val) == 'object'
-        && val != null && !Array.isArray(val) && !(val instanceof Date)) {
+      // if this is one of the types we expect to be documented,
+      // and there's no heading for a section documenting it
+      if (isLeafType(val) && !documentedFields.test(path)) {
+        //note that it was a failure
+        failures.push(path);
+      // otherwise, if this is an object
+      } else if (typeof(val) == 'object') {
         // recurse into it
         checkKeys(path + '.', val);
-      // if this is one of our end value types
-      } else {
-        // if it's not documented, list it as unrecognized
-        if (!documentedFields.test(path)) failures.push(path);
       }
     }
   }
