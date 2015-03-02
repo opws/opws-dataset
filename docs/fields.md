@@ -152,6 +152,15 @@ What kind of captcha (if any) is used to deter automated username reminders. See
 
 The URL of the page to create a new user account.
 
+## register.usability
+
+A space-separated token string describing how the password set UI differs from a form with a double-blind password field.
+
+Tokens:
+
+- "emailonce": requires email address to be entered once.
+- "emailtwice": requires email address to be entered twice.
+
 ## login.url
 
 The URL of the page to log in, as a user.
@@ -163,6 +172,10 @@ A space-separated token string describing how the password set UI differs from t
 Tokens:
 
 - "showable": Password can be toggled to plaintext.
+
+## login.thirdparty
+
+An array of domains for third party credentials accepted for login.
 
 ## sessions.manage.url
 
