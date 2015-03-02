@@ -3,7 +3,6 @@ password:
   rules:
     length:
       min: 4
-      max: 
   change:
     url: https://members.zipcar.com/user/password-update
     reauth: password
