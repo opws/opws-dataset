@@ -1,0 +1,22 @@
+name: IMDb
+password:
+  rules:
+    length:
+      min: 8
+  reset:
+    url: https://secure.imdb.com/register-imdb/forgotten
+    accept: email
+    response:
+      sender: do-not-reply-here@imdb.com
+      body: url
+register:
+  url: https://secure.imdb.com/register-imdb/register
+  usability: emailtwice
+login:
+  url: https://secure.imdb.com/register-imdb/login
+  thirdparty:
+  - amazon.com
+  - facebook.com
+  - google.com
+reviewed:
+  date: 2015-03-01T22:47:00Z
