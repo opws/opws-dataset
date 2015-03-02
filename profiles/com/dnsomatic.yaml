@@ -8,6 +8,8 @@ password:
     accept: email
     response:
       body: url
+    token:
+      expires: 3h
   change:
     url: https://www.dnsomatic.com/account/
     reauth: no
