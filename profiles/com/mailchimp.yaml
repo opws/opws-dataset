@@ -1,0 +1,30 @@
+name: MailChimp
+password:
+  rules:
+    length:
+      min: 8
+      max: 50
+    contain:
+    - lowers: 1
+    - uppers: 1
+    - numbers: 1
+    - specials: 1
+  reset:
+    url: https://login.mailchimp.com/login/forgot
+    accept: username
+    captcha: recaptcha
+    response:
+      sender: confirm@mailchimp.com
+      body: username link
+    token:
+      login: no
+  change:
+    url: https://admin.mailchimp.com/account/profile/#security-form
+    reauth: password
+register:
+  url: https://login.mailchimp.com/signup/
+login:
+  url: https://login.mailchimp.com/
+https: enforced
+reviewed:
+  date: 2015-03-23T16:10:18Z
