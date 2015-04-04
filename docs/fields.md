@@ -37,6 +37,7 @@ Character class names used:
 - nonletters
 - specials (when sites list "special characters": assumed to be non-alphanumeric)
 - punctuation (likely contains all non-alphanumeric-or-space characters)
+- symbols (probably the same as punctuation)
 - dot (".")
 - hyphen ("-")
 - underscore ("_")
@@ -85,6 +86,8 @@ What email address the password reset response comes from.
 A space-separated token string of data the reset mechanism responds with (usually via email):
 
 - username: Your username on the site.
+- firstname: A "first name" set on your profile.
+- lastname: A "last name" set on yuor profile.
 - url: a URL (possibly linked) to the page to reset the password.
 - link: A link (without the URL visible) to reset the password.
 - token: A token that can be typed on a page (may also be part of a link/URL) to bring you to the reset screen.
