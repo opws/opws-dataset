@@ -168,6 +168,10 @@ Tokens:
 
 The URL of the page to log in, as a user.
 
+## login.persist.checked
+
+If there is a checkbox to remain logged in, what the default status of that check box is.
+
 ## login.usability
 
 A space-separated token string describing how the password set UI differs from traditional blind-entry.
