@@ -7,8 +7,7 @@ password:
       body: temp
     token:
       expires: 7d
-      login: yes
-      reset: enforced
+      login: after
   change:
     url: https://commons.wikimedia.org/wiki/Special:ChangePassword
 https: optional
