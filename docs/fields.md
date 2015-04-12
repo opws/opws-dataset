@@ -91,6 +91,7 @@ A space-separated token string of data the reset mechanism responds with (usuall
 - url: a URL (possibly linked) to the page to reset the password.
 - link: A link (without the URL visible) to reset the password.
 - token: A token that can be typed on a page (may also be part of a link/URL) to bring you to the reset screen.
+- temp: A temporary password to use for logging in.
 
 ## password.reset.token.expires
 
@@ -110,11 +111,7 @@ Whether the reset token works as login credentials. Valid values:
 - "after" (the token logs you in after resetting the password)
 - "no" (the token does not log you in)
 
-## password.reset.token.reset
-
-In the rare case that a site's password reset mechanism is something like a temporary password, this value denotes whether you are then *required* to reset the password. Valid values:
-
-- "enforced" (you must reset the password before you can do anything else)
+For sites that use a temporary password as the reset token, a value of "before" implies you may opt not to reset the password (using the password logs you in and you can navigate away), while a value of "after" implies you are *required* to reset the password.
 
 ## password.change.url
 
