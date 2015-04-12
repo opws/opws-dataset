@@ -87,7 +87,7 @@ A space-separated token string of data the reset mechanism responds with (usuall
 
 - username: Your username on the site.
 - firstname: A "first name" set on your profile.
-- lastname: A "last name" set on yuor profile.
+- lastname: A "last name" set on your profile.
 - url: a URL (possibly linked) to the page to reset the password.
 - link: A link (without the URL visible) to reset the password.
 - token: A token that can be typed on a page (may also be part of a link/URL) to bring you to the reset screen.
