@@ -6,6 +6,17 @@ password:
       max: 100
     blacklist:
     - spaces
+  reset:
+    url: https://www.dynadot.com/forgot.html
+    accept: email email+username
+    response:
+      sender: accounts@dynadot.com
+      body: link
+    token:
+      login: no
+  change:
+    url: https://www.dynadot.com/account/info/settings.html
+    reauth: password
 username:
   rules:
     length:
@@ -21,3 +32,5 @@ register:
 login:
   url: https://www.dynadot.com/account/signin.html
 https: enforced
+reviewed:
+  date: 2015-04-12T07:21:45.766Z
