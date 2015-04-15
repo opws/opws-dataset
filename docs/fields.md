@@ -152,6 +152,10 @@ What kind of captcha (if any) is used to deter automated username reminders. See
 
 The URL of the page to create a new user account.
 
+## register.captcha
+
+What kind of captcha (if any) is used to deter automated user registration. See `password.reset.captcha`.
+
 ## register.usability
 
 A space-separated token string describing how the password set UI differs from a form with a double-blind password field.
