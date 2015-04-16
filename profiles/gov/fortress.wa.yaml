@@ -1,0 +1,53 @@
+name: Washington State Department of Revenue E-file
+password:
+  rules:
+    length:
+      min: 10
+      max: 32
+    contain:
+    - letters: 1
+    - numbers: 1
+    - exclaim: 1
+      at: 1
+      hash: 1
+      dollar: 1
+      percent: 1
+      caret: 1
+      ampersand: 1
+      asterisk: 1
+      question: 1
+      underscore: 1
+      tilde: 1
+  reset:
+    url: https://fortress.wa.gov/dor/efile/FortressLogon/RetrievePassword.aspx
+    accept: email
+    captcha: yes
+  change:
+    url: https://fortress.wa.gov/dor/efile/FortressLogon/ChangePassword.aspx
+    reauth: password
+username:
+  rules:
+    length:
+      min: 8
+  remind:
+    url: https://fortress.wa.gov/dor/efile/FortressLogon/RetrieveLogon.aspx
+    accept: email
+    captcha: yes
+login:
+  url: https://fortress.wa.gov/dor/efile/FortressLogon/Logon.aspx
+register:
+  url: https://fortress.wa.gov/dor/efile/FortressLogon/UserRegistration.aspx
+  captcha: yes
+questions:
+- required: 1
+  options:
+  - What is your mother's maiden name?
+  - What city were you born in?
+  - What is the name of the street you grew up on?
+  - What is your mother's birthday?
+  - What is your father's birthday?
+  - What is the name of your favorite pet?
+  - Other
+https: enforced
+reviewed:
+  date: 2015-04-15T20:56:20.616Z
