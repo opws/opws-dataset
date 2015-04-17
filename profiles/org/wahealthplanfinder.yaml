@@ -1,0 +1,62 @@
+name: Washington Healthplanfinder
+password:
+  rules:
+    length:
+      min: 8
+      max: 20
+    contain:
+    - uppers: 1
+    - lowers: 1
+    - numbers: 1
+    - exclaim: 1
+      dollar: 1
+      hash: 1
+      caret: 1
+    blacklist:
+    - spaces
+  reset:
+    url: https://www.wahealthplanfinder.org/HBEWeb/Annon_DisplayForgotPasswordGetUserName.action
+    accept: username
+  change:
+    url: https://www.wahealthplanfinder.org/HBEWeb/DisplayPasswordChangePassword.action
+    reauth: password
+username:
+  rules:
+    length:
+      min: 6
+      max: 20
+    contain:
+    - letters: 1
+    - numbers: 1
+    whitelist:
+    - letters
+    - numbers
+    - dot
+    - underscore
+    - dollar
+  remind:
+    url: https://www.wahealthplanfinder.org/HBEWeb/Annon_DisplayForgotUserName.action
+    accept: email
+register:
+  url: https://www.wahealthplanfinder.org/HBEWeb/Annon_DisplayCreateAccountLanding.action
+  usability: emailtwice
+questions:
+- required: 3
+  notes:
+  - en: answers must be at least 2 characters and different for each question
+  - en: answers may not include special characters or more than one space between words
+  options:
+  - What is your oldest sibling's middle name?
+  - What was the first name of your childhood best friend?
+  - In what city were you born?
+  - What was the make of your first car?
+  - What was the name of the company that you worked at for your first job?
+  - What is your favorite pet's name?
+  - What is your favorite author's last name?
+  - What is the month and year of your oldest sibling's birthday? (e.g., January 1970)
+  - What was the name of your high school?
+  - What was the name of your elementary school?
+  - In which town was your first job?
+https: enforced
+reviewed:
+  date: 2015-04-16T22:57:22.648Z
