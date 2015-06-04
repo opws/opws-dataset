@@ -49,3 +49,8 @@ spaces and plusses (for concatenation).
 
 See [docs/fields.md](docs/fields.md) for documentation on the format used to
 describe the profiles for each domain.
+
+## License
+
+This database is licensed under the [Open Database License (ODbL) version 1.0](http://opendatacommons.org/licenses/odbl/1.0/). See
+[LICENSE.md](LICENSE.md) for more information.
