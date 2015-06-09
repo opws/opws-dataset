@@ -1,0 +1,22 @@
+name: Pottermore Shop
+password:
+  rules:
+    length:
+      min: 6
+    contain:
+    - numbers: 1
+    - uppers: 1
+    - lowers: 1
+  reset:
+    url: https://shop.pottermore.com/passwordrecovery
+    accept: email
+  change:
+    url: https://shop.pottermore.com/customer/info#ChangePassword
+    reauth: password
+register:
+  url: https://shop.pottermore.com/register
+login:
+  url: https://shop.pottermore.com/login
+https: enforced
+reviewed:
+  date: 2015-06-09T19:27:21Z
