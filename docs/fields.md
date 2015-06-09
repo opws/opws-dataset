@@ -121,6 +121,16 @@ The URL of the "change password" page for the logged-in user. If the site doesn'
 
 "no" if users can change password without reauthenticating, "password" if they have to enter the old password.
 
+## password.change.sessions.invalidate
+
+Whether changing your password invalidates sessions (logs you out), forcing you to log back in with the new password.
+
+Values:
+
+- "yes": invalidates session that changed password, probably all sessions
+- "all": demonstrably invalidates all sessions
+- "no": doesn't log you out, the assumed default
+
 ## password.change.usability
 
 A space-separated token string describing how the password set UI differs from double-blind-entry.
