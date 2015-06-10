@@ -38,6 +38,7 @@ Character class names used:
 - specials (when sites list "special characters": assumed to be non-alphanumeric)
 - punctuation (likely contains all non-alphanumeric-or-space characters)
 - symbols (probably the same as punctuation)
+- nonspaces (anything that isn't whitespace)
 - dot (".")
 - hyphen ("-")
 - underscore ("_")
