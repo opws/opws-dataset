@@ -5,7 +5,7 @@ Profiles of the security support and user account systems of various sites.
 [![Test Status](https://img.shields.io/circleci/project/opensets/domainprofiles/master.svg?style=flat&label=tests)][tests]
 [![Gitter Chat](https://img.shields.io/badge/gitter-discuss_%E2%86%92-1dce73.svg?style=flat)][gitter]
 
-[circleci]: https://circleci.com/gh/opensets/domainprofiles/tree/master
+[tests]: https://circleci.com/gh/opensets/domainprofiles/tree/master
 [gitter]: https://gitter.im/opensets/domainprofiles
 
 ## Where you would use this
