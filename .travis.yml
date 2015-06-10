@@ -1,9 +1,0 @@
-language: node_js
-node_js:
-  - "0.10"
-notifications:
-  webhooks:
-    urls:
-      - https://webhooks.gitter.im/e/781758d4f5aed1b47894
-    on_success: always
-    on_failure: always

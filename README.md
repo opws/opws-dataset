@@ -2,11 +2,15 @@
 
 Profiles of the security support and user account systems of various sites.
 
-[![Test Status](https://img.shields.io/travis/opensets/domainprofiles.svg?style=flat&label=tests)](https://travis-ci.org/opensets/domainprofiles)
-[![Gitter Chat](https://img.shields.io/badge/gitter-discuss_%E2%86%92-1dce73.svg?style=flat)](https://gitter.im/opensets/domainprofiles)
+[![Test Status](https://img.shields.io/circleci/project/opensets/domainprofiles/master.svg?style=flat&label=tests)][tests]
+[![Gitter Chat](https://img.shields.io/badge/gitter-discuss_%E2%86%92-1dce73.svg?style=flat)][gitter]
+
+[circleci]: https://circleci.com/gh/opensets/domainprofiles/tree/master
+[gitter]: https://gitter.im/opensets/domainprofiles
+
 ## Where you would use this
 
-On sites or in browser extensions that deal with user accounts across sites.
+On sites, or in browser extensions, that deal with user accounts across sites.
 For instance, this was originally curated as a component of
 [blot.pw](http://blot.pw).
 
@@ -52,5 +56,8 @@ describe the profiles for each domain.
 
 ## License
 
-This database is licensed under the [Open Database License (ODbL) version 1.0](http://opendatacommons.org/licenses/odbl/1.0/). See
-[LICENSE.md](LICENSE.md) for more information.
+This database is licensed under the
+[Open Database License (ODbL) version 1.0][odbl]. See [LICENSE.md](LICENSE.md)
+for more information.
+
+[odbl]: http://opendatacommons.org/licenses/odbl/1.0/
