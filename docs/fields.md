@@ -134,6 +134,8 @@ Values:
 
 ## password.change.usability
 
+*(The structure of `usability` fields is currently under review, see [issue #15](https://github.com/opensets/domainprofiles/issues/15).)*
+
 A space-separated token string describing how the password set UI differs from double-blind-entry.
 
 Tokens:
@@ -169,6 +171,8 @@ What kind of captcha (if any) is used to deter automated user registration. See 
 
 ## register.usability
 
+*(The structure of `usability` fields is currently under review, see [issue #15](https://github.com/opensets/domainprofiles/issues/15).)*
+
 A space-separated token string describing how the password set UI differs from a form with a double-blind password field.
 
 Tokens:
@@ -186,6 +190,8 @@ If there is a checkbox to remain logged in, what the default status of that chec
 
 ## login.usability
 
+*(The structure of `usability` fields is currently under review, see [issue #15](https://github.com/opensets/domainprofiles/issues/15).)*
+
 A space-separated token string describing how the password set UI differs from traditional blind-entry.
 
 Tokens:
@@ -193,6 +199,8 @@ Tokens:
 - "showable": Password can be toggled to plaintext.
 
 ## login.thirdparty
+
+*(The location of this field is currently under review, see [issue #31](https://github.com/opensets/domainprofiles/issues/31).)*
 
 An array of domains for third party credentials accepted for login.
 
