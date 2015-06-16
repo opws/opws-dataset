@@ -10,4 +10,12 @@ password:
       body: link url
   change:
     url: https://aytm.com/users/account-setting?current_tab=change_password
+register:
+  url: http://aytm.com/users/new
+  captcha: recaptcha
+  usability: single showable
+login:
+  url: http://aytm.com/login
 https: partial downgraded
+reviewed:
+  date: 2015-06-16T04:43:02.172Z
