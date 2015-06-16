@@ -9,7 +9,8 @@ password:
   change:
     url: https://slides.com/users/edit#user_password
     reauth: password
-    usability: single
+    usability:
+      password: single
   reset:
     url: https://slides.com/users/password/new
     accept: email

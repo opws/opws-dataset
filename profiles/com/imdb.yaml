@@ -11,7 +11,8 @@ password:
       body: url
 register:
   url: https://secure.imdb.com/register-imdb/register
-  usability: emailtwice
+  usability:
+    email: twice
 login:
   url: https://secure.imdb.com/register-imdb/login
 thirdparty:

@@ -14,10 +14,12 @@ password:
   change:
     url: https://www.guru.com/pro/modifyaccount.aspx?tab=3
     reauth: password
-    usability: showable # but not single - and only the first one
+    usability:
+      password: showable # but not single - and only the first one
 login:
   url: https://www.guru.com/login.aspx
-  usability: showable
+  usability:
+    password: showable
 register:
   url: https://www.guru.com/registeraccount.aspx
 https: enforced

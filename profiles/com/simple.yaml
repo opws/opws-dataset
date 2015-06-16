@@ -15,7 +15,8 @@ password:
     notes: Sends tokens via email and SMS, both are needed.
   change:
     url: https://bank.simple.com/activity/preferences/account-settings
-    usability: single showable
+    usability:
+      password: single showable
     reauth: no
 username:
   remind:

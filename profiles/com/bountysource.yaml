@@ -10,7 +10,8 @@ password:
   change:
     url: https://www.bountysource.com/settings/accounts
     reauth: password
-    usability: single
+    usability:
+      password: single
   reset:
     url: https://www.bountysource.com/signin
     response:

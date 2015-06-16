@@ -39,7 +39,8 @@ username:
     accept: email
 register:
   url: https://www.wahealthplanfinder.org/HBEWeb/Annon_DisplayCreateAccountLanding.action
-  usability: emailtwice
+  usability:
+    email: twice
 questions:
 - required: 3
   notes:

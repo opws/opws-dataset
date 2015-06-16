@@ -132,9 +132,7 @@ Values:
 - "all": demonstrably invalidates all sessions
 - "no": doesn't log you out, the assumed default
 
-## password.change.usability
-
-*(The structure of `usability` fields is currently under review, see [issue #15](https://github.com/opensets/domainprofiles/issues/15).)*
+## password.change.usability.password
 
 A space-separated token string describing how the password set UI differs from double-blind-entry.
 
@@ -169,16 +167,18 @@ The URL of the page to create a new user account.
 
 What kind of captcha (if any) is used to deter automated user registration. See `password.reset.captcha`.
 
-## register.usability
+## register.usability.email
 
-*(The structure of `usability` fields is currently under review, see [issue #15](https://github.com/opensets/domainprofiles/issues/15).)*
-
-A space-separated token string describing how the password set UI differs from a form with a double-blind password field.
+A space-separated token string describing how email address is specified in registration.
 
 Tokens:
 
-- "emailonce": requires email address to be entered once.
-- "emailtwice": requires email address to be entered twice.
+- "once": requires email address to be entered once.
+- "twice": requires email address to be entered twice.
+
+## register.usability.password
+
+A space-separated token string describing how the password set UI differs from double-blind-entry. See `password.change.usability.password`.
 
 ## login.url
 
@@ -188,11 +188,9 @@ The URL of the page to log in, as a user.
 
 If there is a checkbox to remain logged in, what the default status of that check box is.
 
-## login.usability
+## login.usability.password
 
-*(The structure of `usability` fields is currently under review, see [issue #15](https://github.com/opensets/domainprofiles/issues/15).)*
-
-A space-separated token string describing how the password set UI differs from traditional blind-entry.
+A space-separated token string describing how the password UI differs from traditional blind-entry.
 
 Tokens:
 

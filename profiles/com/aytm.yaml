@@ -13,7 +13,8 @@ password:
 register:
   url: http://aytm.com/users/new
   captcha: recaptcha
-  usability: single showable
+  usability:
+    password: single showable
 login:
   url: http://aytm.com/login
 https: partial downgraded
