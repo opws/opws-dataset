@@ -6,7 +6,21 @@ password:
   reset:
     url: https://assembly.com/users/password/new
     accept: email
+    response:
+      sender: notifications@assemblymail.com
+      body: link
   change:
-    url: https://assembly.com/settings
+    url: https://assembly.com/settings#account
     reauth: no
+redflags:
+- en: The change and reset password pages give the same response
+      whether the new password was accepted or not.
+register:
+  url: https://assembly.com/signup
+login:
+  url: https://assembly.com/login
+  thirdparty:
+  - facebook.com
 https: enforced
+reviewed:
+  date: 2015-06-16T03:24:51.697Z
