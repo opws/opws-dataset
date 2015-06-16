@@ -12,6 +12,6 @@ register:
   url: http://www.avclub.com/article/full-trailer-lifetimes-deadly-adoption-cranks-melo-220886
 login:
   url: http://www.avclub.com/login/
-https: unsupported
+https: mismatch
 reviewed:
   date: 2015-06-16T04:15:35.176Z
