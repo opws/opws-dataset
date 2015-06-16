@@ -1,18 +1,40 @@
 name: Bountysource
 password:
   rules:
+    length:
+      min: 8
+      max: 72 # effectively, because bcrypt
     contain:
     - letters: 1
     - numbers: 1
   change:
     url: https://www.bountysource.com/settings/accounts
+    reauth: password
+    usability: single
   reset:
-    notes: Reset can be triggered on either the signin page at
-      https://www.bountysource.com/signin or the accounts page once logged in.
+    url: https://www.bountysource.com/signin
+    response:
+      sender: support@bountysource.com
+      body: code url
+    token:
+      login: after
+    notes: 
+    - en: Enter email, then a "Forgot?" link will appear
+          by the password field.
+register:
+  url: https://www.bountysource.com/signin
+login:
+  url: https://www.bountysource.com/signin
+  thirdparty:
+  - github.com
+  - twitter.com
+  - facebook.com
 profile:
   fields:
-    - email
-    - city
-    - organization
-    - website
+  - email
+  - city
+  - organization
+  - website
 https: enforced
+reviewed:
+  date: 2015-06-16T06:51:48.026Z
