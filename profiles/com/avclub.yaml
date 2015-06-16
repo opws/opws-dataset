@@ -1,8 +1,17 @@
 name: The A.V. Club
 password:
+  rules:
+    length:
+      min: 1
   reset:
     url: http://www.avclub.com/users/reset_password/
     accept: email
   change:
     url: http://www.avclub.com/users/me/settings/
+register:
+  url: http://www.avclub.com/article/full-trailer-lifetimes-deadly-adoption-cranks-melo-220886
+login:
+  url: http://www.avclub.com/login/
 https: unsupported
+reviewed:
+  date: 2015-06-16T04:15:35.176Z
