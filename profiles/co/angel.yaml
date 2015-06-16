@@ -21,10 +21,12 @@ register:
   url: https://angel.co/join
 login:
   url: https://angel.co/login
-  thirdparty:
-  - twitter.com
-  - facebook.com
-  - linkedin.com
+thirdparty:
+  auth:
+    providers:
+    - twitter.com
+    - facebook.com
+    - linkedin.com
 https: enforced
 reviewed:
   date: 2015-06-09T22:24:40.201Z

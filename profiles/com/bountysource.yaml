@@ -18,17 +18,19 @@ password:
       body: code url
     token:
       login: after
-    notes: 
+    notes:
     - en: Enter email, then a "Forgot?" link will appear
           by the password field.
 register:
   url: https://www.bountysource.com/signin
 login:
   url: https://www.bountysource.com/signin
-  thirdparty:
-  - github.com
-  - twitter.com
-  - facebook.com
+thirdparty:
+  auth:
+    providers:
+    - github.com
+    - twitter.com
+    - facebook.com
 profile:
   fields:
   - email

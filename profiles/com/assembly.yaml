@@ -19,8 +19,10 @@ register:
   url: https://assembly.com/signup
 login:
   url: https://assembly.com/login
-  thirdparty:
-  - facebook.com
+thirdparty:
+  auth:
+    providers:
+    - facebook.com
 https: enforced
 reviewed:
   date: 2015-06-16T03:24:51.697Z

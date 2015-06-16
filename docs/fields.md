@@ -198,11 +198,9 @@ Tokens:
 
 - "showable": Password can be toggled to plaintext.
 
-## login.thirdparty
+## thirdparty.auth.providers
 
-*(The location of this field is currently under review, see [issue #31](https://github.com/opensets/domainprofiles/issues/31).)*
-
-An array of domains for third party credentials accepted for login.
+An array of domains for third party auth providers.
 
 ## sessions.manage.url
 
