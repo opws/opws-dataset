@@ -14,6 +14,8 @@ password:
     response:
       sender: do-not-reply@basecamp.com
       body: username link
+    token:
+      login: after
   change:
     url: https:// + user url + /identity/edit
     reauth: no
