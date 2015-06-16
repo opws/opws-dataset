@@ -112,7 +112,7 @@ Whether the reset token works as login credentials. Valid values:
 - "after" (the token logs you in after resetting the password)
 - "no" (the token does not log you in)
 
-For sites that use a temporary password as the reset token, a value of "before" implies you may opt not to reset the password (using the password logs you in and you can navigate away), while a value of "after" implies you are *required* to reset the password.
+A value of "before" implies you may opt not to reset the password (using the reset token logs you in and you can navigate away). For sites that use a temporary password as the reset token, a value of "after" implies you are *required* to reset the password after logging in with the temporary password.
 
 ## password.change.url
 
