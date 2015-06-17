@@ -1,8 +1,0 @@
-name: TweetDeck
-password:
-  reset:
-    url: https://tweetdeck.twitter.com/
-  notes: >
-    TweetDeck's web app allows you to reset your password from the login
-    screen or the Settings dialog. That is the only password change mechanism
-    TweetDeck offers.
