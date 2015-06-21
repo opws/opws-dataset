@@ -1,0 +1,24 @@
+name: Compose
+password:
+  rules:
+    length:
+      min: 8
+      max: 999
+  reset:
+    url: https://app.compose.io/users/password/new
+    accept: email
+    response:
+      sender: support@compose.io
+      body: url
+    token:
+      login: no
+  change:
+    url: https://app.compose.io/account
+    reauth: maybe
+register:
+  url: https://app.compose.io/signup/svelte
+login:
+  url: https://app.compose.io/
+https: enforced
+reviewed:
+  date: 2015-06-20T19:29:04.756Z
