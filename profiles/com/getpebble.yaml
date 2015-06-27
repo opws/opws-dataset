@@ -1,0 +1,23 @@
+name: Pebble
+password:
+  rules:
+    length:
+      min: 8
+      max: 128
+    contain:
+    - nonspaces: 1
+  reset:
+    url: https://auth.getpebble.com/users/password/new
+    accept: email
+  change:
+    url: https://auth.getpebble.com/users/edit
+    reauth: password
+register:
+  url: https://auth.getpebble.com/users/sign_up
+  usability:
+    email: twice
+login:
+  url: https://auth.getpebble.com/users/sign_in
+https: enforced
+reviewed:
+  date: 2015-06-27T19:31:00.308Z
