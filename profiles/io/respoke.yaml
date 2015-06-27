@@ -1,0 +1,18 @@
+name: Respoke
+password:
+  rules:
+    length:
+      min: 1
+  reset:
+    url: https://portal.respoke.io/#/password-reset
+    accept: email
+  change:
+    url: https://portal.respoke.io/#/account?section=Profile
+    reauth: no
+register:
+  url: https://portal.respoke.io/#/signup
+login:
+  url: https://portal.respoke.io/#/login
+https: enforced
+reviewed:
+  date: 2015-06-27T20:36:28.772Z
