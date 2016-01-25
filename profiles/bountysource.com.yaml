@@ -32,12 +32,6 @@ thirdparty:
     - github.com
     - twitter.com
     - facebook.com
-profile:
-  fields:
-  - email
-  - city
-  - organization
-  - website
 https: enforced
 reviewed:
   date: 2015-06-16T06:51:48.026Z
