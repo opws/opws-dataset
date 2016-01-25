@@ -24,10 +24,8 @@ it uses).
 ## Layout
 
 Entries for domains are in [YAML](http://yaml.org/) files in the "profiles"
-directory.
-[public suffix](http://publicsuffix.org/). The filename of each file, minus the
-.yaml extension, is the significant domain name components of the site being
-profiled.
+directory. The filename of each file, minus the .yaml extension, is the
+significant domain name components of the site being profiled.
 
 Domains are listed by the least-specific component of the domain necessary to
 distinguish it from others: therefore, most sites are listed simply by the
