@@ -239,10 +239,6 @@ A string describing a site's support of Time-based One Time Password (RFC 6238),
 
 List of security questions. Each item that is a string should be interpreted as a required question: each item that is an object may have "required" or "optional" fields with the number of questions that may or must have answers given, and an "options" list of options that may be chosen.
 
-## profile.fields
-
-List of fields included in profiles on that site. (Currently not widely used.)
-
 ## notes, \*.notes
 
 Notes on quirks of the site that make it difficult to map to the standard format (usually a URL scheme that doesn't permit easy linking).
