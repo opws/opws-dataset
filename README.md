@@ -24,9 +24,10 @@ it uses).
 ## Layout
 
 Entries for domains are in [YAML](http://yaml.org/) files in the "profiles"
-directory, in sub-directories based on their
+directory.
 [public suffix](http://publicsuffix.org/). The filename of each file, minus the
-.yaml extension, is the remaining domain component(s).
+.yaml extension, is the significant domain name components of the site being
+profiled.
 
 Domains are listed by the least-specific component of the domain necessary to
 distinguish it from others: therefore, most sites are listed simply by the
@@ -35,7 +36,7 @@ like www).
 
 When lower-level domains have their own profiles (such as Arch Linux's AUR and
 BBS), their filenames include the lower domain components, like
-org/aur.archlinux.yaml and org/bbs.archlinux.yaml.
+aur.archlinux.org.yaml and bbs.archlinux.org.yaml.
 
 ## Notes on URLs
 

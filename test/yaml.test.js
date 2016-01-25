@@ -57,11 +57,11 @@ function validateDocumentedFields(doc,done) {
 }
 
 describe('YAML file', function() {
-  glob.sync('profiles/*/*', {cwd: __dirname + '/..'})
+  glob.sync('profiles/*', {cwd: __dirname + '/..'})
     .forEach(function(filename) { describe(filename, function() {
 
       it('should follow correct naming conventions', function() {
-        assert(/^profiles\/[a-z0-9\-\.]+\/[a-z0-9\-\.]+\.yaml$/.exec(filename),
+        assert(/^profiles\/[a-z0-9\-\.]+\.[a-z0-9\-\.]+\.yaml$/.exec(filename),
           filename + ' does not fit the filename pattern for domain profiles');
       });
 
