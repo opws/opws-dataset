@@ -1,7 +1,0 @@
-name: Dogecoin
-platform: mediawiki
-password:
-  reset:
-    url: http://www.dogeco.in/wiki/index.php/Special:PasswordReset
-    accept: username
-https: unsupported
