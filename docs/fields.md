@@ -254,12 +254,6 @@ List of quirks that demonstrate a lack of understanding on the behalf of the sit
 
 Note that factors documented in other fields that should raise red flags, such as restricted password lengths or character sets, are not included in this list.
 
-## platform
-
-*(The structure of this field is currently under review, see [issue #5](https://github.com/opensets/domainprofiles/issues/5).)*
-
-A service or software package the site is based on, as a token-esque name. May be used in the future to provide defaults based on known characteristics and patterns of various platforms (similar to "use").
-
 ## use
 
 An alternate domain used as the account provider (for instance, Google services use google.com). Unless a field is specified here (for instance, https), values should be inherited from the specified domain, and records to do with account providers should be fetched according to the used domain.
