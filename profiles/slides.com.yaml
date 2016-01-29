@@ -4,8 +4,8 @@ password:
     length:
       min: 6
       max: 128
-    mustnot:
-    - be blank (all spaces)
+    contain:
+    - nonspaces: 1
   change:
     url: https://slides.com/users/edit#user_password
     reauth: password
@@ -15,7 +15,31 @@ password:
     url: https://slides.com/users/password/new
     accept: email
     response:
+      sender: no-reply@slides.com
       body: link
     token:
       login: after
+username:
+  rules:
+    whitelist:
+    - letters
+    - numbers
+    - hyphen
+    - underscore
+register:
+  url: https://slides.com/users/sign_up
+  captcha: recaptcha
+  usability:
+    password: single
+login:
+  url: https://slides.com/users/sign_in
+  persist:
+    checked: no
+thirdparty:
+  auth:
+    providers:
+    - facebook.com
+    - google.com
 https: enforced
+reviewed:
+  date: 2016-01-29T13:54:08.594Z
