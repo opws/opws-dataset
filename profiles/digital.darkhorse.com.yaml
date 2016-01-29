@@ -1,8 +1,28 @@
 name: Dark Horse Digital Comics
 password:
+  rules:
+    length:
+      min: 6
+    mustnot:
+    - en: be a dictionary word
+    - en: be based on a common sequence of characters (e.g. 1234, qwerty or asdf)
   reset:
     url: https://digital.darkhorse.com/accounts/password_reset/
     accept: email
+    response:
+      sender: digital.service@darkhorse.com
+      body: firstname url
+    token:
+      login: no
   change:
     url: https://digital.darkhorse.com/accounts/manage/password_change/
+    reauth: password
+    sessions:
+      invalidate: no
+register:
+  url: https://digital.darkhorse.com/accounts/register/
+  usability:
+    email: once
 https: enforced
+reviewed:
+  date: 2016-01-29T13:32:48.207Z
