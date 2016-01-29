@@ -13,4 +13,3 @@ register:
   url: https://www.facebook.com/r.php
 login:
   url: https://www.facebook.com/login.php
-https: enforced

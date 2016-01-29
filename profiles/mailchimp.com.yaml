@@ -25,6 +25,5 @@ register:
   url: https://login.mailchimp.com/signup/
 login:
   url: https://login.mailchimp.com/
-https: enforced
 reviewed:
   date: 2015-03-23T16:10:18Z

@@ -6,4 +6,3 @@ password:
     blacklist:
     - spaces
     - special characters
-https: enforced

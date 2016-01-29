@@ -12,4 +12,3 @@ password:
   reset:
     url: https://secure4.billerweb.com/csg/inetSrv
     notes: Reset must be triggered through the main page's links.
-https: only

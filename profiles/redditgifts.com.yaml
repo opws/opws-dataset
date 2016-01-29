@@ -9,4 +9,3 @@ password:
   change:
     url: http://redditgifts.com/profiles/update/#js-change-password
     reauth: password
-https: unsupported

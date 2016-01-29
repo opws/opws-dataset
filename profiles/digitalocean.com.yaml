@@ -11,4 +11,3 @@ password:
   change:
     url: https://www.digitalocean.com/settings#edit-password
 totp: optional
-https: enforced

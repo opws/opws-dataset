@@ -9,4 +9,3 @@ password:
   change:
     url: https://www.mapbox.com/account/
     reauth: no
-https: partial

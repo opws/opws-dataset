@@ -18,4 +18,3 @@ password:
   change:
     url: https://www.qfc.com/account/update#editCredentials
     reauth: no
-https: enforced

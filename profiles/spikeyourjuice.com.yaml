@@ -12,4 +12,3 @@ username:
   remind:
     url: http://spikeyourjuice.com/ecart/index.php?option=com_user&view=remind
     accept: email
-https: unsupported

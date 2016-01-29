@@ -18,6 +18,5 @@ register:
     email: twice
 login:
   url: https://auth.getpebble.com/users/sign_in
-https: enforced
 reviewed:
   date: 2015-06-27T19:31:00.308Z

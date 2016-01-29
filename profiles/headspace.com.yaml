@@ -15,4 +15,3 @@ password:
 redflags:
 - Going to the "Forgotten Password" page when logged in results in a partial
   page render.
-https: enforced

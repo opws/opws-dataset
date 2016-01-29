@@ -3,4 +3,3 @@ password:
   reset:
     url: https://vline.com/#_vline_forgotpassword
     accept: email
-https: enforced

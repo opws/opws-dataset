@@ -17,4 +17,3 @@ login:
   url: https://hub.docker.com/account/login/
 register:
   url: https://hub.docker.com/account/signup/
-https: enforced

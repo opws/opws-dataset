@@ -19,4 +19,3 @@ password:
 sessions:
   manage:
     url: https://github.com/settings/security
-https: enforced

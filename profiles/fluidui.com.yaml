@@ -5,7 +5,6 @@ password:
     accept: email
   change:
     url: https://www.fluidui.com/editor/live/
-https: optional
 notes: >
   http requests to fluidui.com redirect to the equivalent path on
   https://www.fluidui.com, but HTTP requests to www.fluidui.com are not

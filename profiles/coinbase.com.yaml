@@ -5,4 +5,3 @@ password:
     accept: email
   change:
     url: https://coinbase.com/account#change_password_modal
-https: enforced

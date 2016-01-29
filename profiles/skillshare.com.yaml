@@ -5,4 +5,3 @@ password:
     accept: email
   change:
     url: https://www.skillshare.com/settings/pw
-https: optional

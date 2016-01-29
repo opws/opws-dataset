@@ -42,6 +42,5 @@ questions:
   - Make and model of your first car
   - The city where you first met your spouse
   - Other...
-https: enforced
 redflags:
 - Password entry in account creation does not enforce length limit.

@@ -3,4 +3,3 @@ password:
   reset:
     url: http://www.freesound.org/home/resetpassword/
     accept: email
-https: unsupported

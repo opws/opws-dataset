@@ -12,4 +12,3 @@ password:
   change:
     url: https://www.okcupid.com/settings
     reauth: password
-https: partial downgraded

@@ -5,4 +5,3 @@ password:
     accept: email
   change:
     url: https://www.linkedin.com/uas/change-password
-https: optional

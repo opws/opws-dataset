@@ -10,6 +10,5 @@ password:
     blacklist:
     - spaces
     - special characters (*, &, $, etc.)
-https: partial
 notes:
 - HTTPS is only supported for login pages.

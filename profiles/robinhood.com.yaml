@@ -5,4 +5,3 @@ password:
       min: 10
 register:
   url: https://www.robinhood.com/signup/
-https: enforced

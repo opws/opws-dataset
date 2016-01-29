@@ -13,4 +13,3 @@ register:
   url: https://www.yammer.com/signup
 login:
   url: https://www.yammer.com/login
-https: enforced

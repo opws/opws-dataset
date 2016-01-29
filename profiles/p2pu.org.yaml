@@ -11,4 +11,3 @@ password:
     accept: username email
   change:
     url: https://p2pu.org/en/profile/edit/password/
-https: enforced

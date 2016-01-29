@@ -9,4 +9,3 @@ password:
     accept: email username
   change:
     url: https://memit.com/user/profile/#password_reset
-https: optional

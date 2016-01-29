@@ -2,4 +2,3 @@ name: WorkFlowy
 password:
   reset:
     url: https://workflowy.com/accounts/password_reset/
-https: enforced

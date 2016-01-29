@@ -5,4 +5,3 @@ password:
     accept: email
   change:
     url: https://www.udemy.com/user/edit-account#password
-https: enforced

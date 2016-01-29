@@ -17,4 +17,3 @@ password:
   change:
     url: https://signin.ebay.com/ws/eBayISAPI.dll?ChangePasswordAndCreateHint
     reauth: password
-https: partial

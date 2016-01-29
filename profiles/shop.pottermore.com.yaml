@@ -17,6 +17,5 @@ register:
   url: https://shop.pottermore.com/register
 login:
   url: https://shop.pottermore.com/login
-https: enforced
 reviewed:
   date: 2015-06-09T19:27:21Z

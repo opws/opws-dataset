@@ -18,6 +18,5 @@ register:
     email: twice
 login:
   url: https://auth.sxsw.com/users/sign_in
-https: partial
 reviewed:
   date: 2015-08-23T02:47:23.258Z

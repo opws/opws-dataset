@@ -17,4 +17,3 @@ register:
   url: https://store.steampowered.com/join/
 login:
   url: https://store.steampowered.com/login/
-https: enforced

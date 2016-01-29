@@ -5,4 +5,3 @@ password:
     accept: email
   change:
     url: https://bbs.archlinux.org/profile.php?action=change_pass&id= + usernumber
-https: enforced

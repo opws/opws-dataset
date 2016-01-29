@@ -21,4 +21,3 @@ username:
     accept: email
 redflags:
 - '"Remember Me" creates a p_key cookie rather than changing your session.'
-https: optional

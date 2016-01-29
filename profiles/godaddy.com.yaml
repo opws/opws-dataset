@@ -26,4 +26,3 @@ username:
     length:
       min: 5
       max: 30
-https: optional

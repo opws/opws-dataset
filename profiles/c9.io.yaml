@@ -6,4 +6,3 @@ password:
   change:
     url: https://c9.io/dashboard.html
     reauth: no
-https: enforced

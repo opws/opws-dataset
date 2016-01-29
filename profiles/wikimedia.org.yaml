@@ -10,4 +10,3 @@ password:
       login: after
   change:
     url: https://commons.wikimedia.org/wiki/Special:ChangePassword
-https: optional

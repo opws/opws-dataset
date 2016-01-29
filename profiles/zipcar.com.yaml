@@ -11,4 +11,3 @@ password:
     accept: email
     response:
       body: username token
-https: partial

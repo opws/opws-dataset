@@ -24,6 +24,5 @@ register:
   url: https://www.name.com/account/create
 login:
   url: https://www.name.com/account/login
-https: enforced
 redflags:
 - Maximum password length only disclosed when exceeded.

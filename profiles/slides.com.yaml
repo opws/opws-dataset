@@ -40,6 +40,5 @@ thirdparty:
     providers:
     - facebook.com
     - google.com
-https: enforced
 reviewed:
   date: 2016-01-29T13:54:08.594Z

@@ -5,4 +5,3 @@ password:
     accept: username email
   change:
     url: https://npmjs.org/password
-https: enforced

@@ -3,4 +3,3 @@ password:
   reset:
     url: https://twitter.com/account/resend_password
     accept: email phone username
-https: enforced

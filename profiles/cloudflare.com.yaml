@@ -13,4 +13,3 @@ password:
   change:
     url: https://www.cloudflare.com/my-account
     reauth: password
-https: enforced

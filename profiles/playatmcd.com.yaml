@@ -10,4 +10,3 @@ password:
   reset:
     url: https://www.playatmcd.com/ForgotPassword
     accept: email
-https: enforced

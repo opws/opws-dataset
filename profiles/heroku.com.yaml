@@ -9,4 +9,3 @@ password:
   change:
     url: https://dashboard.heroku.com/account
     reauth: password
-https: enforced

@@ -13,6 +13,5 @@ register:
   url: https://portal.respoke.io/#/signup
 login:
   url: https://portal.respoke.io/#/login
-https: enforced
 reviewed:
   date: 2015-06-27T20:36:28.772Z
