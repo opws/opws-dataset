@@ -9,4 +9,3 @@ password:
   change:
     url: https://www.docker.io/account/change-password/
     reauth: password
-https: enforced

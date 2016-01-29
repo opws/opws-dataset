@@ -14,4 +14,3 @@ password:
   change:
     url: https://billing.condointernet.net/clientarea.php?action=changepw
     reauth: password
-https: enforced

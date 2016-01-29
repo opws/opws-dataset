@@ -6,4 +6,3 @@ password:
   reset:
     url: https://trello.com/forgot
     accept: email
-https: enforced

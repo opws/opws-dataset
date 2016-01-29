@@ -12,4 +12,3 @@ password:
     reauth: no
 redflags:
 - Passwords consisting entirely of spaces raise "Password cannot be blank" errors.
-https: unsupported

@@ -16,4 +16,3 @@ register:
   url: https://my.gocurb.com/signup
 login:
   url: https://my.gocurb.com/signin
-https: enforced

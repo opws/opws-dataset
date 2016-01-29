@@ -13,7 +13,6 @@ password:
   change:
     url: https://skyeatbelltown.activebuilding.com/portal/settings#change-password
     reauth: password
-https: enforced
 redflags:
 - Password rules state "must contain at least 1 number and 1 letter",
   while accpeting any non-letter character as a "number".

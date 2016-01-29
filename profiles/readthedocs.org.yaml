@@ -15,7 +15,6 @@ register:
   url: https://readthedocs.org/accounts/signup/
 login:
   url: https://readthedocs.org/accounts/login/
-https: enforced
 notes: No way to change password once logged in.
 reviewed:
   date: 2015-03-04T09:30:32Z

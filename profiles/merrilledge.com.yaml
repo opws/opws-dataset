@@ -15,7 +15,6 @@ password:
 username:
   remind:
     url: https://olui2.fs.ml.com/login/ForgotUserId.aspx
-https: enforced
 notes: >
   Redirects to subdomains on ml.com for login
   (not sure if ml.com is a shared login across sites)

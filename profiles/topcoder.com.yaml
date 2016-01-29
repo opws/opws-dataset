@@ -11,5 +11,4 @@ password:
   reset:
     url: http://www.topcoder.com/password-recovery/
     accept: username email
-https: downgraded
     

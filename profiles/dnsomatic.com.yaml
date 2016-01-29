@@ -13,4 +13,3 @@ password:
   change:
     url: https://www.dnsomatic.com/account/
     reauth: no
-https: enforced

@@ -8,4 +8,3 @@ password:
     accept: username email
   change:
     url: https://freedns.afraid.org/profile/password.php
-https: optional

@@ -9,4 +9,3 @@ password:
     accept: email
   change:
     url: http://www.proboards.com/account/settings#password
-https: partial

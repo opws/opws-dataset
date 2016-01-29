@@ -16,4 +16,3 @@ username:
       max: 16
     must:
     - begin with a letter
-https: enforced

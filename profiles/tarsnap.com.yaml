@@ -3,4 +3,3 @@ password:
   change:
     url: https://www.tarsnap.com/manage.cgi?action=chpassform
     reauth: password
-https: enforced

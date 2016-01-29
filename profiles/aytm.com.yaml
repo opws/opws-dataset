@@ -17,6 +17,5 @@ register:
     password: single showable
 login:
   url: http://aytm.com/login
-https: partial downgraded
 reviewed:
   date: 2015-06-16T04:43:02.172Z

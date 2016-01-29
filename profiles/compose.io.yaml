@@ -19,6 +19,5 @@ register:
   url: https://app.compose.io/signup/svelte
 login:
   url: https://app.compose.io/
-https: enforced
 reviewed:
   date: 2015-06-20T19:29:04.756Z

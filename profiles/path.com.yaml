@@ -5,4 +5,3 @@ password:
     accept: email
   change:
     url: https://path.com/settings
-https: enforced

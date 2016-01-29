@@ -9,4 +9,3 @@ password:
     accept: email firstname+lastname+creditcard
   change:
     url: https://www.netflix.com/YourAccount#updateProfile
-https: enforced

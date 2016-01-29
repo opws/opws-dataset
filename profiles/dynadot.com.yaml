@@ -31,6 +31,5 @@ register:
   url: https://www.dynadot.com/create_account.html
 login:
   url: https://www.dynadot.com/account/signin.html
-https: enforced
 reviewed:
   date: 2015-04-12T07:21:45.766Z

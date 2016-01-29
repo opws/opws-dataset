@@ -14,4 +14,3 @@ password:
   change:
     url: https://www.paypal.com/us/cgi-bin/webscr?cmd=_profile-password-start
     reauth: password
-https: enforced

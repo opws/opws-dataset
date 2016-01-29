@@ -23,6 +23,5 @@ register:
   url: https://signup.37signals.com/basecamp/Free/
 login:
   url: https://launchpad.37signals.com/signin
-https: enforced
 reviewed:
   date: 2015-06-16T02:29:36.878Z

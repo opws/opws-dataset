@@ -3,4 +3,3 @@ password:
   reset:
     url: http://www.html5-ninja.com/#/account
     accept: email
-https: unsupported

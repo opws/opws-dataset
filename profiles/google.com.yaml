@@ -9,4 +9,3 @@ password:
   change:
     url: https://accounts.google.com/EditPasswd
     reauth: password
-https: enforced

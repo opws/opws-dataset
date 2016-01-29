@@ -12,4 +12,3 @@ password:
   change:
     url: https://www.pave.com/settings
     reauth: no
-https: partial enforced

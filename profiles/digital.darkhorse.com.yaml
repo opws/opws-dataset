@@ -23,6 +23,5 @@ register:
   url: https://digital.darkhorse.com/accounts/register/
   usability:
     email: once
-https: enforced
 reviewed:
   date: 2016-01-29T13:32:48.207Z

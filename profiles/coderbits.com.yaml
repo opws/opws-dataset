@@ -5,4 +5,3 @@ password:
     accept: username email
   change:
     url: https://coderbits.com/account/settings#tab-account
-https: enforced

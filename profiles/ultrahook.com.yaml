@@ -7,4 +7,3 @@ api:
   key:
     retrieve:
       url: http://www.ultrahook.com/resend
-https: optional mismatch

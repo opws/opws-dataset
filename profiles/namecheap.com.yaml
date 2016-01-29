@@ -6,4 +6,3 @@ password:
   change:
     url: https://manage.www.namecheap.com/myaccount/modify-profile-changepassword.aspx
     reauth: password
-https: enforced

@@ -9,4 +9,3 @@ password:
       body: temp
   change:
     url: https://www.wibit.net/myAccount
-https: enforced

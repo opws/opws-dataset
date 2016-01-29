@@ -3,4 +3,3 @@ password:
   reset:
     url: http://support.cloud9ide.com/access/help
     accept: email
-https: mismatch downgraded

@@ -18,6 +18,5 @@ register:
   url: https://bugs.gnupg.org/gnupg/user?@template=register
 login:
   url: https://bugs.gnupg.org/gnupg/
-https: enforced
 reviewed:
   date: 2015-06-17T03:40:41.249Z

@@ -13,4 +13,3 @@ register:
   url: https://www.humblebundle.com/signup
 login:
   url: https://www.humblebundle.com/login 
-https: enforced

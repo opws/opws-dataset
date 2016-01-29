@@ -8,4 +8,3 @@ password:
   change:
     url: https://panel.dreamhost.com/index.cgi?tree=billing.secure
 totp: optional
-https: enforced

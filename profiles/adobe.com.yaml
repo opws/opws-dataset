@@ -31,6 +31,5 @@ register:
   url: https://adobeid.services.adobe.com/renga-idprovider/pages/create_account?client_id=SunbreakWebUI1&callback=https%3A%2F%2Fadobelogin.com%2F&client_redirect=https%3A%2F%2Fadobelogin.com&denied_callback=https%3A%2F%2Fadobelogin.com&display=web_v2
 login:
   url: https://accounts.adobe.com
-https: enforced
 reviewed:
   date: 2015-04-04T12:44:45-0700

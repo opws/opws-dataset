@@ -212,25 +212,6 @@ The URL of a page to retrieve API key(s).
 
 The URL of a page to report security breaches to.
 
-## https
-
-A string containing space-separated tokens (usually only one) describing the site's HTTPS support. Known values:
-
-- enforced: The site upgrades all HTTP requests to HTTPS.
-- optional: The site responds to HTTPS requests, but doesn't upgrade HTTP requests.
-- unsupported: The site does not respond to HTTPS requests.
-- only: The site *only* responds to HTTPS requests (and does not respond to HTTP requests).
-- downgraded: The site actually *downgrades* HTTPS connections to HTTP.
-- partial: Some parts / subdomains of the site support HTTPS, while others do not. (May be explained further in notes.)
-
-These values describe issues with a site's use of HTTPS and usually follow "optional":
-
-- selfsigned: The site uses a self-signed certificate.
-- mismatch: The site uses an HTTPS certificate that does not match the domain it uses it on.
-- blockedhttp: The site hotlinks blocked assets (CSS, JS, iframes) from HTTP sources when serving HTTPS.
-
-For more detail about a site's support for HTTPS, see the [HTTPS Everywhere Atlas](https://www.eff.org/https-everywhere/atlas/).
-
 ## totp
 
 A string describing a site's support of Time-based One Time Password (RFC 6238), as used by Google Authenticator, for two-factor authentication security. (Rare.)

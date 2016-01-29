@@ -22,4 +22,3 @@ login:
     password: showable
 register:
   url: https://www.guru.com/registeraccount.aspx
-https: enforced

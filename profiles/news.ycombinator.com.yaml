@@ -15,4 +15,3 @@ register:
   url: https://news.ycombinator.com/login
 login:
   url: https://news.ycombinator.com/login
-https: enforced

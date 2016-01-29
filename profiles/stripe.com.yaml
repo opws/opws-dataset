@@ -9,4 +9,3 @@ password:
   change:
     url: https://manage.stripe.com/account
     reauth: password
-https: enforced
