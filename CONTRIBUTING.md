@@ -23,5 +23,6 @@ register:
   url: https://example.com/register
 login:
   url: https://example.com/login
-https: enforced # What happens if you start a url with "http:"? With "https:"?
+reviewed:
+  date: 1970-01-01T00:00:00.000Z # use https://www.isotimestamp.com/
 ```
