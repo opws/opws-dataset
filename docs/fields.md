@@ -114,6 +114,16 @@ Whether the reset token works as login credentials. Valid values:
 
 A value of "before" implies you may opt not to reset the password (using the reset token logs you in and you can navigate away). For sites that use a temporary password as the reset token, a value of "after" implies you are *required* to reset the password after logging in with the temporary password.
 
+## password.reset.sessions.invalidate
+
+Whether resetting your password invalidates sessions (logs you out), forcing you to log back in with the new password.
+
+Values:
+
+- "all": demonstrably invalidates all sessions
+- "no": doesn't invalidate any logged-in sessions
+  - Although this is less secure than the alternative(s), it's assumed to be the default.
+
 ## password.change.url
 
 The URL of the "change password" page for the logged-in user. If the site doesn't have a URL for the logged-in user, this will be in a space-and-plus-separated string denoting where to insert the variable components (such as "username").
