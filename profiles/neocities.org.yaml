@@ -1,0 +1,40 @@
+name: Neocities
+password:
+  rules:
+    length:
+      min: 5
+  reset:
+    url: https://neocities.org/password_reset
+    accept: email
+    response:
+      sender: web@neocities.org
+      body: url token password
+    token:
+      login: no
+    notes:
+    - en: Visiting the URL in the provided email will change your password to
+          the reset token in the email.
+    sessions:
+      invalidate: no
+  change:
+    url: https://neocities.org/settings#password
+    reauth: password
+    sessions:
+      invalidate: no
+username:
+  rules:
+    whitelist:
+    - letters
+    - numbers
+    - underscore
+    - hyphen
+register:
+  url: https://neocities.org/#new
+  captcha: recaptcha
+  usability:
+    email: once
+    password: single
+login:
+  url: https://neocities.org/signin
+reviewed:
+  date: 2016-02-19T02:31:51.735Z
