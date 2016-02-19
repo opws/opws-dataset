@@ -10,11 +10,11 @@ password:
     - numbers: 1
     - symbols: 1
     mustnot:
-    - use previously used passwords
-    - use common words
-    - use your username
-    - use your first name
-    - use your last name
+    - en: use previously used passwords
+    - en: use common words
+    - en: use your username
+    - en: use your first name
+    - en: use your last name
   reset:
     url: https://adobeid.services.adobe.com/renga-idprovider/pages/start_forgot_password?client_id=SunbreakWebUI1&callback=https%3A%2F%2Fadobelogin.com%2F&client_redirect=https%3A%2F%2Fadobelogin.com&denied_callback=https%3A%2F%2Fadobelogin.com&display=web_v2
     accept: email
