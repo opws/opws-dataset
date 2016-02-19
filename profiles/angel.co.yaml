@@ -16,7 +16,7 @@ password:
     url: https://angel.co/settings/password
     reauth: password
     sessions:
-      invalidate: yes
+      invalidate: own
 register:
   url: https://angel.co/join
 login:

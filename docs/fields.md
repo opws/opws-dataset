@@ -128,9 +128,13 @@ Whether changing your password invalidates sessions (logs you out), forcing you 
 
 Values:
 
-- "yes": invalidates session that changed password, probably all sessions
+- "own": invalidates session that changed password
+  - This hopefully implies that other sessions are invalidated as well (like "all"), but hasn't been verified.
+  - If other sessions are still shown to be logged in, it will be listed under redflags.
+- "others": invalidates all sessions other than the one used to change the password
 - "all": demonstrably invalidates all sessions
-- "no": doesn't log you out, the assumed default
+- "no": doesn't log you out or invalidate any other logged-in sessions
+  - Although this is less secure than the others, it's assumed to be the default.
 
 ## password.change.usability.password
 
@@ -232,6 +236,7 @@ List of quirks that demonstrate a lack of understanding on the behalf of the sit
 
 - Cookies that suggest session isn't stored on the server
 - Partial page renders that may expose information to outside observers
+- Logging the user out when changing their password, but leaving their other sessions logged in (see password.change.sessions.invalidate)
 
 Note that factors documented in other fields that should raise red flags, such as restricted password lengths or character sets, are not included in this list.
 
