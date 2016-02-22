@@ -187,8 +187,8 @@ A space-separated token string describing how email address is specified in regi
 
 Tokens:
 
-- "once": requires email address to be entered once.
-- "twice": requires email address to be entered twice.
+- "single": requires email address to be entered once.
+- "double": requires email address to be entered twice.
 
 ## register.usability.password
 

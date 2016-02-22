@@ -32,7 +32,7 @@ register:
   url: https://neocities.org/#new
   captcha: recaptcha
   usability:
-    email: once
+    email: single
     password: single
 login:
   url: https://neocities.org/signin
