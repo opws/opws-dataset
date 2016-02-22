@@ -2,16 +2,28 @@ name: GOG.com
 password:
   rules:
     length:
-      min: 6
-      max: 64
+      min: 2
+      max: 100
   reset:
-    url: http://www.gog.com/#reset_holder
+    url: https://login.gog.com/password/request
     accept: email
+    captcha: recaptcha
+    notes:
+    - en: Captcha only appears after multiple reset requests.
     response:
-      body: token
+      sender: no-reply@gog.com
+      body: username link url
   change:
-    url: https://secure.gog.com/account/settings
+    url: https://login.gog.com/account/password
     reauth: password
 redflags:
-- Resetting a password can fail with a "must be at least 6 chars" error,
-  even when the password is significantly longer than 6 chars.
+- en: The system accepts passwords longer than 100 characters, but does not
+      recognize them when logging in or changing passwords.
+register:
+  url: https://login.gog.com/register
+  usability:
+    email: once
+login:
+  url: https://login.gog.com/login
+reviewed:
+  date: 2016-02-22T22:39:55.259Z
