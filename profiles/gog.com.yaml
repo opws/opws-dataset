@@ -22,7 +22,7 @@ redflags:
 register:
   url: https://login.gog.com/register
   usability:
-    email: once
+    email: single
 login:
   url: https://login.gog.com/login
 reviewed:

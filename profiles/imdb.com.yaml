@@ -12,7 +12,7 @@ password:
 register:
   url: https://secure.imdb.com/register-imdb/register
   usability:
-    email: twice
+    email: double
 login:
   url: https://secure.imdb.com/register-imdb/login
 thirdparty:

@@ -15,7 +15,7 @@ password:
 register:
   url: https://auth.sxsw.com/users/sign_up
   usability:
-    email: twice
+    email: double
 login:
   url: https://auth.sxsw.com/users/sign_in
 reviewed:
