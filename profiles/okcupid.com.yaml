@@ -2,13 +2,48 @@ name: OkCupid
 password:
   rules:
     length:
-      min: 4
-      max: 16
+      min: 6
+      max: 256
   reset:
     url: http://www.okcupid.com/lostpassword
     accept: username email
     response:
-      body: token
+      sender: bounces@mail1.oknotify2.com
+      body: username link
+    steps:
+    - change
+    - expire
+    - autologin
   change:
     url: https://www.okcupid.com/settings
     reauth: password
+username:
+  rules:
+    length:
+      min: 4
+      max: 16
+    whitelist:
+    - letters
+    - numbers
+    - hyphen
+    - underscore
+register:
+  url: https://www.okcupid.com/
+  usability:
+    email: double
+    password: single
+login:
+  url: https://www.okcupid.com/login
+thirdparty:
+  auth:
+    providers:
+    - facebook.com
+redflags:
+- en: Registration restricts password length to 5; password reset and changing
+      restricts password length to 6.
+- en: >
+    Trying to change your password to anything longer than 256 characters fails
+    with the error message "Update Failed! Could not update database; please
+    try again later."
+reviewed:
+  date: 2016-02-23T00:15:43.893Z
