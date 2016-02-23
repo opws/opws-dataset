@@ -13,6 +13,11 @@ password:
     response:
       sender: no-reply@gog.com
       body: username link url
+    steps:
+    - change
+    - expire
+    - stub
+    - login
   change:
     url: https://login.gog.com/account/password
     reauth: password
