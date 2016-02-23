@@ -104,7 +104,23 @@ Space-separated string of things the password reset page expects before resettin
 
 - "requester-ip" (IP requesting the page must be the same IP the email was requested from)
 
+## password.reset.steps
+
+An array of string tokens describing the operations involved after a user follows whatever password reset link they get via email:
+
+- "change" (for the actual changing of the password)
+- "autochange" (for when the password is changed to something else by the site, eg. Neocities)
+- "button" (when the next step happens automatically, but only after a POST)
+- "expire" (documenting at what point the token is expired)
+- "stub" (the page displays a message confirming the reset and you go nowhere)
+- "login" (user is directed to the login page)
+- "autologin" (user is logged in)
+
+Where "stub" is a non-final step (eg. when it is followed by "login"), it is implied that there is a single button that, when clicked, leads to the next step (similar to "button").
+
 ## password.reset.token.login
+
+*(This field is deprecated. Profiles should transition to using password.reset.steps instead. See [issue #70](https://github.com/opensets/domainprofiles/issues/70).)*
 
 Whether the reset token works as login credentials. Valid values:
 
