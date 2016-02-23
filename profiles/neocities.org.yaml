@@ -9,11 +9,10 @@ password:
     response:
       sender: web@neocities.org
       body: url token password
-    token:
-      login: no
-    notes:
-    - en: Visiting the URL in the provided email will change your password to
-          the reset token in the email.
+    steps:
+    - autochange
+    - expire
+    - stub
     sessions:
       invalidate: no
   change:
