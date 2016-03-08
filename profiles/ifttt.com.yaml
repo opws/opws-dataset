@@ -1,7 +1,39 @@
 name: IFTTT
 password:
+  rules:
+    length:
+      min: 6
+      max: 1024
+    contain:
+    - nonspaces: 1
   reset:
     url: https://ifttt.com/forgot
     accept: email
+    response:
+      sender: welcome@ifttt.com
+      body: username link
+    steps:
+    - change
+    - expire
+    - autologin
   change:
     url: https://ifttt.com/settings/password
+username:
+  rules:
+    length:
+      min: 3
+      max: 35
+    whitelist:
+    - letters
+    - numbers
+    - underscore
+  change:
+    url: https://ifttt.com/settings/update_username
+login:
+  url: https://ifttt.com/session/new
+register:
+  url: https://ifttt.com/join
+  usability:
+    password: single
+reviewed:
+  date: 2016-03-08T23:33:25.603Z
