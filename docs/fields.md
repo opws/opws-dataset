@@ -189,6 +189,10 @@ When sites *require multiple* identifiers, they are joined with a plus (`+`). (F
 
 What kind of captcha (if any) is used to deter automated username reminders. See `password.reset.captcha`.
 
+## username.change.url
+
+The URL of the "change username" page for the logged-in user. If the site doesn't have a URL for the logged-in user, this will be in a space-and-plus-separated string denoting where to insert the variable components (such as "userid").
+
 ## register.url
 
 The URL of the page to create a new user account.
