@@ -5,5 +5,15 @@ password:
     accept: username
   change:
     url: https://shop.centurylink.com/MasterWebPortal/freeRange/acctMgmt/ManageMyProfile_goToChangeProfilePassword.action
+username:
+  remind:
+    url: https://eam.centurylink.com/eam/loginTrouble/obtainForgottenUserID.do
+    accept: email
+register:
+  url: https://eam.centurylink.com/eam/registration.do
+login:
+  url: https://eam.centurylink.com/eam/login.do
 redflags:
-- Passwords are not allowed to contain certain characters (such as spaces).
+- en: Passwords are not allowed to contain certain characters (such as spaces).
+reviewed:
+  date: 2016-03-08T23:13:31.274Z
