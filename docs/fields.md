@@ -43,6 +43,8 @@ Character class names used:
 - hyphen ("-")
 - underscore ("_")
 - at ("@")
+- plus ("+")
+- exclaim ("!")
 
 ## password.rules.classes
 
@@ -93,6 +95,7 @@ A space-separated token string of data the reset mechanism responds with (usuall
 - link: A link (without the URL visible) to reset the password.
 - token: A token that can be typed on a page (may also be part of a link/URL) to bring you to the reset screen.
 - temp: A temporary password to use for logging in.
+- origin: Data identifying the source for the reset request, such as the IP address it was posted from.
 
 ## password.reset.token.expires
 
@@ -102,7 +105,7 @@ How long after issuance the reset token is valid for, as a human-abbreviated str
 
 Space-separated string of things the password reset page expects before resetting the password. Tokens:
 
-- "requester-ip" (IP requesting the page must be the same IP the email was requested from)
+- "origin" (IP address requesting the page must be the same IP the email was requested from)
 
 ## password.reset.steps
 
