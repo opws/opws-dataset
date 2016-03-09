@@ -9,20 +9,46 @@ password:
     - numbers: 1
       symbols: 1
   reset:
-    url: https://www.name.com/tools/get_password
+    url: https://www.name.com/account/credentials/password
     accept: domain username
     response:
-      body: url username requester-ip
+      sender: support@name.com
+      body: url origin
     token:
       expires: 24h
-      expects: requester-ip
-      login: after
+      expects: origin
+    steps:
+    - change
+    - expire
+    - autologin
   change:
     url: https://www.name.com/account/settings/
     reauth: password
+username:
+  rules:
+    length:
+      min: 6
+      max: 60
+    whitelist:
+    - plus
+    - letters
+    - numbers
+    - exclaim
+    - dot
+    - at
+    - underscore
+    - hyphen
+  remind:
+    url: https://www.name.com/account/credentials/username
+    accept: domain
 register:
   url: https://www.name.com/account/create
+  usability:
+    email: single
+    password: single
 login:
   url: https://www.name.com/account/login
 redflags:
-- Maximum password length only disclosed when exceeded.
+- en: Registration lists backslash as an accepted username character (it is not).
+reviewed:
+  date: 2016-03-09T01:59:14.495Z
