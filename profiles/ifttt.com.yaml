@@ -18,6 +18,7 @@ password:
     - autologin
   change:
     url: https://ifttt.com/settings/password
+    reauth: password
 username:
   rules:
     length:
