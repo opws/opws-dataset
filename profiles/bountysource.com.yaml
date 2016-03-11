@@ -17,13 +17,20 @@ password:
     response:
       sender: support@bountysource.com
       body: code url
-    token:
-      login: after
+    steps:
+    - change
+    - expire
+    - autologin
+    usability:
+      password: single
     notes:
     - en: Enter email, then a "Forgot?" link will appear
           by the password field.
 register:
   url: https://www.bountysource.com/signin
+  usability:
+    email: single
+    password: single
 login:
   url: https://www.bountysource.com/signin
 thirdparty:
@@ -33,4 +40,4 @@ thirdparty:
     - twitter.com
     - facebook.com
 reviewed:
-  date: 2015-06-16T06:51:48.026Z
+  date: 2016-03-11T00:46:36.954Z
