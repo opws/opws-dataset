@@ -121,6 +121,10 @@ An array of string tokens describing the operations involved after a user follow
 
 Where "stub" is a non-final step (eg. when it is followed by "login"), it is implied that there is a single button that, when clicked, leads to the next step (similar to "button").
 
+## password.reset.usability.password
+
+A space-separated token string describing how the password set UI differs from double-blind-entry. See `password.change.usability.password`.
+
 ## password.reset.token.login
 
 *(This field is deprecated. Profiles should transition to using password.reset.steps instead. See [issue #70](https://github.com/opensets/domainprofiles/issues/70).)*
