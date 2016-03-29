@@ -1,0 +1,53 @@
+name: Wells Fargo
+password:
+  rules:
+    length:
+      min: 6
+      max: 14
+    contain:
+    - letters: 1
+    - numbers: 1
+    mustnot:
+    - en: contain 9 or more numbers
+    - en: repeat the same character more than 3 times in a row
+    - en: contain more than 3 sequential numbers or letters (such as '1234' or 'abcd') in a row
+    - en: be identical to your username
+    - en: 
+  change:
+    url: https://oam.wellsfargo.com/oam/access/receiver?dest=MODIFY_PASSWORD
+    reauth: password
+  reset:
+    url: https://oam.wellsfargo.com/oamo/identity/help/passwordhelp
+    notes:
+    - en: >
+        Requires username or Social Security number (or ITIN),
+        account/loan/card number (or birthdate, for mortgage or
+        employer-sponsored retirement plan customers), and
+        Debit/ATM card number and PIN. Password change form
+        is presented immediately after entering all of these.
+username:
+  rules:
+    length:
+      min: 6
+      max: 14
+    contain:
+    - letters: 1
+    mustnot:
+    - en: contain 9 or more numbers
+    whitelist:
+    - letters
+    - numbers
+    - hyphen
+    - underscore
+  change:
+    url: https://oam.wellsfargo.com/oam/access/receiver?dest=CHANGE_USERNAME
+  remind:
+    url: https://oam.wellsfargo.com/oamo/identity/help/usernamehelp
+    notes:
+    - en: Requires Social Security number (or ITIN) and password.
+register:
+  url: https://oam.wellsfargo.com/oamo/identity/enrollment
+login:
+  url: https://connect.secure.wellsfargo.com/auth/login/present
+reviewed:
+  date: 2016-03-29T03:39:01.096Z
