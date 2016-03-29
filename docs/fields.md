@@ -200,6 +200,10 @@ What kind of captcha (if any) is used to deter automated username reminders. See
 
 The URL of the "change username" page for the logged-in user. If the site doesn't have a URL for the logged-in user, this will be in a space-and-plus-separated string denoting where to insert the variable components (such as "userid").
 
+## username.change.reauth
+
+"no" if users can change username without reauthenticating, "password" if they have to (re)enter their password (among other credentials).
+
 ## register.url
 
 The URL of the page to create a new user account.
