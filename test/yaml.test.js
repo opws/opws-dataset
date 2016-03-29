@@ -74,6 +74,16 @@ describe('YAML file', function() {
           });
       });
 
+      it('should contain a name',
+        function(done) {
+          fs.readFile(filename, 'utf8', function(err, content) {
+            if (err) return done(err);
+            assert(yaml.load(content, {filename: filename}).name,
+              filename + ' does not contain a name entry');
+            return done();
+          });
+      });
+
     });
   });
 });
