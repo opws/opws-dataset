@@ -6,6 +6,7 @@ password:
       max: 100
   reset:
     url: https://www.proboards.com/forgot
-    accept: email
+    request:
+      accepts: email
   change:
     url: http://www.proboards.com/account/settings#password

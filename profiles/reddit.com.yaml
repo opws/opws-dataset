@@ -5,7 +5,8 @@ password:
       min: 6
   reset:
     url: http://www.reddit.com/password
-    accept: username
+    request:
+      accepts: username
   change:
     url: https://ssl.reddit.com/prefs/update/
 notes: Main site served by Akamai. Preferences are directed to a special SSL server.

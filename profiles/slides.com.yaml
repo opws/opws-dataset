@@ -13,7 +13,8 @@ password:
       password: single
   reset:
     url: https://slides.com/users/password/new
-    accept: email
+    request:
+      accepts: email
     response:
       sender: no-reply@slides.com
       body: link
@@ -26,7 +27,7 @@ username:
     - numbers
     - hyphen
     - underscore
-register:
+registration:
   url: https://slides.com/users/sign_up
   captcha: recaptcha
   usability:

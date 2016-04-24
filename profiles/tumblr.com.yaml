@@ -2,7 +2,8 @@ name: Tumblr
 password:
   reset:
     url: https://www.tumblr.com/forgot_password
-    accept: email
+    request:
+      accepts: email
   change:
     url: https://www.tumblr.com/settings/account#changepassword
     reauth: password

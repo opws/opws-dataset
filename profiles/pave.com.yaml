@@ -8,7 +8,8 @@ password:
     - letters: 1
   reset:
     url: https://www.pave.com/forgot_password
-    accept: email
+    request:
+      accepts: email
   change:
     url: https://www.pave.com/settings
     reauth: no

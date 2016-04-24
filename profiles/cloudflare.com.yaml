@@ -5,7 +5,8 @@ password:
       min: 1
   reset:
     url: https://www.cloudflare.com/forgot-password
-    accept: email
+    request:
+      accepts: email
     response:
       body: url token
     expiration:

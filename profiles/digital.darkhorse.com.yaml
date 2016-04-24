@@ -8,7 +8,8 @@ password:
     - en: be based on a common sequence of characters (e.g. 1234, qwerty or asdf)
   reset:
     url: https://digital.darkhorse.com/accounts/password_reset/
-    accept: email
+    request:
+      accepts: email
     response:
       sender: digital.service@darkhorse.com
       body: firstname url
@@ -19,7 +20,7 @@ password:
     reauth: password
     sessions:
       invalidate: no
-register:
+registration:
   url: https://digital.darkhorse.com/accounts/register/
   usability:
     email: single

@@ -2,7 +2,8 @@ name: Fluid UI
 password:
   reset:
     url: https://www.fluidui.com/editor/live/
-    accept: email
+    request:
+      accepts: email
   change:
     url: https://www.fluidui.com/editor/live/
 notes: >

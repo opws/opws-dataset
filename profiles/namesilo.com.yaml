@@ -8,7 +8,8 @@ password:
     - spaces
   reset:
     url: https://www.namesilo.com/lost_password.php
-    accept: username domain
+    request:
+      accepts: username domain
   change:
     url: https://www.namesilo.com/account_maintenance.php
     reauth: password

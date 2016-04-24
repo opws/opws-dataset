@@ -5,7 +5,8 @@ password:
       min: 1
   reset:
     url: http://www.avclub.com/users/reset_password/
-    accept: email
+    request:
+      accepts: email
   change:
     url: http://www.avclub.com/users/me/settings/
 login:

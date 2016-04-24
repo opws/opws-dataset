@@ -2,6 +2,7 @@ name: CodeHS
 password:
   reset:
     url: http://www.codehs.com/forgot_password
-    accept: email
+    request:
+      accepts: email
   change:
     url: http://www.codehs.com/change_password

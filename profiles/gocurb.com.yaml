@@ -6,13 +6,14 @@ password:
     notes: Max 14 when registering on Android
   reset:
     url: https://my.gocurb.com/signin#resetPassword
-    accept: email
+    request:
+      accepts: email
     response:
       body: link
   change:
     url: https://my.gocurb.com/myaccount#password
     reauth: no
-register:
+registration:
   url: https://my.gocurb.com/signup
 login:
   url: https://my.gocurb.com/signin

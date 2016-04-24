@@ -64,13 +64,13 @@ Array of other restrictions on what passwords *must not* do.
 
 The URL of the site's "reset password" page.
 
-## password.reset.accept
+## password.reset.request.accepts
 
 A space-separated token string of what identifiers the site needs to reset passwords. (Usually some combination of "email" and/or "username".)
 
 When sites *require multiple* identifiers, they are joined with a plus (`+`).
 
-## password.reset.captcha
+## password.reset.request.captcha
 
 What kind of captcha (if any) is used to deter automated password resets ("yes" if unknown).
 
@@ -186,19 +186,19 @@ Tokens:
 
 Rules on the format of usernames. See `password.rules`.
 
-## username.remind.url
+## username.reminder.url
 
 The URL of the page to send a username reminder to an email address (when separate from password resetting).
 
-## username.remind.accept
+## username.reminder.request.accepts
 
 A space-separated token string of what identifiers the site needs to send a username reminder. (Usually just "email".)
 
 When sites *require multiple* identifiers, they are joined with a plus (`+`). (For example, simple.com requires an email *and* phone number, so its `username.remind.accept` value is "email+phone".)
 
-## username.remind.captcha
+## username.reminder.request.captcha
 
-What kind of captcha (if any) is used to deter automated username reminders. See `password.reset.captcha`.
+What kind of captcha (if any) is used to deter automated username reminders. See `password.reset.request.captcha`.
 
 ## username.change.url
 
@@ -208,15 +208,15 @@ The URL of the "change username" page for the logged-in user. If the site doesn'
 
 "no" if users can change username without reauthenticating, "password" if they have to (re)enter their password (among other credentials).
 
-## register.url
+## registration.url
 
 The URL of the page to create a new user account.
 
-## register.captcha
+## registration.captcha
 
 What kind of captcha (if any) is used to deter automated user registration. See `password.reset.captcha`.
 
-## register.usability.email
+## registration.usability.email
 
 A space-separated token string describing how email address is specified in registration.
 
@@ -225,7 +225,7 @@ Tokens:
 - "single": requires email address to be entered once.
 - "double": requires email address to be entered twice.
 
-## register.usability.password
+## registration.usability.password
 
 A space-separated token string describing how the password set UI differs from double-blind-entry. See `password.change.usability.password`.
 
@@ -249,11 +249,11 @@ Tokens:
 
 An array of domains for third party auth providers.
 
-## sessions.manage.url
+## sessions.management.url
 
 The URL of a page to view and revoke logged-in sessions.
 
-## api.key.retrieve.url
+## api.key.retrieval.url
 
 The URL of a page to retrieve API key(s).
 

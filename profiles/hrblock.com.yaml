@@ -10,16 +10,18 @@ password:
     - spaces
   reset:
     url: https://idp.hrblock.com/idp/Authn/DForgotCredentials.html
-    accept: username firstname+lastname+ssn+dob
+    request:
+      accepts: username firstname+lastname+ssn+dob
   change:
     reauth: password
     notes:
     - en: Click "Account Settings" after logging in
 username:
-  remind:
+  reminder:
     url: https://idp.hrblock.com/idp/Authn/DForgotCredentials.html
-    accept: email firstname+lastname+ssn+dob
-register:
+    request:
+      accepts: email firstname+lastname+ssn+dob
+registration:
   url: https://idp.hrblock.com/idp/Authn/DCreateUser.html
 login:
   url: https://idp.hrblock.com/idp/Authn/DUserLogin.html

@@ -10,8 +10,9 @@ password:
       symbols: 1
   reset:
     url: https://www.odesk.com/reset/password
-    accept: email
-    captcha: yes
+    request:
+      accepts: email
+      captcha: yes
     response:
       sender: donotreply@odesk.com
       body: url

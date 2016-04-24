@@ -9,4 +9,5 @@ password:
     - numbers
   reset:
     url: https://www.playatmcd.com/ForgotPassword
-    accept: email
+    request:
+      accepts: email

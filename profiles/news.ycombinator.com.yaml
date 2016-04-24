@@ -5,13 +5,14 @@ password:
       min: 8
   reset:
     url: https://news.ycombinator.com/forgot
-    accept: username
+    request:
+      accepts: username
   change:
     url: https://news.ycombinator.com/changepw
     reauth: password
     usability:
       password: single
-register:
+registration:
   url: https://news.ycombinator.com/login
 login:
   url: https://news.ycombinator.com/login

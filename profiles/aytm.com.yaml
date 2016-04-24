@@ -5,12 +5,13 @@ password:
       min: 5
   reset:
     url: https://aytm.com/users/restore-password
-    accept: email
+    request:
+      accepts: email
     response:
       body: link url
   change:
     url: https://aytm.com/users/account-setting?current_tab=change_password
-register:
+registration:
   url: http://aytm.com/users/new
   captcha: recaptcha
   usability:

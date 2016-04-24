@@ -12,7 +12,7 @@ password:
     - en: repeat the same character more than 3 times in a row
     - en: contain more than 3 sequential numbers or letters (such as '1234' or 'abcd') in a row
     - en: be identical to your username
-    - en: 
+    - en:
   change:
     url: https://oam.wellsfargo.com/oam/access/receiver?dest=MODIFY_PASSWORD
     reauth: password
@@ -41,11 +41,11 @@ username:
     - underscore
   change:
     url: https://oam.wellsfargo.com/oam/access/receiver?dest=CHANGE_USERNAME
-  remind:
+  reminder:
     url: https://oam.wellsfargo.com/oamo/identity/help/usernamehelp
     notes:
     - en: Requires Social Security number (or ITIN) and password.
-register:
+registration:
   url: https://oam.wellsfargo.com/oamo/identity/enrollment
 login:
   url: https://connect.secure.wellsfargo.com/auth/login/present

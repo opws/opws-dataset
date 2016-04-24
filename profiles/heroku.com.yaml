@@ -5,7 +5,8 @@ password:
       min: 8
   reset:
     url: https://id.heroku.com/account/password/reset
-    accept: email
+    request:
+      accepts: email
   change:
     url: https://dashboard.heroku.com/account
     reauth: password

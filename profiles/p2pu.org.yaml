@@ -8,6 +8,7 @@ password:
     - letters: 1
   reset:
     url: https://p2pu.org/en/forgot/
-    accept: username email
+    request:
+      accepts: username email
   change:
     url: https://p2pu.org/en/profile/edit/password/

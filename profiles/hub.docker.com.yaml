@@ -5,7 +5,8 @@ password:
       min: 5
   reset:
     url: https://hub.docker.com/account/forgot-password/
-    accept: email
+    request:
+      accepts: email
     response:
       body: url
     token:
@@ -15,5 +16,5 @@ password:
     reauth: password
 login:
   url: https://hub.docker.com/account/login/
-register:
+registration:
   url: https://hub.docker.com/account/signup/

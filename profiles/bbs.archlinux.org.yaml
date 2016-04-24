@@ -2,6 +2,7 @@ name: Arch Linux Forums
 password:
   reset:
     url: https://bbs.archlinux.org/login.php?action=forget
-    accept: email
+    request:
+      accepts: email
   change:
     url: https://bbs.archlinux.org/profile.php?action=change_pass&id= + usernumber

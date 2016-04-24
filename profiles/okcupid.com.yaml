@@ -6,7 +6,8 @@ password:
       max: 256
   reset:
     url: http://www.okcupid.com/lostpassword
-    accept: username email
+    request:
+      accepts: username email
     response:
       sender: bounces@mail1.oknotify2.com
       body: username link
@@ -28,7 +29,7 @@ username:
     - numbers
     - hyphen
     - underscore
-register:
+registration:
   url: https://www.okcupid.com/
   usability:
     email: double

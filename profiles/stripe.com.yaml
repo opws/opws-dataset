@@ -5,7 +5,8 @@ password:
       min: 1
   reset:
     url: https://manage.stripe.com/reset
-    accept: email
+    request:
+      accepts: email
   change:
     url: https://manage.stripe.com/account
     reauth: password

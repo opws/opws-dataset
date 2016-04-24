@@ -5,11 +5,12 @@ password:
       min: 8
   reset:
     url: https://secure.imdb.com/register-imdb/forgotten
-    accept: email
+    request:
+      accepts: email
     response:
       sender: do-not-reply-here@imdb.com
       body: url
-register:
+registration:
   url: https://secure.imdb.com/register-imdb/register
   usability:
     email: double

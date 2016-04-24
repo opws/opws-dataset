@@ -15,7 +15,8 @@ password:
     - url: http://pages.ebay.com/help/new/contextual/create_password.html
   reset:
     url: https://fyp.ebay.com/EnterUserInfo
-    accept: email username
+    request:
+      accepts: email username
     response:
       sender: ebay@ebay.com
       body: firstname url
@@ -53,7 +54,7 @@ username:
   change:
     url: https://scgi.ebay.com/ws/eBayISAPI.dll?ChangeUserId
     reauth: password
-register:
+registration:
   url: https://signin.ebay.com/ws/eBayISAPI.dll?pos=1
   usability:
     email: double

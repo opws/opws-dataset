@@ -13,7 +13,8 @@ password:
     - en: contain part of your username
   reset:
     url: https://www.dnsomatic.com/account/#pwdreset
-    accept: email
+    request:
+      accepts: email
     response:
       sender: accounts@dnsomatic.com
       body: url username
@@ -39,7 +40,7 @@ username:
     - hyphen
     mustnot:
     - en: begin or end with a non-alphanumeric character
-register:
+registration:
   url: https://www.dnsomatic.com/create/
   usability:
     password: once

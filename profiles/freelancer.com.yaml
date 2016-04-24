@@ -2,7 +2,8 @@ name: Freelancer
 password:
   reset:
     url: https://www.freelancer.com/#forgot-password-toggle
-    accept: email
+    request:
+      accepts: email
   change:
     url: https://www.freelancer.com/users/settings.php#AccountSettings
 redflags:

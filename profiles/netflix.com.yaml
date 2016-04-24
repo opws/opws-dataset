@@ -6,6 +6,7 @@ password:
       max: 60
   reset:
     url: https://www.netflix.com/LoginHelp
-    accept: email firstname+lastname+creditcard
+    request:
+      accepts: email firstname+lastname+creditcard
   change:
     url: https://www.netflix.com/YourAccount#updateProfile
