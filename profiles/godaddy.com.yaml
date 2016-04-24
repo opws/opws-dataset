@@ -15,8 +15,9 @@ password:
     captcha: botdetect-vertigo
     response:
       body: link token
+    expiration:
+      timeout: 2h
     token:
-      expires: 2h
       login: no
   change:
     url: https://mya.godaddy.com/settings.aspx#settsecurity

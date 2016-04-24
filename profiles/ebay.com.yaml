@@ -11,7 +11,7 @@ password:
       - numbers
       - symbols
     blacklist: [ spaces, "[", "]", "<", ">" ]
-    notes: 
+    notes:
     - url: http://pages.ebay.com/help/new/contextual/create_password.html
   reset:
     url: https://fyp.ebay.com/EnterUserInfo
@@ -19,12 +19,12 @@ password:
     response:
       sender: ebay@ebay.com
       body: firstname url
-    token:
-      expires: 24h
     steps:
     - change
-    - expire
     - login
+    expiration:
+      timeout: 24h
+      trigger: change
   change:
     url: https://signin.ebay.com/ws/eBayISAPI.dll?ChangePasswordAndCreateHint
     reauth: password

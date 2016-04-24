@@ -8,8 +8,8 @@ password:
     accept: email
     response:
       body: url token
-    token:
-      expires: 2h
+    expiration:
+      timeout: 2h
   change:
     url: https://www.cloudflare.com/my-account
     reauth: password

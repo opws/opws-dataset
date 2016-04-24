@@ -97,11 +97,7 @@ A space-separated token string of data the reset mechanism responds with (usuall
 - temp: A temporary password to use for logging in.
 - origin: Data identifying the source for the reset request, such as the IP address it was posted from.
 
-## password.reset.token.expires
-
-How long after issuance the reset token is valid for, as a human-abbreviated string ("24h" is common).
-
-## password.reset.token.expects
+## password.reset.expects
 
 Space-separated string of things the password reset page expects before resetting the password. Tokens:
 
@@ -120,6 +116,14 @@ An array of string tokens describing the operations involved after a user follow
 - "autologin" (user is logged in)
 
 Where "stub" is a non-final step (eg. when it is followed by "login"), it is implied that there is a single button that, when clicked, leads to the next step (similar to "button").
+
+## password.reset.expiration.trigger
+
+Which step causes the reset session token to be invalidated for further reset attempts. Should be "change", is sometimes "visit" (meaning the reset link can only be followed once).
+
+## password.reset.expiration.timeout
+
+How long after issuance the reset token is valid for, as a human-abbreviated string ("24h" is common).
 
 ## password.reset.usability.password
 

@@ -10,8 +10,9 @@ password:
     accept: email
     response:
       body: url
+    expiration:
+      timeout: 24h
     token:
-      expires: 24h
       login: no
   change:
     url: https://github.com/settings/admin

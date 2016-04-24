@@ -11,10 +11,11 @@ password:
       body: url token password
     steps:
     - autochange
-    - expire
     - stub
     sessions:
       invalidate: no
+    expiration:
+      trigger: visit
   change:
     url: https://neocities.org/settings#password
     reauth: password

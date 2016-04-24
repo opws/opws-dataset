@@ -14,13 +14,13 @@ password:
     response:
       sender: support@name.com
       body: url origin
-    token:
-      expires: 24h
-      expects: origin
+    expects: origin
     steps:
     - change
-    - expire
     - autologin
+    expiration:
+      timeout: 24h
+      trigger: change
   change:
     url: https://www.name.com/account/settings/
     reauth: password

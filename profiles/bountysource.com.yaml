@@ -19,8 +19,9 @@ password:
       body: code url
     steps:
     - change
-    - expire
     - autologin
+    expiration:
+      trigger: change
     usability:
       password: single
     notes:

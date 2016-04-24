@@ -5,8 +5,9 @@ password:
     accept: username email
     response:
       body: temp
+    expiration:
+      timeout: 7d
     token:
-      expires: 7d
       login: after
   change:
     url: https://commons.wikimedia.org/wiki/Special:ChangePassword

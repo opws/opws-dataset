@@ -9,8 +9,8 @@ password:
     response:
       sender: billing@condointernet.net
       body: url
-    token:
-      expires: 2h
+    expiration:
+      timeout: 2h
   change:
     url: https://billing.condointernet.net/clientarea.php?action=changepw
     reauth: password
