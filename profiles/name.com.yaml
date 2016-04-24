@@ -10,7 +10,8 @@ password:
       symbols: 1
   reset:
     url: https://www.name.com/account/credentials/password
-    accept: domain username
+    request:
+      accepts: domain username
     response:
       sender: support@name.com
       body: url origin
@@ -38,10 +39,11 @@ username:
     - at
     - underscore
     - hyphen
-  remind:
+  reminder:
     url: https://www.name.com/account/credentials/username
-    accept: domain
-register:
+    request:
+      accepts: domain
+registration:
   url: https://www.name.com/account/create
   usability:
     email: single

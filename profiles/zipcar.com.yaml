@@ -8,6 +8,7 @@ password:
     reauth: password
   reset:
     url: https://members.zipcar.com/register/forgot-password
-    accept: email
+    request:
+      accepts: email
     response:
       body: username token

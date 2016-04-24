@@ -9,8 +9,9 @@ password:
     - unprintable characters
   reset:
     url: https://www.paypal.com/us/cgi-bin/webscr?cmd=_account-recovery
-    accept: email
-    captcha: yes
+    request:
+      accepts: email
+      captcha: yes
   change:
     url: https://www.paypal.com/us/cgi-bin/webscr?cmd=_profile-password-start
     reauth: password

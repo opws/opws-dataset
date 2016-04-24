@@ -8,12 +8,14 @@ password:
     - numbers: 1
   reset:
     url: https://secure.mashery.com/member/lost/
-    accept: email+username
+    request:
+      accepts: email+username
 username:
-  remind:
+  reminder:
     url: https://secure.mashery.com/member/lost-username/
-    accept: email
-register:
+    request:
+      accepts: email
+registration:
   url: http://developer.mashery.com/member/register
 login:
   url: https://secure.mashery.com/login/

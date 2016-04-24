@@ -2,6 +2,7 @@ name: Koding
 password:
   reset:
     url: https://koding.com/Recover
-    accept: username email
+    request:
+      accepts: username email
   change:
     url: https://koding.com/Account

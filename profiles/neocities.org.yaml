@@ -5,7 +5,8 @@ password:
       min: 5
   reset:
     url: https://neocities.org/password_reset
-    accept: email
+    request:
+      accepts: email
     response:
       sender: web@neocities.org
       body: url token password
@@ -28,7 +29,7 @@ username:
     - numbers
     - underscore
     - hyphen
-register:
+registration:
   url: https://neocities.org/#new
   captcha: recaptcha
   usability:

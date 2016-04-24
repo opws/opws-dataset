@@ -6,6 +6,7 @@ password:
       max: 30
   reset:
     url: https://memit.com/user/resetpassword
-    accept: email username
+    request:
+      accepts: email username
   change:
     url: https://memit.com/user/profile/#password_reset

@@ -9,7 +9,8 @@ password:
     - numbers: 1
   reset:
     url: https://www.qfc.com/forgotPassword
-    accept: email
+    request:
+      accepts: email
     response:
       body: url link
     expiration:

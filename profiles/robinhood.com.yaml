@@ -3,5 +3,5 @@ password:
   rules:
     length:
       min: 10
-register:
+registration:
   url: https://www.robinhood.com/signup/

@@ -5,7 +5,8 @@ password:
       min: 8
   reset:
     url: https://www.google.com/accounts/recovery
-    accept: email
+    request:
+      accepts: email
   change:
     url: https://accounts.google.com/EditPasswd
     reauth: password

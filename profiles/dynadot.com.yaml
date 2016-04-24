@@ -8,7 +8,8 @@ password:
     - spaces
   reset:
     url: https://www.dynadot.com/forgot.html
-    accept: email email+username
+    request:
+      accepts: email email+username
     response:
       sender: accounts@dynadot.com
       body: link
@@ -27,7 +28,7 @@ username:
     - numbers
     - hyphen
     - underscore
-register:
+registration:
   url: https://www.dynadot.com/create_account.html
 login:
   url: https://www.dynadot.com/account/signin.html

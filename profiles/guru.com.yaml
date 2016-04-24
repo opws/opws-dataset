@@ -6,7 +6,8 @@ password:
       max: 35
   reset:
     url: http://www.guru.com/forgotsignin.aspx
-    accept: email
+    request:
+      accepts: email
     response:
       body: username link
     token:
@@ -20,5 +21,5 @@ login:
   url: https://www.guru.com/login.aspx
   usability:
     password: showable
-register:
+registration:
   url: https://www.guru.com/registeraccount.aspx

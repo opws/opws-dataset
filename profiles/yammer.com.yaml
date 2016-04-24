@@ -5,11 +5,12 @@ password:
       min: 6
   reset:
     url: https://www.yammer.com/forgotten_password/new
-    accept: email
+    request:
+      accepts: email
   change:
     url: https://www.yammer.com/account/password
     reauth: password
-register:
+registration:
   url: https://www.yammer.com/signup
 login:
   url: https://www.yammer.com/login

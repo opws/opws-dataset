@@ -5,4 +5,5 @@ password:
       min: 5
   reset:
     url: http://help.aytm.com/access/help
-    accept: email
+    request:
+      accepts: email

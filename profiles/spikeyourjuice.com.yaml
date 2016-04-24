@@ -9,6 +9,7 @@ password:
   reset:
     url: http://spikeyourjuice.com/ecart/index.php?option=com_user&view=reset
 username:
-  remind:
+  reminder:
     url: http://spikeyourjuice.com/ecart/index.php?option=com_user&view=remind
-    accept: email
+    request:
+      accepts: email

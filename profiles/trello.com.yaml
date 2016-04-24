@@ -5,4 +5,5 @@ password:
     reauth: no
   reset:
     url: https://trello.com/forgot
-    accept: email
+    request:
+      accepts: email

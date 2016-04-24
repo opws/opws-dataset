@@ -6,7 +6,8 @@ password:
       max: 80
   reset:
     url: https://login.persona.org/
-    accept: email
+    request:
+      accepts: email
     response:
       sender: no-reply@persona.org
       body: link

@@ -11,8 +11,9 @@ password:
     - specials: 1
   reset:
     url: https://login.mailchimp.com/login/forgot
-    accept: username
-    captcha: recaptcha
+    request:
+      accepts: username
+      captcha: recaptcha
     response:
       sender: confirm@mailchimp.com
       body: username link
@@ -21,7 +22,7 @@ password:
   change:
     url: https://admin.mailchimp.com/account/profile/#security-form
     reauth: password
-register:
+registration:
   url: https://login.mailchimp.com/signup/
 login:
   url: https://login.mailchimp.com/

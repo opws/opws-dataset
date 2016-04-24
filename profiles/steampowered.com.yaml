@@ -13,7 +13,7 @@ password:
     notes:
       You must use the Steam desktop client to reset your password, see
       https://support.steampowered.com/kb_article.php?ref=4988-DHXV-7272
-register:
+registration:
   url: https://store.steampowered.com/join/
 login:
   url: https://store.steampowered.com/login/

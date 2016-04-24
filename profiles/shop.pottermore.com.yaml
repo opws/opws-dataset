@@ -9,11 +9,12 @@ password:
     - lowers: 1
   reset:
     url: https://shop.pottermore.com/passwordrecovery
-    accept: email
+    request:
+      accepts: email
   change:
     url: https://shop.pottermore.com/customer/info#ChangePassword
     reauth: password
-register:
+registration:
   url: https://shop.pottermore.com/register
 login:
   url: https://shop.pottermore.com/login

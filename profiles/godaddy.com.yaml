@@ -11,8 +11,9 @@ password:
     - begin or end with a space
   reset:
     url: https://idp.godaddy.com/Account/AccountRetrieval.aspx
-    accept: username+email accountno+email
-    captcha: botdetect-vertigo
+    request:
+      accepts: username+email accountno+email
+      captcha: botdetect-vertigo
     response:
       body: link token
     expiration:

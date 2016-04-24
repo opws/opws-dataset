@@ -10,7 +10,8 @@ password:
           but does not require it.
   reset:
     url: https://launchpad.37signals.com/forgot_password
-    accept: email
+    request:
+      accepts: email
     response:
       sender: do-not-reply@basecamp.com
       body: username link
@@ -19,7 +20,7 @@ password:
   change:
     url: https:// + user url + /identity/edit
     reauth: no
-register:
+registration:
   url: https://signup.37signals.com/basecamp/Free/
 login:
   url: https://launchpad.37signals.com/signin

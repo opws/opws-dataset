@@ -5,6 +5,7 @@ password:
       max: 16
   reset:
     url: https://freedns.afraid.org/password/
-    accept: username email
+    request:
+      accepts: username email
   change:
     url: https://freedns.afraid.org/profile/password.php

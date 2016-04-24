@@ -2,12 +2,13 @@ name: MakerBot
 password:
   reset:
     url: https://accounts.makerbot.com/forgot
-    accept: email
+    request:
+      accepts: email
   change:
     url: https://accounts.makerbot.com/edit#old_password
     reauth: password
 login:
   url: https://accounts.makerbot.com/
-register:
+registration:
   url: https://accounts.makerbot.com/register
   

@@ -12,12 +12,14 @@ password:
     - underscore
   reset:
     url: https://projecteuler.net/reset_password
-    accept: username+email
+    request:
+      accepts: username+email
   change:
     url: https://projecteuler.net/account
 username:
-  remind:
+  reminder:
     url: https://projecteuler.net/username_reminder
-    accept: email
+    request:
+      accepts: email
 redflags:
 - '"Remember Me" creates a p_key cookie rather than changing your session.'

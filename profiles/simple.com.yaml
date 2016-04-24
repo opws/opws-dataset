@@ -6,7 +6,8 @@ password:
       and a user's passphrase must be at least a "grade C" to pass.
   reset:
     url: https://bank.simple.com/forgot-password
-    accept: username+phone email+phone
+    request:
+      accepts: username+phone email+phone
     response:
       sender: notify@simple.com
       body: url
@@ -19,6 +20,7 @@ password:
       password: single showable
     reauth: no
 username:
-  remind:
+  reminder:
     url: https://bank.simple.com/forgot-username
-    accept: email+phone
+    request:
+      accepts: email+phone

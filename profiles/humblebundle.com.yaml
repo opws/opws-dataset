@@ -5,11 +5,12 @@ password:
       min: 4
   reset:
     url: https://www.humblebundle.com/user/forgot
-    accept: email
+    request:
+      accepts: email
   change:
     url: https://www.humblebundle.com/user/settings#password
     reauth: once email password
-register:
+registration:
   url: https://www.humblebundle.com/signup
 login:
   url: https://www.humblebundle.com/login 

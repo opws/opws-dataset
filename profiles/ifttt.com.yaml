@@ -8,7 +8,8 @@ password:
     - nonspaces: 1
   reset:
     url: https://ifttt.com/forgot
-    accept: email
+    request:
+      accepts: email
     response:
       sender: welcome@ifttt.com
       body: username link
@@ -33,7 +34,7 @@ username:
     url: https://ifttt.com/settings/update_username
 login:
   url: https://ifttt.com/session/new
-register:
+registration:
   url: https://ifttt.com/join
   usability:
     password: single

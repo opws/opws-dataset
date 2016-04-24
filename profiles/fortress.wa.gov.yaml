@@ -20,8 +20,9 @@ password:
       tilde: 1
   reset:
     url: https://fortress.wa.gov/dor/efile/FortressLogon/RetrievePassword.aspx
-    accept: email
-    captcha: yes
+    request:
+      accepts: email
+      captcha: yes
   change:
     url: https://fortress.wa.gov/dor/efile/FortressLogon/ChangePassword.aspx
     reauth: password
@@ -29,13 +30,14 @@ username:
   rules:
     length:
       min: 8
-  remind:
+  reminder:
     url: https://fortress.wa.gov/dor/efile/FortressLogon/RetrieveLogon.aspx
-    accept: email
-    captcha: yes
+    request:
+      accepts: email
+      captcha: yes
 login:
   url: https://fortress.wa.gov/dor/efile/FortressLogon/Logon.aspx
-register:
+registration:
   url: https://fortress.wa.gov/dor/efile/FortressLogon/UserRegistration.aspx
   captcha: yes
 questions:

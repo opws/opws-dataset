@@ -7,7 +7,8 @@ password:
     - letters: 1
   reset:
     url: https://www.digitalocean.com/forgot_password/new
-    accept: email
+    request:
+      accepts: email
   change:
     url: https://www.digitalocean.com/settings#edit-password
 totp: optional

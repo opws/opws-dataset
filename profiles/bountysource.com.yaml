@@ -27,7 +27,7 @@ password:
     notes:
     - en: Enter email, then a "Forgot?" link will appear
           by the password field.
-register:
+registration:
   url: https://www.bountysource.com/signin
   usability:
     email: single

@@ -6,7 +6,8 @@ password:
       max: 32
   reset:
     url: https://www.diigo.com/user_mana2/forgot
-    accept: username email
+    request:
+      accepts: username email
   change:
     url: https://www.diigo.com/setting#account_setting
 username:

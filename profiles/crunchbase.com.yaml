@@ -6,7 +6,8 @@ password:
       max: 40
   reset:
     url: http://www.crunchbase.com/recovery/new
-    accept: email
+    request:
+      accepts: email
   change:
     url: http://www.crunchbase.com/user/ + username + /edit#change-pw
     reauth: no

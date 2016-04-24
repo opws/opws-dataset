@@ -8,7 +8,8 @@ password:
     - spaces
   reset:
     url: https://www.headspace.com/login/forgotten-password
-    accept: email
+    request:
+      accepts: email
   change:
     url: https://www.headspace.com/my/settings/about-you#user_profile_password_first
     reauth: no

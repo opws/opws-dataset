@@ -8,11 +8,12 @@ password:
     - nonspaces: 1
   reset:
     url: https://auth.getpebble.com/users/password/new
-    accept: email
+    request:
+      accepts: email
   change:
     url: https://auth.getpebble.com/users/edit
     reauth: password
-register:
+registration:
   url: https://auth.getpebble.com/users/sign_up
   usability:
     email: double

@@ -17,7 +17,8 @@ password:
     - en: use your last name
   reset:
     url: https://adobeid.services.adobe.com/renga-idprovider/pages/start_forgot_password?client_id=SunbreakWebUI1&callback=https%3A%2F%2Fadobelogin.com%2F&client_redirect=https%3A%2F%2Fadobelogin.com&denied_callback=https%3A%2F%2Fadobelogin.com&display=web_v2
-    accept: email
+    request:
+      accepts: email
     response:
       sender: account-noreply@adobe.com
       body: firstname lastname url
@@ -28,7 +29,7 @@ password:
   change:
     url: https://accounts.adobe.com/security/change-password
     reauth: no
-register:
+registration:
   url: https://adobeid.services.adobe.com/renga-idprovider/pages/create_account?client_id=SunbreakWebUI1&callback=https%3A%2F%2Fadobelogin.com%2F&client_redirect=https%3A%2F%2Fadobelogin.com&denied_callback=https%3A%2F%2Fadobelogin.com&display=web_v2
 login:
   url: https://accounts.adobe.com

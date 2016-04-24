@@ -2,6 +2,7 @@ name: Coderbyte
 password:
   reset:
     url: http://coderbyte.com/sl/forgotpassword/
-    accept: email
+    request:
+      accepts: email
   change:
     url: http://coderbyte.com/CodingArea/Settings/

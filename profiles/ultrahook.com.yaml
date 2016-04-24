@@ -5,5 +5,5 @@ password:
       min: 1
 api:
   key:
-    retrieve:
+    retrieval:
       url: http://www.ultrahook.com/resend

@@ -2,8 +2,9 @@ name: WiBit.Net
 password:
   reset:
     url: https://www.wibit.net/forgotPassword
-    accept: email
-    captcha: yes
+    request:
+      accepts: email
+      captcha: yes
     response:
       sender: no-reply@wibit.net
       body: temp
