@@ -14,8 +14,9 @@ password:
       body: username link
     steps:
     - change
-    - expire
     - autologin
+    expiration:
+      trigger: change
   change:
     url: https://ifttt.com/settings/password
     reauth: password

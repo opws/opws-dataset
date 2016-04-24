@@ -17,11 +17,11 @@ password:
     response:
       sender: accounts@dnsomatic.com
       body: url username
-    token:
-      expires: 3h
+    expiration:
+      timeout: 3h
+      trigger: change
     steps:
     - change
-    - expire
     - autologin
   change:
     url: https://www.dnsomatic.com/account/

@@ -10,8 +10,8 @@ password:
     response:
       sender: notify@simple.com
       body: url
-    token:
-      expires: 30m
+    expiration:
+      timeout: 30m
     notes: Sends tokens via email and SMS, both are needed.
   change:
     url: https://bank.simple.com/activity/preferences/account-settings

@@ -21,8 +21,9 @@ password:
     response:
       sender: account-noreply@adobe.com
       body: firstname lastname url
+    expiration:
+      timeout: 72h
     token:
-      expires: 72h
       login: no
   change:
     url: https://accounts.adobe.com/security/change-password

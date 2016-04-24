@@ -15,9 +15,10 @@ password:
       body: username link url
     steps:
     - change
-    - expire
     - stub
     - login
+    expiration:
+      trigger: change
   change:
     url: https://login.gog.com/account/password
     reauth: password

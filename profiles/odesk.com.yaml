@@ -15,9 +15,10 @@ password:
     response:
       sender: donotreply@odesk.com
       body: url
+    expiration:
+      timeout: 1h
+    expects: question-answer
     token:
-      expires: 1h
-      expects: question-answer
       login: no
   change:
     url: https://www.odesk.com/UserSettings/change-password
