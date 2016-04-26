@@ -2,10 +2,34 @@ name: afraid.org FreeDNS
 password:
   rules:
     length:
+      min: 4
       max: 16
   reset:
     url: https://freedns.afraid.org/password/
     request:
       accepts: username email
+    response:
+      sender: dnsadmin@afraid.org
+      body: url username temp origin
+    steps:
+    - autochange
+    - stub
+    - login
+    expiration:
+      trigger: visit
   change:
     url: https://freedns.afraid.org/profile/password.php
+    reauth: password
+    sessions:
+      invalidate: all
+registration:
+  url: https://freedns.afraid.org/signup/
+  captcha: securimage
+  usability:
+    email: single
+login:
+  url: https://freedns.afraid.org/zc.php
+  persist:
+    checked: no
+reviewed:
+  date: 2016-04-26T13:06:29.753Z
