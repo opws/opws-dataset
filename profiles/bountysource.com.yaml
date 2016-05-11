@@ -1,12 +1,14 @@
 name: Bountysource
 password:
-  rules:
+  value:
     length:
       min: 8
       max: 72 # effectively, because bcrypt
-    contain:
-    - letters: 1
-    - numbers: 1
+  contents:
+    required:
+    - classes:
+      - letters
+      - numbers
   change:
     url: https://www.bountysource.com/settings/accounts
     reauth: password

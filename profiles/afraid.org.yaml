@@ -1,6 +1,6 @@
 name: afraid.org FreeDNS
 password:
-  rules:
+  value:
     length:
       min: 4
       max: 16

@@ -1,6 +1,6 @@
 name: Zipcar
 password:
-  rules:
+  value:
     length:
       min: 4
   change:

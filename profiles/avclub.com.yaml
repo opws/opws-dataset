@@ -1,6 +1,6 @@
 name: The A.V. Club
 password:
-  rules:
+  value:
     length:
       min: 1
   reset:

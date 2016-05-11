@@ -1,6 +1,6 @@
 name: Docker Hub
 password:
-  rules:
+  value:
     length:
       min: 5
   reset:

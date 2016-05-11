@@ -1,11 +1,13 @@
 name: P2PU
 password:
-  rules:
+  value:
     length:
       min: 8
-    contain:
-    - numbers: 1
-    - letters: 1
+  contents:
+    required:
+    - classes:
+      - numbers
+      - letters
   reset:
     url: https://p2pu.org/en/forgot/
     request:

@@ -1,14 +1,17 @@
 name: Merrill Edge
 password:
-  rules:
+  value:
     length:
       min: 8
       max: 20
-    contain:
-    - letters: 1
-    - numbers: 1
+  contents:
+    required:
+    - classes:
+      - letters
+      - numbers
     blacklist:
-    - spaces
+      classes:
+      - spaces
   reset:
     url: https://olui2.fs.ml.com/login/ForgotPassword.aspx
     request:

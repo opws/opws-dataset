@@ -1,11 +1,13 @@
 name: Pebble
 password:
-  rules:
+  value:
     length:
       min: 8
       max: 128
-    contain:
-    - nonspaces: 1
+  contents:
+    required:
+    - classes:
+      - nonspaces
   reset:
     url: https://auth.getpebble.com/users/password/new
     request:

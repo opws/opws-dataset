@@ -1,11 +1,12 @@
 name: Dark Horse Digital Comics
 password:
-  rules:
+  value:
     length:
       min: 6
-    mustnot:
-    - en: be a dictionary word
-    - en: be based on a common sequence of characters (e.g. 1234, qwerty or asdf)
+    blacklist:
+      dictionaries:
+      - english
+      - common
   reset:
     url: https://digital.darkhorse.com/accounts/password_reset/
     request:

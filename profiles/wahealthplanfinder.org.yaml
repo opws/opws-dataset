@@ -1,19 +1,20 @@
 name: Washington Healthplanfinder
 password:
-  rules:
+  value:
     length:
       min: 8
       max: 20
-    contain:
-    - uppers: 1
-    - lowers: 1
-    - numbers: 1
-    - exclaim: 1
-      dollar: 1
-      hash: 1
-      caret: 1
+  contents:
+    required:
+    - classes:
+      - uppers
+      - lowers
+      - numbers
+    - atleast: 1
+      strings: ['!', '$', '#', '^']
     blacklist:
-    - spaces
+      classes:
+      - spaces
   reset:
     url: https://www.wahealthplanfinder.org/HBEWeb/Annon_DisplayForgotPasswordGetUserName.action
     request:
@@ -22,19 +23,20 @@ password:
     url: https://www.wahealthplanfinder.org/HBEWeb/DisplayPasswordChangePassword.action
     reauth: password
 username:
-  rules:
+  value:
     length:
       min: 6
       max: 20
-    contain:
-    - letters: 1
-    - numbers: 1
+  contents:
+    required:
+    - classes:
+      - letters
+      - numbers
     whitelist:
-    - letters
-    - numbers
-    - dot
-    - underscore
-    - dollar
+      classes:
+      - letters
+      - numbers
+      strings: ['.', '_', '$']
   reminder:
     url: https://www.wahealthplanfinder.org/HBEWeb/Annon_DisplayForgotUserName.action
     request:

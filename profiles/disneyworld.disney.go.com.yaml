@@ -1,12 +1,14 @@
 name: Walt Disney World Resort
 password:
-  rules:
+  value:
     length:
       min: 4
       max: 25
+  contents:
     whitelist:
-    - letters
-    - numbers
+      classes:
+      - letters
+      - numbers
   reset:
     url: https://disneyworld.disney.go.com/login/
     request:

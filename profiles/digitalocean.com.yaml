@@ -1,10 +1,12 @@
 name: DigitalOcean
 password:
-  rules:
+  value:
     length:
       min: 6
-    contain:
-    - letters: 1
+  contents:
+    required:
+    - classes:
+      - letters
   reset:
     url: https://www.digitalocean.com/forgot_password/new
     request:

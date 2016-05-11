@@ -1,19 +1,21 @@
 name: ORCA
 password:
-  rules:
+  value:
     length:
       min: 7
       max: 15
-    classes:
-    - required: 3
-      from:
+  contents:
+    required:
+    - atleast: 3
+      classes:
       - uppers
       - lowers
       - numbers
       - specials
-    mustnot:
-    - en: contain the user's account name
-    - en: be the same as any of the previous 4 passwords for that user
+    blacklist:
+      variables:
+      - username
+      previous: 4
   reset:
     url: https://orcacard.com/ERG-Seattle/p5_001.do
     request:
@@ -30,13 +32,15 @@ password:
     sessions:
       invalidate: no
 username:
-  rules:
+  value:
     length:
       min: 6
       max: 15
+  contents:
     whitelist:
-    - letters
-    - numbers
+      classes:
+      - letters
+      - numbers
 registration:
   url: https://orcacard.com/ERG-Seattle/p4_010.do
   usability:

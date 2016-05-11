@@ -1,6 +1,6 @@
 name: Gmail
 username:
-  rules:
+  value:
     length:
       min: 6
       max: 30

@@ -1,6 +1,6 @@
 name: Humble Bundle
 password:
-  rules:
+  value:
     length:
       min: 4
   reset:
@@ -13,4 +13,4 @@ password:
 registration:
   url: https://www.humblebundle.com/signup
 login:
-  url: https://www.humblebundle.com/login 
+  url: https://www.humblebundle.com/login

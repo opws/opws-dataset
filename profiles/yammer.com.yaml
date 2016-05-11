@@ -1,6 +1,6 @@
 name: Yammer
 password:
-  rules:
+  value:
     length:
       min: 6
   reset:

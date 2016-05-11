@@ -1,6 +1,6 @@
 name: GnuPG's BTS
 password:
-  rules:
+  value:
     length:
       min: 1
   reset:

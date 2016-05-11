@@ -1,13 +1,17 @@
 name: Name.com
 password:
-  rules:
+  value:
     length:
       min: 7
       max: 60
-    contain:
-    - letters: 1
-    - numbers: 1
-      symbols: 1
+  contents:
+    required:
+    - classes:
+      - letters
+    - atleast: 1
+      classes:
+      - numbers
+      - symbols
   reset:
     url: https://www.name.com/account/credentials/password
     request:
@@ -26,19 +30,16 @@ password:
     url: https://www.name.com/account/settings/
     reauth: password
 username:
-  rules:
+  value:
     length:
       min: 6
       max: 60
+  contents:
     whitelist:
-    - plus
-    - letters
-    - numbers
-    - exclaim
-    - dot
-    - at
-    - underscore
-    - hyphen
+      classes:
+      - letters
+      - numbers
+      strings: ['+', '!', '.', '@', '_', '-']
   reminder:
     url: https://www.name.com/account/credentials/username
     request:

@@ -1,12 +1,14 @@
 name: DreamHost
 password:
-  rules:
+  value:
     length:
       min: 8
       max: 1024
     mustnot:
     - en: start or end with a space
-    - en: be a dictionary word
+    blacklist:
+      dictionaries:
+      - english
   reset:
     url: https://panel.dreamhost.com/login/forgot.cgi
     request:

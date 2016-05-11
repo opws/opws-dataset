@@ -1,6 +1,6 @@
 name: Docker
 password:
-  rules:
+  value:
     length:
       min: 5
   reset:

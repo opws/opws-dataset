@@ -1,6 +1,6 @@
 name: Double Fine
 password:
-  rules:
+  value:
     length:
       min: 5
   reset:

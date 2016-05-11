@@ -1,26 +1,30 @@
 name: eBay
 password:
-  rules:
+  value:
     length:
       min: 6
       max: 64
-    classes:
-    - required: 2
-      from:
+    blacklist:
+      dictionaries:
+      - common
+      previous: yes
+    notes:
+    - url: http://pages.ebay.com/help/new/contextual/create_password.html
+  contents:
+    required:
+    - atleast: 2
+      classes:
       - uppers
       - lowers
       - numbers
       - symbols
-    mustnot:
-    - en: be the same as previous used passwords
-    - en: be on an undisclosed list of common passwords like "abc123"
-    - en: contain the word "password"
-    blacklist: [
-      spaces,
-      "[", "]", "<", ">", "{", "}",
-      "//", "'", '"', ";" ]
-    notes:
-    - url: http://pages.ebay.com/help/new/contextual/create_password.html
+    blacklist:
+      classes:
+      - spaces
+      strings: [
+        "[", "]", "<", ">", "{", "}",
+        "//", "'", '"', ";",
+        "password" ]
   reset:
     url: https://fyp.ebay.com/EnterUserInfo
     request:
@@ -38,27 +42,29 @@ password:
     url: https://signin.ebay.com/ws/eBayISAPI.dll?ChangePasswordAndCreateHint
     reauth: password
 username:
-  rules:
+  value:
     length:
       min: 6
       max: 64
-    whitelist:
-    - letters
-    - numbers
-    - asterisk
-    - underscore
-    - dot
-    - hyphen
     mustnot:
     - en: begin with an underscore, hyphen, or dot
     - en: contain consecutive dots, asterisks, underscores or hyphens
-    - en: contain the word eBay
     - en: begin with the letter e and multiple digits
     - en: contain a dot followed by a common TLD, or imply web addresses in general
-    - en: contain profanity
     notes:
     - url: http://pages.ebay.com/help/policies/identity-user-ids.html
     - url: http://pages.ebay.com/help/reg/contextual/createuserid.html
+  contents:
+    whitelist:
+      classes:
+      - letters
+      - numbers
+      strings: ['*', '_', '.', '-']
+    blacklist:
+      strings:
+      - "ebay"
+      dictionaries:
+      - profanity
   change:
     url: https://scgi.ebay.com/ws/eBayISAPI.dll?ChangeUserId
     reauth: password

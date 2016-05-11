@@ -1,9 +1,9 @@
 name: Linode
 password:
-  rules:
-    classes:
-    - required: 2
-      from:
+  contents:
+    required:
+    - atleast: 2
+      classes:
       - lowers
       - uppers
       - numbers

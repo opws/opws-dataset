@@ -1,12 +1,14 @@
 name: QFC
 password:
-  rules:
+  value:
     length:
       min: 6
       max: 12
-    contain:
-    - letters: 1
-    - numbers: 1
+  contents:
+    required:
+    - classes:
+      - letters
+      - numbers
   reset:
     url: https://www.qfc.com/forgotPassword
     request:

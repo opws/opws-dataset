@@ -1,12 +1,14 @@
 name: Pottermore Shop
 password:
-  rules:
+  value:
     length:
       min: 6
-    contain:
-    - numbers: 1
-    - uppers: 1
-    - lowers: 1
+  contents:
+    required:
+    - classes:
+      - numbers
+      - uppers
+      - lowers
   reset:
     url: https://shop.pottermore.com/passwordrecovery
     request:

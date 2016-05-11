@@ -1,6 +1,6 @@
 name: Read the Docs
 password:
-  rules:
+  value:
     length:
       min: 6
   reset:
@@ -16,6 +16,7 @@ registration:
   url: https://readthedocs.org/accounts/signup/
 login:
   url: https://readthedocs.org/accounts/login/
-notes: No way to change password once logged in.
+notes:
+- en: No way to change password once logged in.
 reviewed:
   date: 2015-03-04T09:30:32Z

@@ -1,6 +1,6 @@
 name: Google
 password:
-  rules:
+  value:
     length:
       min: 8
   reset:

@@ -1,6 +1,6 @@
 name: LaptopScreen.com
 password:
-  rules:
+  value:
     length:
       min: 6
   reset:

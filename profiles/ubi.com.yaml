@@ -1,6 +1,6 @@
 name: Uplay Connect
 password:
-  rules:
+  value:
     length:
       min: 8
       max: 16

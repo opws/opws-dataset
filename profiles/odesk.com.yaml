@@ -1,13 +1,17 @@
 name: oDesk
 password:
-  rules:
+  value:
     length:
       min: 8
       max: 60
-    contain:
-    - letters: 1
-    - numbers: 1
-      symbols: 1
+  contents:
+    required:
+    - classes:
+      - letters
+    - atleast: 1
+      classes:
+      - numbers
+      - symbols
   reset:
     url: https://www.odesk.com/reset/password
     request:

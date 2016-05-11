@@ -1,11 +1,13 @@
 name: Slides
 password:
-  rules:
+  value:
     length:
       min: 6
       max: 128
-    contain:
-    - nonspaces: 1
+  contents:
+    required:
+    - classes:
+      - nonspaces
   change:
     url: https://slides.com/users/edit#user_password
     reauth: password
@@ -21,12 +23,12 @@ password:
     token:
       login: after
 username:
-  rules:
+  contents:
     whitelist:
-    - letters
-    - numbers
-    - hyphen
-    - underscore
+      classes:
+      - letters
+      - numbers
+      strings: ['-', '_']
 registration:
   url: https://slides.com/users/sign_up
   captcha: recaptcha

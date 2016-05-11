@@ -1,11 +1,13 @@
 name: Skye at Belltown
 password:
-  rules:
+  value:
     length:
       min: 6
-    contain:
-    - letters: 1
-    - nonletters: 1
+  contents:
+    required:
+    - classes:
+      - letters
+      - nonletters
   reset:
     url: https://skyeatbelltown.activebuilding.com#password
     request:

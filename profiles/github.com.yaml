@@ -1,10 +1,10 @@
 name: GitHub
 password:
-  rules:
+  value:
     length:
       min: 7
     must:
-    - contain a lowercase letter and number if shorter than 16 characters
+    - en: contain a lowercase letter and number if shorter than 16 characters
   reset:
     url: https://github.com/password_reset
     request:

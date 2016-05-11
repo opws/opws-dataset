@@ -1,32 +1,34 @@
 name: Washington Connection
 password:
-  rules:
+  value:
     length:
       min: 10
       max: 25
-    contain:
-    - letters: 1
-    - numbers: 1
-    - specials: 1
+  contents:
+    required:
+    - classes:
+      - letters
+      - numbers
+      - specials
     blacklist:
-    - spaces
+      classes:
+      - spaces
   reset:
     url: https://www.washingtonconnection.org/authservice/resetpassword.go
     request:
       accepts: username+email
       captcha: yes
 username:
-  rules:
+  value:
     length:
       min: 4
       max: 32
+  contents:
     whitelist:
-    - letters
-    - numbers
-    - dot
-    - hyphen
-    - underscore
-    - at
+      classes:
+      - letters
+      - numbers
+      strings: ['.', '-', '_', '@']
   reminder:
     url: https://www.washingtonconnection.org/authservice/forgotusername.go
     request:
@@ -47,4 +49,4 @@ questions:
   - By what nickname did your friends call you when you were a child?
   - What was the mascot of your high school football team?
 redflags:
-- There is no page for changing passwords once logged in.
+- en: There is no page for changing passwords once logged in.

@@ -1,9 +1,10 @@
 name: Simple
 password:
-  rules:
-    notes: >
-      Simple has its own passphrase strength grading system,
-      and a user's passphrase must be at least a "grade C" to pass.
+  value:
+    notes:
+    - en: >
+        Simple has its own passphrase strength grading system,
+        and a user's passphrase must be at least a "grade C" to pass.
   reset:
     url: https://bank.simple.com/forgot-password
     request:
@@ -13,7 +14,8 @@ password:
       body: url
     expiration:
       timeout: 30m
-    notes: Sends tokens via email and SMS, both are needed.
+    notes:
+    - en: Sends tokens via email and SMS, both are needed.
   change:
     url: https://bank.simple.com/activity/preferences/account-settings
     usability:

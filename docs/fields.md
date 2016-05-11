@@ -4,29 +4,22 @@
 
 The name of the site at this domain, as it would be used in a sentence.
 
-## password.rules
+## password.value, password.contents
 
-Rules and requirements the site imposes on passwords.
+Rules and requirements the site imposes on passwords. Fields under
+`password.contents` pertain to individual characters and substrings of the
+password; fields under `password.value` apply only for the string value of the
+*entire* password.
 
-## password.rules.length.min, password.rules.length.max
+## password.value.length.min, password.value.length.max
 
-An object with the `min` and `max` lengths permitted for passwords.
+The minimum and maximum length permitted for passwords, respectively.
 
 `min` should only be missing if the site legitimately allows blank passwords (or allows passwords to be disabled): otherwise, `min` will be at least 1. `max` should only be missing if the site will allow passwords over 9000 characters in length. (This can usually be tested by inspecting the password element, then entering `$0.value='Aa'+new Array(9001).join('A')` before submitting.)
 
-## password.rules.blacklist
+## password.contents.blacklist.classes
 
-Array of character types not allowed (such as those from rules that begin "must not contain").
-
-## password.rules.whitelist
-
-Array of character types that are the *only* types supported.
-
-## password.rules.contain
-
-Array of objects describing what classes of character (and at least how many) must be present. Usually of the form `[{letters: 1}, {numbers: 1}]`, but can be different.
-
-(When an object lists more than one character class, it means only one of the classes must be met.)
+Array of character types passwords may not contain (such as those from rules that begin "must not contain", or those which trigger errors in the site's password handling).
 
 Character class names used:
 
@@ -39,26 +32,59 @@ Character class names used:
 - punctuation (likely contains all non-alphanumeric-or-space characters)
 - symbols (probably the same as punctuation)
 - nonspaces (anything that isn't whitespace)
-- dot (".")
-- hyphen ("-")
-- underscore ("_")
-- at ("@")
-- plus ("+")
-- exclaim ("!")
+- nonprinting (unprintable characters)
 
-## password.rules.classes
+## password.contents.blacklist.strings
 
-Array of advanced class satisfaction rules: contains objects with `required`, as the number of classes required, and `from`, as an array of `contain` class names that can be included.
+Specific characters and sequences which passwords may not contain.
 
-Currently, this is only used for a couple of sites whose rules can't be better explained with a `contain` list.
+## password.value.blacklist.dictionaries, password.contents.blacklist.dictionaries
 
-## password.rules.must
+Array of keywords describing sets of a words that a password may not match or contain, respectively:
 
-Array of other restrictions on what passwords *must* do (if not coverable by `contain` or `classes`).
+- `english`: English words.
+- `profanity`: Profane words (probably English ones).
+- `common`: Common passwords like "abc123" or "qweasd".
 
-## password.rules.mustnot
+## password.value.blacklist.variables, password.contents.blacklist.variables
 
-Array of other restrictions on what passwords *must not* do.
+Array of keywords describing other fields of the user's profile that a password may not match or contain, respectively:
+
+- `username`
+- `firstname`
+- `lastname`
+
+## password.value.blacklist.previous, password.contents.blacklist.previous
+
+Number of retained, previously-used passwords that a password may not match or contain, respectively. When the number is not known, this field's value will just be `yes`.
+
+(`password.contents.blacklist.previous` implies that a site is retaining the plaintext of the user's passwords, and is a *huge* red flag compared to `password.value.blacklist.previous`, which only implies that previous *hashes* are retained.)
+
+## password.contents.whitelist
+
+An object describing the *only* contents permitted in passwords: any content not described by this object is forbidden.
+
+## password.contents.whitelist.classes
+
+Array of character types that are the *only* types supported. See `password.contents.blacklist.classes`.
+
+## password.contents.whitelist.strings
+
+Array of characters not included in `password.contents.whitelist.classes` that are also allowed in passwords.
+
+## password.contents.required
+
+An array of objects, similar to `password.contents.whitelist`, describing characters and classes that *must* be included in the password.
+
+Objects in this array may also have an `atleast` property, indicating that only a certain number of the classes / strings on the object need to be present.
+
+## password.value.must
+
+Array of restrictions on what passwords *must* do (other than those described by `password.contents.required`).
+
+## password.value.mustnot
+
+Array of restrictions on what passwords *must not* do (other than those described by a `blacklist` or `whitelist` object).
 
 ## password.reset.url
 
@@ -182,9 +208,9 @@ Tokens:
 - "single": Does not require password to be entered twice.
 - "showable": Password can be toggled to plaintext.
 
-## username.rules.\*
+## username.value.\*, username.contents.\*
 
-Rules on the format of usernames. See `password.rules`.
+Rules on the format of usernames. See `password.value` and `password.contents` above.
 
 ## username.reminder.url
 

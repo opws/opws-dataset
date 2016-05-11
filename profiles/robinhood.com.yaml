@@ -1,6 +1,6 @@
 name: Robinhood
 password:
-  rules:
+  value:
     length:
       min: 10
 registration:

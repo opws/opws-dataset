@@ -1,14 +1,17 @@
 name: Verizon Wireless
 password:
-  rules:
+  value:
     length:
       min: 8
       max: 20
-    contain:
-    - numbers: 1
-    - letters: 1
+  contents:
+    required:
+    - classes:
+      - numbers
+      - letters
     blacklist:
-    - spaces
-    - special characters (*, &, $, etc.)
+      classes:
+      - spaces
+      - specials
 notes:
-- HTTPS is only supported for login pages.
+- en: HTTPS is only supported for login pages.

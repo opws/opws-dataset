@@ -1,6 +1,6 @@
 name: OkCupid
 password:
-  rules:
+  value:
     length:
       min: 6
       max: 256
@@ -20,15 +20,17 @@ password:
     url: https://www.okcupid.com/settings
     reauth: password
 username:
-  rules:
+  value:
     length:
       min: 4
       max: 16
+  contents:
     whitelist:
-    - letters
-    - numbers
-    - hyphen
-    - underscore
+      classes:
+      - letters
+      - numbers
+      - hyphen
+      - underscore
 registration:
   url: https://www.okcupid.com/
   usability:

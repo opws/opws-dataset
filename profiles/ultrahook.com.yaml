@@ -1,6 +1,6 @@
 name: UltraHook
 password:
-  rules:
+  value:
     length:
       min: 1
 api:

@@ -1,6 +1,6 @@
 name: Diigo
 password:
-  rules:
+  value:
     length:
       min: 6
       max: 32
@@ -11,9 +11,9 @@ password:
   change:
     url: https://www.diigo.com/setting#account_setting
 username:
-  rules:
+  value:
     length:
       min: 6
       max: 16
     must:
-    - begin with a letter
+    - en: begin with a letter

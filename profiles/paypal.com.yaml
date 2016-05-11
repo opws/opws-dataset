@@ -1,12 +1,14 @@
 name: PayPal
 password:
-  rules:
+  value:
     length:
       min: 8
       max: 20
+  contents:
     blacklist:
-    - spaces
-    - unprintable characters
+      classes:
+      - spaces
+      - nonprinting
   reset:
     url: https://www.paypal.com/us/cgi-bin/webscr?cmd=_account-recovery
     request:

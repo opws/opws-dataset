@@ -1,6 +1,6 @@
 name: IMDb
 password:
-  rules:
+  value:
     length:
       min: 8
   reset:

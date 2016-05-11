@@ -1,11 +1,13 @@
 name: NameSilo
 password:
-  rules:
+  value:
     length:
       min: 6
       max: 32
+  contents:
     blacklist:
-    - spaces
+      classes:
+      - spaces
   reset:
     url: https://www.namesilo.com/lost_password.php
     request:

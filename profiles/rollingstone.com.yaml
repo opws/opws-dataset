@@ -1,8 +1,10 @@
 name: Rolling Stone
 password:
-  rules:
+  value:
     length:
       min: 6
+  contents:
     blacklist:
-    - spaces
-    - special characters
+      classes:
+      - spaces
+      - special

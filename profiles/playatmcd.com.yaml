@@ -1,12 +1,14 @@
 name: PlayatMcD.com
 password:
-  rules:
+  value:
     length:
       min: 6
       max: 15
+  contents:
     whitelist:
-    - letters
-    - numbers
+      classes:
+      - letters
+      - numbers
   reset:
     url: https://www.playatmcd.com/ForgotPassword
     request:

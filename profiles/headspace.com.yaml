@@ -1,11 +1,13 @@
 name: Headspace
 password:
-  rules:
+  value:
     length:
       min: 8
       max: 50
+  contents:
     blacklist:
-    - spaces
+      classes:
+      - spaces
   reset:
     url: https://www.headspace.com/login/forgotten-password
     request:

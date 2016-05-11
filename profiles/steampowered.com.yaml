@@ -1,18 +1,19 @@
 name: Steam
 password:
-  rules:
+  value:
     length:
       min: 8
       max: 64
-    notes: Password must meet an undisclosed strength requirement
+    must:
+    - en: meet an undisclosed strength requirement
   change:
     notes:
-      You must use the Steam desktop client to change your password, see
-      https://support.steampowered.com/kb_article.php?ref=7058-AFZC-7069
+    - en: You must use the Steam desktop client to change your password.
+    - url: https://support.steampowered.com/kb_article.php?ref=7058-AFZC-7069
   reset:
     notes:
-      You must use the Steam desktop client to reset your password, see
-      https://support.steampowered.com/kb_article.php?ref=4988-DHXV-7272
+    - en: You must use the Steam desktop client to reset your password.
+    - url: https://support.steampowered.com/kb_article.php?ref=4988-DHXV-7272
 registration:
   url: https://store.steampowered.com/join/
 login:

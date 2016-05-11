@@ -1,6 +1,6 @@
 name: Reddit
 password:
-  rules:
+  value:
     length:
       min: 6
   reset:
@@ -9,4 +9,5 @@ password:
       accepts: username
   change:
     url: https://ssl.reddit.com/prefs/update/
-notes: Main site served by Akamai. Preferences are directed to a special SSL server.
+notes:
+- en: Main site served by Akamai. Preferences are directed to a special SSL server.

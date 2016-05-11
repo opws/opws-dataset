@@ -1,11 +1,13 @@
 name: IFTTT
 password:
-  rules:
+  value:
     length:
       min: 6
       max: 1024
-    contain:
-    - nonspaces: 1
+  contents:
+    required:
+    - classes:
+      - nonspaces
   reset:
     url: https://ifttt.com/forgot
     request:
@@ -22,14 +24,16 @@ password:
     url: https://ifttt.com/settings/password
     reauth: password
 username:
-  rules:
+  value:
     length:
       min: 3
       max: 35
+  contents:
     whitelist:
-    - letters
-    - numbers
-    - underscore
+      classes:
+      - letters
+      - numbers
+      strings: ['_']
   change:
     url: https://ifttt.com/settings/update_username
 login:

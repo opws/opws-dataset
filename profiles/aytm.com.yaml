@@ -1,6 +1,6 @@
 name: AYTM - Ask Your Target Market
 password:
-  rules:
+  value:
     length:
       min: 5
   reset:

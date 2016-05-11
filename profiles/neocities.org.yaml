@@ -1,6 +1,6 @@
 name: Neocities
 password:
-  rules:
+  value:
     length:
       min: 5
   reset:
@@ -23,12 +23,13 @@ password:
     sessions:
       invalidate: no
 username:
-  rules:
+  value:
     whitelist:
-    - letters
-    - numbers
-    - underscore
-    - hyphen
+      classes:
+      - letters
+      - numbers
+      - underscore
+      - hyphen
 registration:
   url: https://neocities.org/#new
   captcha: recaptcha

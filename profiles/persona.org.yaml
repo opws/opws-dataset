@@ -1,6 +1,6 @@
 name: Mozilla Persona
 password:
-  rules:
+  value:
     length:
       min: 8
       max: 80

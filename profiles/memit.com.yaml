@@ -1,6 +1,6 @@
 name: Memit
 password:
-  rules:
+  value:
     length:
       min: 6
       max: 30

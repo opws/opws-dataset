@@ -1,6 +1,6 @@
 name: MapBox
 password:
-  rules:
+  value:
     length:
       min: 1
   reset:

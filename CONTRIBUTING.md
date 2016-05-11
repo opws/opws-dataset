@@ -10,7 +10,7 @@ for details):
 ```yaml
 name: Site Name Here # How would you refer to this site in a sentence?
 password:
-  rules:
+  value:
     length:
       min: 1 # What is their minimum password size? Is there a maximum?
   reset:

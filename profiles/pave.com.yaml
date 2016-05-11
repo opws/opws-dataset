@@ -1,11 +1,13 @@
 name: Pave
 password:
-  rules:
+  value:
     length:
       min: 7
-    contain:
-    - numbers: 1
-    - letters: 1
+  contents:
+    required:
+    - classes:
+      - numbers
+      - letters
   reset:
     url: https://www.pave.com/forgot_password
     request:

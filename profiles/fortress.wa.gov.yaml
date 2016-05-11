@@ -1,23 +1,16 @@
 name: Washington State Department of Revenue E-file
 password:
-  rules:
+  value:
     length:
       min: 10
       max: 32
-    contain:
-    - letters: 1
-    - numbers: 1
-    - exclaim: 1
-      at: 1
-      hash: 1
-      dollar: 1
-      percent: 1
-      caret: 1
-      ampersand: 1
-      asterisk: 1
-      question: 1
-      underscore: 1
-      tilde: 1
+  contents:
+    required:
+    - classes:
+      - letters
+      - numbers
+    - atleast: 1
+      strings: ['!', '@', '#', '$', '%', '^', '&', '*', '?', '_', '~']
   reset:
     url: https://fortress.wa.gov/dor/efile/FortressLogon/RetrievePassword.aspx
     request:
@@ -27,7 +20,7 @@ password:
     url: https://fortress.wa.gov/dor/efile/FortressLogon/ChangePassword.aspx
     reauth: password
 username:
-  rules:
+  value:
     length:
       min: 8
   reminder:

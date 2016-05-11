@@ -1,6 +1,6 @@
 name: GOG.com
 password:
-  rules:
+  value:
     length:
       min: 2
       max: 100

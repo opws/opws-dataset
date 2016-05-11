@@ -1,6 +1,6 @@
 name: Guru.com
 password:
-  rules:
+  value:
     length:
       min: 8
       max: 35

@@ -1,6 +1,6 @@
 name: Hacker News
 password:
-  rules:
+  value:
     length:
       min: 8
   reset:

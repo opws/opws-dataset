@@ -1,11 +1,13 @@
 name: Mashery
 password:
-  rules:
+  value:
     length:
       min: 8
-    contain:
-    - letters: 1
-    - numbers: 1
+  contents:
+    required:
+    - classes:
+      - letters
+      - numbers
   reset:
     url: https://secure.mashery.com/member/lost/
     request:

@@ -1,16 +1,19 @@
 name: DNS-O-Matic
 password:
-  rules:
+  value:
     length:
       min: 8
       max: 256
-    contain:
-    - uppers: 1
-    - lowers: 1
-    - digits: 1
-    - specials: 1
-    mustnot:
-    - en: contain part of your username
+  contents:
+    required:
+    - classes:
+      - uppers
+      - lowers
+      - digits
+      - specials
+    blacklist:
+      variables:
+      - username # or "part of" your username?
   reset:
     url: https://www.dnsomatic.com/account/#pwdreset
     request:
@@ -28,18 +31,18 @@ password:
     url: https://www.dnsomatic.com/account/
     reauth: no
 username:
-  rules:
+  value:
     length:
       min: 3
       max: 25
-    whitelist:
-    - letters
-    - numbers
-    - underscore
-    - dot
-    - hyphen
     mustnot:
     - en: begin or end with a non-alphanumeric character
+  contents:
+    whitelist:
+      classes:
+      - letters
+      - numbers
+      strings: ['_', '.', '-']
 registration:
   url: https://www.dnsomatic.com/create/
   usability:

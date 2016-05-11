@@ -1,9 +1,13 @@
 name: CrunchBase
 password:
-  rules:
+  value:
     length:
       min: 3
       max: 40
+  contents:
+    required:
+    - classes:
+      - nonspaces
   reset:
     url: http://www.crunchbase.com/recovery/new
     request:
@@ -12,4 +16,4 @@ password:
     url: http://www.crunchbase.com/user/ + username + /edit#change-pw
     reauth: no
 redflags:
-- Passwords consisting entirely of spaces raise "Password cannot be blank" errors.
+- en: Passwords consisting entirely of spaces raise "Password cannot be blank" errors.

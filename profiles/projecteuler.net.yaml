@@ -1,15 +1,15 @@
 name: Project Euler
 password:
-  rules:
+  value:
     length:
       min: 1
       max: 32
+  contents:
     whitelist:
-    - letters
-    - numbers
-    - dot
-    - hyphen
-    - underscore
+      classes:
+      - letters
+      - numbers
+      strings: ['.', '-', '_']
   reset:
     url: https://projecteuler.net/reset_password
     request:

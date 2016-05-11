@@ -1,11 +1,13 @@
 name: South by Southwest
 password:
-  rules:
+  value:
     length:
       min: 8
       max: 128
-    contain:
-    - nonspaces: 1
+  contents:
+    required:
+    - classes:
+      - nonspaces
   reset:
     url: https://auth.sxsw.com/users/password/new
     request:

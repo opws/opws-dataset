@@ -1,12 +1,16 @@
 name: Behance
 password:
-  rules:
+  value:
     length:
       min: 6
       max: 32
+  contents:
+    blacklist:
+      classes:
+      - spaces
   reset:
     url: http://www.behance.net/account/reset_password
   change:
     url: http://www.behance.net/account/settings#block-account-password
 redflags:
-- Passwords with spaces trigger a "Password must be between 6 and 32 characters" error message.
+- en: Passwords with spaces trigger a "Password must be between 6 and 32 characters" error message.

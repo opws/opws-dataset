@@ -1,18 +1,19 @@
 name: Wells Fargo
 password:
-  rules:
+  value:
     length:
       min: 6
       max: 14
-    contain:
-    - letters: 1
-    - numbers: 1
     mustnot:
     - en: contain 9 or more numbers
     - en: repeat the same character more than 3 times in a row
     - en: contain more than 3 sequential numbers or letters (such as '1234' or 'abcd') in a row
     - en: be identical to your username
-    - en:
+  contents:
+    required:
+    - classes:
+      - letters
+      - numbers
   change:
     url: https://oam.wellsfargo.com/oam/access/receiver?dest=MODIFY_PASSWORD
     reauth: password
@@ -26,19 +27,21 @@ password:
         Debit/ATM card number and PIN. Password change form
         is presented immediately after entering all of these.
 username:
-  rules:
+  value:
     length:
       min: 6
       max: 14
-    contain:
-    - letters: 1
     mustnot:
     - en: contain 9 or more numbers
+  contents:
+    required:
+    - classes:
+      - letters
     whitelist:
-    - letters
-    - numbers
-    - hyphen
-    - underscore
+      classes:
+      - letters
+      - numbers
+      strings: ['-', '_']
   change:
     url: https://oam.wellsfargo.com/oam/access/receiver?dest=CHANGE_USERNAME
   reminder:

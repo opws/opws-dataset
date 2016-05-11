@@ -1,13 +1,15 @@
 name: H&R Block
 password:
-  rules:
+  value:
     length:
       min: 8
       max: 15
     mustnot:
     - en: contain the same character three consecutive times
+  contents:
     blacklist:
-    - spaces
+      classes:
+      - spaces
   reset:
     url: https://idp.hrblock.com/idp/Authn/DForgotCredentials.html
     request:
