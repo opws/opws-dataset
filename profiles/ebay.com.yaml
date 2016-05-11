@@ -7,10 +7,18 @@ password:
     classes:
     - required: 2
       from:
-      - letters
+      - uppers
+      - lowers
       - numbers
       - symbols
-    blacklist: [ spaces, "[", "]", "<", ">" ]
+    mustnot:
+    - en: be the same as previous used passwords
+    - en: be on an undisclosed list of common passwords like "abc123"
+    - en: contain the word "password"
+    blacklist: [
+      spaces,
+      "[", "]", "<", ">", "{", "}",
+      "//", "'", '"', ";" ]
     notes:
     - url: http://pages.ebay.com/help/new/contextual/create_password.html
   reset:
@@ -64,4 +72,4 @@ login:
   persist:
     checked: yes
 reviewed:
-  date: 2016-03-29T09:09:37.873Z
+  date: 2016-04-28T21:38:12Z
