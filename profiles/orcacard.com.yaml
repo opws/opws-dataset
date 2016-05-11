@@ -1,0 +1,47 @@
+name: ORCA
+password:
+  rules:
+    length:
+      min: 7
+      max: 15
+    classes:
+    - required: 3
+      from:
+      - uppers
+      - lowers
+      - numbers
+      - specials
+    mustnot:
+    - en: contain the user's account name
+    - en: be the same as any of the previous 4 passwords for that user
+  reset:
+    url: https://orcacard.com/ERG-Seattle/p5_001.do
+    request:
+      accepts: firstname+lastname+email+cardnumber+cvn+question
+    response:
+      sender: contactus@orcacard.com
+      body: firstname lastname username temp
+    steps:
+    - login
+    - change
+  change:
+    url: https://orcacard.com/ERG-Seattle/p7_007.do
+    reauth: password
+    sessions:
+      invalidate: no
+username:
+  rules:
+    length:
+      min: 6
+      max: 15
+    whitelist:
+    - letters
+    - numbers
+registration:
+  url: https://orcacard.com/ERG-Seattle/p4_010.do
+  usability:
+    email: single
+login:
+  url: https://orcacard.com/ERG-Seattle/haveACard.do?m=5
+reviewed:
+  date: 2016-05-11T04:09:30.105Z
