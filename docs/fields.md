@@ -174,6 +174,7 @@ Whether resetting your password invalidates sessions (logs you out), forcing you
 Values:
 
 - "all": demonstrably invalidates all sessions
+- "others": invalidates all sessions other than the one used to reset the password
 - "no": doesn't invalidate any logged-in sessions
   - Although this is less secure than the alternative(s), it's assumed to be the default.
 
