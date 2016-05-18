@@ -3,8 +3,12 @@ password:
   value:
     length:
       min: 8
-    mustnot:
-    - en: consist of one repeated character
+    blacklist:
+      dictionaries:
+      - english
+      - common
+      variables:
+      - username
     notes:
     - en: Password editing suggests using at least 1 number
           but does not require it.
@@ -13,16 +17,27 @@ password:
     request:
       accepts: email
     response:
-      sender: do-not-reply@basecamp.com
+      sender: support@basecamp.com
       body: username link
-    token:
-      login: after
+    steps:
+    - change
+    - autologin
+    expiration:
+      trigger: change
+    sessions:
+      invalidate: others
   change:
-    url: https:// + user url + /identity/edit
+    url: https://launchpad.37signals.com/identity/password/edit
     reauth: no
+    sessions:
+      invalidate: others
 registration:
   url: https://signup.37signals.com/basecamp/Free/
 login:
   url: https://launchpad.37signals.com/signin
+thirdparty:
+  auth:
+    providers:
+    - google.com
 reviewed:
-  date: 2015-06-16T02:29:36.878Z
+  date: 2016-05-18T05:33:39.553Z
