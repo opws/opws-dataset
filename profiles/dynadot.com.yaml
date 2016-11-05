@@ -10,13 +10,16 @@ password:
       - spaces
   reset:
     url: https://www.dynadot.com/forgot.html
-    request:
-      accepts: email email+username
-    response:
-      sender: accounts@dynadot.com
-      body: link
-    token:
-      login: no
+    flow:
+      email:
+        request:
+          accepts: email email+username
+        response:
+          sender: accounts@dynadot.com
+          body: link
+      submit:
+        sessions:
+          own: sustain # assumed based on previous "token.login: no"
   change:
     url: https://www.dynadot.com/account/info/settings.html
     reauth: password

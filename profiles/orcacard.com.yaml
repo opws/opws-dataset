@@ -18,19 +18,18 @@ password:
       previous: 4
   reset:
     url: https://orcacard.com/ERG-Seattle/p5_001.do
-    request:
-      accepts: firstname+lastname+email+cardnumber+cvn+question
-    response:
-      sender: contactus@orcacard.com
-      body: firstname lastname username temp
-    steps:
-    - login
-    - change
+    onetime:
+      email:
+        request:
+          accepts: firstname+lastname+email+cardnumber+cvn+question
+        response:
+          sender: contactus@orcacard.com
+          body: firstname lastname username password
   change:
     url: https://orcacard.com/ERG-Seattle/p7_007.do
     reauth: password
     sessions:
-      invalidate: no
+      own: sustain
 username:
   value:
     length:

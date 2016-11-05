@@ -5,13 +5,16 @@ password:
       min: 6
   reset:
     url: https://readthedocs.org/accounts/password/reset/
-    request:
-      accepts: email
-    response:
-      sender: support@readthedocs.org
-      body: url username
-    token:
-      login: no
+    flow:
+      email:
+        request:
+          accepts: email
+        response:
+          sender: support@readthedocs.org
+          body: url username
+      submit:
+        sessions:
+          own: sustain # assumed based on previous "token.login: no"
 registration:
   url: https://readthedocs.org/accounts/signup/
 login:

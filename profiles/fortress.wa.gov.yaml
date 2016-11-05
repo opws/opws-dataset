@@ -13,9 +13,11 @@ password:
       strings: ['!', '@', '#', '$', '%', '^', '&', '*', '?', '_', '~']
   reset:
     url: https://fortress.wa.gov/dor/efile/FortressLogon/RetrievePassword.aspx
-    request:
-      accepts: email
-      captcha: yes
+    flow:
+      email:
+        request:
+          accepts: email
+          captcha: yes
   change:
     url: https://fortress.wa.gov/dor/efile/FortressLogon/ChangePassword.aspx
     reauth: password

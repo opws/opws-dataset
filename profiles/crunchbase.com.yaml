@@ -10,8 +10,10 @@ password:
       - nonspaces
   reset:
     url: http://www.crunchbase.com/recovery/new
-    request:
-      accepts: email
+    flow:
+      email:
+        request:
+          accepts: email
   change:
     url: http://www.crunchbase.com/user/ + username + /edit#change-pw
     reauth: no

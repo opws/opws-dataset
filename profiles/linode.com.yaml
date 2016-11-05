@@ -10,8 +10,10 @@ password:
       - punctuation
   reset:
     url: https://manager.linode.com/session/forgot/password
-    request:
-      accepts: username
+    flow:
+      email:
+        request:
+          accepts: username
   change:
     url: https://manager.linode.com/profile/index#password
 totp: optional

@@ -5,8 +5,10 @@ password:
       min: 5
   reset:
     url: https://www.docker.io/account/forgot-password/
-    request:
-      accepts: email
+    flow:
+      email:
+        request:
+          accepts: email
   change:
     url: https://www.docker.io/account/change-password/
     reauth: password

@@ -11,17 +11,19 @@ password:
       - english
   reset:
     url: https://panel.dreamhost.com/login/forgot.cgi
-    request:
-      accepts: email
-    response:
-      sender: support@dreamhost.com
-      body: firstname origin url
-    steps:
-    - change
-    - login
-    expiration:
-      timeout: 8h
-      trigger: change
+    flow:
+      email:
+        request:
+          accepts: email
+        response:
+          sender: support@dreamhost.com
+          body: firstname origin url
+      expiration:
+        timeout: 8h
+        trigger: change
+      submit:
+        destination:
+          page: login
   change:
     url: https://panel.dreamhost.com/index.cgi?tree=billing.secure
     reauth: password

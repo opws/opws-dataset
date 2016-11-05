@@ -5,12 +5,14 @@ password:
       min: 1
   reset:
     url: https://www.cloudflare.com/forgot-password
-    request:
-      accepts: email
-    response:
-      body: url token
-    expiration:
-      timeout: 2h
+    flow:
+      email:
+        request:
+          accepts: email
+        response:
+          body: url token
+      expiration:
+        timeout: 2h
   change:
     url: https://www.cloudflare.com/my-account
     reauth: password

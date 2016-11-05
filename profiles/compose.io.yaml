@@ -6,13 +6,16 @@ password:
       max: 999
   reset:
     url: https://app.compose.io/users/password/new
-    request:
-      accepts: email
-    response:
-      sender: support@compose.io
-      body: url
-    token:
-      login: no
+    flow:
+      email:
+        request:
+          accepts: email
+        response:
+          sender: support@compose.io
+          body: url
+      submit:
+        sessions:
+          own: sustain # assumed based on previous "token.login: no"
   change:
     url: https://app.compose.io/account
     reauth: maybe

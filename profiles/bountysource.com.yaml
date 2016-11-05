@@ -16,14 +16,16 @@ password:
       password: single
   reset:
     url: https://www.bountysource.com/signin
-    response:
-      sender: support@bountysource.com
-      body: code url
-    steps:
-    - change
-    - autologin
-    expiration:
-      trigger: change
+    flow:
+      email:
+        response:
+          sender: support@bountysource.com
+          body: code url
+      expiration:
+        trigger: submit
+      submit:
+        sessions:
+          own: login
     usability:
       password: single
     notes:

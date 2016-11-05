@@ -10,8 +10,10 @@ password:
       - nonspaces
   reset:
     url: https://auth.getpebble.com/users/password/new
-    request:
-      accepts: email
+    flow:
+      email:
+        request:
+          accepts: email
   change:
     url: https://auth.getpebble.com/users/edit
     reauth: password

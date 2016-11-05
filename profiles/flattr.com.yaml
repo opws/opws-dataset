@@ -2,7 +2,9 @@ name: Flattr
 password:
   reset:
     url: https://flattr.com/forgot
-    request:
-      accepts: email
+    flow:
+      email:
+        request:
+          accepts: email
   change:
     url: https://flattr.com/authaccounts/editpassword

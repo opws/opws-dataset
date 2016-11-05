@@ -2,5 +2,7 @@ name: WordPress
 password:
   reset:
     url: https://en.wordpress.com/wp-login.php?action=lostpassword
-    request:
-      accepts: username email
+    flow:
+      email:
+        request:
+          accepts: username email

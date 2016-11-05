@@ -7,13 +7,15 @@ password:
         and a user's passphrase must be at least a "grade C" to pass.
   reset:
     url: https://bank.simple.com/forgot-password
-    request:
-      accepts: username+phone email+phone
-    response:
-      sender: notify@simple.com
-      body: url
-    expiration:
-      timeout: 30m
+    flow:
+      email:
+        request:
+          accepts: username+phone email+phone
+        response:
+          sender: notify@simple.com
+          body: url
+      expiration:
+        timeout: 30m
     notes:
     - en: Sends tokens via email and SMS, both are needed.
   change:

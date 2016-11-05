@@ -10,16 +10,18 @@ password:
       - nonspaces
   reset:
     url: https://ifttt.com/forgot
-    request:
-      accepts: email
-    response:
-      sender: welcome@ifttt.com
-      body: username link
-    steps:
-    - change
-    - autologin
-    expiration:
-      trigger: change
+    flow:
+      email:
+        request:
+          accepts: email
+        response:
+          sender: welcome@ifttt.com
+          body: username link
+      submit:
+        sessions:
+          own: login
+      expiration:
+        trigger: submit
   change:
     url: https://ifttt.com/settings/password
     reauth: password

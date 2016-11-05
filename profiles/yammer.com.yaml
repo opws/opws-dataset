@@ -5,8 +5,10 @@ password:
       min: 6
   reset:
     url: https://www.yammer.com/forgotten_password/new
-    request:
-      accepts: email
+    flow:
+      email:
+        request:
+          accepts: email
   change:
     url: https://www.yammer.com/account/password
     reauth: password

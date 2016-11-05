@@ -2,7 +2,9 @@ name: iWantMyName
 password:
   reset:
     url: https://iwantmyname.com/reset_password
-    request:
-      accepts: email domain
+    flow:
+      email:
+        request:
+          accepts: email domain
   change:
     url: https://iwantmyname.com/dashboard/account/login

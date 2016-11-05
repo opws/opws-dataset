@@ -2,7 +2,9 @@ name: Nitrous.IO
 password:
   reset:
     url: https://www.nitrous.io/users/password/new
-    request:
-      accepts: email
+    flow:
+      email:
+        request:
+          accepts: email
   change:
     url: https://www.nitrous.io/users/edit#user_password

@@ -5,8 +5,10 @@ password:
       min: 1
   reset:
     url: https://www.mapbox.com/#active1
-    request:
-      accepts: email
+    flow:
+      email:
+        request:
+          accepts: email
   change:
     url: https://www.mapbox.com/account/
     reauth: no

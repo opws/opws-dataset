@@ -2,8 +2,10 @@ name: Namecheap
 password:
   reset:
     url: https://manage.www.namecheap.com/myaccount/rememberpwd.asp
-    request:
-      accepts: username email domain
+    flow:
+      email:
+        request:
+          accepts: username email domain
   change:
     url: https://manage.www.namecheap.com/myaccount/modify-profile-changepassword.aspx
     reauth: password

@@ -12,8 +12,10 @@ password:
       - spaces
   reset:
     url: https://idp.hrblock.com/idp/Authn/DForgotCredentials.html
-    request:
-      accepts: username firstname+lastname+ssn+dob
+    flow:
+      email:
+        request:
+          accepts: username firstname+lastname+ssn+dob
   change:
     reauth: password
     notes:

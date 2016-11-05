@@ -16,17 +16,19 @@ password:
       - username # or "part of" your username?
   reset:
     url: https://www.dnsomatic.com/account/#pwdreset
-    request:
-      accepts: email
-    response:
-      sender: accounts@dnsomatic.com
-      body: url username
-    expiration:
-      timeout: 3h
-      trigger: change
-    steps:
-    - change
-    - autologin
+    flow:
+      email:
+        request:
+          accepts: email
+        response:
+          sender: accounts@dnsomatic.com
+          body: url username
+      expiration:
+        timeout: 3h
+        trigger: submit
+      submit:
+        sessions:
+          own: login
   change:
     url: https://www.dnsomatic.com/account/
     reauth: no

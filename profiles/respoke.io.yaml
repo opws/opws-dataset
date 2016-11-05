@@ -5,8 +5,10 @@ password:
       min: 1
   reset:
     url: https://portal.respoke.io/#/password-reset
-    request:
-      accepts: email
+    flow:
+      email:
+        request:
+          accepts: email
   change:
     url: https://portal.respoke.io/#/account?section=Profile
     reauth: no

@@ -10,8 +10,10 @@ password:
       - letters
   reset:
     url: https://www.pave.com/forgot_password
-    request:
-      accepts: email
+    flow:
+      email:
+        request:
+          accepts: email
   change:
     url: https://www.pave.com/settings
     reauth: no

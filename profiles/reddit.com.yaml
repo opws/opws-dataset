@@ -5,8 +5,10 @@ password:
       min: 6
   reset:
     url: http://www.reddit.com/password
-    request:
-      accepts: username
+    flow:
+      email:
+        request:
+          accepts: username
   change:
     url: https://ssl.reddit.com/prefs/update/
 notes:

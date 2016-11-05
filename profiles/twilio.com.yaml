@@ -2,7 +2,9 @@ name: Twilio
 password:
   reset:
     url: https://www.twilio.com/reset-password
-    request:
-      accepts: email
+    flow:
+      email:
+        request:
+          accepts: email
   change:
     url: https://www.twilio.com/user/settings#password-row

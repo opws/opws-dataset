@@ -5,7 +5,9 @@ password:
       min: 6
   reset:
     url: https://www.laptopscreen.com/English/section/password-recovery/
-    request:
-      accepts: email
+    flow:
+      email:
+        request:
+          accepts: email
   change:
     url: https://www.laptopscreen.com/English/profile/

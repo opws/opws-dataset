@@ -90,13 +90,13 @@ Array of restrictions on what passwords *must not* do (other than those describe
 
 The URL of the site's "reset password" page.
 
-## password.reset.request.accepts
+## password.reset.flow.email.request.accepts, password.reset.randomize.email.request.accepts, password.reset.onetime.email.request.accepts
 
-A space-separated token string of what identifiers the site needs to reset passwords. (Usually some combination of "email" and/or "username".)
+A space-separated token string of what identifiers the site needs to request an email to enter password reset flow. (Usually some combination of "email" and/or "username".)
 
 When sites *require multiple* identifiers, they are joined with a plus (`+`).
 
-## password.reset.request.captcha
+## password.reset.flow.email.request.captcha, password.reset.randomize.email.request.captcha, password.reset.onetime.email.request.captcha
 
 What kind of captcha (if any) is used to deter automated password resets ("yes" if unknown).
 
@@ -106,11 +106,11 @@ Known captchas:
 - botdetect (see http://captcha.com/captcha-examples.html) - when possible, the specific style in use is listed instead:
   - botdetect-vertigo
 
-## password.reset.response.sender
+## password.reset.flow.email.response.sender, password.reset.randomize.email.response.sender, password.reset.onetime.email.response.sender
 
 What email address the password reset response comes from.
 
-## password.reset.response.body
+## password.reset.flow.email.response.body, password.reset.randomize.email.response.body, password.reset.onetime.email.response.body
 
 A space-separated token string of data the reset mechanism responds with (usually via email):
 
@@ -120,54 +120,54 @@ A space-separated token string of data the reset mechanism responds with (usuall
 - url: a URL (possibly linked) to the page to reset the password.
 - link: A link (without the URL visible) to reset the password.
 - token: A token that can be typed on a page (may also be part of a link/URL) to bring you to the reset screen.
-- temp: A temporary password to use for logging in.
+- password: The random password, for "password.reset.randomize" and "password.reset.onetime" methods.
 - origin: Data identifying the source for the reset request, such as the IP address it was posted from.
 
-## password.reset.expects
+## password.reset.flow.enter.expects
 
 Space-separated string of things the password reset page expects before resetting the password. Tokens:
 
 - "origin" (IP address requesting the page must be the same IP the email was requested from)
 
-## password.reset.steps
+## password.reset.flow.expiration.trigger
 
-An array of string tokens describing the operations involved after a user follows whatever password reset link they get via email:
+Which step causes the reset session token to be invalidated for further reset attempts. Should be "submit", is sometimes "enter" (meaning the reset link can only be followed once).
 
-- "change" (for the actual changing of the password)
-- "autochange" (for when the password is changed to something else by the site, eg. Neocities)
-- "button" (when the next step happens automatically, but only after a POST)
-- "expire" (documenting at what point the token is expired)
-- "stub" (the page displays a message confirming the reset and you go nowhere)
-- "login" (user is directed to the login page)
-- "autologin" (user is logged in)
-
-Where "stub" is a non-final step (eg. when it is followed by "login"), it is implied that there is a single button that, when clicked, leads to the next step (similar to "button").
-
-## password.reset.expiration.trigger
-
-Which step causes the reset session token to be invalidated for further reset attempts. Should be "change", is sometimes "visit" (meaning the reset link can only be followed once).
-
-## password.reset.expiration.timeout
+## password.reset.flow.expiration.timeout, password.reset.onetime.expiration.timeout
 
 How long after issuance the reset token is valid for, as a human-abbreviated string ("24h" is common).
+
+## password.reset.randomize.enter.result
+
+Whether following a link sets and sends the randomized password (`send`), or just changes the password to the already-sent password (`change`).
 
 ## password.reset.usability.password
 
 A space-separated token string describing how the password set UI differs from double-blind-entry. See `password.change.usability.password`.
 
-## password.reset.token.login
+## password.reset.flow.submit.destination.page
 
-*(This field is deprecated. Profiles should transition to using password.reset.steps instead. See [issue #70](https://github.com/opensets/domainprofiles/issues/70).)*
+What kind of page the user is directed to after submitting a reset password:
 
-Whether the reset token works as login credentials. Valid values:
+- `stub`: A page that doesn't go anywhere, you're just expected to close the tab or navbar away or whatever.
+- `login`: The login page (assuming `password.reset.flow.submit.sessions.own` is `invalidate`: what happens if you're logged in, eh, I don't think it's worth profiling, this value is just for what's expected when you're logged out).
+- `settings`: The user settings page, presumably the one with password changes.
+- `profile`: The public-facing profile page for the user.
+- `home`: Some manner of home page for the user (if `password.reset.flow.submit.sessions.own` is `login`) or the site's root (if it's not `login`).
 
-- "before" (the token logs you in before resetting the password)
-- "after" (the token logs you in after resetting the password)
-- "no" (the token does not log you in)
+## password.reset.flow.submit.sessions.own, password.reset.randomize.enter.sessions.own
 
-A value of "before" implies you may opt not to reset the password (using the reset token logs you in and you can navigate away). For sites that use a temporary password as the reset token, a value of "after" implies you are *required* to reset the password after logging in with the temporary password.
+Whether the current session is logged in (`login`), logged out if logged in (`invalidate`), or not changed with regards to login state (`sustain`) after resetting.
+
+Note that being *redirected to the login page to enter the new password* does not count as a `login` value here (unless the site for some reason logs the user in *before presenting the login page*, which would make no sense) - such behavior is instead reflected with `password.reset.flow.submit.destination.page` having a value of `login`.
+
+## password.reset.flow.submit.sessions.others, password.reset.randomize.enter.sessions.others
+
+Whether other logged-in sessions are invalidated (`invalidate`) or not (`sustain`) when resetting a password.
 
 ## password.reset.sessions.invalidate
+
+*TODO: this should be refactorable into password.reset.flow.submit.sessions values after #127 and deletable*
 
 Whether resetting your password invalidates sessions (logs you out), forcing you to log back in with the new password.
 
@@ -186,19 +186,13 @@ The URL of the "change password" page for the logged-in user. If the site doesn'
 
 "no" if users can change password without reauthenticating, "password" if they have to enter the old password.
 
-## password.change.sessions.invalidate
+## password.change.sessions.own
 
-Whether changing your password invalidates sessions (logs you out), forcing you to log back in with the new password.
+Whether the current session is logged out (`invalidate`) or not (`sustain`) after changing the password.
 
-Values:
+## password.change.sessions.others
 
-- "own": invalidates session that changed password
-  - This hopefully implies that other sessions are invalidated as well (like "all"), but hasn't been verified.
-  - If other sessions are still shown to be logged in, it will be listed under redflags.
-- "others": invalidates all sessions other than the one used to change the password
-- "all": demonstrably invalidates all sessions
-- "no": doesn't log you out or invalidate any other logged-in sessions
-  - Although this is less secure than the others, it's assumed to be the default.
+Whether other logged-in sessions are logged out (`invalidate`) or not (`sustain`) after changing the password.
 
 ## password.change.usability.password
 

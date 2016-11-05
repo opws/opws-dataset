@@ -5,23 +5,24 @@ password:
       min: 5
   reset:
     url: https://neocities.org/password_reset
-    request:
-      accepts: email
-    response:
-      sender: web@neocities.org
-      body: url token password
-    steps:
-    - autochange
-    - stub
-    sessions:
-      invalidate: no
-    expiration:
-      trigger: visit
+    randomize:
+      email:
+        request:
+          accepts: email
+        response:
+          sender: web@neocities.org
+          body: url token password
+      enter:
+        result: change
+        sessions: # based on previous "invalidate: no"
+          own: sustain
+          others: sustain
   change:
     url: https://neocities.org/settings#password
     reauth: password
-    sessions:
-      invalidate: no
+    sessions: # based on previous "invalidate: no"
+      own: sustain
+      others: sustain
 username:
   value:
     whitelist:

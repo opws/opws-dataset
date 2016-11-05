@@ -2,8 +2,10 @@ name: Yahoo
 password:
   reset:
     url: https://edit.yahoo.com/forgotroot
-    request:
-      accepts: username email
+    flow:
+      email:
+        request:
+          accepts: username email
   change:
     url: https://edit.yahoo.com/config/change_pw
 report:

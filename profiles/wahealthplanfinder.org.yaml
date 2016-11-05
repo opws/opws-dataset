@@ -17,8 +17,10 @@ password:
       - spaces
   reset:
     url: https://www.wahealthplanfinder.org/HBEWeb/Annon_DisplayForgotPasswordGetUserName.action
-    request:
-      accepts: username
+    flow:
+      email:
+        request:
+          accepts: username
   change:
     url: https://www.wahealthplanfinder.org/HBEWeb/DisplayPasswordChangePassword.action
     reauth: password

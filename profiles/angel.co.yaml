@@ -10,16 +10,18 @@ password:
       - nonspaces
   reset:
     url: https://angel.co/users/password/new
-    request:
-      accepts: email
-    response:
-      sender: team@angel.co
-      body: link
+    flow:
+      email:
+        request:
+          accepts: email
+        response:
+          sender: team@angel.co
+          body: link
   change:
     url: https://angel.co/settings/password
     reauth: password
     sessions:
-      invalidate: own
+      own: invalidate
 registration:
   url: https://angel.co/join
 login:

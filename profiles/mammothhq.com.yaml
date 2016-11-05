@@ -2,7 +2,9 @@ name: Mammoth
 password:
   reset:
     url: https://mammothhq.com/users/password/new
-    request:
-      accepts: email
+    flow:
+      email:
+        request:
+          accepts: email
   change:
     url: https://mammothhq.com/users/edit

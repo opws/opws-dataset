@@ -6,13 +6,16 @@ password:
       max: 80
   reset:
     url: https://login.persona.org/
-    request:
-      accepts: email
-    response:
-      sender: no-reply@persona.org
-      body: link
-    token:
-      login: after
+    flow:
+      email:
+        request:
+          accepts: email
+        response:
+          sender: no-reply@persona.org
+          body: link
+      submit:
+        destination:
+          page: login
     notes: See http://support.mozilla.org/en-US/kb/how-do-i-manage-my-persona-account
   change:
     url: https://login.persona.org/

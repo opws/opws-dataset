@@ -6,20 +6,21 @@ password:
       max: 100
   reset:
     url: https://login.gog.com/password/request
-    request:
-      accepts: email
-      captcha: recaptcha
-    notes:
-    - en: Captcha only appears after multiple reset requests.
-    response:
-      sender: no-reply@gog.com
-      body: username link url
-    steps:
-    - change
-    - stub
-    - login
-    expiration:
-      trigger: change
+    flow:
+      email:
+        request:
+          accepts: email
+          captcha: recaptcha
+          notes:
+          - en: Captcha only appears after multiple reset requests.
+        response:
+          sender: no-reply@gog.com
+          body: username link url
+      submit:
+        destination:
+          page: stub
+      expiration:
+        trigger: submit
   change:
     url: https://login.gog.com/account/password
     reauth: password
