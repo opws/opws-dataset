@@ -29,8 +29,7 @@ password:
         email:
           sender: account-noreply@adobe.com
           body: firstname lastname url
-        timeout: 72h
-      expiration:
+        expire: 72h
       submit:
         sessions:
           own: sustain # assumed based on previous "token.login: no"

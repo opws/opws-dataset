@@ -20,7 +20,7 @@ password:
       response:
         email:
           body: link token
-        timeout: 2h
+        expire: 2h
       submit:
         sessions:
           own: sustain # assumed based on previous "token.login: no"

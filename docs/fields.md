@@ -129,17 +129,21 @@ Space-separated string of things the password reset page expects before resettin
 
 - "origin" (IP address requesting the page must be the same IP the email was requested from)
 
-## password.reset.flow.expiration
-
-Which step causes the reset session token to be invalidated for further reset attempts. Should be "submit", is sometimes "enter" (meaning the reset link can only be followed once).
-
-## password.reset.flow.response.timeout, password.reset.onetime.response.timeout
+## password.reset.flow.response.expire, password.reset.onetime.response.expire
 
 How long after issuance the reset token is valid for, as a human-abbreviated string ("24h" is common).
 
-## password.reset.flow.open.timeout
+## password.reset.flow.open.expire
 
 How long after beginning the post-response step (ie. following the link) the reset token is valid for, as a human-abbreviated string ("24h" is common).
+
+If the token may not be used to re-open the password reset flow after the first time it is used, this value will be `"now"`.
+
+## password.reset.flow.submit.expire
+
+If the token does not immediately expire until it is used, the value of this field will be `"now"`.
+
+This value is only included as a way of canonically stating that the token does not expire at an earlier step: if it is omitted and there is no `password.reset.flow.open.expire: now`, this means that the step that triggers expiration has not been profiled, not that it is absent. A token that *does not expire* after use would be a red flag, and would be documented as such under `redflags`.
 
 ## password.reset.randomize.open.result
 

@@ -8,6 +8,6 @@ password:
       response:
         email:
           body: password
-        timeout: 7d
+        expire: 7d
   change:
     url: https://commons.wikimedia.org/wiki/Special:ChangePassword

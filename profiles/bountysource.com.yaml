@@ -24,7 +24,7 @@ password:
       submit:
         sessions:
           own: login
-      expiration: submit
+        expire: now
     usability:
       password: single
     notes:

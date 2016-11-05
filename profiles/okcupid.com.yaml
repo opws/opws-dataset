@@ -16,7 +16,7 @@ password:
       submit:
         sessions:
           own: login
-      expiration: submit
+        expire: now
   change:
     url: https://www.okcupid.com/settings
     reauth: password

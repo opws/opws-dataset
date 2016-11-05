@@ -17,7 +17,7 @@ password:
       response:
         email:
           body: url link
-        timeout: 24h
+        expire: 24h
       submit:
         sessions:
           own: sustain # assumed based on previous "token.login: no"

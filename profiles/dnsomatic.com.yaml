@@ -23,11 +23,11 @@ password:
         email:
           sender: accounts@dnsomatic.com
           body: url username
-        timeout: 3h
+        expire: 3h
       submit:
         sessions:
           own: login
-      expiration: submit
+        expire: now
   change:
     url: https://www.dnsomatic.com/account/
     reauth: no

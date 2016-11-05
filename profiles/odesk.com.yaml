@@ -22,7 +22,7 @@ password:
         email:
           sender: donotreply@odesk.com
           body: url
-        timeout: 1h
+        expire: 1h
       open:
         expects: question-answer
       submit:

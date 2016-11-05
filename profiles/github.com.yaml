@@ -13,7 +13,7 @@ password:
       response:
         email:
           body: url
-        timeout: 24h
+        expire: 24h
       submit:
         sessions:
           own: sustain # assumed based on previous "token.login: no"

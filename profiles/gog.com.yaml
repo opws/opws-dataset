@@ -19,7 +19,7 @@ password:
       submit:
         destination:
           page: stub
-      expiration: submit
+        expire: now
   change:
     url: https://login.gog.com/account/password
     reauth: password

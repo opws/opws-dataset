@@ -14,9 +14,7 @@ password:
         email:
           sender: notify@simple.com
           body: url
-        timeout: 72h
-      open:
-        timeout: 30m
+        expire: 30m
     notes:
     - en: Sends tokens via email and SMS, both are needed.
   change:

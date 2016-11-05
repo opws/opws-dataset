@@ -34,11 +34,11 @@ password:
         email:
           sender: ebay@ebay.com
           body: firstname url
-        timeout: 24h
-      expiration: submit
+        expire: 24h
       submit:
         destination:
           page: login
+        expire: now
   change:
     url: https://signin.ebay.com/ws/eBayISAPI.dll?ChangePasswordAndCreateHint
     reauth: password

@@ -20,7 +20,7 @@ password:
       submit:
         sessions:
           own: login
-      expiration: submit
+        expire: now
   change:
     url: https://ifttt.com/settings/password
     reauth: password

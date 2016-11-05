@@ -11,7 +11,7 @@ password:
       response:
         email:
           body: url token
-        timeout: 2h
+        expire: 2h
   change:
     url: https://www.cloudflare.com/my-account
     reauth: password

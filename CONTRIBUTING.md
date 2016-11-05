@@ -43,13 +43,13 @@ password:
         email:
           sender: sender@example.com # What address does a reset email come from?
           body: username url # Does the email contain a URL? A link? User info?
-        timeout: 24h # How long until the link expires?
+        expire: 24h # How long until the link expires?
       submit:
         destination:
           page: profile # What kind of page does submitting take you to?
         sessions:
           own: login # Is the user auto-logged in, or just directed to do so?
-      expiration: submit # Can the link be revisited after use?
+        expire: now # Can the link be revisited after use?
     usability:
       password: single showable # Is password input better than double-blind?
 ```
