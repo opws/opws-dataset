@@ -2,7 +2,8 @@ name: Eventbrite
 password:
   reset:
     url: https://www.eventbrite.com/resetpassword
-    request:
-      accepts: email
+    flow:
+      request:
+        accepts: email
   change:
     url: https://www.eventbrite.com/password

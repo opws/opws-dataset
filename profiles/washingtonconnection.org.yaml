@@ -15,9 +15,10 @@ password:
       - spaces
   reset:
     url: https://www.washingtonconnection.org/authservice/resetpassword.go
-    request:
-      accepts: username+email
-      captcha: yes
+    flow:
+      request:
+        accepts: username+email
+        captcha: yes
 username:
   value:
     length:

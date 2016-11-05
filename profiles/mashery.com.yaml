@@ -10,8 +10,9 @@ password:
       - numbers
   reset:
     url: https://secure.mashery.com/member/lost/
-    request:
-      accepts: email+username
+    flow:
+      request:
+        accepts: email+username
 username:
   reminder:
     url: https://secure.mashery.com/member/lost-username/

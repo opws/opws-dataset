@@ -6,12 +6,15 @@ password:
       max: 35
   reset:
     url: http://www.guru.com/forgotsignin.aspx
-    request:
-      accepts: email
-    response:
-      body: username link
-    token:
-      login: no
+    flow:
+      request:
+        accepts: email
+      response:
+        email:
+          body: username link
+      submit:
+        sessions:
+          own: sustain # assumed based on previous "token.login: no"
   change:
     url: https://www.guru.com/pro/modifyaccount.aspx?tab=3
     reauth: password

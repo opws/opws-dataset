@@ -2,8 +2,9 @@ name: Cloud9 IDE
 password:
   reset:
     url: https://c9.io/#resetPasswordForm
-    request:
-      accepts: username email
+    flow:
+      request:
+        accepts: username email
   change:
     url: https://c9.io/dashboard.html
     reauth: no

@@ -2,7 +2,8 @@ name: Path
 password:
   reset:
     url: https://path.com/forgot-password
-    request:
-      accepts: email
+    flow:
+      request:
+        accepts: email
   change:
     url: https://path.com/settings

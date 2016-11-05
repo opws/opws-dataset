@@ -14,18 +14,20 @@ password:
       - symbols
   reset:
     url: https://www.name.com/account/credentials/password
-    request:
-      accepts: domain username
-    response:
-      sender: support@name.com
-      body: url origin
-    expects: origin
-    steps:
-    - change
-    - autologin
-    expiration:
-      timeout: 24h
-      trigger: change
+    flow:
+      request:
+        accepts: domain username
+      response:
+        email:
+          sender: support@name.com
+          body: url origin
+        expire: 24h
+      open:
+        expects: origin
+      submit:
+        sessions:
+          own: login
+        expire: now
   change:
     url: https://www.name.com/account/settings/
     reauth: password

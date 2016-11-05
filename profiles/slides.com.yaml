@@ -15,13 +15,16 @@ password:
       password: single
   reset:
     url: https://slides.com/users/password/new
-    request:
-      accepts: email
-    response:
-      sender: no-reply@slides.com
-      body: link
-    token:
-      login: after
+    flow:
+      request:
+        accepts: email
+      response:
+        email:
+          sender: no-reply@slides.com
+          body: link
+      submit:
+        destination:
+          page: login
 username:
   contents:
     whitelist:

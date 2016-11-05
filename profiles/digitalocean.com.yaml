@@ -9,8 +9,9 @@ password:
       - letters
   reset:
     url: https://www.digitalocean.com/forgot_password/new
-    request:
-      accepts: email
+    flow:
+      request:
+        accepts: email
   change:
     url: https://www.digitalocean.com/settings#edit-password
 totp: optional

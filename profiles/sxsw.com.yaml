@@ -10,8 +10,9 @@ password:
       - nonspaces
   reset:
     url: https://auth.sxsw.com/users/password/new
-    request:
-      accepts: email
+    flow:
+      request:
+        accepts: email
   change:
     url: https://auth.sxsw.com/users/edit
     reauth: password

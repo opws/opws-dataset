@@ -2,7 +2,8 @@ name: Koding
 password:
   reset:
     url: https://koding.com/Recover
-    request:
-      accepts: username email
+    flow:
+      request:
+        accepts: username email
   change:
     url: https://koding.com/Account

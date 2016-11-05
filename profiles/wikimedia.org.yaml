@@ -2,13 +2,12 @@ name: Wikimedia Foundation
 password:
   reset:
     url: https://commons.wikimedia.org/wiki/Special:PasswordReset
-    request:
-      accepts: username email
-    response:
-      body: temp
-    expiration:
-      timeout: 7d
-    token:
-      login: after
+    onetime:
+      request:
+        accepts: username email
+      response:
+        email:
+          body: password
+        expire: 7d
   change:
     url: https://commons.wikimedia.org/wiki/Special:ChangePassword

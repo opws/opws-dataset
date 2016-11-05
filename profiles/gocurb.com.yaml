@@ -7,10 +7,12 @@ password:
     - en: 14-character limit when registering on Android
   reset:
     url: https://my.gocurb.com/signin#resetPassword
-    request:
-      accepts: email
-    response:
-      body: link
+    flow:
+      request:
+        accepts: email
+      response:
+        email:
+          body: link
   change:
     url: https://my.gocurb.com/myaccount#password
     reauth: no

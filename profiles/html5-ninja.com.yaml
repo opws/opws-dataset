@@ -2,5 +2,6 @@ name: HTML5 Ninja
 password:
   reset:
     url: http://www.html5-ninja.com/#/account
-    request:
-      accepts: email
+    flow:
+      request:
+        accepts: email

@@ -9,18 +9,22 @@ password:
       - common
   reset:
     url: https://digital.darkhorse.com/accounts/password_reset/
-    request:
-      accepts: email
-    response:
-      sender: digital.service@darkhorse.com
-      body: firstname url
-    token:
-      login: no
+    flow:
+      request:
+        accepts: email
+      response:
+        email:
+          sender: digital.service@darkhorse.com
+          body: firstname url
+      submit:
+        sessions:
+          own: sustain # assumed based on previous "token.login: no"
   change:
     url: https://digital.darkhorse.com/accounts/manage/password_change/
     reauth: password
-    sessions:
-      invalidate: no
+    sessions: # assumed based on previous "invalidate: no"
+      own: sustain
+      others: sustain
 registration:
   url: https://digital.darkhorse.com/accounts/register/
   usability:

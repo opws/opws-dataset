@@ -2,7 +2,8 @@ name: LinkedIn
 password:
   reset:
     url: https://www.linkedin.com/uas/request-password-reset
-    request:
-      accepts: email
+    flow:
+      request:
+        accepts: email
   change:
     url: https://www.linkedin.com/uas/change-password

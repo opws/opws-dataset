@@ -22,15 +22,17 @@ password:
       - symbols
   reset:
     url: https://adobeid.services.adobe.com/renga-idprovider/pages/start_forgot_password?client_id=SunbreakWebUI1&callback=https%3A%2F%2Fadobelogin.com%2F&client_redirect=https%3A%2F%2Fadobelogin.com&denied_callback=https%3A%2F%2Fadobelogin.com&display=web_v2
-    request:
-      accepts: email
-    response:
-      sender: account-noreply@adobe.com
-      body: firstname lastname url
-    expiration:
-      timeout: 72h
-    token:
-      login: no
+    flow:
+      request:
+        accepts: email
+      response:
+        email:
+          sender: account-noreply@adobe.com
+          body: firstname lastname url
+        expire: 72h
+      submit:
+        sessions:
+          own: sustain # assumed based on previous "token.login: no"
   change:
     url: https://accounts.adobe.com/security/change-password
     reauth: no

@@ -10,8 +10,9 @@ password:
       - nonletters
   reset:
     url: https://skyeatbelltown.activebuilding.com#password
-    request:
-      accepts: email
+    flow:
+      request:
+        accepts: email
     notes: Click the question mark in a circle in the password field.
   change:
     url: https://skyeatbelltown.activebuilding.com/portal/settings#change-password

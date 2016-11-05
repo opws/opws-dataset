@@ -1,8 +1,9 @@
 name: Skillshare
 password:
-  reset: 
+  reset:
     url: https://www.skillshare.com/reset-password
-    request:
-      accepts: email
+    flow:
+      request:
+        accepts: email
   change:
     url: https://www.skillshare.com/settings/pw

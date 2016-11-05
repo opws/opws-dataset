@@ -13,15 +13,17 @@ password:
       - numbers
   reset:
     url: https://idp.godaddy.com/Account/AccountRetrieval.aspx
-    request:
-      accepts: username+email accountno+email
-      captcha: botdetect-vertigo
-    response:
-      body: link token
-    expiration:
-      timeout: 2h
-    token:
-      login: no
+    flow:
+      request:
+        accepts: username+email accountno+email
+        captcha: botdetect-vertigo
+      response:
+        email:
+          body: link token
+        expire: 2h
+      submit:
+        sessions:
+          own: sustain # assumed based on previous "token.login: no"
   change:
     url: https://mya.godaddy.com/settings.aspx#settsecurity
     reauth: password

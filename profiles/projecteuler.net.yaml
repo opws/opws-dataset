@@ -12,8 +12,9 @@ password:
       strings: ['.', '-', '_']
   reset:
     url: https://projecteuler.net/reset_password
-    request:
-      accepts: username+email
+    flow:
+      request:
+        accepts: username+email
   change:
     url: https://projecteuler.net/account
 username:

@@ -14,17 +14,20 @@ password:
       - symbols
   reset:
     url: https://www.odesk.com/reset/password
-    request:
-      accepts: email
-      captcha: yes
-    response:
-      sender: donotreply@odesk.com
-      body: url
-    expiration:
-      timeout: 1h
-    expects: question-answer
-    token:
-      login: no
+    flow:
+      request:
+        accepts: email
+        captcha: yes
+      response:
+        email:
+          sender: donotreply@odesk.com
+          body: url
+        expire: 1h
+      open:
+        expects: question-answer
+      submit:
+        sessions:
+          own: sustain # assumed based on previous "token.login: no"
   change:
     url: https://www.odesk.com/UserSettings/change-password
     reauth: password

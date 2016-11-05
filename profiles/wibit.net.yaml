@@ -2,11 +2,13 @@ name: WiBit.Net
 password:
   reset:
     url: https://www.wibit.net/forgotPassword
-    request:
-      accepts: email
-      captcha: yes
-    response:
-      sender: no-reply@wibit.net
-      body: temp
+    flow:
+      request:
+        accepts: email
+        captcha: yes
+      response:
+        email:
+          sender: no-reply@wibit.net
+          body: temp
   change:
     url: https://www.wibit.net/myAccount

@@ -6,22 +6,22 @@ password:
       max: 16
   reset:
     url: https://freedns.afraid.org/password/
-    request:
-      accepts: username email
-    response:
-      sender: dnsadmin@afraid.org
-      body: url username temp origin
-    steps:
-    - autochange
-    - stub
-    - login
-    expiration:
-      trigger: visit
+    randomize:
+      request:
+        accepts: username email
+        captcha: question
+      response:
+        email:
+          sender: dnsadmin@afraid.org
+          body: url username password origin
+      open:
+        result: change
   change:
     url: https://freedns.afraid.org/profile/password.php
     reauth: password
     sessions:
-      invalidate: all
+      own: invalidate
+      others: invalidate
 registration:
   url: https://freedns.afraid.org/signup/
   captcha: securimage

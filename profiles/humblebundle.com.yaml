@@ -5,8 +5,9 @@ password:
       min: 4
   reset:
     url: https://www.humblebundle.com/user/forgot
-    request:
-      accepts: email
+    flow:
+      request:
+        accepts: email
   change:
     url: https://www.humblebundle.com/user/settings#password
     reauth: once email password

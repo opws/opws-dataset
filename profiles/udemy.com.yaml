@@ -2,7 +2,8 @@ name: Udemy
 password:
   reset:
     url: https://www.udemy.com/user/forgot-password
-    request:
-      accepts: email
+    flow:
+      request:
+        accepts: email
   change:
     url: https://www.udemy.com/user/edit-account#password

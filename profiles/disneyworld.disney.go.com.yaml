@@ -11,8 +11,9 @@ password:
       - numbers
   reset:
     url: https://disneyworld.disney.go.com/login/
-    request:
-      accepts: username email
+    flow:
+      request:
+        accepts: username email
 registration:
   url: https://disneyworld.disney.go.com/registration/
 login:

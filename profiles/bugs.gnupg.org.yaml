@@ -5,16 +5,17 @@ password:
       min: 1
   reset:
     url: https://bugs.gnupg.org/gnupg/user?@template=forgotten
-    request:
-      accepts: email username
-    response:
-      sender: bitbucket@bugs.g10code.com
-      body: username url
-      notes:
-      - en: First response contains a URL that generates a second response
-            containing a new password.
-    token:
-      login: no
+    randomize:
+      request:
+        accepts: email username
+      response:
+        email:
+          sender: bitbucket@bugs.g10code.com
+          body: username url
+      open:
+        result: send
+        sessions:
+          own: sustain # assumed based on previous "token.login: no"
 registration:
   url: https://bugs.gnupg.org/gnupg/user?@template=register
 login:

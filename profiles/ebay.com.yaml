@@ -27,17 +27,18 @@ password:
         "password" ]
   reset:
     url: https://fyp.ebay.com/EnterUserInfo
-    request:
-      accepts: email username
-    response:
-      sender: ebay@ebay.com
-      body: firstname url
-    steps:
-    - change
-    - login
-    expiration:
-      timeout: 24h
-      trigger: change
+    flow:
+      request:
+        accepts: email username
+      response:
+        email:
+          sender: ebay@ebay.com
+          body: firstname url
+        expire: 24h
+      submit:
+        destination:
+          page: login
+        expire: now
   change:
     url: https://signin.ebay.com/ws/eBayISAPI.dll?ChangePasswordAndCreateHint
     reauth: password

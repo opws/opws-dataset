@@ -2,5 +2,6 @@ name: Freesound.org
 password:
   reset:
     url: http://www.freesound.org/home/resetpassword/
-    request:
-      accepts: email
+    flow:
+      request:
+        accepts: email

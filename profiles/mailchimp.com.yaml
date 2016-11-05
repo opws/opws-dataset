@@ -13,14 +13,17 @@ password:
       - specials
   reset:
     url: https://login.mailchimp.com/login/forgot
-    request:
-      accepts: username
-      captcha: recaptcha
-    response:
-      sender: confirm@mailchimp.com
-      body: username link
-    token:
-      login: no
+    flow:
+      request:
+        accepts: username
+        captcha: recaptcha
+      response:
+        email:
+          sender: confirm@mailchimp.com
+          body: username link
+      submit:
+        sessions:
+          own: sustain # assumed based on previous "token.login: no"
   change:
     url: https://admin.mailchimp.com/account/profile/#security-form
     reauth: password

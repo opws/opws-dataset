@@ -6,16 +6,17 @@ password:
       max: 256
   reset:
     url: http://www.okcupid.com/lostpassword
-    request:
-      accepts: username email
-    response:
-      sender: bounces@mail1.oknotify2.com
-      body: username link
-    steps:
-    - change
-    - autologin
-    expiration:
-      trigger: change
+    flow:
+      request:
+        accepts: username email
+      response:
+        email:
+          sender: bounces@mail1.oknotify2.com
+          body: username link
+      submit:
+        sessions:
+          own: login
+        expire: now
   change:
     url: https://www.okcupid.com/settings
     reauth: password

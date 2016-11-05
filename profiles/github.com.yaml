@@ -7,14 +7,16 @@ password:
     - en: contain a lowercase letter and number if shorter than 16 characters
   reset:
     url: https://github.com/password_reset
-    request:
-      accepts: email
-    response:
-      body: url
-    expiration:
-      timeout: 24h
-    token:
-      login: no
+    flow:
+      request:
+        accepts: email
+      response:
+        email:
+          body: url
+        expire: 24h
+      submit:
+        sessions:
+          own: sustain # assumed based on previous "token.login: no"
   change:
     url: https://github.com/settings/admin
     reauth: password

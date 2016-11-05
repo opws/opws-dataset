@@ -5,12 +5,15 @@ password:
       min: 5
   reset:
     url: https://hub.docker.com/account/forgot-password/
-    request:
-      accepts: email
-    response:
-      body: url
-    token:
-      login: no
+    flow:
+      request:
+        accepts: email
+      response:
+        email:
+          body: url
+      submit:
+        sessions:
+          own: sustain # assumed based on previous "token.login: no"
   change:
     url: https://hub.docker.com/account/change-password/
     reauth: password

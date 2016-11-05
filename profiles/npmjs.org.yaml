@@ -2,7 +2,8 @@ name: npm
 password:
   reset:
     url: https://npmjs.org/forgot
-    request:
-      accepts: username email
+    flow:
+      request:
+        accepts: username email
   change:
     url: https://npmjs.org/password

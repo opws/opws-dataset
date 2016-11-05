@@ -2,8 +2,9 @@ name: CenturyLink
 password:
   reset:
     url: https://eam.centurylink.com/eam/loginTrouble/forgotPassword.do
-    request:
-      accepts: username
+    flow:
+      request:
+        accepts: username
   change:
     url: https://shop.centurylink.com/MasterWebPortal/freeRange/acctMgmt/ManageMyProfile_goToChangeProfilePassword.action
 username:

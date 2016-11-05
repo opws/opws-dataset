@@ -5,8 +5,9 @@ password:
       min: 8
   reset:
     url: https://news.ycombinator.com/forgot
-    request:
-      accepts: username
+    flow:
+      request:
+        accepts: username
   change:
     url: https://news.ycombinator.com/changepw
     reauth: password
