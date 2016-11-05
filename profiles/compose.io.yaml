@@ -15,7 +15,7 @@ password:
           body: url
       submit:
         sessions:
-          own: sustain # assumed based on previous "token.login: no"
+          own: keep # assumed based on previous "token.login: no"
   change:
     url: https://app.compose.io/account
     reauth: maybe

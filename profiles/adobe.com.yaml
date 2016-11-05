@@ -32,7 +32,7 @@ password:
         expire: 72h
       submit:
         sessions:
-          own: sustain # assumed based on previous "token.login: no"
+          own: keep # assumed based on previous "token.login: no"
   change:
     url: https://accounts.adobe.com/security/change-password
     reauth: no

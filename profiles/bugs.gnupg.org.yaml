@@ -15,7 +15,7 @@ password:
       open:
         result: send
         sessions:
-          own: sustain # assumed based on previous "token.login: no"
+          own: keep # assumed based on previous "token.login: no"
 registration:
   url: https://bugs.gnupg.org/gnupg/user?@template=register
 login:

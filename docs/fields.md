@@ -165,13 +165,13 @@ What kind of page the user is directed to after submitting a reset password:
 
 ## password.reset.flow.submit.sessions.own, password.reset.randomize.open.sessions.own
 
-Whether the current session is logged in (`login`), logged out if logged in (`invalidate`), or not changed with regards to login state (`sustain`) after resetting.
+Whether the current session is logged in (`login`), logged out if logged in (`deauth`), or not changed with regards to login state (`keep`) after resetting.
 
 Note that being *redirected to the login page to enter the new password* does not count as a `login` value here (unless the site for some reason logs the user in *before presenting the login page*, which would make no sense) - such behavior is instead reflected with `password.reset.flow.submit.destination.page` having a value of `login`.
 
 ## password.reset.flow.submit.sessions.others, password.reset.randomize.open.sessions.others
 
-Whether other logged-in sessions are invalidated (`invalidate`) or not (`sustain`) when resetting a password.
+Whether other logged-in sessions are invalidated (`deauth`) or not (`keep`) when resetting a password.
 
 ## password.reset.sessions.invalidate
 

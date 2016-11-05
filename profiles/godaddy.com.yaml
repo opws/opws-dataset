@@ -23,7 +23,7 @@ password:
         expire: 2h
       submit:
         sessions:
-          own: sustain # assumed based on previous "token.login: no"
+          own: keep # assumed based on previous "token.login: no"
   change:
     url: https://mya.godaddy.com/settings.aspx#settsecurity
     reauth: password

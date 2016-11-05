@@ -14,7 +14,7 @@ password:
           body: url username
       submit:
         sessions:
-          own: sustain # assumed based on previous "token.login: no"
+          own: keep # assumed based on previous "token.login: no"
 registration:
   url: https://readthedocs.org/accounts/signup/
 login:

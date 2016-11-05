@@ -16,7 +16,7 @@ password:
         expire: 24h
       submit:
         sessions:
-          own: sustain # assumed based on previous "token.login: no"
+          own: keep # assumed based on previous "token.login: no"
   change:
     url: https://github.com/settings/admin
     reauth: password

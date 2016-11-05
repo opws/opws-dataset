@@ -18,13 +18,13 @@ password:
           body: firstname url
       submit:
         sessions:
-          own: sustain # assumed based on previous "token.login: no"
+          own: keep # assumed based on previous "token.login: no"
   change:
     url: https://digital.darkhorse.com/accounts/manage/password_change/
     reauth: password
     sessions: # assumed based on previous "invalidate: no"
-      own: sustain
-      others: sustain
+      own: keep
+      others: keep
 registration:
   url: https://digital.darkhorse.com/accounts/register/
   usability:
