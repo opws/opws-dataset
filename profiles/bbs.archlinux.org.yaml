@@ -6,3 +6,10 @@ password:
       accepts: email
   change:
     url: https://bbs.archlinux.org/profile.php?action=change_pass&id= + usernumber
+registration:
+  url: https://bbs.archlinux.org/register.php
+  captcha: yes
+login:
+  url: https://bbs.archlinux.org/login.php
+  persist:
+    checked: no
