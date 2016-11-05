@@ -11,9 +11,8 @@ password:
   reset:
     url: http://www.crunchbase.com/recovery/new
     flow:
-      email:
-        request:
-          accepts: email
+      request:
+        accepts: email
   change:
     url: http://www.crunchbase.com/user/ + username + /edit#change-pw
     reauth: no

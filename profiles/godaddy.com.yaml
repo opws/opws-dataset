@@ -14,13 +14,12 @@ password:
   reset:
     url: https://idp.godaddy.com/Account/AccountRetrieval.aspx
     flow:
-      email:
-        request:
-          accepts: username+email accountno+email
-          captcha: botdetect-vertigo
-        response:
+      request:
+        accepts: username+email accountno+email
+        captcha: botdetect-vertigo
+      response:
+        email:
           body: link token
-      expiration:
         timeout: 2h
       submit:
         sessions:

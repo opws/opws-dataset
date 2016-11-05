@@ -3,9 +3,8 @@ password:
   reset:
     url: https://eam.centurylink.com/eam/loginTrouble/forgotPassword.do
     flow:
-      email:
-        request:
-          accepts: username
+      request:
+        accepts: username
   change:
     url: https://shop.centurylink.com/MasterWebPortal/freeRange/acctMgmt/ManageMyProfile_goToChangeProfilePassword.action
 username:

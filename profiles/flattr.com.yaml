@@ -3,8 +3,7 @@ password:
   reset:
     url: https://flattr.com/forgot
     flow:
-      email:
-        request:
-          accepts: email
+      request:
+        accepts: email
   change:
     url: https://flattr.com/authaccounts/editpassword

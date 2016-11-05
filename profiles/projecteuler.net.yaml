@@ -13,9 +13,8 @@ password:
   reset:
     url: https://projecteuler.net/reset_password
     flow:
-      email:
-        request:
-          accepts: username+email
+      request:
+        accepts: username+email
   change:
     url: https://projecteuler.net/account
 username:

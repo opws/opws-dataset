@@ -14,11 +14,11 @@ password:
   reset:
     url: https://login.mailchimp.com/login/forgot
     flow:
-      email:
-        request:
-          accepts: username
-          captcha: recaptcha
-        response:
+      request:
+        accepts: username
+        captcha: recaptcha
+      response:
+        email:
           sender: confirm@mailchimp.com
           body: username link
       submit:

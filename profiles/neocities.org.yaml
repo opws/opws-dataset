@@ -6,13 +6,13 @@ password:
   reset:
     url: https://neocities.org/password_reset
     randomize:
-      email:
-        request:
-          accepts: email
-        response:
+      request:
+        accepts: email
+      response:
+        email:
           sender: web@neocities.org
           body: url token password
-      enter:
+      open:
         result: change
         sessions: # based on previous "invalidate: no"
           own: sustain

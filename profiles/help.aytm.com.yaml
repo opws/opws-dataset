@@ -6,6 +6,5 @@ password:
   reset:
     url: http://help.aytm.com/access/help
     flow:
-      email:
-        request:
-          accepts: email
+      request:
+        accepts: email

@@ -6,10 +6,10 @@ password:
   reset:
     url: https://aytm.com/users/restore-password
     flow:
-      email:
-        request:
-          accepts: email
-        response:
+      request:
+        accepts: email
+      response:
+        email:
           body: link url
   change:
     url: https://aytm.com/users/account-setting?current_tab=change_password

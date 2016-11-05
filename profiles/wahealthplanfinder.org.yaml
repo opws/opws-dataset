@@ -18,9 +18,8 @@ password:
   reset:
     url: https://www.wahealthplanfinder.org/HBEWeb/Annon_DisplayForgotPasswordGetUserName.action
     flow:
-      email:
-        request:
-          accepts: username
+      request:
+        accepts: username
   change:
     url: https://www.wahealthplanfinder.org/HBEWeb/DisplayPasswordChangePassword.action
     reauth: password

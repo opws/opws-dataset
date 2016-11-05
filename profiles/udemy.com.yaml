@@ -3,8 +3,7 @@ password:
   reset:
     url: https://www.udemy.com/user/forgot-password
     flow:
-      email:
-        request:
-          accepts: email
+      request:
+        accepts: email
   change:
     url: https://www.udemy.com/user/edit-account#password

@@ -11,10 +11,10 @@ password:
   reset:
     url: https://www.dynadot.com/forgot.html
     flow:
-      email:
-        request:
-          accepts: email email+username
-        response:
+      request:
+        accepts: email email+username
+      response:
+        email:
           sender: accounts@dynadot.com
           body: link
       submit:

@@ -7,10 +7,10 @@ password:
   reset:
     url: http://www.guru.com/forgotsignin.aspx
     flow:
-      email:
-        request:
-          accepts: email
-        response:
+      request:
+        accepts: email
+      response:
+        email:
           body: username link
       submit:
         sessions:

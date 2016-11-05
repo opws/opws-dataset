@@ -16,10 +16,10 @@ password:
   reset:
     url: https://slides.com/users/password/new
     flow:
-      email:
-        request:
-          accepts: email
-        response:
+      request:
+        accepts: email
+      response:
+        email:
           sender: no-reply@slides.com
           body: link
       submit:

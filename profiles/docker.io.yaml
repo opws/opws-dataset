@@ -6,9 +6,8 @@ password:
   reset:
     url: https://www.docker.io/account/forgot-password/
     flow:
-      email:
-        request:
-          accepts: email
+      request:
+        accepts: email
   change:
     url: https://www.docker.io/account/change-password/
     reauth: password

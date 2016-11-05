@@ -11,10 +11,10 @@ password:
   reset:
     url: https://angel.co/users/password/new
     flow:
-      email:
-        request:
-          accepts: email
-        response:
+      request:
+        accepts: email
+      response:
+        email:
           sender: team@angel.co
           body: link
   change:

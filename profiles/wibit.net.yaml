@@ -3,11 +3,11 @@ password:
   reset:
     url: https://www.wibit.net/forgotPassword
     flow:
-      email:
-        request:
-          accepts: email
-          captcha: yes
-        response:
+      request:
+        accepts: email
+        captcha: yes
+      response:
+        email:
           sender: no-reply@wibit.net
           body: temp
   change:

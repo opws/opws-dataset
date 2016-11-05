@@ -6,10 +6,10 @@ password:
   reset:
     url: https://secure.imdb.com/register-imdb/forgotten
     flow:
-      email:
-        request:
-          accepts: email
-        response:
+      request:
+        accepts: email
+      response:
+        email:
           sender: do-not-reply-here@imdb.com
           body: url
 registration:

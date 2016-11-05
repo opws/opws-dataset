@@ -6,9 +6,8 @@ password:
   reset:
     url: https://www.humblebundle.com/user/forgot
     flow:
-      email:
-        request:
-          accepts: email
+      request:
+        accepts: email
   change:
     url: https://www.humblebundle.com/user/settings#password
     reauth: once email password

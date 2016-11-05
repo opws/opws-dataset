@@ -6,8 +6,7 @@ password:
   reset:
     url: https://www.laptopscreen.com/English/section/password-recovery/
     flow:
-      email:
-        request:
-          accepts: email
+      request:
+        accepts: email
   change:
     url: https://www.laptopscreen.com/English/profile/

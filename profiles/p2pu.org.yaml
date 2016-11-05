@@ -11,8 +11,7 @@ password:
   reset:
     url: https://p2pu.org/en/forgot/
     flow:
-      email:
-        request:
-          accepts: username email
+      request:
+        accepts: username email
   change:
     url: https://p2pu.org/en/profile/edit/password/

@@ -6,9 +6,8 @@ password:
   reset:
     url: https://news.ycombinator.com/forgot
     flow:
-      email:
-        request:
-          accepts: username
+      request:
+        accepts: username
   change:
     url: https://news.ycombinator.com/changepw
     reauth: password

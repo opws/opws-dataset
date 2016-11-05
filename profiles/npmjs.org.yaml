@@ -3,8 +3,7 @@ password:
   reset:
     url: https://npmjs.org/forgot
     flow:
-      email:
-        request:
-          accepts: username email
+      request:
+        accepts: username email
   change:
     url: https://npmjs.org/password

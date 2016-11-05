@@ -3,6 +3,5 @@ password:
   reset:
     url: http://www.html5-ninja.com/#/account
     flow:
-      email:
-        request:
-          accepts: email
+      request:
+        accepts: email

@@ -7,20 +7,19 @@ password:
   reset:
     url: https://login.gog.com/password/request
     flow:
-      email:
-        request:
-          accepts: email
-          captcha: recaptcha
-          notes:
-          - en: Captcha only appears after multiple reset requests.
-        response:
+      request:
+        accepts: email
+        captcha: recaptcha
+        notes:
+        - en: Captcha only appears after multiple reset requests.
+      response:
+        email:
           sender: no-reply@gog.com
           body: username link url
       submit:
         destination:
           page: stub
-      expiration:
-        trigger: submit
+      expiration: submit
   change:
     url: https://login.gog.com/account/password
     reauth: password

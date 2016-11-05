@@ -7,10 +7,10 @@ password:
   reset:
     url: https://login.persona.org/
     flow:
-      email:
-        request:
-          accepts: email
-        response:
+      request:
+        accepts: email
+      response:
+        email:
           sender: no-reply@persona.org
           body: link
       submit:

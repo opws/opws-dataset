@@ -6,9 +6,8 @@ password:
   reset:
     url: https://portal.respoke.io/#/password-reset
     flow:
-      email:
-        request:
-          accepts: email
+      request:
+        accepts: email
   change:
     url: https://portal.respoke.io/#/account?section=Profile
     reauth: no

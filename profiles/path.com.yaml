@@ -3,8 +3,7 @@ password:
   reset:
     url: https://path.com/forgot-password
     flow:
-      email:
-        request:
-          accepts: email
+      request:
+        accepts: email
   change:
     url: https://path.com/settings

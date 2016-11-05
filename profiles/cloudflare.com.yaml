@@ -6,12 +6,11 @@ password:
   reset:
     url: https://www.cloudflare.com/forgot-password
     flow:
-      email:
-        request:
-          accepts: email
-        response:
+      request:
+        accepts: email
+      response:
+        email:
           body: url token
-      expiration:
         timeout: 2h
   change:
     url: https://www.cloudflare.com/my-account

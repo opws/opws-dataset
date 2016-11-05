@@ -15,16 +15,15 @@ password:
   reset:
     url: https://www.odesk.com/reset/password
     flow:
-      email:
-        request:
-          accepts: email
-          captcha: yes
-        response:
+      request:
+        accepts: email
+        captcha: yes
+      response:
+        email:
           sender: donotreply@odesk.com
           body: url
-      expiration:
         timeout: 1h
-      enter:
+      open:
         expects: question-answer
       submit:
         sessions:

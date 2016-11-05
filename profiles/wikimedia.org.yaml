@@ -3,12 +3,11 @@ password:
   reset:
     url: https://commons.wikimedia.org/wiki/Special:PasswordReset
     onetime:
-      email:
-        request:
-          accepts: username email
-        response:
+      request:
+        accepts: username email
+      response:
+        email:
           body: password
-      expiration:
         timeout: 7d
   change:
     url: https://commons.wikimedia.org/wiki/Special:ChangePassword

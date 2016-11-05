@@ -6,9 +6,8 @@ password:
   reset:
     url: http://redditgifts.com/profiles/password/reset/
     flow:
-      email:
-        request:
-          accepts: email
+      request:
+        accepts: email
   change:
     url: http://redditgifts.com/profiles/update/#js-change-password
     reauth: password

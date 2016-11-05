@@ -3,8 +3,7 @@ password:
   reset:
     url: https://coderbits.com/passwordreset/initiate
     flow:
-      email:
-        request:
-          accepts: username email
+      request:
+        accepts: username email
   change:
     url: https://coderbits.com/account/settings#tab-account

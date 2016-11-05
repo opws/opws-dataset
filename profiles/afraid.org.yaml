@@ -7,14 +7,14 @@ password:
   reset:
     url: https://freedns.afraid.org/password/
     randomize:
-      email:
-        request:
-          accepts: username email
-          captcha: question
-        response:
+      request:
+        accepts: username email
+        captcha: question
+      response:
+        email:
           sender: dnsadmin@afraid.org
           body: url username password origin
-      enter:
+      open:
         result: change
   change:
     url: https://freedns.afraid.org/profile/password.php

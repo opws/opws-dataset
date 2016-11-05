@@ -8,12 +8,11 @@ password:
   reset:
     url: https://github.com/password_reset
     flow:
-      email:
-        request:
-          accepts: email
-        response:
+      request:
+        accepts: email
+      response:
+        email:
           body: url
-      expiration:
         timeout: 24h
       submit:
         sessions:

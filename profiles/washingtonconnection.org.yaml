@@ -16,10 +16,9 @@ password:
   reset:
     url: https://www.washingtonconnection.org/authservice/resetpassword.go
     flow:
-      email:
-        request:
-          accepts: username+email
-          captcha: yes
+      request:
+        accepts: username+email
+        captcha: yes
 username:
   value:
     length:

@@ -19,10 +19,10 @@ password:
   reset:
     url: https://orcacard.com/ERG-Seattle/p5_001.do
     onetime:
-      email:
-        request:
-          accepts: firstname+lastname+email+cardnumber+cvn+question
-        response:
+      request:
+        accepts: firstname+lastname+email+cardnumber+cvn+question
+      response:
+        email:
           sender: contactus@orcacard.com
           body: firstname lastname username password
   change:

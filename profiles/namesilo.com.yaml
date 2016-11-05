@@ -11,9 +11,8 @@ password:
   reset:
     url: https://www.namesilo.com/lost_password.php
     flow:
-      email:
-        request:
-          accepts: username domain
+      request:
+        accepts: username domain
   change:
     url: https://www.namesilo.com/account_maintenance.php
     reauth: password

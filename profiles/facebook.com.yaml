@@ -6,9 +6,8 @@ password:
   reset:
     url: https://www.facebook.com/recover/initiate
     flow:
-      email:
-        request:
-          accepts: email phone username fullname
+      request:
+        accepts: email phone username fullname
   change:
     url: https://www.facebook.com/settings?tab=account&section=password
     reauth: password

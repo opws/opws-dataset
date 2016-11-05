@@ -3,6 +3,5 @@ password:
   reset:
     url: http://www.freesound.org/home/resetpassword/
     flow:
-      email:
-        request:
-          accepts: email
+      request:
+        accepts: email

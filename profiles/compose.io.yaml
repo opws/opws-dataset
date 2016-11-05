@@ -7,10 +7,10 @@ password:
   reset:
     url: https://app.compose.io/users/password/new
     flow:
-      email:
-        request:
-          accepts: email
-        response:
+      request:
+        accepts: email
+      response:
+        email:
           sender: support@compose.io
           body: url
       submit:

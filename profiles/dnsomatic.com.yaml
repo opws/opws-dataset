@@ -17,18 +17,17 @@ password:
   reset:
     url: https://www.dnsomatic.com/account/#pwdreset
     flow:
-      email:
-        request:
-          accepts: email
-        response:
+      request:
+        accepts: email
+      response:
+        email:
           sender: accounts@dnsomatic.com
           body: url username
-      expiration:
         timeout: 3h
-        trigger: submit
       submit:
         sessions:
           own: login
+      expiration: submit
   change:
     url: https://www.dnsomatic.com/account/
     reauth: no

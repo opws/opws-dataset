@@ -3,8 +3,7 @@ password:
   reset:
     url: https://www.linkedin.com/uas/request-password-reset
     flow:
-      email:
-        request:
-          accepts: email
+      request:
+        accepts: email
   change:
     url: https://www.linkedin.com/uas/change-password

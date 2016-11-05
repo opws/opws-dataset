@@ -15,18 +15,17 @@ password:
   reset:
     url: https://launchpad.37signals.com/forgot_password
     flow:
-      email:
-        request:
-          accepts: email
-        response:
+      request:
+        accepts: email
+      response:
+        email:
           sender: support@basecamp.com
           body: username link
       submit:
         sessions:
           own: login
           others: invalidate
-      expiration:
-        trigger: submit
+      expiration: submit
   change:
     url: https://launchpad.37signals.com/identity/password/edit
     reauth: no

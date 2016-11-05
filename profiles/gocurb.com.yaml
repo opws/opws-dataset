@@ -8,10 +8,10 @@ password:
   reset:
     url: https://my.gocurb.com/signin#resetPassword
     flow:
-      email:
-        request:
-          accepts: email
-        response:
+      request:
+        accepts: email
+      response:
+        email:
           body: link
   change:
     url: https://my.gocurb.com/myaccount#password

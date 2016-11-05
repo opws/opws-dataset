@@ -3,9 +3,8 @@ password:
   reset:
     url: https://www.freelancer.com/#forgot-password-toggle
     flow:
-      email:
-        request:
-          accepts: email
+      request:
+        accepts: email
   change:
     url: https://www.freelancer.com/users/settings.php#AccountSettings
 redflags:

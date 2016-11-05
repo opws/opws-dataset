@@ -28,15 +28,14 @@ password:
   reset:
     url: https://fyp.ebay.com/EnterUserInfo
     flow:
-      email:
-        request:
-          accepts: email username
-        response:
+      request:
+        accepts: email username
+      response:
+        email:
           sender: ebay@ebay.com
           body: firstname url
-      expiration:
         timeout: 24h
-        trigger: change
+      expiration: submit
       submit:
         destination:
           page: login

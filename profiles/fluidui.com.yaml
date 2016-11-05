@@ -3,9 +3,8 @@ password:
   reset:
     url: https://www.fluidui.com/editor/live/
     flow:
-      email:
-        request:
-          accepts: email
+      request:
+        accepts: email
   change:
     url: https://www.fluidui.com/editor/live/
 notes: >

@@ -10,10 +10,10 @@ password:
   reset:
     url: https://digital.darkhorse.com/accounts/password_reset/
     flow:
-      email:
-        request:
-          accepts: email
-        response:
+      request:
+        accepts: email
+      response:
+        email:
           sender: digital.service@darkhorse.com
           body: firstname url
       submit:

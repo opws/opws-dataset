@@ -11,9 +11,8 @@ password:
   reset:
     url: https://auth.getpebble.com/users/password/new
     flow:
-      email:
-        request:
-          accepts: email
+      request:
+        accepts: email
   change:
     url: https://auth.getpebble.com/users/edit
     reauth: password

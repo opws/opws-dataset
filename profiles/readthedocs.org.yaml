@@ -6,10 +6,10 @@ password:
   reset:
     url: https://readthedocs.org/accounts/password/reset/
     flow:
-      email:
-        request:
-          accepts: email
-        response:
+      request:
+        accepts: email
+      response:
+        email:
           sender: support@readthedocs.org
           body: url username
       submit:

@@ -6,13 +6,13 @@ password:
   reset:
     url: https://bugs.gnupg.org/gnupg/user?@template=forgotten
     randomize:
-      email:
-        request:
-          accepts: email username
-        response:
+      request:
+        accepts: email username
+      response:
+        email:
           sender: bitbucket@bugs.g10code.com
           body: username url
-      enter:
+      open:
         result: send
         sessions:
           own: sustain # assumed based on previous "token.login: no"

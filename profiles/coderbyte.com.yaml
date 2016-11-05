@@ -3,8 +3,7 @@ password:
   reset:
     url: http://coderbyte.com/sl/forgotpassword/
     flow:
-      email:
-        request:
-          accepts: email
+      request:
+        accepts: email
   change:
     url: http://coderbyte.com/CodingArea/Settings/

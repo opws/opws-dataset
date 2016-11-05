@@ -3,6 +3,5 @@ password:
   reset:
     url: http://support.cloud9ide.com/access/help
     flow:
-      email:
-        request:
-          accepts: email
+      request:
+        accepts: email

@@ -6,10 +6,10 @@ password:
   reset:
     url: https://hub.docker.com/account/forgot-password/
     flow:
-      email:
-        request:
-          accepts: email
-        response:
+      request:
+        accepts: email
+      response:
+        email:
           body: url
       submit:
         sessions:

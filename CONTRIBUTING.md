@@ -16,9 +16,8 @@ password:
   reset:
     url: https://example.com/resetpassword
     flow: # assuming the usual request-email-visit-change flow
-      email:
-        request:
-          accepts: email # Does the reset page accept email address, or username?
+      request:
+        accepts: email # Does the reset page accept email address, or username?
   change:
     url: https://example.com/account/changepassword
     reauth: password # Do you have to enter the old password? ("no" if not)
@@ -37,21 +36,20 @@ If you check the password reset functionality, the profile should include
 password:
   reset:
     flow:
-      email:
-        request:
-          accepts: email # Does the reset page accept email address, or username?
-          captcha: word # Is there a captcha?
-        response:
+      request:
+        accepts: email # Does the reset page accept email address, or username?
+        captcha: word # Is there a captcha?
+      response:
+        email:
           sender: sender@example.com # What address does a reset email come from?
           body: username url # Does the email contain a URL? A link? User info?
+        timeout: 24h # How long until the link expires?
       submit:
         destination:
           page: profile # What kind of page does submitting take you to?
-      sessions:
-        own: login # Is the user auto-logged in, or just directed to do so?
-      expiration:
-        trigger: submit # Can the link be revisited after use?
-        timeout: 24h # How long until the link expires?
+        sessions:
+          own: login # Is the user auto-logged in, or just directed to do so?
+      expiration: submit # Can the link be revisited after use?
     usability:
       password: single showable # Is password input better than double-blind?
 ```

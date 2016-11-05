@@ -3,9 +3,8 @@ password:
   reset:
     url: https://manage.www.namecheap.com/myaccount/rememberpwd.asp
     flow:
-      email:
-        request:
-          accepts: username email domain
+      request:
+        accepts: username email domain
   change:
     url: https://manage.www.namecheap.com/myaccount/modify-profile-changepassword.aspx
     reauth: password

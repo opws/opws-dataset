@@ -12,12 +12,11 @@ password:
   reset:
     url: https://www.qfc.com/forgotPassword
     flow:
-      email:
-        request:
-          accepts: email
-        response:
+      request:
+        accepts: email
+      response:
+        email:
           body: url link
-      expiration:
         timeout: 24h
       submit:
         sessions:

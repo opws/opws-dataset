@@ -90,13 +90,13 @@ Array of restrictions on what passwords *must not* do (other than those describe
 
 The URL of the site's "reset password" page.
 
-## password.reset.flow.email.request.accepts, password.reset.randomize.email.request.accepts, password.reset.onetime.email.request.accepts
+## password.reset.flow.request.accepts, password.reset.randomize.request.accepts, password.reset.onetime.request.accepts
 
 A space-separated token string of what identifiers the site needs to request an email to enter password reset flow. (Usually some combination of "email" and/or "username".)
 
 When sites *require multiple* identifiers, they are joined with a plus (`+`).
 
-## password.reset.flow.email.request.captcha, password.reset.randomize.email.request.captcha, password.reset.onetime.email.request.captcha
+## password.reset.flow.request.captcha, password.reset.randomize.request.captcha, password.reset.onetime.request.captcha
 
 What kind of captcha (if any) is used to deter automated password resets ("yes" if unknown).
 
@@ -106,11 +106,11 @@ Known captchas:
 - botdetect (see http://captcha.com/captcha-examples.html) - when possible, the specific style in use is listed instead:
   - botdetect-vertigo
 
-## password.reset.flow.email.response.sender, password.reset.randomize.email.response.sender, password.reset.onetime.email.response.sender
+## password.reset.flow.response.email.sender, password.reset.randomize.response.email.sender, password.reset.onetime.response.email.sender
 
 What email address the password reset response comes from.
 
-## password.reset.flow.email.response.body, password.reset.randomize.email.response.body, password.reset.onetime.email.response.body
+## password.reset.flow.response.email.body, password.reset.randomize.response.email.body, password.reset.onetime.response.email.body
 
 A space-separated token string of data the reset mechanism responds with (usually via email):
 
@@ -123,21 +123,25 @@ A space-separated token string of data the reset mechanism responds with (usuall
 - password: The random password, for "password.reset.randomize" and "password.reset.onetime" methods.
 - origin: Data identifying the source for the reset request, such as the IP address it was posted from.
 
-## password.reset.flow.enter.expects
+## password.reset.flow.open.expects
 
 Space-separated string of things the password reset page expects before resetting the password. Tokens:
 
 - "origin" (IP address requesting the page must be the same IP the email was requested from)
 
-## password.reset.flow.expiration.trigger
+## password.reset.flow.expiration
 
 Which step causes the reset session token to be invalidated for further reset attempts. Should be "submit", is sometimes "enter" (meaning the reset link can only be followed once).
 
-## password.reset.flow.expiration.timeout, password.reset.onetime.expiration.timeout
+## password.reset.flow.response.timeout, password.reset.onetime.response.timeout
 
 How long after issuance the reset token is valid for, as a human-abbreviated string ("24h" is common).
 
-## password.reset.randomize.enter.result
+## password.reset.flow.open.timeout
+
+How long after beginning the post-response step (ie. following the link) the reset token is valid for, as a human-abbreviated string ("24h" is common).
+
+## password.reset.randomize.open.result
 
 Whether following a link sets and sends the randomized password (`send`), or just changes the password to the already-sent password (`change`).
 
@@ -155,13 +159,13 @@ What kind of page the user is directed to after submitting a reset password:
 - `profile`: The public-facing profile page for the user.
 - `home`: Some manner of home page for the user (if `password.reset.flow.submit.sessions.own` is `login`) or the site's root (if it's not `login`).
 
-## password.reset.flow.submit.sessions.own, password.reset.randomize.enter.sessions.own
+## password.reset.flow.submit.sessions.own, password.reset.randomize.open.sessions.own
 
 Whether the current session is logged in (`login`), logged out if logged in (`invalidate`), or not changed with regards to login state (`sustain`) after resetting.
 
 Note that being *redirected to the login page to enter the new password* does not count as a `login` value here (unless the site for some reason logs the user in *before presenting the login page*, which would make no sense) - such behavior is instead reflected with `password.reset.flow.submit.destination.page` having a value of `login`.
 
-## password.reset.flow.submit.sessions.others, password.reset.randomize.enter.sessions.others
+## password.reset.flow.submit.sessions.others, password.reset.randomize.open.sessions.others
 
 Whether other logged-in sessions are invalidated (`invalidate`) or not (`sustain`) when resetting a password.
 

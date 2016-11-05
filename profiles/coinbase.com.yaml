@@ -3,8 +3,7 @@ password:
   reset:
     url: https://coinbase.com/password_resets/new
     flow:
-      email:
-        request:
-          accepts: email
+      request:
+        accepts: email
   change:
     url: https://coinbase.com/account#change_password_modal

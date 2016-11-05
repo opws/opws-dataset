@@ -13,6 +13,5 @@ password:
   reset:
     url: http://www.topcoder.com/password-recovery/
     flow:
-      email:
-        request:
-          accepts: username email
+      request:
+        accepts: username email

@@ -11,17 +11,16 @@ password:
   reset:
     url: https://ifttt.com/forgot
     flow:
-      email:
-        request:
-          accepts: email
-        response:
+      request:
+        accepts: email
+      response:
+        email:
           sender: welcome@ifttt.com
           body: username link
       submit:
         sessions:
           own: login
-      expiration:
-        trigger: submit
+      expiration: submit
   change:
     url: https://ifttt.com/settings/password
     reauth: password

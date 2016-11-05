@@ -7,8 +7,7 @@ password:
   reset:
     url: https://www.netflix.com/LoginHelp
     flow:
-      email:
-        request:
-          accepts: email firstname+lastname+creditcard
+      request:
+        accepts: email firstname+lastname+creditcard
   change:
     url: https://www.netflix.com/YourAccount#updateProfile
