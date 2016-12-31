@@ -1,0 +1,25 @@
+name: Dark Sky API
+password:
+  value:
+    length:
+      min: 8
+  contents:
+    required:
+    - classes:
+      - nonspaces
+  reset:
+    url: https://darksky.net/dev/reset/password
+    flow:
+      request:
+        accepts: email
+  change:
+    url: https://darksky.net/dev/account/edit
+    reauth: no
+registration:
+  url: https://darksky.net/dev/register
+  usability:
+    email: single
+login:
+  url: https://darksky.net/dev/login
+reviewed:
+  date: 2016-12-31T22:03:33.484Z
