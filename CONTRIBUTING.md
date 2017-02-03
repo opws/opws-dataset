@@ -30,7 +30,7 @@ reviewed:
 ```
 
 If you check the password reset functionality, the profile should include
-(again, assuming the ususal password reset flow):
+(again, assuming the usual password reset flow):
 
 ```yaml
 password:
