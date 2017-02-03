@@ -1,0 +1,19 @@
+name: Porkbun
+password:
+  value:
+    length:
+      min: 6
+  reset:
+    url: https://porkbun.com/account/forgot
+    flow:
+      request:
+        accepts: email
+  change:
+    url: https://porkbun.com/account
+    reauth: no
+registration:
+  url: https://porkbun.com/account/login
+login:
+  url: https://porkbun.com/account/login
+reviewed:
+  date: 2017-02-03T02:12:30.317Z
