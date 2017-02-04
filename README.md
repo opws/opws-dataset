@@ -2,11 +2,11 @@
 
 Profiles of the security support and user account systems of various sites.
 
-[![Test Status](https://img.shields.io/circleci/project/opensets/domainprofiles/master.svg?style=flat&label=tests)][tests]
+[![Test Status](https://img.shields.io/circleci/project/opws/domainprofiles/master.svg?style=flat&label=tests)][tests]
 [![Gitter Chat](https://img.shields.io/badge/gitter-discuss_%E2%86%92-1dce73.svg?style=flat)][gitter]
 
-[tests]: https://circleci.com/gh/opensets/domainprofiles/tree/master
-[gitter]: https://gitter.im/opensets/domainprofiles
+[tests]: https://circleci.com/gh/opws/domainprofiles/tree/master
+[gitter]: https://gitter.im/opws
 
 ## Where you would use this
 
