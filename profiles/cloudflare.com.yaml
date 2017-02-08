@@ -2,16 +2,30 @@ name: CloudFlare
 password:
   value:
     length:
-      min: 1
+      min: 6
   reset:
-    url: https://www.cloudflare.com/forgot-password
+    url: https://www.cloudflare.com/a/forgot-password
     flow:
       request:
-        accepts: email
+        accepts: email+domain
+        captcha: recaptcha
+        notes:
+        - en: Captcha only appears after multiple reset requests.
       response:
         email:
+          sender: no-reply@cloudflare.com
           body: url token
         expire: 2h
+    usability:
+      password: double
   change:
-    url: https://www.cloudflare.com/my-account
+    url: https://www.cloudflare.com/a/account/my-account
     reauth: password
+    usability:
+      password: double
+login:
+  url: https://www.cloudflare.com/a/login
+registration:
+  url: https://www.cloudflare.com/a/sign-up
+reviewed:
+  date: 2017-02-08T03:28:06.394Z
