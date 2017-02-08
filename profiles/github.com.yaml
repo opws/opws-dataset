@@ -12,14 +12,23 @@ password:
         accepts: email
       response:
         email:
+          sender: noreply@github.com
           body: url
         expire: 24h
       submit:
         sessions:
-          own: keep # assumed based on previous "token.login: no"
+          own: deauth
   change:
     url: https://github.com/settings/admin
     reauth: password
+    sessions:
+      own: keep
+login:
+  url: https://github.com/login
+registration:
+  url: https://github.com/join
 sessions:
   management:
     url: https://github.com/settings/security
+reviewed:
+  date: 2017-02-08T05:56:57.636Z
