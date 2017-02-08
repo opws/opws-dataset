@@ -21,7 +21,7 @@ password:
     url: https://angel.co/settings/password
     reauth: password
     sessions:
-      own: deauth
+      own: logout
 registration:
   url: https://angel.co/join
 login:

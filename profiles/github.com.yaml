@@ -17,12 +17,12 @@ password:
         expire: 24h
       submit:
         sessions:
-          own: deauth
+          own: logout
   change:
     url: https://github.com/settings/admin
     reauth: password
     sessions:
-      own: keep
+      own: unchanged
 login:
   url: https://github.com/login
 registration:

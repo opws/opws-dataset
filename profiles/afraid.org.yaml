@@ -20,8 +20,8 @@ password:
     url: https://freedns.afraid.org/profile/password.php
     reauth: password
     sessions:
-      own: deauth
-      others: deauth
+      own: logout
+      others: logout
 registration:
   url: https://freedns.afraid.org/signup/
   captcha: securimage

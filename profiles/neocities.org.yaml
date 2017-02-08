@@ -15,14 +15,14 @@ password:
       open:
         result: change
         sessions: # based on previous "invalidate: no"
-          own: keep
-          others: keep
+          own: unchanged
+          others: unchanged
   change:
     url: https://neocities.org/settings#password
     reauth: password
     sessions: # based on previous "invalidate: no"
-      own: keep
-      others: keep
+      own: unchanged
+      others: unchanged
 username:
   value:
     whitelist:

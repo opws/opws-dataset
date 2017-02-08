@@ -29,7 +29,7 @@ password:
     url: https://orcacard.com/ERG-Seattle/p7_007.do
     reauth: password
     sessions:
-      own: keep
+      own: unchanged
 username:
   value:
     length:

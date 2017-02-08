@@ -158,33 +158,22 @@ A space-separated token string describing how the password set UI differs from d
 What kind of page the user is directed to after submitting a reset password:
 
 - `stub`: A page that doesn't go anywhere, you're just expected to close the tab or navbar away or whatever.
-- `login`: The login page (assuming `password.reset.flow.submit.sessions.own` is `invalidate`: what happens if you're logged in, eh, I don't think it's worth profiling, this value is just for what's expected when you're logged out).
+- `login`: The login page.
 - `settings`: The user settings page, presumably the one with password changes.
 - `profile`: The public-facing profile page for the user.
 - `home`: Some manner of home page for the user (if `password.reset.flow.submit.sessions.own` is `login`) or the site's root (if it's not `login`).
 
+This assumes the user wasn't logged in before resetting their password. It's possible that a site may have a different destination when a logged-in user resets their password (particularly if `password.reset.flow.submit.sessions.own` is `unchanged` and the destination page when logged out is `login`). If this is the case, this detail may be noted in the pull request comments for the profile change, but this is a detail that is not currently incorporated into profiles.
+
 ## password.reset.flow.submit.sessions.own, password.reset.randomize.open.sessions.own
 
-Whether the current session is logged in (`login`), logged out if logged in (`deauth`), or not changed with regards to login state (`keep`) after resetting.
+Whether the current session is logged in (`login`), logged out if logged in (`logout`), or not changed with regards to login state (`unchanged`) after resetting.
 
 Note that being *redirected to the login page to enter the new password* does not count as a `login` value here (unless the site for some reason logs the user in *before presenting the login page*, which would make no sense) - such behavior is instead reflected with `password.reset.flow.submit.destination.page` having a value of `login`.
 
 ## password.reset.flow.submit.sessions.others, password.reset.randomize.open.sessions.others
 
-Whether other logged-in sessions are invalidated (`deauth`) or not (`keep`) when resetting a password.
-
-## password.reset.sessions.invalidate
-
-*TODO: this should be refactorable into password.reset.flow.submit.sessions values after #127 and deletable*
-
-Whether resetting your password invalidates sessions (logs you out), forcing you to log back in with the new password.
-
-Values:
-
-- "all": demonstrably invalidates all sessions
-- "others": invalidates all sessions other than the one used to reset the password
-- "no": doesn't invalidate any logged-in sessions
-  - Although this is less secure than the alternative(s), it's assumed to be the default.
+Whether other logged-in sessions are invalidated (`logout`) or not (`unchanged`) when resetting a password.
 
 ## password.change.url
 
@@ -196,11 +185,11 @@ The URL of the "change password" page for the logged-in user. If the site doesn'
 
 ## password.change.sessions.own
 
-Whether the current session is logged out (`invalidate`) or not (`sustain`) after changing the password.
+Whether the current session is logged out (`logout`) or not (`unchanged`) after changing the password.
 
 ## password.change.sessions.others
 
-Whether other logged-in sessions are logged out (`invalidate`) or not (`sustain`) after changing the password.
+Whether other logged-in sessions are logged out (`logout`) or not (`unchanged`) after changing the password.
 
 ## password.change.usability.password
 

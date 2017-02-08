@@ -28,6 +28,6 @@ password:
     url: https://www.paypal.com/us/cgi-bin/webscr?cmd=_profile-password-start
     reauth: password
     sessions:
-      own: deauth
+      own: logout
 reviewed:
   date: 2017-02-08T04:42:35.421Z

@@ -27,7 +27,7 @@ password:
         expects: question-answer
       submit:
         sessions:
-          own: keep # assumed based on previous "token.login: no"
+          own: unchanged # assumed based on previous "token.login: no"
   change:
     url: https://www.odesk.com/UserSettings/change-password
     reauth: password

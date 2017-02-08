@@ -24,14 +24,14 @@ password:
       submit:
         sessions:
           own: login
-          others: deauth
+          others: logout
         expire: now
   change:
     url: https://launchpad.37signals.com/identity/password/edit
     reauth: no
     sessions:
-      own: keep
-      others: deauth
+      own: unchanged
+      others: logout
 registration:
   url: https://signup.37signals.com/basecamp/Free/
 login:
