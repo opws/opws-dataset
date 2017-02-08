@@ -5,16 +5,29 @@ password:
       min: 8
       max: 20
   contents:
+    required:
+    - atleast: 1
+      classes:
+      - digits
+      - symbols
     blacklist:
       classes:
       - spaces
       - nonprinting
   reset:
-    url: https://www.paypal.com/us/cgi-bin/webscr?cmd=_account-recovery
+    url: https://www.paypal.com/webapps/accountrecovery/passwordrecovery
     flow:
       request:
         accepts: email
-        captcha: yes
+        captcha: alphanumeric
+      response:
+        email:
+          sender: service@paypal.com
+          body: token
   change:
     url: https://www.paypal.com/us/cgi-bin/webscr?cmd=_profile-password-start
     reauth: password
+    sessions:
+      own: deauth
+reviewed:
+  date: 2017-02-08T04:42:35.421Z
