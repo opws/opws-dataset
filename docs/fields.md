@@ -307,6 +307,12 @@ Note that factors documented in other fields that should raise red flags, such a
 
 An alternate domain used as the account provider (for instance, Google services use google.com). Unless a field is specified here (for instance, https), values should be inherited from the specified domain, and records to do with account providers should be fetched according to the used domain.
 
+## distinguish.subdomains.level
+
+For sites that keep multiple subsites with separate account databases under subdomains, this will be a number describing what level of subdomain (from the root) should be seen as a distinct site using this profile. For instance, the profile for `slack.com` has a value fo `3`, as the third-level domain is where sites are distinguished (an account on `foo.slack.com` not being shared with `bar.slack.com`).
+
+Note that profiles for sites with distinct subdomains will use a `*` in URLs to represent the domain component that varies from subsite to subsite, like `https://auth.*.example.com/login`.
+
 ## reviewed.date
 
 The date and time that the profiled data was last reviewed for accuracy.
