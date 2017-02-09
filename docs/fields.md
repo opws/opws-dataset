@@ -143,7 +143,7 @@ If the token may not be used to re-open the password reset flow after the first 
 
 If the token does not immediately expire until it is used, the value of this field will be `"now"`.
 
-This value is only included as a way of canonically stating that the token does not expire at an earlier step: if it is omitted and there is no `password.reset.flow.open.expire: now`, this means that the step that triggers expiration has not been profiled, not that it is absent. A token that *does not expire* after use would be a red flag, and would be documented as such under `redflags`.
+This value is only included as a way of canonically stating that the token does not expire at an earlier step: if it is omitted and there is no `password.reset.flow.open.expire: now`, this means that the step that triggers expiration has not been profiled, not that it is absent. A token that *does not expire* after use is profiled with a value of `"unchanged"` here (and should be seen as a red flag).
 
 ## password.reset.randomize.open.result
 
