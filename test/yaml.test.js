@@ -61,7 +61,7 @@ describe('YAML file', function() {
     .forEach(function(filename) { describe(filename, function() {
 
       it('should follow correct naming conventions', function() {
-        assert(/^profiles\/[a-z0-9\-\.]+\.[a-z0-9\-\.]+\.yaml$/.exec(filename),
+        assert(/^profiles\/(?:(?:[a-z0-9\-]+|WILDCARD)\.)+[a-z0-9\-]+\.yaml$/.exec(filename),
           filename + ' does not fit the filename pattern for domain profiles');
       });
 
