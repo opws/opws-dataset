@@ -1,6 +1,0 @@
-name: Skye at Belltown
-password:
-  reset:
-    url: https://skyeatbelltown.residentportal.com/resident_portal/?module=forgot_password
-  change: 
-    url: https://skyeatbelltown.residentportal.com/resident_portal/?module=customer#ChangePassword

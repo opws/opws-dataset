@@ -1,0 +1,42 @@
+name: ResidentPortal
+password:
+  value:
+    length:
+      min: 6
+  contents:
+    required:
+    - atleast: 2
+      classes:
+      - uppers
+      - lowers
+      - numbers
+  reset:
+    url: https://*.residentportal.com/resident_portal/?module=forgot_password&action=forgot_password
+    flow:
+      request:
+        accepts: email
+      response:
+        email:
+          body: link
+        expire: 72h
+      submit:
+        destination:
+          page: stub
+        sessions:
+          own: unchanged
+        expire: unchanged
+  change: 
+    url: https://*.residentportal.com/resident_portal/?module=customer&action=view_customer#ChangePassword
+login:
+  url: https://*.residentportal.com/resident_portal/?module=authentication&action=view_login
+registration:
+  url: https://*.residentportal.com/resident_portal/?module=authentication&action=view_login
+thirdparty:
+  auth:
+    providers:
+    - facebook.com # although I've yet to see this actually work
+distinguish:
+  subdomains:
+    level: 3
+reviewed:
+  date: 2017-02-09T10:09:17.908Z
