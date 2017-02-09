@@ -24,17 +24,23 @@ it uses).
 ## Layout
 
 Entries for domains are in [YAML](http://yaml.org/) files in the "profiles"
-directory. The filename of each file, minus the .yaml extension, is the
-significant domain name components of the site being profiled.
+directory. The filename of each file, minus the .yaml extension, is the 
+lower-case base domain name of the site being profiled.
 
 Domains are listed by the least-specific component of the domain necessary to
 distinguish it from others: therefore, most sites are listed simply by the
 second-level domain (regardless of whether or not they use a further domain
 like www).
 
-When lower-level domains have their own profiles (such as Arch Linux's AUR and
-BBS), their filenames include the lower domain components, like
-aur.archlinux.org.yaml and bbs.archlinux.org.yaml.
+Profiles that are meant to match *only lower wildcard domains* (eg.
+`foo.example.com` and `bar.example.com` but *not* `example.com` by itself) use
+an all-capital `WILDCARD` for the wildcard domain component (getting around
+the cross-platform problems that using a character like `*` in filenames would
+entail).
+
+When lower-level domains have their own separate profiles (such as Arch Linux's
+AUR and BBS), their filenames include the lower domain components, like
+`aur.archlinux.org.yaml` and `bbs.archlinux.org.yaml`.
 
 ## Notes on URLs
 
