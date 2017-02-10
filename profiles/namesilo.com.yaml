@@ -15,6 +15,28 @@ password:
         form:
           account:
             accepts: username domain
+        notes:
+        - en: >
+            Also requires the answer to the user's security question.
+      response:
+        email:
+          sender: support@namesilo.com
+          body: firstname url origin
+        expire: 24h
+      change:
+        form:
+          newpassword:
+            characters: hidden
+          repeat:
+            newpassword:
+              input: required
+              characters: hidden
+      submit:
+        destination:
+          page: stub
+        sessions:
+          own: unchanged
+        expire: now
   change:
     url: https://www.namesilo.com/account_maintenance.php
     form:
@@ -31,3 +53,32 @@ questions:
   - What was your high school's mascot?
   - What make was your first car or bike?
   - Where did you first meet your spouse?
+registration:
+  url: https://www.namesilo.com/create_account.php
+  form:
+    password:
+      input: required
+      characters: hidden
+    firstname:
+      input: required
+    lastname:
+      input: required
+    email:
+      input: required
+    repeat:
+      email:
+        input: required
+      password:
+        input: required
+        characters: hidden
+    captcha:
+      type: letters
+login:
+  url: https://www.namesilo.com/login.php
+  form:
+    account:
+      accepts: username domain
+    password:
+      characters: hidden
+reviewed:
+  date: 2017-02-10T08:08:32.725Z
