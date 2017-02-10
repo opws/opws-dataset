@@ -259,6 +259,10 @@ Whether there are `optional` or `required` fields for first, last, and/or full n
 
 Note that the assumption that all names can be broken into "first" and "last", while often present in registration forms, can be problematic. See https://www.w3.org/International/questions/qa-personal-names for a summary.
 
+## registration.form.username.input
+
+Whether defining a username on registration is `optional`, `required`, or not requested (`none`).
+
 ## registration.form.email.input
 
 Whether providing an email address on registration is `optional`, `required`, or not requested (`none`).
