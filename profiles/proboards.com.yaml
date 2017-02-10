@@ -5,11 +5,67 @@ password:
       min: 6
       max: 100
   reset:
-    url: https://www.proboards.com/forgot
+    url: https://login.proboards.com/forgot
     flow:
       request:
         form:
           account:
             accepts: email
+          captcha:
+            type: funcaptcha
+      response:
+        email:
+          sender: noreply@proboards.com
+          body: url
+        expire: 1h
+      change:
+        form:
+          newpassword:
+            characters: hidden
+          repeat:
+            newpassword:
+              input: required
+              characters: hidden
+      submit:
+        destination:
+          page: home
+        sessions:
+          own: login
+        expire: now
   change:
     url: http://www.proboards.com/account/settings#password
+    form:
+      oldpassword:
+        input: required
+        characters: hidden
+      newpassword:
+        characters: hidden
+      repeat:
+        newpassword:
+          input: required
+          characters: hidden
+    sessions:
+      own: logout
+      others: logout
+registration:
+  url: https://login.proboards.com/register
+  form:
+    password:
+      characters: hidden
+    repeat:
+      password:
+        input: required
+        characters: hidden
+    fullname:
+      input: required
+login:
+  url: https://login.proboards.com/login
+  form:
+    account:
+      accepts: email
+    password:
+      characters: hidden
+    persist:
+      checkbox: unchecked
+reviewed:
+  date: 2017-02-10T07:23:20.084Z
