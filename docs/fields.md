@@ -205,7 +205,7 @@ Whether the old password is `required` *after* submitting a password change, to 
 
 Whether an input to repeat the new password is `required`, `optional`, or not present (`none`).
 
-## password.change.form.newpassword.characters, password.change.form.repeat.newpassword.characters, password.reset.flow.change.form.oldpassword.characters
+## password.change.form.newpassword.characters, password.change.form.repeat.newpassword.characters, password.change.form.oldpassword.characters
 
 Whether the password inputs have typed characters `hidden` or `visible`, or, if visibility can be toggled, `showable` or `hideable` (from the default states, respectively).
 
