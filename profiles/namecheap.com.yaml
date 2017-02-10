@@ -1,14 +1,74 @@
 name: Namecheap
 password:
+  value:
+    length:
+      min: 8
+      max: 100
+  contents:
+    required:
+    - classes:
+      - nonspaces
   reset:
-    url: https://manage.www.namecheap.com/myaccount/rememberpwd.asp
+    url: https://ap.www.namecheap.com/ResetPassword
     flow:
       request:
         form:
           account:
             accepts: username email domain
+      response:
+        email:
+          sender: support@namecheap.com
+          body: firstname url username origin
+      change:
+        form:
+          newpassword:
+            characters: showable
+          repeat:
+            newpassword:
+              input: required
+              characters: showable
+      submit:
+        destination:
+          page: stub
+        sessions:
+          own: unchanged
+        expire: now
   change:
-    url: https://manage.www.namecheap.com/myaccount/modify-profile-changepassword.aspx
+    url: https://ap.www.namecheap.com/Profile/Security#ChangePassword
     form:
+      newpassword:
+        characters: showable
+      repeat:
+        newpassword:
+          input: required
+          characters: showable
       oldpassword:
         input: required
+        characters: showable
+registration:
+  url: https://www.namecheap.com/myaccount/signup.aspx
+  form:
+    username:
+      input: required
+    password:
+      input: required
+      characters: showable
+    repeat:
+      password:
+        input: required
+        characters: showable
+    firstname:
+      input: required
+    lastname:
+      input: required
+    email:
+      input: required
+login:
+  url: https://www.namecheap.com/myaccount/login.aspx
+  form:
+    account:
+      accepts: username
+    password:
+      characters: hidden
+reviewed:
+  date: 2017-02-10T20:20:30.602Z
