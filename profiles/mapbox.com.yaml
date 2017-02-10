@@ -10,4 +10,6 @@ password:
         accepts: email
   change:
     url: https://www.mapbox.com/account/
-    reauth: no
+    form:
+      oldpassword:
+        input: none

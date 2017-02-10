@@ -22,14 +22,20 @@ password:
         expire: now
   change:
     url: https://login.gog.com/account/password
-    reauth: password
+    form:
+      oldpassword:
+        input: required
 redflags:
 - en: The system accepts passwords longer than 100 characters, but does not
       recognize them when logging in or changing passwords.
 registration:
   url: https://login.gog.com/register
-  usability:
-    email: single
+  form:
+    email:
+      input: required
+    repeat:
+      email:
+        input: none
 login:
   url: https://login.gog.com/login
 reviewed:

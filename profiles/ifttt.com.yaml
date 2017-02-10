@@ -23,7 +23,9 @@ password:
         expire: now
   change:
     url: https://ifttt.com/settings/password
-    reauth: password
+    form:
+      oldpassword:
+        input: required
 username:
   value:
     length:
@@ -41,7 +43,11 @@ login:
   url: https://ifttt.com/session/new
 registration:
   url: https://ifttt.com/join
-  usability:
-    password: single
+  form:
+    password:
+      input: required
+    repeat:
+      password:
+        input: none
 reviewed:
   date: 2016-03-08T23:33:25.603Z

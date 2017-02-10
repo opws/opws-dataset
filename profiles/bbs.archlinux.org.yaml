@@ -12,5 +12,6 @@ registration:
   captcha: yes
 login:
   url: https://bbs.archlinux.org/login.php
-  persist:
-    checked: no
+  form:
+    persist:
+      checkbox: unchecked

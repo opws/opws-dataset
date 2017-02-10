@@ -20,7 +20,9 @@ password:
           own: logout
   change:
     url: https://github.com/settings/admin
-    reauth: password
+    form:
+      oldpassword:
+        input: required
     sessions:
       own: unchanged
 login:

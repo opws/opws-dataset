@@ -17,12 +17,19 @@ password:
           own: unchanged # assumed based on previous "token.login: no"
   change:
     url: https://www.guru.com/pro/modifyaccount.aspx?tab=3
-    reauth: password
-    usability:
-      password: showable # but not single - and only the first one
+    form:
+      oldpassword:
+        input: required
+      newpassword:
+        characters: showable
+      repeat:
+        newpassword: # previously described in a comment? TODO: check this
+          input: required
+          characters: hidden
 login:
   url: https://www.guru.com/login.aspx
-  usability:
-    password: showable
+  form:
+    password:
+      characters: showable
 registration:
   url: https://www.guru.com/registeraccount.aspx

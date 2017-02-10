@@ -2,4 +2,6 @@ name: Tarsnap
 password:
   change:
     url: https://www.tarsnap.com/manage.cgi?action=chpassform
-    reauth: password
+    form:
+      oldpassword:
+        input: required

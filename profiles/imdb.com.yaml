@@ -14,8 +14,12 @@ password:
           body: url
 registration:
   url: https://secure.imdb.com/register-imdb/register
-  usability:
-    email: double
+  form:
+    email:
+      input: required
+    repeat:
+      email:
+        input: required
 login:
   url: https://secure.imdb.com/register-imdb/login
 thirdparty:

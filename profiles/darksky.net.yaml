@@ -14,11 +14,17 @@ password:
         accepts: email
   change:
     url: https://darksky.net/dev/account/edit
-    reauth: no
+    form:
+      oldpassword:
+        input: none
 registration:
   url: https://darksky.net/dev/register
-  usability:
-    email: single
+  form:
+    email:
+      input: required
+    repeat:
+      email:
+        input: none
 login:
   url: https://darksky.net/dev/login
 reviewed:

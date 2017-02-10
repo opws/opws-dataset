@@ -22,7 +22,9 @@ password:
           own: unchanged # assumed based on previous "token.login: no"
   change:
     url: https://www.dynadot.com/account/info/settings.html
-    reauth: password
+    form:
+      oldpassword:
+        input: required
 username:
   value:
     length:

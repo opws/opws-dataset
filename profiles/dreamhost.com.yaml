@@ -25,7 +25,9 @@ password:
         expire: now
   change:
     url: https://panel.dreamhost.com/index.cgi?tree=billing.secure
-    reauth: password
+    form:
+      oldpassword:
+        input: required
 login:
   url: https://panel.dreamhost.com/
 totp: optional

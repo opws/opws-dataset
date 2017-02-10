@@ -10,7 +10,9 @@ password:
         accepts: email
   change:
     url: https://portal.respoke.io/#/account?section=Profile
-    reauth: no
+    form:
+      oldpassword:
+        input: none
 registration:
   url: https://portal.respoke.io/#/signup
 login:

@@ -26,7 +26,9 @@ password:
           own: unchanged # assumed based on previous "token.login: no"
   change:
     url: https://mya.godaddy.com/settings.aspx#settsecurity
-    reauth: password
+    form:
+      oldpassword:
+        input: required
 username:
   value:
     length:

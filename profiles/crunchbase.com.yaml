@@ -15,6 +15,8 @@ password:
         accepts: email
   change:
     url: http://www.crunchbase.com/user/ + username + /edit#change-pw
-    reauth: no
+    form:
+      oldpassword:
+        input: none
 redflags:
 - en: Passwords consisting entirely of spaces raise "Password cannot be blank" errors.

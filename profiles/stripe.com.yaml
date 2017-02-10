@@ -10,4 +10,6 @@ password:
         accepts: email
   change:
     url: https://manage.stripe.com/account
-    reauth: password
+    form:
+      oldpassword:
+        input: required

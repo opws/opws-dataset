@@ -10,7 +10,9 @@ password:
         accepts: email phone username fullname
   change:
     url: https://www.facebook.com/settings?tab=account&section=password
-    reauth: password
+    form:
+      oldpassword:
+        input: required
 registration:
   url: https://www.facebook.com/r.php
 login:

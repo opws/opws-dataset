@@ -10,7 +10,9 @@ password:
         accepts: email
   change:
     url: https://www.yammer.com/account/password
-    reauth: password
+    form:
+      oldpassword:
+        input: required
 registration:
   url: https://www.yammer.com/signup
 login:

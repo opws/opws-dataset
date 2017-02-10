@@ -15,11 +15,17 @@ password:
         accepts: email
   change:
     url: https://auth.sxsw.com/users/edit
-    reauth: password
+    form:
+      oldpassword:
+        input: required
 registration:
   url: https://auth.sxsw.com/users/sign_up
-  usability:
-    email: double
+  form:
+    email:
+      input: required
+    repeat:
+      email:
+        input: required
 login:
   url: https://auth.sxsw.com/users/sign_in
 reviewed:

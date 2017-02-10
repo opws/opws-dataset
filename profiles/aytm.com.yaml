@@ -16,8 +16,13 @@ password:
 registration:
   url: http://aytm.com/users/new
   captcha: recaptcha
-  usability:
-    password: single showable
+  form:
+    password:
+      input: required
+      characters: showable
+    repeat:
+      password:
+        input: none
 login:
   url: http://aytm.com/login
 reviewed:

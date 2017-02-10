@@ -19,13 +19,17 @@ password:
         email:
           body: link
         expire: 72h
+      change:
+        form:
+          email:
+            input: required
       submit:
         destination:
           page: stub
         sessions:
           own: unchanged
         expire: unchanged
-  change: 
+  change:
     url: https://*.residentportal.com/resident_portal/?module=customer&action=view_customer#ChangePassword
 login:
   url: https://*.residentportal.com/resident_portal/?module=authentication&action=view_login

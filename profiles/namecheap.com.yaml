@@ -7,4 +7,6 @@ password:
         accepts: username email domain
   change:
     url: https://manage.www.namecheap.com/myaccount/modify-profile-changepassword.aspx
-    reauth: password
+    form:
+      oldpassword:
+        input: required

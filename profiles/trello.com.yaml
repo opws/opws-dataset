@@ -2,7 +2,9 @@ name: Trello
 password:
   change:
     url: https://trello.com/me/account
-    reauth: no
+    form:
+      oldpassword:
+        input: none
   reset:
     url: https://trello.com/forgot
     flow:

@@ -10,4 +10,6 @@ password:
         accepts: email
   change:
     url: https://dashboard.heroku.com/account
-    reauth: password
+    form:
+      oldpassword:
+        input: required

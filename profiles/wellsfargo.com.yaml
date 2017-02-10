@@ -16,7 +16,9 @@ password:
       - numbers
   change:
     url: https://oam.wellsfargo.com/oam/access/receiver?dest=MODIFY_PASSWORD
-    reauth: password
+    form:
+      oldpassword:
+        input: required
   reset:
     url: https://oam.wellsfargo.com/oamo/identity/help/passwordhelp
     notes:
