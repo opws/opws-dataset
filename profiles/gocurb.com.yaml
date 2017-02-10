@@ -15,7 +15,9 @@ password:
           body: link
   change:
     url: https://my.gocurb.com/myaccount#password
-    reauth: no
+    form:
+      oldpassword:
+        input: none
 registration:
   url: https://my.gocurb.com/signup
 login:

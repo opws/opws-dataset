@@ -15,4 +15,6 @@ password:
         accepts: email
   change:
     url: https://www.pave.com/settings
-    reauth: no
+    form:
+      oldpassword:
+        input: none

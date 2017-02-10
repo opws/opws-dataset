@@ -16,7 +16,9 @@ password:
       request:
         accepts: username firstname+lastname+ssn+dob
   change:
-    reauth: password
+    form:
+      oldpassword:
+        input: required
     notes:
     - en: Click "Account Settings" after logging in
 username:

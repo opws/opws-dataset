@@ -10,9 +10,12 @@ password:
         accepts: username
   change:
     url: https://news.ycombinator.com/changepw
-    reauth: password
-    usability:
-      password: single
+    form:
+      oldpassword:
+        input: required
+      repeat:
+        newpassword:
+          input: none
 registration:
   url: https://news.ycombinator.com/login
 login:

@@ -7,6 +7,9 @@ password:
         accepts: email
   change:
     url: https://www.tumblr.com/settings/account#changepassword
-    reauth: password
-    usability:
-      password: single
+    form:
+      oldpassword:
+        input: required
+      repeat:
+        newpassword:
+          input: none

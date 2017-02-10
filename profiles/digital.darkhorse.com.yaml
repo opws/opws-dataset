@@ -21,13 +21,19 @@ password:
           own: unchanged # assumed based on previous "token.login: no"
   change:
     url: https://digital.darkhorse.com/accounts/manage/password_change/
-    reauth: password
+    form:
+      oldpassword:
+        input: required
     sessions: # assumed based on previous "invalidate: no"
       own: unchanged
       others: unchanged
 registration:
   url: https://digital.darkhorse.com/accounts/register/
-  usability:
-    email: single
+  form:
+    email:
+      input: required
+    repeat:
+      email:
+        input: none
 reviewed:
   date: 2016-01-29T13:32:48.207Z

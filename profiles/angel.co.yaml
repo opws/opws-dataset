@@ -19,7 +19,9 @@ password:
           body: link
   change:
     url: https://angel.co/settings/password
-    reauth: password
+    form:
+      oldpassword:
+        input: required
     sessions:
       own: logout
 registration:

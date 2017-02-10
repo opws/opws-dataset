@@ -29,8 +29,12 @@ questions:
   - What is the name of a college you applied to but didn't attend?
 registration:
   url: https://selfservice.travelers.com/registration/
-  usability:
-    email: double
+  form:
+    email:
+      input: required
+    repeat:
+      email:
+        input: required
   captcha: recaptcha
 login:
   url: https://www.travelers.com/login/

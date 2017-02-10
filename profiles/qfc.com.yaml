@@ -23,4 +23,6 @@ password:
           own: unchanged # assumed based on previous "token.login: no"
   change:
     url: https://www.qfc.com/account/update#editCredentials
-    reauth: no
+    form:
+      oldpassword:
+        input: none

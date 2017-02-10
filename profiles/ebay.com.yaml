@@ -41,7 +41,9 @@ password:
         expire: now
   change:
     url: https://signin.ebay.com/ws/eBayISAPI.dll?ChangePasswordAndCreateHint
-    reauth: password
+    form:
+      oldpassword:
+        input: required
 username:
   value:
     length:
@@ -68,15 +70,26 @@ username:
       - profanity
   change:
     url: https://scgi.ebay.com/ws/eBayISAPI.dll?ChangeUserId
-    reauth: password
+    form:
+      password:
+        input: required
 registration:
   url: https://signin.ebay.com/ws/eBayISAPI.dll?pos=1
-  usability:
-    email: double
-    password: single showable
+  form:
+    email:
+      input: required
+    password:
+      input: required
+      characters: showable
+    repeat:
+      email:
+        input: required
+      password:
+        input: none
 login:
   url: https://signin.ebay.com/ws/eBayISAPI.dll
-  persist:
-    checked: yes
+  form:
+    persist:
+      checkbox: checked
 reviewed:
   date: 2016-04-28T21:38:12Z

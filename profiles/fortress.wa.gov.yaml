@@ -19,7 +19,9 @@ password:
         captcha: yes
   change:
     url: https://fortress.wa.gov/dor/efile/FortressLogon/ChangePassword.aspx
-    reauth: password
+    form:
+      oldpassword:
+        input: required
 username:
   value:
     length:

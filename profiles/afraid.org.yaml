@@ -18,18 +18,25 @@ password:
         result: change
   change:
     url: https://freedns.afraid.org/profile/password.php
-    reauth: password
+    form:
+      oldpassword:
+        input: required
     sessions:
       own: logout
       others: logout
 registration:
   url: https://freedns.afraid.org/signup/
   captcha: securimage
-  usability:
-    email: single
+  form:
+    email:
+      input: required
+    repeat:
+      email:
+        input: none
 login:
   url: https://freedns.afraid.org/zc.php
-  persist:
-    checked: no
+  form:
+    persist:
+      checkbox: unchecked
 reviewed:
   date: 2016-04-26T13:06:29.753Z

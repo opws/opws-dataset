@@ -7,7 +7,9 @@ password:
         accepts: email
   change:
     url: https://accounts.makerbot.com/edit#old_password
-    reauth: password
+    form:
+      oldpassword:
+        input: required
 login:
   url: https://accounts.makerbot.com/
 registration:

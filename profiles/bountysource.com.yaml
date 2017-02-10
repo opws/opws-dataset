@@ -11,9 +11,12 @@ password:
       - numbers
   change:
     url: https://www.bountysource.com/settings/accounts
-    reauth: password
-    usability:
-      password: single
+    form:
+      oldpassword:
+        input: required
+      repeat:
+        newpassword:
+          input: none
   reset:
     url: https://www.bountysource.com/signin
     flow:
@@ -21,20 +24,30 @@ password:
         email:
           sender: support@bountysource.com
           body: code url
+      change:
+        form:
+          repeat:
+            newpassword:
+              input: none
       submit:
         sessions:
           own: login
         expire: now
-    usability:
-      password: single
     notes:
     - en: Enter email, then a "Forgot?" link will appear
           by the password field.
 registration:
   url: https://www.bountysource.com/signin
-  usability:
-    email: single
-    password: single
+  form:
+    email:
+      input: required
+    password:
+      input: required
+    repeat:
+      email:
+        input: none
+      password:
+        input: none
 login:
   url: https://www.bountysource.com/signin
 thirdparty:

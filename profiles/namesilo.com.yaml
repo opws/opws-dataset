@@ -15,7 +15,9 @@ password:
         accepts: username domain
   change:
     url: https://www.namesilo.com/account_maintenance.php
-    reauth: password
+    form:
+      oldpassword:
+        input: required
 questions:
 - required: 1
   options:

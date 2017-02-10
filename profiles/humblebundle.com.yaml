@@ -12,18 +12,24 @@ password:
         email:
           sender: contact@humblebundle.com
           body: url
+      change:
+        form:
+          repeat:
+            newpassword:
+              input: none
       submit:
         sessions:
           own: login
         destination:
           page: home
-    usability:
-      password: single
   change:
     url: https://www.humblebundle.com/user/settings#password
-    reauth: password
-    usability:
-      password: double
+    form:
+      oldpassword:
+        input: required
+      repeat:
+        newpassword:
+          input: required
     notes:
     - en: >
         Password re-authentication is via prompt after entering the password,

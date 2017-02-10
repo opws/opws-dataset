@@ -28,7 +28,9 @@ password:
         expire: now
   change:
     url: https://launchpad.37signals.com/identity/password/edit
-    reauth: no
+    form:
+      oldpassword:
+        input: none
     sessions:
       own: unchanged
       others: logout

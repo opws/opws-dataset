@@ -19,7 +19,9 @@ password:
         expire: now
   change:
     url: https://www.okcupid.com/settings
-    reauth: password
+    form:
+      oldpassword:
+        input: required
 username:
   value:
     length:
@@ -34,9 +36,16 @@ username:
       - underscore
 registration:
   url: https://www.okcupid.com/
-  usability:
-    email: double
-    password: single
+  form:
+    email:
+      input: required
+    password:
+      input: required
+    repeat:
+      email:
+        input: required
+      password:
+        input: none
 login:
   url: https://www.okcupid.com/login
 thirdparty:

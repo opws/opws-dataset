@@ -5,7 +5,9 @@ password:
       min: 4
   change:
     url: https://members.zipcar.com/user/password-update
-    reauth: password
+    form:
+      oldpassword:
+        input: required
   reset:
     url: https://members.zipcar.com/register/forgot-password
     flow:

@@ -20,7 +20,9 @@ password:
         accepts: email # Does the reset page accept email address, or username?
   change:
     url: https://example.com/account/changepassword
-    reauth: password # Do you have to enter the old password? ("no" if not)
+    form:
+      oldpassword:
+        input: required # Do you have to enter the old password? ("none" if not)
 registration:
   url: https://example.com/register
 login:
@@ -50,6 +52,11 @@ password:
         sessions:
           own: login # Is the user auto-logged in, or just directed to do so?
         expire: now # Can the link be revisited after use?
-    usability:
-      password: single showable # Is password input better than double-blind?
+    change:
+      form:
+        newpassword:
+          characters: hidden # Can you see what you're typing?
+        repeat:
+          newpassword:
+            input: required # Do you have to type the new password twice?
 ```

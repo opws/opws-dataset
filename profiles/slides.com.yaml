@@ -10,9 +10,12 @@ password:
       - nonspaces
   change:
     url: https://slides.com/users/edit#user_password
-    reauth: password
-    usability:
-      password: single
+    form:
+      oldpassword:
+        input: required
+      repeat:
+        newpassword:
+          input: none
   reset:
     url: https://slides.com/users/password/new
     flow:
@@ -35,12 +38,17 @@ username:
 registration:
   url: https://slides.com/users/sign_up
   captcha: recaptcha
-  usability:
-    password: single
+  form:
+    password:
+      input: required
+    repeat:
+      password:
+        input: none
 login:
   url: https://slides.com/users/sign_in
-  persist:
-    checked: no
+  form:
+    persist:
+      checkbox: unchecked
 thirdparty:
   auth:
     providers:

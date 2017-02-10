@@ -16,13 +16,19 @@ password:
           sender: no-reply@cloudflare.com
           body: url token
         expire: 2h
-    usability:
-      password: double
+      change:
+        form:
+          repeat:
+            newpassword:
+              input: required
   change:
     url: https://www.cloudflare.com/a/account/my-account
-    reauth: password
-    usability:
-      password: double
+    form:
+      oldpassword:
+        input: required
+      repeat:
+        newpassword:
+          input: required
 login:
   url: https://www.cloudflare.com/a/login
 registration:

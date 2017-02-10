@@ -30,7 +30,9 @@ password:
         expire: now
   change:
     url: https://www.dnsomatic.com/account/
-    reauth: no
+    form:
+      oldpassword:
+        input: none
 username:
   value:
     length:
@@ -46,8 +48,12 @@ username:
       strings: ['_', '.', '-']
 registration:
   url: https://www.dnsomatic.com/create/
-  usability:
-    password: once
+  form:
+    password:
+      input: required
+    repeat:
+      password:
+        input: none
 login:
   url: https://www.dnsomatic.com/account/
 thirdparty:

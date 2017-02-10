@@ -22,7 +22,9 @@ password:
         accepts: username
   change:
     url: https://www.wahealthplanfinder.org/HBEWeb/DisplayPasswordChangePassword.action
-    reauth: password
+    form:
+      oldpassword:
+        input: required
 username:
   value:
     length:
@@ -44,8 +46,12 @@ username:
       accepts: email
 registration:
   url: https://www.wahealthplanfinder.org/HBEWeb/Annon_DisplayCreateAccountLanding.action
-  usability:
-    email: double
+  form:
+    email:
+      input: required
+    repeat:
+      email:
+        input: required
 questions:
 - required: 3
   notes:

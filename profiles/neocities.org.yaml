@@ -19,7 +19,9 @@ password:
           others: unchanged
   change:
     url: https://neocities.org/settings#password
-    reauth: password
+    form:
+      oldpassword:
+        input: required
     sessions: # based on previous "invalidate: no"
       own: unchanged
       others: unchanged
@@ -34,9 +36,16 @@ username:
 registration:
   url: https://neocities.org/#new
   captcha: recaptcha
-  usability:
-    email: single
-    password: single
+  form:
+    email:
+      input: required
+    password:
+      input: required
+    repeat:
+      email:
+        input: none
+      password:
+        input: none
 login:
   url: https://neocities.org/signin
 reviewed:

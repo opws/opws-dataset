@@ -139,6 +139,18 @@ How long after beginning the post-response step (ie. following the link) the res
 
 If the token may not be used to re-open the password reset flow after the first time it is used, this value will be `"now"`.
 
+## password.reset.flow.change.form.newpassword.characters, password.reset.flow.change.form.repeat.newpassword.characters
+
+Whether the "new password" inputs have typed characters `hidden` or `visible`, or, if visibility can be toggled, `showable` or `hideable` (from the default states, respectively).
+
+## password.reset.flow.change.form.repeat.newpassword.input
+
+Whether an input to repeat the new password is `required`, `optional`, or not present (`none`).
+
+## password.reset.flow.change.form.email.input
+
+If resetting a password requires you to provide the email address on the account, this will be `required`. A value of `none` would suggest it's not present, but would more likely just not be profiled (as this is rare).
+
 ## password.reset.flow.submit.expire
 
 If the token does not immediately expire until it is used, the value of this field will be `"now"`.
@@ -148,10 +160,6 @@ This value is only included as a way of canonically stating that the token does 
 ## password.reset.randomize.open.result
 
 Whether following a link sets and sends the randomized password (`send`), or just changes the password to the already-sent password (`change`).
-
-## password.reset.usability.password
-
-A space-separated token string describing how the password set UI differs from double-blind-entry. See `password.change.usability.password`.
 
 ## password.reset.flow.submit.destination.page
 
@@ -179,9 +187,27 @@ Whether other logged-in sessions are invalidated (`logout`) or not (`unchanged`)
 
 The URL of the "change password" page for the logged-in user. If the site doesn't have a URL for the logged-in user, this will be in a space-and-plus-separated string denoting where to insert the variable components (such as "username").
 
-## password.change.reauth
+## password.change.form.oldpassword.input
 
-"no" if users can change password without reauthenticating, "password" if they have to enter the old password.
+Whether the old password is `required` when changing a password, or not (`none`).
+
+If it's required *before* or *after*, one of the two following documented fields will be present instead: this field should not be present.
+
+## password.change.before.form.oldpassword.input
+
+Whether the old password is `required` *before* changing a password. If not, the `password.change.before` object will most likely not be present: however, it's valid for this to be specified all the way down to a value of `none` here.
+
+## password.change.after.form.oldpassword.input
+
+Whether the old password is `required` *after* submitting a password change, to approve and commit the new password. If not, the `password.change.after` object will most likely not be present: however, it's valid for this to be specified all the way down to a value of `none` here.
+
+## password.change.form.repeat.newpassword.input
+
+Whether an input to repeat the new password is `required`, `optional`, or not present (`none`).
+
+## password.change.form.newpassword.characters, password.change.form.repeat.newpassword.characters
+
+Whether the "new password" inputs have typed characters `hidden` or `visible`, or, if visibility can be toggled, `showable` or `hideable` (from the default states, respectively).
 
 ## password.change.sessions.own
 
@@ -190,15 +216,6 @@ Whether the current session is logged out (`logout`) or not (`unchanged`) after 
 ## password.change.sessions.others
 
 Whether other logged-in sessions are logged out (`logout`) or not (`unchanged`) after changing the password.
-
-## password.change.usability.password
-
-A space-separated token string describing how the password set UI differs from double-blind-entry.
-
-Tokens:
-
-- "single": Does not require password to be entered twice.
-- "showable": Password can be toggled to plaintext.
 
 ## username.value.\*, username.contents.\*
 
@@ -222,9 +239,11 @@ What kind of captcha (if any) is used to deter automated username reminders. See
 
 The URL of the "change username" page for the logged-in user. If the site doesn't have a URL for the logged-in user, this will be in a space-and-plus-separated string denoting where to insert the variable components (such as "userid").
 
-## username.change.reauth
+## username.change.form.password.input
 
-"no" if users can change username without reauthenticating, "password" if they have to (re)enter their password (among other credentials).
+Whether a password is `required` when submitting a username change
+
+*Note: this should have `before` and `after` mirrors like `password.change.form.oldpassword` does*
 
 ## registration.url
 
@@ -234,34 +253,39 @@ The URL of the page to create a new user account.
 
 What kind of captcha (if any) is used to deter automated user registration. See `password.reset.captcha`.
 
-## registration.usability.email
+## registration.form.email.input
 
-A space-separated token string describing how email address is specified in registration.
+Whether providing an email address on registration is `optional`, `required`, or not requested (`none`).
 
-Tokens:
+## registration.form.repeat.email.input
 
-- "single": requires email address to be entered once.
-- "double": requires email address to be entered twice.
+Whether entering the email address a second time on registration is `optional`, `required`, or not requested (`none`).
 
-## registration.usability.password
+## registration.form.password.input
 
-A space-separated token string describing how the password set UI differs from double-blind-entry. See `password.change.usability.password`.
+Whether setting a password on registration is `optional`, `required`, or not requested (`none`).
+
+## registration.form.repeat.password.input
+
+Whether *repeating* a password on registration is `optional`, `required`, or not requested (`none`).
+
+## registration.form.email.characters, registration.form.repeat.email.characters, registration.form.password.characters, registration.form.repeat.password.characters
+
+Whether the inputs have typed characters `hidden` or `visible`, or, if visibility can be toggled, `showable` or `hideable` (from the default states, respectively).
 
 ## login.url
 
 The URL of the page to log in, as a user.
 
-## login.persist.checked
+## login.form.persist.checkbox
 
-If there is a checkbox to remain logged in, what the default status of that check box is.
+If there is a checkbox to remain logged in, what the default status of that check box is, `checked` or `unchecked`.
 
-## login.usability.password
+## login.form.password.characters
 
-A space-separated token string describing how the password UI differs from traditional blind-entry.
+Whether the password input on login has typed characters `hidden` or `visible`, or, if visibility can be toggled, `showable` or `hideable` (from the default states, respectively).
 
-Tokens:
-
-- "showable": Password can be toggled to plaintext.
+This is usually `hidden`, and if this field is not present, that's the value that can safely be assumed.
 
 ## thirdparty.auth.providers
 
