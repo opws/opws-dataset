@@ -12,8 +12,11 @@ password:
     url: https://auth.getpebble.com/users/password/new
     flow:
       request:
-        accepts: email
-        captcha: recaptcha
+        form:
+          account:
+            accepts: email
+          captcha:
+            type: recaptcha
       response:
         email:
           sender: support@pebble.com

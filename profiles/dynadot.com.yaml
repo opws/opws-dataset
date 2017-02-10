@@ -12,7 +12,9 @@ password:
     url: https://www.dynadot.com/forgot.html
     flow:
       request:
-        accepts: email email+username
+        form:
+          account:
+            accepts: email email+username
       response:
         email:
           sender: accounts@dynadot.com

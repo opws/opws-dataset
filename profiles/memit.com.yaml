@@ -8,6 +8,8 @@ password:
     url: https://memit.com/user/resetpassword
     flow:
       request:
-        accepts: email username
+        form:
+          account:
+            accepts: email username
   change:
     url: https://memit.com/user/profile/#password_reset

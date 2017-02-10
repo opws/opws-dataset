@@ -4,7 +4,9 @@ password:
     url: https://commons.wikimedia.org/wiki/Special:PasswordReset
     onetime:
       request:
-        accepts: username email
+        form:
+          account:
+            accepts: username email
       response:
         email:
           body: password

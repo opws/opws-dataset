@@ -13,7 +13,9 @@ password:
     url: https://panel.dreamhost.com/login/forgot.cgi
     flow:
       request:
-        accepts: email
+        form:
+          account:
+            accepts: email
       response:
         email:
           sender: support@dreamhost.com

@@ -4,4 +4,6 @@ password:
     url: http://www.freesound.org/home/resetpassword/
     flow:
       request:
-        accepts: email
+        form:
+          account:
+            accepts: email

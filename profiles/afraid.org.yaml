@@ -8,8 +8,11 @@ password:
     url: https://freedns.afraid.org/password/
     randomize:
       request:
-        accepts: username email
-        captcha: question
+        form:
+          account:
+            accepts: username email
+          captcha:
+            type: question
       response:
         email:
           sender: dnsadmin@afraid.org
@@ -26,13 +29,14 @@ password:
       others: logout
 registration:
   url: https://freedns.afraid.org/signup/
-  captcha: securimage
   form:
     email:
       input: required
     repeat:
       email:
         input: none
+    captcha:
+      type: securimage
 login:
   url: https://freedns.afraid.org/zc.php
   form:

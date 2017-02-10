@@ -11,7 +11,9 @@ password:
     url: https://c9.io/auth/password/reset
     flow:
       request:
-        accepts: username email
+        form:
+          account:
+            accepts: username email
       response:
         email:
           sender: support@c9.io

@@ -4,6 +4,8 @@ password:
     url: https://koding.com/Recover
     flow:
       request:
-        accepts: username email
+        form:
+          account:
+            accepts: username email
   change:
     url: https://koding.com/Account

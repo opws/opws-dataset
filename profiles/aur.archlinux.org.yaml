@@ -4,6 +4,8 @@ password:
     url: https://aur.archlinux.org/passreset/
     flow:
       request:
-        accepts: email
+        form:
+          account:
+            accepts: email
   change:
     url: https://aur.archlinux.org/account/ + username + /edit/

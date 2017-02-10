@@ -14,4 +14,6 @@ password:
     url: http://www.topcoder.com/password-recovery/
     flow:
       request:
-        accepts: username email
+        form:
+          account:
+            accepts: username email

@@ -7,6 +7,8 @@ password:
     url: http://www.doublefine.com/forums/member/forgot_password/
     flow:
       request:
-        accepts: email
+        form:
+          account:
+            accepts: email
   change:
     url: http://www.doublefine.com/forums/member/edit_userpass/

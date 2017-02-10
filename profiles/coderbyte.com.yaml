@@ -4,6 +4,8 @@ password:
     url: http://coderbyte.com/sl/forgotpassword/
     flow:
       request:
-        accepts: email
+        form:
+          account:
+            accepts: email
   change:
     url: http://coderbyte.com/CodingArea/Settings/

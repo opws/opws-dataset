@@ -9,7 +9,9 @@ password:
     url: https://github.com/password_reset
     flow:
       request:
-        accepts: email
+        form:
+          account:
+            accepts: email
       response:
         email:
           sender: noreply@github.com

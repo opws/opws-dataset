@@ -8,8 +8,11 @@ password:
     url: https://login.gog.com/password/request
     flow:
       request:
-        accepts: email
-        captcha: recaptcha
+        form:
+          account:
+            accepts: email
+          captcha:
+            type: recaptcha
         notes:
         - en: Captcha only appears after multiple reset requests.
       response:

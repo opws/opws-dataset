@@ -7,7 +7,9 @@ password:
     url: https://aytm.com/users/restore-password
     flow:
       request:
-        accepts: email
+        form:
+          account:
+            accepts: email
       response:
         email:
           body: link url
@@ -15,7 +17,6 @@ password:
     url: https://aytm.com/users/account-setting?current_tab=change_password
 registration:
   url: http://aytm.com/users/new
-  captcha: recaptcha
   form:
     password:
       input: required
@@ -23,6 +24,8 @@ registration:
     repeat:
       password:
         input: none
+    captcha:
+      type: recaptcha
 login:
   url: http://aytm.com/login
 reviewed:

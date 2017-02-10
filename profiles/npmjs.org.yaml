@@ -4,6 +4,8 @@ password:
     url: https://npmjs.org/forgot
     flow:
       request:
-        accepts: username email
+        form:
+          account:
+            accepts: username email
   change:
     url: https://npmjs.org/password

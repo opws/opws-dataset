@@ -35,7 +35,8 @@ registration:
     repeat:
       email:
         input: required
-  captcha: recaptcha
+    captcha:
+      type: recaptcha
 login:
   url: https://www.travelers.com/login/
 reviewed:

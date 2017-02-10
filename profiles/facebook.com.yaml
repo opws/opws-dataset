@@ -7,7 +7,9 @@ password:
     url: https://www.facebook.com/recover/initiate
     flow:
       request:
-        accepts: email phone username fullname
+        form:
+          account:
+            accepts: email phone username fullname
   change:
     url: https://www.facebook.com/settings?tab=account&section=password
     form:

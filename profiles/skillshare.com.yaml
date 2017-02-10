@@ -4,6 +4,8 @@ password:
     url: https://www.skillshare.com/reset-password
     flow:
       request:
-        accepts: email
+        form:
+          account:
+            accepts: email
   change:
     url: https://www.skillshare.com/settings/pw

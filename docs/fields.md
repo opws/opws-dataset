@@ -90,13 +90,13 @@ Array of restrictions on what passwords *must not* do (other than those describe
 
 The URL of the site's "reset password" page.
 
-## password.reset.flow.request.accepts, password.reset.randomize.request.accepts, password.reset.onetime.request.accepts
+## password.reset.flow.request.form.account.accepts, password.reset.randomize.request.form.account.accepts, password.reset.onetime.request.form.account.accepts
 
 A space-separated token string of what identifiers the site needs to request an email to enter password reset flow. (Usually some combination of "email" and/or "username".)
 
 When sites *require multiple* identifiers, they are joined with a plus (`+`).
 
-## password.reset.flow.request.captcha, password.reset.randomize.request.captcha, password.reset.onetime.request.captcha
+## password.reset.flow.request.form.captcha.type, password.reset.randomize.request.form.captcha.type, password.reset.onetime.request.form.captcha.type
 
 What kind of captcha (if any) is used to deter automated password resets ("yes" if unknown).
 
@@ -225,13 +225,13 @@ Rules on the format of usernames. See `password.value` and `password.contents` a
 
 The URL of the page to send a username reminder to an email address (when separate from password resetting).
 
-## username.reminder.request.accepts
+## username.reminder.request.form.account.accepts
 
 A space-separated token string of what identifiers the site needs to send a username reminder. (Usually just "email".)
 
 When sites *require multiple* identifiers, they are joined with a plus (`+`). (For example, simple.com requires an email *and* phone number, so its `username.remind.accept` value is "email+phone".)
 
-## username.reminder.request.captcha
+## username.reminder.request.form.captcha.type
 
 What kind of captcha (if any) is used to deter automated username reminders. See `password.reset.request.captcha`.
 
@@ -241,7 +241,7 @@ The URL of the "change username" page for the logged-in user. If the site doesn'
 
 ## username.change.form.password.input
 
-Whether a password is `required` when submitting a username change
+Whether a password is `required` when submitting a username change.
 
 *Note: this should have `before` and `after` mirrors like `password.change.form.oldpassword` does*
 
@@ -249,9 +249,15 @@ Whether a password is `required` when submitting a username change
 
 The URL of the page to create a new user account.
 
-## registration.captcha
+## registration.form.captcha.type
 
-What kind of captcha (if any) is used to deter automated user registration. See `password.reset.captcha`.
+What kind of captcha (if any) is used to deter automated user registration. See `password.reset.captcha.type`.
+
+## registration.form.firstname.input, registration.form.lastname.input, registration.form.fullname.input
+
+Whether there are `optional` or `required` fields for first, last, and/or full names, respectively, when registering an account.
+
+Note that the assumption that all names can be broken into "first" and "last", while often present in registration forms, can be problematic. See https://www.w3.org/International/questions/qa-personal-names for a summary.
 
 ## registration.form.email.input
 
@@ -277,15 +283,19 @@ Whether the inputs have typed characters `hidden` or `visible`, or, if visibilit
 
 The URL of the page to log in, as a user.
 
-## login.form.persist.checkbox
+## login.form.account.accepts
 
-If there is a checkbox to remain logged in, what the default status of that check box is, `checked` or `unchecked`.
+A space-separated token string of what identifiers the site accepts to identify the account logging in. (Usually some combination of "email" and/or "username".)
 
 ## login.form.password.characters
 
 Whether the password input on login has typed characters `hidden` or `visible`, or, if visibility can be toggled, `showable` or `hideable` (from the default states, respectively).
 
 This is usually `hidden`, and if this field is not present, that's the value that can safely be assumed.
+
+## login.form.persist.checkbox
+
+If there is a checkbox to remain logged in, what the default status of that check box is, `checked` or `unchecked`.
 
 ## thirdparty.auth.providers
 

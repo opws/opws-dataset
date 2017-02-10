@@ -14,7 +14,9 @@ password:
     url: https://idp.hrblock.com/idp/Authn/DForgotCredentials.html
     flow:
       request:
-        accepts: username firstname+lastname+ssn+dob
+        form:
+          account:
+            accepts: username firstname+lastname+ssn+dob
   change:
     form:
       oldpassword:
@@ -25,7 +27,9 @@ username:
   reminder:
     url: https://idp.hrblock.com/idp/Authn/DForgotCredentials.html
     request:
-      accepts: email firstname+lastname+ssn+dob
+      form:
+        account:
+          accepts: email firstname+lastname+ssn+dob
 registration:
   url: https://idp.hrblock.com/idp/Authn/DCreateUser.html
 login:

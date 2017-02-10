@@ -12,12 +12,14 @@ name: Site Name Here # How would you refer to this site in a sentence?
 password:
   value:
     length:
-      min: 1 # What is their minimum password size? Is there a maximum?
+      min: 8 # What is their minimum password size? Is there a maximum?
   reset:
     url: https://example.com/resetpassword
     flow: # assuming the usual request-email-visit-change flow
       request:
-        accepts: email # Does the reset page accept email address, or username?
+        form:
+          account:
+            accepts: email # Does the reset page accept email address, or username?
   change:
     url: https://example.com/account/changepassword
     form:
@@ -25,8 +27,21 @@ password:
         input: required # Do you have to enter the old password? ("none" if not)
 registration:
   url: https://example.com/register
+  form:
+    email:
+      input: optional # Does registration require an email address?
+    password:
+      characters: hidden # Can you show what password you're typing?
+    repeat:
+      password:
+        input: required # Is there a "confirm password" box?
 login:
   url: https://example.com/login
+  form:
+    account:
+      accepts: username # Can you log in with an email address? Username?
+    password:
+      characters: hidden # Is the login password showable?
 reviewed:
   date: 1970-01-01T00:00:00.000Z # use https://www.isotimestamp.com/
 ```
@@ -39,8 +54,11 @@ password:
   reset:
     flow:
       request:
-        accepts: email # Does the reset page accept email address, or username?
-        captcha: word # Is there a captcha?
+        form:
+          account:
+            accepts: email # Does the reset page accept email address, or username?
+          captcha:
+            type: word # Is there a captcha?
       response:
         email:
           sender: sender@example.com # What address does a reset email come from?
@@ -52,11 +70,11 @@ password:
         sessions:
           own: login # Is the user auto-logged in, or just directed to do so?
         expire: now # Can the link be revisited after use?
-    change:
-      form:
-        newpassword:
-          characters: hidden # Can you see what you're typing?
-        repeat:
+      change:
+        form:
           newpassword:
-            input: required # Do you have to type the new password twice?
+            characters: hidden # Can you see what you're typing?
+          repeat:
+            newpassword:
+              input: required # Do you have to type the new password twice?
 ```

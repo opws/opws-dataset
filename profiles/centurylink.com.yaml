@@ -4,14 +4,18 @@ password:
     url: https://eam.centurylink.com/eam/loginTrouble/forgotPassword.do
     flow:
       request:
-        accepts: username
+        form:
+          account:
+            accepts: username
   change:
     url: https://shop.centurylink.com/MasterWebPortal/freeRange/acctMgmt/ManageMyProfile_goToChangeProfilePassword.action
 username:
   reminder:
     url: https://eam.centurylink.com/eam/loginTrouble/obtainForgottenUserID.do
     request:
-      accepts: email
+      form:
+        account:
+          accepts: email
 registration:
   url: https://eam.centurylink.com/eam/registration.do
 login:

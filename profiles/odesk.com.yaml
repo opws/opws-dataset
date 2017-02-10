@@ -16,8 +16,11 @@ password:
     url: https://www.odesk.com/reset/password
     flow:
       request:
-        accepts: email
-        captcha: yes
+        form:
+          account:
+            accepts: email
+          captcha:
+            type: letters
       response:
         email:
           sender: donotreply@odesk.com

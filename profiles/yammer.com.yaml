@@ -7,7 +7,9 @@ password:
     url: https://www.yammer.com/forgotten_password/new
     flow:
       request:
-        accepts: email
+        form:
+          account:
+            accepts: email
   change:
     url: https://www.yammer.com/account/password
     form:

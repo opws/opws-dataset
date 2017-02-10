@@ -9,7 +9,9 @@ password:
     url: https://www.linkedin.com/passwordReset
     flow:
       request:
-        accepts: email phone
+        form:
+          account:
+            accepts: email phone
       response:
         email:
           sender: security-noreply@linkedin.com

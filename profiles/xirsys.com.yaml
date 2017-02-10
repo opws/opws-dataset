@@ -4,4 +4,6 @@ password:
     url: https://manage.xirsys.com/forgotten
     flow:
       request:
-        accepts: username email
+        form:
+          account:
+            accepts: username email

@@ -16,7 +16,9 @@ password:
     url: https://olui2.fs.ml.com/login/ForgotPassword.aspx
     flow:
       request:
-        accepts: username
+        form:
+          account:
+            accepts: username
 username:
   reminder:
     url: https://olui2.fs.ml.com/login/ForgotUserId.aspx

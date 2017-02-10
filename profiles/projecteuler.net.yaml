@@ -14,13 +14,17 @@ password:
     url: https://projecteuler.net/reset_password
     flow:
       request:
-        accepts: username+email
+        form:
+          account:
+            accepts: username+email
   change:
     url: https://projecteuler.net/account
 username:
   reminder:
     url: https://projecteuler.net/username_reminder
     request:
-      accepts: email
+      form:
+        account:
+          accepts: email
 redflags:
 - '"Remember Me" creates a p_key cookie rather than changing your session.'

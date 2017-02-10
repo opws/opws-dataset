@@ -4,6 +4,8 @@ password:
     url: https://www.udemy.com/user/forgot-password
     flow:
       request:
-        accepts: email
+        form:
+          account:
+            accepts: email
   change:
     url: https://www.udemy.com/user/edit-account#password

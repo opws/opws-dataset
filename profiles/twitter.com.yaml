@@ -4,4 +4,6 @@ password:
     url: https://twitter.com/account/resend_password
     flow:
       request:
-        accepts: email phone username
+        form:
+          account:
+            accepts: email phone username

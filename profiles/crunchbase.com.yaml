@@ -12,7 +12,9 @@ password:
     url: http://www.crunchbase.com/recovery/new
     flow:
       request:
-        accepts: email
+        form:
+          account:
+            accepts: email
   change:
     url: http://www.crunchbase.com/user/ + username + /edit#change-pw
     form:

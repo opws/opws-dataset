@@ -7,7 +7,9 @@ password:
     url: https://secure.imdb.com/register-imdb/forgotten
     flow:
       request:
-        accepts: email
+        form:
+          account:
+            accepts: email
       response:
         email:
           sender: do-not-reply-here@imdb.com

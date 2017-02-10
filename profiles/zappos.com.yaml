@@ -7,8 +7,11 @@ password:
     url: https://secure-www.zappos.com/password/reset
     flow:
       request:
-        accepts: email
-        captcha: alphanumeric
+        form:
+          account:
+            accepts: email
+          captcha:
+            type: alphanumeric
       response:
         email:
           sender: cs@zappos.com

@@ -7,7 +7,9 @@ password:
     url: https://portal.respoke.io/#/password-reset
     flow:
       request:
-        accepts: email
+        form:
+          account:
+            accepts: email
   change:
     url: https://portal.respoke.io/#/account?section=Profile
     form:

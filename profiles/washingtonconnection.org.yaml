@@ -17,8 +17,11 @@ password:
     url: https://www.washingtonconnection.org/authservice/resetpassword.go
     flow:
       request:
-        accepts: username+email
-        captcha: yes
+        form:
+          account:
+            accepts: username+email
+          captcha:
+            type: word
 username:
   value:
     length:
@@ -33,8 +36,11 @@ username:
   reminder:
     url: https://www.washingtonconnection.org/authservice/forgotusername.go
     request:
-      accepts: email
-      captcha: yes
+      form:
+        account:
+          accepts: email
+        captcha:
+          type: word
 registration:
   url: https://www.washingtonconnection.org/authservice/createaccount.go
 login:

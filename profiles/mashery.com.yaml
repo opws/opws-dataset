@@ -12,12 +12,16 @@ password:
     url: https://secure.mashery.com/member/lost/
     flow:
       request:
-        accepts: email+username
+        form:
+          account:
+            accepts: email+username
 username:
   reminder:
     url: https://secure.mashery.com/member/lost-username/
     request:
-      accepts: email
+      form:
+        account:
+          accepts: email
 registration:
   url: http://developer.mashery.com/member/register
 login:

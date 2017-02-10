@@ -8,6 +8,8 @@ password:
     url: https://www.proboards.com/forgot
     flow:
       request:
-        accepts: email
+        form:
+          account:
+            accepts: email
   change:
     url: http://www.proboards.com/account/settings#password

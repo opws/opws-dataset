@@ -4,7 +4,9 @@ password:
     url: https://edit.yahoo.com/forgotroot
     flow:
       request:
-        accepts: username email
+        form:
+          account:
+            accepts: username email
   change:
     url: https://edit.yahoo.com/config/change_pw
 report:

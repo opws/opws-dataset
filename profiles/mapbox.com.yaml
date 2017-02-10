@@ -7,7 +7,9 @@ password:
     url: https://www.mapbox.com/#active1
     flow:
       request:
-        accepts: email
+        form:
+          account:
+            accepts: email
   change:
     url: https://www.mapbox.com/account/
     form:

@@ -4,6 +4,8 @@ password:
     url: https://scraperwiki.com/accounts/password/reset/
     flow:
       request:
-        accepts: email
+        form:
+          account:
+            accepts: email
   change:
     url: https://scraperwiki.com/accounts/password/change/

@@ -7,7 +7,9 @@ password:
     url: http://www.avclub.com/users/reset_password/
     flow:
       request:
-        accepts: email
+        form:
+          account:
+            accepts: email
   change:
     url: http://www.avclub.com/users/me/settings/
 login:

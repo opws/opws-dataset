@@ -4,6 +4,8 @@ password:
     url: https://iwantmyname.com/reset_password
     flow:
       request:
-        accepts: email domain
+        form:
+          account:
+            accepts: email domain
   change:
     url: https://iwantmyname.com/dashboard/account/login

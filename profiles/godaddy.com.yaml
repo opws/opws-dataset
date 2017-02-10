@@ -15,8 +15,11 @@ password:
     url: https://idp.godaddy.com/Account/AccountRetrieval.aspx
     flow:
       request:
-        accepts: username+email accountno+email
-        captcha: botdetect-vertigo
+        form:
+          account:
+            accepts: username+email accountno+email
+          captcha:
+            type: botdetect-vertigo
       response:
         email:
           body: link token

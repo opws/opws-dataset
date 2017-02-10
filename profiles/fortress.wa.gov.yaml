@@ -15,8 +15,11 @@ password:
     url: https://fortress.wa.gov/dor/efile/FortressLogon/RetrievePassword.aspx
     flow:
       request:
-        accepts: email
-        captcha: yes
+        form:
+          account:
+            accepts: email
+          captcha:
+            type: alphanumeric
   change:
     url: https://fortress.wa.gov/dor/efile/FortressLogon/ChangePassword.aspx
     form:
@@ -29,13 +32,18 @@ username:
   reminder:
     url: https://fortress.wa.gov/dor/efile/FortressLogon/RetrieveLogon.aspx
     request:
-      accepts: email
-      captcha: yes
+      form:
+        account:
+          accepts: email
+        captcha:
+          type: alphanumeric
 login:
   url: https://fortress.wa.gov/dor/efile/FortressLogon/Logon.aspx
 registration:
   url: https://fortress.wa.gov/dor/efile/FortressLogon/UserRegistration.aspx
-  captcha: yes
+  form:
+    captcha:
+      type: alphanumeric
 questions:
 - required: 1
   options:

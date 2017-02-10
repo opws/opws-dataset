@@ -4,6 +4,8 @@ password:
     url: https://mammothhq.com/users/password/new
     flow:
       request:
-        accepts: email
+        form:
+          account:
+            accepts: email
   change:
     url: https://mammothhq.com/users/edit

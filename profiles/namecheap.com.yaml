@@ -4,7 +4,9 @@ password:
     url: https://manage.www.namecheap.com/myaccount/rememberpwd.asp
     flow:
       request:
-        accepts: username email domain
+        form:
+          account:
+            accepts: username email domain
   change:
     url: https://manage.www.namecheap.com/myaccount/modify-profile-changepassword.aspx
     form:

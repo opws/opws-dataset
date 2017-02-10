@@ -18,8 +18,11 @@ password:
     url: https://www.paypal.com/webapps/accountrecovery/passwordrecovery
     flow:
       request:
-        accepts: email
-        captcha: alphanumeric
+        form:
+          account:
+            accepts: email
+          captcha:
+            type: alphanumeric
       response:
         email:
           sender: service@paypal.com

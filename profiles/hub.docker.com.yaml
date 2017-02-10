@@ -7,7 +7,9 @@ password:
     url: https://hub.docker.com/account/forgot-password/
     flow:
       request:
-        accepts: email
+        form:
+          account:
+            accepts: email
       response:
         email:
           body: url

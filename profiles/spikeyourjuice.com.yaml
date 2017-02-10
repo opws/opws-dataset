@@ -14,4 +14,6 @@ username:
   reminder:
     url: http://spikeyourjuice.com/ecart/index.php?option=com_user&view=remind
     request:
-      accepts: email
+      form:
+        account:
+          accepts: email

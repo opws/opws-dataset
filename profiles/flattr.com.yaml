@@ -4,6 +4,8 @@ password:
     url: https://flattr.com/forgot
     flow:
       request:
-        accepts: email
+        form:
+          account:
+            accepts: email
   change:
     url: https://flattr.com/authaccounts/editpassword

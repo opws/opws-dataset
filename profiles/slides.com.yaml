@@ -20,7 +20,9 @@ password:
     url: https://slides.com/users/password/new
     flow:
       request:
-        accepts: email
+        form:
+          account:
+            accepts: email
       response:
         email:
           sender: no-reply@slides.com
@@ -37,13 +39,14 @@ username:
       strings: ['-', '_']
 registration:
   url: https://slides.com/users/sign_up
-  captcha: recaptcha
   form:
     password:
       input: required
     repeat:
       password:
         input: none
+    captcha:
+      type: recaptcha
 login:
   url: https://slides.com/users/sign_in
   form:

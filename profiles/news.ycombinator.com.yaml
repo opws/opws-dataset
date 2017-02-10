@@ -7,7 +7,9 @@ password:
     url: https://news.ycombinator.com/forgot
     flow:
       request:
-        accepts: username
+        form:
+          account:
+            accepts: username
   change:
     url: https://news.ycombinator.com/changepw
     form:

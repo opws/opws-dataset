@@ -7,8 +7,11 @@ password:
     url: https://www.cloudflare.com/a/forgot-password
     flow:
       request:
-        accepts: email+domain
-        captcha: recaptcha
+        form:
+          account:
+            accepts: email+domain
+          captcha:
+            type: recaptcha
         notes:
         - en: Captcha only appears after multiple reset requests.
       response:

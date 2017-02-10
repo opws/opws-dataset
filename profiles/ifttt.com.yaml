@@ -12,7 +12,9 @@ password:
     url: https://ifttt.com/forgot
     flow:
       request:
-        accepts: email
+        form:
+          account:
+            accepts: email
       response:
         email:
           sender: welcome@ifttt.com

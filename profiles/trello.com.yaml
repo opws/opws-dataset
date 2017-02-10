@@ -9,4 +9,6 @@ password:
     url: https://trello.com/forgot
     flow:
       request:
-        accepts: email
+        form:
+          account:
+            accepts: email

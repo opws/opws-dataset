@@ -7,7 +7,9 @@ password:
     url: https://www.docker.io/account/forgot-password/
     flow:
       request:
-        accepts: email
+        form:
+          account:
+            accepts: email
   change:
     url: https://www.docker.io/account/change-password/
     form:

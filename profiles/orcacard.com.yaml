@@ -20,7 +20,9 @@ password:
     url: https://orcacard.com/ERG-Seattle/p5_001.do
     onetime:
       request:
-        accepts: firstname+lastname+email+cardnumber+cvn+question
+        form:
+          account:
+            accepts: firstname+lastname+email+cardnumber+cvn+question
       response:
         email:
           sender: contactus@orcacard.com

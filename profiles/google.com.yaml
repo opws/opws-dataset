@@ -7,7 +7,9 @@ password:
     url: https://www.google.com/accounts/recovery
     flow:
       request:
-        accepts: email
+        form:
+          account:
+            accepts: email
   change:
     url: https://accounts.google.com/EditPasswd
     form:

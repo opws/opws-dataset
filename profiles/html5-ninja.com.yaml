@@ -4,4 +4,6 @@ password:
     url: http://www.html5-ninja.com/#/account
     flow:
       request:
-        accepts: email
+        form:
+          account:
+            accepts: email

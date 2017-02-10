@@ -7,7 +7,9 @@ password:
     url: https://neocities.org/password_reset
     randomize:
       request:
-        accepts: email
+        form:
+          account:
+            accepts: email
       response:
         email:
           sender: web@neocities.org
@@ -35,7 +37,6 @@ username:
       - hyphen
 registration:
   url: https://neocities.org/#new
-  captcha: recaptcha
   form:
     email:
       input: required
@@ -46,6 +47,8 @@ registration:
         input: none
       password:
         input: none
+    captcha:
+      type: recaptcha
 login:
   url: https://neocities.org/signin
 reviewed:

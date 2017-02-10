@@ -7,7 +7,9 @@ password:
     url: http://redditgifts.com/profiles/password/reset/
     flow:
       request:
-        accepts: email
+        form:
+          account:
+            accepts: email
   change:
     url: http://redditgifts.com/profiles/update/#js-change-password
     form:

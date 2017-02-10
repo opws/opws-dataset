@@ -9,7 +9,9 @@ password:
     url: https://bank.simple.com/forgot-password
     flow:
       request:
-        accepts: username+phone email+phone
+        form:
+          account:
+            accepts: username+phone email+phone
       response:
         email:
           sender: notify@simple.com
@@ -31,4 +33,6 @@ username:
   reminder:
     url: https://bank.simple.com/forgot-username
     request:
-      accepts: email+phone
+      form:
+        account:
+          accepts: email+phone

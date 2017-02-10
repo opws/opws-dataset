@@ -8,7 +8,9 @@ password:
     url: https://www.diigo.com/user_mana2/forgot
     flow:
       request:
-        accepts: username email
+        form:
+          account:
+            accepts: username email
   change:
     url: https://www.diigo.com/setting#account_setting
 username:

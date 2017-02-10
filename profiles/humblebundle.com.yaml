@@ -7,7 +7,9 @@ password:
     url: https://www.humblebundle.com/user/forgot
     flow:
       request:
-        accepts: email
+        form:
+          account:
+            accepts: email
       response:
         email:
           sender: contact@humblebundle.com

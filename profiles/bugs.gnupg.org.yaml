@@ -7,7 +7,9 @@ password:
     url: https://bugs.gnupg.org/gnupg/user?@template=forgotten
     randomize:
       request:
-        accepts: email username
+        form:
+          account:
+            accepts: email username
       response:
         email:
           sender: bitbucket@bugs.g10code.com

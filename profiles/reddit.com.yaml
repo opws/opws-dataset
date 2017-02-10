@@ -7,7 +7,9 @@ password:
     url: http://www.reddit.com/password
     flow:
       request:
-        accepts: username
+        form:
+          account:
+            accepts: username
   change:
     url: https://ssl.reddit.com/prefs/update/
 notes:

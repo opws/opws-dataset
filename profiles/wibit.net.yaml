@@ -4,8 +4,11 @@ password:
     url: https://www.wibit.net/forgotPassword
     flow:
       request:
-        accepts: email
-        captcha: yes
+        form:
+          account:
+            accepts: email
+          captcha:
+            type: letters
       response:
         email:
           sender: no-reply@wibit.net

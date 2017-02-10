@@ -29,7 +29,9 @@ password:
     url: https://fyp.ebay.com/EnterUserInfo
     flow:
       request:
-        accepts: email username
+        form:
+          account:
+            accepts: email username
       response:
         email:
           sender: ebay@ebay.com

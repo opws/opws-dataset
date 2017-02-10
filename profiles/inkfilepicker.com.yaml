@@ -4,6 +4,8 @@ password:
     url: https://developers.inkfilepicker.com/password_reset/
     flow:
       request:
-        accepts: email
+        form:
+          account:
+            accepts: email
   change:
     url: https://developers.inkfilepicker.com/account/#password-reset

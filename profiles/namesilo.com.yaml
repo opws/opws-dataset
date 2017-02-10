@@ -12,7 +12,9 @@ password:
     url: https://www.namesilo.com/lost_password.php
     flow:
       request:
-        accepts: username domain
+        form:
+          account:
+            accepts: username domain
   change:
     url: https://www.namesilo.com/account_maintenance.php
     form:

@@ -7,4 +7,6 @@ password:
     url: http://help.aytm.com/access/help
     flow:
       request:
-        accepts: email
+        form:
+          account:
+            accepts: email

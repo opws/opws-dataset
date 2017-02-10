@@ -4,6 +4,8 @@ password:
     url: https://path.com/forgot-password
     flow:
       request:
-        accepts: email
+        form:
+          account:
+            accepts: email
   change:
     url: https://path.com/settings

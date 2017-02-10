@@ -4,6 +4,8 @@ password:
     url: https://www.nitrous.io/users/password/new
     flow:
       request:
-        accepts: email
+        form:
+          account:
+            accepts: email
   change:
     url: https://www.nitrous.io/users/edit#user_password

@@ -12,7 +12,9 @@ password:
     url: https://auth.sxsw.com/users/password/new
     flow:
       request:
-        accepts: email
+        form:
+          account:
+            accepts: email
   change:
     url: https://auth.sxsw.com/users/edit
     form:

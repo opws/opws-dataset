@@ -16,7 +16,9 @@ password:
     url: https://www.name.com/account/credentials/password
     flow:
       request:
-        accepts: domain username
+        form:
+          account:
+            accepts: domain username
       response:
         email:
           sender: support@name.com
@@ -47,7 +49,9 @@ username:
   reminder:
     url: https://www.name.com/account/credentials/username
     request:
-      accepts: domain
+      form:
+        account:
+          accepts: domain
 registration:
   url: https://www.name.com/account/create
   form:

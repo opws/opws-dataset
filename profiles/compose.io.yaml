@@ -8,7 +8,9 @@ password:
     url: https://app.compose.io/users/password/new
     flow:
       request:
-        accepts: email
+        form:
+          account:
+            accepts: email
       response:
         email:
           sender: support@compose.io

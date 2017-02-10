@@ -9,7 +9,9 @@ password:
     url: https://my.gocurb.com/signin#resetPassword
     flow:
       request:
-        accepts: email
+        form:
+          account:
+            accepts: email
       response:
         email:
           body: link
