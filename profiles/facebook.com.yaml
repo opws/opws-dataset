@@ -3,6 +3,11 @@ password:
   value:
     length:
       min: 6
+  notes:
+  - en: >
+      Resetting a password claims that passwords must not be the same as
+      a previous password (with "must not" in bold), but there doesn't
+      actually seem to be a previous-password prohibition in place.
   reset:
     url: https://www.facebook.com/recover/initiate
     flow:
@@ -10,12 +15,60 @@ password:
         form:
           account:
             accepts: email phone username fullname
+      response:
+        email:
+          sender: security@facebookmail.com
+          body: firstname link token
+      change:
+        form:
+          newpassword:
+            characters: hideable
+          repeat:
+            newpassword:
+              input: none
+      submit:
+        destination:
+          page: settings
+        sessions:
+          own: login
+        expire: now
   change:
     url: https://www.facebook.com/settings?tab=account&section=password
     form:
       oldpassword:
         input: required
+        characters: hidden
+      newpassword:
+        characters: hidden
+      repeat:
+        newpassword:
+          input: required
+          characters: hidden
 registration:
   url: https://www.facebook.com/r.php
+  form:
+    firstname:
+      input: required
+    lastname:
+      input: required
+    email:
+      input: required
+    password:
+      characters: hidden
+    repeat:
+      email:
+        input: required
+      password:
+        input: none
 login:
-  url: https://www.facebook.com/login.php
+  url: https://www.facebook.com/login
+  form:
+    account:
+      accepts: email phone
+    password:
+      characters: hidden
+sessions:
+  management:
+    url: https://www.facebook.com/settings?tab=security&section=sessions
+reviewed:
+  date: 2017-02-10T12:03:50.528Z
