@@ -1,9 +1,78 @@
 name: LinkedIn
 password:
+  value:
+    length:
+      min: 6
+    mustnot:
+    - en: be all the same character
   reset:
-    url: https://www.linkedin.com/uas/request-password-reset
+    url: https://www.linkedin.com/passwordReset
     flow:
       request:
-        accepts: email
+        accepts: email phone
+      response:
+        email:
+          sender: security-noreply@linkedin.com
+          body: firstname link url
+        expire: 24h
+      change:
+        form:
+          newpassword:
+            characters: hidden
+          repeat:
+            newpassword:
+              input: required
+              characters: hidden
+      submit:
+        destination:
+          page: stub
+          notes:
+          - en: >
+              The stub page includes a "Sign In" link, even though you
+              are signed in after submitting the new password.
+        sessions:
+          own: login
+          notes:
+          - en: >
+              The form to submit the password includes a checkbox
+              to control whether other sessions should be logged
+              out or not.
   change:
-    url: https://www.linkedin.com/uas/change-password
+    url: https://www.linkedin.com/psettings/change-password
+    form:
+      oldpassword:
+        input: required
+        characters: hidden
+      newpassword:
+        characters: hidden
+      repeat:
+        newpassword:
+          input: required
+          characters: hidden
+    sessions:
+      own: unchanged
+      notes:
+      - en: >
+          The form to submit the password includes a checkbox
+          to control whether other sessions should be logged
+          out or not.
+registration:
+  url: https://www.linkedin.com/start/join
+  form:
+    password:
+      input: required
+      characters: hidden
+    repeat:
+      email:
+        input: none
+      password:
+        input: none
+thirdparty:
+  auth:
+    providers:
+    - facebook.com
+sessions:
+  management:
+    url: https://www.linkedin.com/psettings/sessions
+reviewed:
+  date: 2017-02-10T02:00:44.474Z
