@@ -1,12 +1,47 @@
-name: Zappos.com
+name: Zappos
 password:
   value:
     length:
       min: 6
   reset:
     url: https://secure-www.zappos.com/password/reset
+    flow:
+      request:
+        accepts: email
+        captcha: alphanumeric
+      response:
+        email:
+          sender: cs@zappos.com
+          body: url
+      change:
+        form:
+          newpassword:
+            characters: hidden
+          repeat:
+            newpassword:
+              input: required
+      submit:
+        sessions:
+          own: unchanged
   change:
     url: https://secure-www.zappos.com/account/updateEmailAndPassword
-notes:
-- Orders and account logins are directed through a separate secure server.
-  The main site is served by Akamai and does not use a Zappos certificate when browsing with HTTPS.
+    form:
+      oldpassword:
+        input: required
+        characters: hidden
+      newpassword:
+        characters: hidden
+      repeat:
+        newpassword:
+          input: required
+          characters: hidden
+login:
+  url: http://www.zappos.com/login
+registration:
+  url: https://auth.zappos.com/register
+thirdparty:
+  auth:
+    providers:
+    - amazon.com
+reviewed:
+  date: 2017-02-10T03:24:00.774Z
