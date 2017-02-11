@@ -10,6 +10,49 @@ password:
       request:
         form:
           account:
-            accepts: email username
+            accepts: email username       
   change:
     url: https://memit.com/user/profile/#password_reset
+username:
+  value:
+    length:
+      min: 3
+  contents:
+    whitelist:
+      classes:
+      - letters
+      - numbers
+registration:
+  url: https://memit.com/user/signup
+  form:
+    fullname:
+      input: required
+    username:
+      input: required
+    email:
+      input: required
+    password:
+      input: required
+      characters: hidden
+    repeat:
+      password:
+        input: none
+      email:
+        input: none
+login:
+  url: http://memit.com/?login=true
+  form:
+    account: 
+      accepts: username email
+    password:
+      characters: hidden
+    persist:
+      checkbox: checked
+thirdparty:
+  auth:
+    providers:
+    - facebook.com
+    - linkedin.com
+    - twitter.com
+reviewed:
+  date: 2017-02-10T18:55:29.905Z
