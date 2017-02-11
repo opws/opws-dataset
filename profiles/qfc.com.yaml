@@ -18,13 +18,54 @@ password:
             accepts: email
       response:
         email:
-          body: url link
+          sender: QFC@e.qfcemail.com
+          body: link
         expire: 24h
+      change:
+        form:
+          newpassword:
+            characters: hidden
+          repeat:
+            newpassword:
+              input: required
+              characters: hidden
       submit:
         sessions:
-          own: unchanged # assumed based on previous "token.login: no"
+          own: unchanged
+        expire: unchanged
   change:
-    url: https://www.qfc.com/account/update#editCredentials
+    url: https://www.qfc.com/account/update#accountCredentialsUpdate
     form:
       oldpassword:
         input: none
+      newpassword:
+        characters: hidden
+      repeat:
+        newpassword:
+          input: required
+          characters: hidden
+login:
+  url: https://www.qfc.com/signin
+  form:
+    account:
+      accepts: email
+    password:
+      characters: hidden
+    persist:
+      checkbox: unchecked
+registration:
+  url: https://www.qfc.com/account/create
+  form:
+    email:
+      input: required
+    password:
+      input: required
+      characters: hidden
+    repeat:
+      email:
+        input: required
+      password:
+        input: required
+        characters: hidden
+reviewed:
+  date: 2017-02-11T04:17:59.890Z
