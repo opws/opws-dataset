@@ -283,6 +283,14 @@ Whether *repeating* a password on registration is `optional`, `required`, or not
 
 Whether the inputs have typed characters `hidden` or `visible`, or, if visibility can be toggled, `showable` or `hideable` (from the default states, respectively).
 
+## registration.form.birthdate.input
+
+Whether the user may (`optional`), must (`required`), or may not (`none`) provide their date of birth on registration.
+
+## registration.form.terms.agreement
+
+Whether any Terms and Conditions the site requires users to comply with are accepted implicitly (`implicit`) or by explicitly checking a box (`checkbox`).
+
 ## login.url
 
 The URL of the page to log in, as a user.
@@ -324,6 +332,18 @@ A string describing a site's support of Time-based One Time Password (RFC 6238),
 ## questions
 
 List of security questions. Each item that is a string should be interpreted as a required question: each item that is an object may have "required" or "optional" fields with the number of questions that may or must have answers given, and an "options" list of options that may be chosen.
+
+## statements.privacy.url
+
+The URL of a privacy policy / statement for the site.
+
+## statements.security.url
+
+The URL of a posted security statement for the site, such as https://github.com/security.
+
+## terms.service.url, terms.use.url, terms.sale.url
+
+URLs for posted Terms and Conditions of Service, Use, and/or Sale. Usually, a user has to agree to all of these to register an account (see `registration.form.terms.agreement`).
 
 ## notes, \*.notes
 

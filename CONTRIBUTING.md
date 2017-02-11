@@ -35,6 +35,8 @@ registration:
     repeat:
       password:
         input: required # Is there a "confirm password" box?
+    terms:
+      agreement: implicit # Do you have to explicitly agree ("checkbox") to terms?
 login:
   url: https://example.com/login
   form:
@@ -42,6 +44,12 @@ login:
       accepts: username # Can you log in with an email address? Username?
     password:
       characters: hidden # Is the login password showable?
+terms:
+  service:
+    url: https://example.com/tos # Where are the site's Terms of Service?
+statments:
+  privacy:
+    url: https://example.com/privacy # Does the site state a privacy policy?
 reviewed:
   date: 1970-01-01T00:00:00.000Z # use https://www.isotimestamp.com/
 ```
