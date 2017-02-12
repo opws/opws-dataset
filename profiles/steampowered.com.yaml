@@ -4,17 +4,87 @@ password:
     length:
       min: 8
       max: 64
-    must:
-    - en: meet an undisclosed strength requirement
-  change:
-    notes:
-    - en: You must use the Steam desktop client to change your password.
-    - url: https://support.steampowered.com/kb_article.php?ref=7058-AFZC-7069
+    blacklist:
+      dictionaries:
+      - common
+  contents:
+    required:
+    - atleast: 3
+      classes:
+      - uppers
+      - lowers
+      - numbers
+      - symbols
   reset:
-    notes:
-    - en: You must use the Steam desktop client to reset your password.
-    - url: https://support.steampowered.com/kb_article.php?ref=4988-DHXV-7272
+    url: https://help.steampowered.com/en/wizard/HelpChangePassword
+    flow:
+      request:
+        form:
+          account:
+            accepts: username email phone
+      response:
+        email:
+          sender: noreply@steampowered.com
+          body: token
+      change:
+        form:
+          newpassword:
+            characters: hidden
+          repeat:
+            newpassword:
+              input: required
+              characters: hidden
+      submit:
+        destination:
+          page: stub
+        sessions:
+          own: logout
+        expire: now
+username:
+  value:
+    length:
+      min: 3
+      max: 64
+  contents:
+    whitelist:
+      classes:
+      - letters
+      - numbers
+      strings: ['_']
 registration:
   url: https://store.steampowered.com/join/
+  form:
+    username:
+      input: required
+    password:
+      input: required
+      characters: hidden
+    email:
+      input: required
+    repeat:
+      password:
+        input: required
+        characters: hidden
+      email:
+        input: required
+    captcha:
+      type: ascii
+    terms:
+      agreement: checkbox
+      notes:
+      - en: Checkbox also agrees that you are over 13 years of age.
 login:
   url: https://store.steampowered.com/login/
+  form:
+    account:
+      accepts: username
+    password:
+      characters: hidden
+terms:
+  service:
+    url: http://store.steampowered.com/subscriber_agreement/
+statements:
+  privacy:
+    url: http://store.steampowered.com/privacy_agreement/
+reviewed:
+  date: 2017-02-12T11:35:31.032Z
