@@ -4,12 +4,65 @@ password:
     length:
       min: 4
       max: 60
+    notes:
+    - en: Registration lists the maximum password length as 50 characters.
   reset:
     url: https://www.netflix.com/LoginHelp
     flow:
       request:
         form:
           account:
-            accepts: email firstname+lastname+creditcard
+            accepts: email phone firstname+lastname+creditcard
+      response:
+        email:
+          sender: info@mailer.netflix.com
+          body: firstname link
+      change:
+        form:
+          newpassword:
+            characters: hidden
+          repeat:
+            newpassword:
+              input: required
+              characters: hidden
+      submit:
+        destination:
+          page: settings
+        sessions:
+          own: login
+        expire: now
   change:
-    url: https://www.netflix.com/YourAccount#updateProfile
+    url: https://www.netflix.com/password
+    form:
+      oldpassword:
+        input: required
+        characters: hidden
+      newpassword:
+        characters: hidden
+      repeat:
+        newpassword:
+          input: required
+          characters: hidden
+registration:
+  url: https://www.netflix.com/getstarted
+  form:
+    email:
+      input: required
+    password:
+      input: required
+      characters: hidden
+login:
+  url: https://www.netflix.com/login
+  form:
+    account:
+      accepts: email
+    password:
+      characters: hidden
+    persist:
+      checkbox: checked
+thirdparty:
+  auth:
+    providers:
+    - facebook.com
+reviewed:
+  date: 2017-02-12T09:18:58.010Z
