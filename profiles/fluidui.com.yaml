@@ -1,17 +1,74 @@
 name: Fluid UI
 password:
+  value:
+    length:
+      min: 1
   reset:
-    url: https://www.fluidui.com/editor/live/
+    url: https://www.fluidui.com/editor/live/recoverPassword/
     flow:
       request:
         form:
           account:
             accepts: email
+      response:
+        email:
+          sender: support@fluidui.com
+          body: url
+      change:
+        form:
+          newpassword:
+            characters: hidden
+          repeat:
+            newpassword:
+              input: required
+              characters: hidden
+      submit:
+        destination:
+          page: stub
+        sessions:
+          own: unchanged
+        expire: now
   change:
     url: https://www.fluidui.com/editor/live/
-notes: >
-  http requests to fluidui.com redirect to the equivalent path on
-  https://www.fluidui.com, but HTTP requests to www.fluidui.com are not
-  upgraded to HTTPS.
-
-  The editor interface is the only way to change or reset passwords.
+    form:
+      oldpassword:
+        input: required
+        characters: hidden
+      newpassword:
+        characters: hidden
+      repeat:
+        newpassword:
+          input: none
+    notes:
+    - en: >
+        Click the "Home" menu in the upper-right corner, then click "Account
+        Settings", then "Password" to open the password change dialog.
+registration:
+  url: https://www.fluidui.com/editor/live/#signup
+  form:
+    email:
+      input: required
+      characters: visible
+    password:
+      input: required
+      characters: hidden
+    repeat:
+      email:
+        input: none
+      password:
+        input: required
+        characters: hidden
+    notes:
+    - en: Must also specify an initial project name and platform.
+login:
+  url: https://www.fluidui.com/editor/live/#signin
+  form:
+    account:
+      accepts: email
+    password:
+      characters: hidden
+terms:
+  use:
+    url: https://www.fluidui.com/terms/
+reviewed:
+  date: 2017-02-12T10:49:17.910Z
