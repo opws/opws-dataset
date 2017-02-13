@@ -10,7 +10,82 @@ password:
         form:
           account:
             accepts: username
+      response:
+        email:
+          sender: reddit@reddit.com
+          body: username url
+      change:
+        form:
+          newpassword:
+            characters: hidden
+          repeat:
+            newpassword:
+              input: required
+              characters: hidden
+      submit:
+        destination:
+          page: login
+        sessions:
+          own: logout
+        expire: now
   change:
-    url: https://ssl.reddit.com/prefs/update/
-notes:
-- en: Main site served by Akamai. Preferences are directed to a special SSL server.
+    url: https://www.reddit.com/prefs/update/
+    form:
+      oldpassword:
+        input: required
+        characters: hidden
+      newpassword:
+        characters: hidden
+      repeat:
+        newpassword:
+          input: required
+          characters: hidden
+username:
+  value:
+    length:
+      min: 3
+      max: 20
+  contents:
+    whitelist:
+      classes:
+      - letters
+      - numbers
+      strings: ['-', '_']
+registration:
+  url: https://www.reddit.com/login
+  form:
+    username:
+      input: required
+    password:
+      input: required
+      characters: hidden
+    repeat:
+      password:
+        input: required
+        characters: hidden
+      email:
+        input: none
+    email:
+      input: optional
+      characters: visible
+    captcha:
+      type: recaptcha
+      notes:
+      - en: Captcha is presented after entering email address.
+login:
+  url: https://www.reddit.com/login
+  form:
+    account:
+      accepts: username
+    password:
+      characters: hidden
+    persist:
+      checkbox: unchecked
+terms:
+  use:
+    url: https://www.reddit.com/help/useragreement/
+statements:
+  privacy:
+    url: https://www.reddit.com/help/privacypolicy/
+reviewed:
+  date: 2017-02-13T00:23:33.072Z
