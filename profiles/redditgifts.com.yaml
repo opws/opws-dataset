@@ -10,6 +10,23 @@ password:
         form:
           account:
             accepts: email
+      response:
+        email:
+          sender: support@redditgifts.com
+          body: link
+      change:
+        form:
+          newpassword:
+            characters: hidden
+          repeat:
+            newpassword:
+              characters: hidden
+      submit:
+        destination:
+          page: home
+        sessions:
+          own: login
+        expire: now
   change:
     url: http://redditgifts.com/profiles/update/#js-change-password
     form:
