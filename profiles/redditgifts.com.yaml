@@ -1,4 +1,4 @@
-name: RedditGifts
+name: Reddit Gifts
 password:
   value:
     length:
@@ -15,3 +15,40 @@ password:
     form:
       oldpassword:
         input: required
+registration:
+  url: https://www.redditgifts.com/profiles/signup/
+  form:
+    email:
+      input: required
+    password:
+      input: required
+      characters: hidden
+    repeat:
+      password:
+        input: required
+        characters: hidden
+      email:
+        input: none
+    firstname:
+      input: required
+    lastname:
+      input: required
+    terms:
+      agreement: checkbox
+    notes:
+    - en: Also requires a shipping address.
+login:
+  url: https://www.redditgifts.com/profiles/login/
+  form:
+    account:
+      accepts: email
+    password:
+      characters: hidden
+terms:
+  service:
+    url: https://www.redditgifts.com/terms/
+statements:
+  privacy:
+    url: https://www.redditgifts.com/privacy/
+reviewed:
+  date: 2017-02-13T09:09:11.945Z
