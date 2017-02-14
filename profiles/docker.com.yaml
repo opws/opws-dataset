@@ -1,0 +1,70 @@
+name: Docker
+password:
+  value:
+    length:
+      min: 6
+  reset:
+    url: https://id.docker.com/reset-password/
+    flow:
+      request:
+        form:
+          account:
+            accepts: email
+      response:
+        email:
+          sender: no-reply@notify.docker.com
+          body: link username
+      change:
+        form:
+          newpassword:
+            characters: hidden
+          repeat:
+            newpassword:
+              input: required
+              characters: hidden
+      submit:
+        sessions:
+          own: unchanged
+        expire: now
+  change:
+    url: https://hub.docker.com/account/settings/
+    form:
+      oldpassword:
+        input: required
+        characters: hidden
+      newpassword:
+        characters: hidden
+      repeat:
+        newpassword:
+          characters: hidden
+username:
+  value:
+    length:
+      max: 30
+login:
+  url: https://cloud.docker.com/login/
+  form:
+    account:
+      accepts: username
+    password:
+      characters: hidden
+registration:
+  url: https://cloud.docker.com/
+  form:
+    username:
+      input: required
+    email:
+      input: required
+    password:
+      input: required
+      characters: hidden
+    terms:
+      agreement: implicit
+terms:
+  service:
+    url: https://www.docker.com/docker-terms-service
+statements:
+  privacy:
+    url: https://www.docker.com/docker-privacy-policy
+reviewed:
+  date: 2017-02-14T10:00:42.681Z
