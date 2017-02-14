@@ -7,3 +7,36 @@ api:
   key:
     retrieval:
       url: http://www.ultrahook.com/resend
+registration:
+  url: http://www.ultrahook.com/register
+  form:
+    firstname:
+      input: required
+    lastname:
+      input: required
+    email:
+      input: required
+    password:
+      input: required
+      characters: hidden
+    repeat:
+      password:
+        input: required
+        characters: hidden
+      email:
+        input: none
+    username:
+      input: required
+    terms:
+      agreement: checkbox
+  notes:
+  - en: >
+      "username" is technically "webhook namespace".
+terms:
+  service:
+    url: http://www.ultrahook.com/terms
+statements:
+  privacy:
+    url: http://www.ultrahook.com/privacy
+reviewed:
+  date: 2017-02-14T09:47:47.262Z
