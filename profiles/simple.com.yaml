@@ -20,19 +20,43 @@ password:
     notes:
     - en: Sends tokens via email and SMS, both are needed.
   change:
-    url: https://bank.simple.com/activity/preferences/account-settings
+    url: https://bank.simple.com/account/settings
     form:
       oldpassword:
-        input: none
+        input: required
+        characters: showable
       newpassword:
         characters: showable
       repeat:
         newpassword:
           input: none
 username:
+  contents:
+    whitelist:
+    - letters
+    - numbers
+    strings: ['.', '_']
   reminder:
     url: https://bank.simple.com/forgot-username
     request:
       form:
         account:
           accepts: email+phone
+registration:
+  url: https://arrow.simple.com/account
+  form:
+    username:
+      input: required
+    email:
+      input: required
+    password:
+      input: required
+login:
+  url: https://bank.simple.com/signin
+  form:
+    account:
+      accepts: username
+    password:
+      characters: showable
+reviewed:
+  date: 2017-02-14T23:38:19.619Z
