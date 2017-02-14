@@ -283,6 +283,10 @@ Whether *repeating* a password on registration is `optional`, `required`, or not
 
 Whether the inputs have typed characters `hidden` or `visible`, or, if visibility can be toggled, `showable` or `hideable` (from the default states, respectively).
 
+## registration.form.phone.input
+
+Whether the form for registration contains an `optional` or `required` input for a phone number, or `none`.
+
 ## registration.form.birthdate.input
 
 Whether the user may (`optional`), must (`required`), or may not (`none`) provide their date of birth on registration.
