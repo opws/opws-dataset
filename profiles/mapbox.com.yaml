@@ -2,7 +2,7 @@ name: MapBox
 password:
   value:
     length:
-      min: 1
+      min: 8
   reset:
     url: https://www.mapbox.com/#active1
     flow:
@@ -10,8 +10,70 @@ password:
         form:
           account:
             accepts: email
+      response:
+        email:
+          sender: noreply@mapbox.com
+          body: username link
+        expire: 24h
+      change:
+        form:
+          newpassword:
+            characters: hidden
+          repeat:
+            newpassword:
+              input: required
+              characters: hidden
+      submit:
+        destination:
+          page: home
+        sessions:
+          own: login
+        expire: now
   change:
-    url: https://www.mapbox.com/account/
+    url: https://www.mapbox.com/studio/account/changepassword/
     form:
       oldpassword:
         input: none
+      newpassword:
+        characters: hidden
+      repeat:
+        newpassword:
+          input: required
+          characters: hidden
+username:
+  value:
+    length:
+      min: 2
+      max: 32
+  contents:
+    whitelist:
+      classes:
+      - lowers
+      - numbers
+registration:
+  url: https://www.mapbox.com/signup/
+  form:
+    username:
+      input: required
+    email:
+      input: required
+    password:
+      input: required
+      characters: hidden
+    terms:
+      agreement: implicit
+login:
+  url: https://www.mapbox.com/#signin
+  form:
+    account:
+      accepts: username email
+    password:
+      characters: hidden
+terms:
+  service:
+    url: https://www.mapbox.com/tos/
+statements:
+  privacy:
+    url: https://www.mapbox.com/privacy/
+reviewed:
+  date: 2017-02-14T08:13:31.422Z
