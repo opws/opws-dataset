@@ -34,6 +34,12 @@ Character class names used:
 - nonspaces (anything that isn't whitespace)
 - nonprinting (unprintable characters)
 
+## password.value.blacklist.strings
+
+An array of specific passwords that are not allowed.
+
+This will only be defined if the site *actually disallows specific password values*, and those values can't be conveyed as `password.contents.blacklist.dictionaries` (heterogenous blacklists that aren't exposed as a public-readable dictionary file will be listed in this fashion).
+
 ## password.contents.blacklist.strings
 
 Specific characters and sequences which passwords may not contain.
