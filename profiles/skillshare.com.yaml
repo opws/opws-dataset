@@ -1,5 +1,12 @@
 name: Skillshare
 password:
+  value:
+    length:
+      min: 8
+  contents:
+    required:
+    - classes:
+      - nonspaces
   reset:
     url: https://www.skillshare.com/reset-password
     flow:
@@ -7,5 +14,69 @@ password:
         form:
           account:
             accepts: email
+      response:
+        email:
+          sender: hello@skillshare.com
+          body: firstname link url
+      change:
+        form:
+          newpassword:
+            characters: hidden
+          repeat:
+            newpassword:
+              input: required
+              characters: hidden
+      submit:
+        destination:
+          page: home
+        sessions:
+          own: login
+        expire: now
   change:
-    url: https://www.skillshare.com/settings/pw
+    url: https://www.skillshare.com/settings/password
+    form:
+      oldpassword:
+        input: required
+        characters: hidden
+      newpassword:
+        characters: hidden
+      repeat:
+        newpassword:
+          input: required
+          characters: hidden
+registration:
+  url: https://www.skillshare.com/signup
+  form:
+    firstname:
+      input: required
+    lastname:
+      input: required
+    email:
+      input: required
+    password:
+      input: required
+      characters: hidden
+    repeat:
+      password:
+        input: none
+      email:
+        input: none
+    captcha:
+      type: recaptcha
+    terms:
+      agreement: implicit
+login:
+  url: https://www.skillshare.com/login
+  form:
+    account:
+      accepts: email
+    password:
+      characters: hidden
+    persist:
+      checkbox: unchecked
+thirdparty:
+  auth:
+    providers:
+    - facebook.com
+reviewed:
+  date: 2017-02-14T15:08:50.692Z
