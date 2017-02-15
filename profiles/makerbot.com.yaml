@@ -1,5 +1,8 @@
 name: MakerBot
 password:
+  value:
+    length:
+      min: 8
   reset:
     url: https://accounts.makerbot.com/forgot
     flow:
@@ -7,12 +10,73 @@ password:
         form:
           account:
             accepts: email
+      response:
+        email:
+          sender: no-reply@thingiverse.com
+          body: link
+      change:
+        form:
+          newpassword:
+            characters: hidden
+          repeat:
+            newpassword:
+              characters: hidden
+      submit:
+        destination:
+          page: home
+        sessions:
+          own: login
+        expire: now
   change:
     url: https://accounts.makerbot.com/edit#old_password
     form:
       oldpassword:
         input: required
+        characters: hidden
+      newpassword:
+        characters: hidden
+      repeat:
+        newpassword:
+          input: required
+          characters: hidden
 login:
   url: https://accounts.makerbot.com/
+  form:
+    account:
+      accepts: username email
+    password:
+      characters: hidden
+    persist:
+      checkbox: unchecked
 registration:
   url: https://accounts.makerbot.com/register
+  form:
+    email:
+      input: required
+    firstname:
+      input: required
+    lastname:
+      input: required
+    username:
+      input: required
+    password:
+      input: required
+      characters: hidden
+    repeat:
+      password:
+        input: required
+        characters: hidden
+      email:
+        input: none
+    captcha:
+      type: recaptcha
+    terms:
+      agreement: implicit
+terms:
+  service:
+    url: http://www.thingiverse.com/legal/terms
+statements:
+  privacy:
+    url: http://www.thingiverse.com/legal/privacy
+reviewed:
+  date: 2017-02-14T23:58:07.739Z
