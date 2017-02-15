@@ -10,15 +10,62 @@ password:
         form:
           account:
             accepts: username
+      response:
+        email:
+          sender: hn@ycombinator.com
+          body: url
+      change:
+        form:
+          newpassword:
+            characters: hidden
+          repeat:
+            newpassword:
+              input: none
+      submit:
+        destination:
+          page: home
+        sessions:
+          own: logout
+        expire: now
   change:
     url: https://news.ycombinator.com/changepw
     form:
       oldpassword:
         input: required
+        characters: hidden
+      newpassword:
+        characters: hidden
       repeat:
         newpassword:
           input: none
+username:
+  value:
+    length:
+      min: 2
+      max: 15
+  contents:
+    whitelist:
+      classes:
+      - letters
+      - numbers
+      strings: ['-', '_']
 registration:
   url: https://news.ycombinator.com/login
+  form:
+    username:
+      input: required
+    password:
+      input: required
+      characters: hidden
+    repeat:
+      password:
+        input: none
 login:
   url: https://news.ycombinator.com/login
+  form:
+    account:
+      accepts: username
+    password:
+      characters: hidden
+reviewed:
+  date: 2017-02-15T00:45:48.373Z
