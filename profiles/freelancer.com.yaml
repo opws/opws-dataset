@@ -1,9 +1,9 @@
 name: Freelancer
 password:
   reset:
-    url: https://www.freelancer.com/#forgot-password-toggle
     flow:
       request:
+        url: https://www.freelancer.com/#forgot-password-toggle
         form:
           account:
             accepts: email

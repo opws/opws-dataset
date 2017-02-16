@@ -8,9 +8,9 @@ password:
     - classes:
       - letters
   reset:
-    url: https://www.digitalocean.com/forgot_password/new
     flow:
       request:
+        url: https://www.digitalocean.com/forgot_password/new
         form:
           account:
             accepts: email

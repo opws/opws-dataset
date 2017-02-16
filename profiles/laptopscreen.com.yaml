@@ -4,9 +4,9 @@ password:
     length:
       min: 6
   reset:
-    url: https://www.laptopscreen.com/English/section/password-recovery/
     flow:
       request:
+        url: https://www.laptopscreen.com/English/section/password-recovery/
         form:
           account:
             accepts: email

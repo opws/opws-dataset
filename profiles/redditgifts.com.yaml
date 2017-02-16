@@ -4,9 +4,9 @@ password:
     length:
       min: 1
   reset:
-    url: http://redditgifts.com/profiles/password/reset/
     flow:
       request:
+        url: http://redditgifts.com/profiles/password/reset/
         form:
           account:
             accepts: email

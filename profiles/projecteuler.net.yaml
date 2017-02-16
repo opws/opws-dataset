@@ -11,9 +11,9 @@ password:
       - numbers
       strings: ['.', '-', '_']
   reset:
-    url: https://projecteuler.net/reset_password
     flow:
       request:
+        url: https://projecteuler.net/reset_password
         form:
           account:
             accepts: username+email

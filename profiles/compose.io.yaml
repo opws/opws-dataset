@@ -5,9 +5,9 @@ password:
       min: 8
       max: 999
   reset:
-    url: https://app.compose.io/users/password/new
     flow:
       request:
+        url: https://app.compose.io/users/password/new
         form:
           account:
             accepts: email

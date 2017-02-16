@@ -26,9 +26,9 @@ password:
         "//", "'", '"', ";",
         "password" ]
   reset:
-    url: https://fyp.ebay.com/EnterUserInfo
     flow:
       request:
+        url: https://fyp.ebay.com/EnterUserInfo
         form:
           account:
             accepts: email username

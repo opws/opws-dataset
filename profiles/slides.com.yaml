@@ -17,9 +17,9 @@ password:
         newpassword:
           input: none
   reset:
-    url: https://slides.com/users/password/new
     flow:
       request:
+        url: https://slides.com/users/password/new
         form:
           account:
             accepts: email

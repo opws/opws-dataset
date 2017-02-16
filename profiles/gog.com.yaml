@@ -5,9 +5,9 @@ password:
       min: 2
       max: 100
   reset:
-    url: https://login.gog.com/password/request
     flow:
       request:
+        url: https://login.gog.com/password/request
         form:
           account:
             accepts: email

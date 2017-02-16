@@ -9,9 +9,9 @@ password:
       a previous password (with "must not" in bold), but there doesn't
       actually seem to be a previous-password prohibition in place.
   reset:
-    url: https://www.facebook.com/recover/initiate
     flow:
       request:
+        url: https://www.facebook.com/recover/initiate
         form:
           account:
             accepts: email phone username fullname

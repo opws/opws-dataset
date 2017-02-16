@@ -4,9 +4,9 @@ password:
     length:
       min: 1
   reset:
-    url: https://www.fluidui.com/editor/live/recoverPassword/
     flow:
       request:
+        url: https://www.fluidui.com/editor/live/recoverPassword/
         form:
           account:
             accepts: email

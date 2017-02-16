@@ -4,9 +4,9 @@ password:
     length:
       min: 8
   reset:
-    url: https://news.ycombinator.com/forgot
     flow:
       request:
+        url: https://news.ycombinator.com/forgot
         form:
           account:
             accepts: username

@@ -20,14 +20,15 @@ password:
       oldpassword:
         input: required
   reset:
-    url: https://oam.wellsfargo.com/oamo/identity/help/passwordhelp
-    notes:
-    - en: >
-        Requires username or Social Security number (or ITIN),
-        account/loan/card number (or birthdate, for mortgage or
-        employer-sponsored retirement plan customers), and
-        Debit/ATM card number and PIN. Password change form
-        is presented immediately after entering all of these.
+    replacement:
+      url: https://oam.wellsfargo.com/oamo/identity/help/passwordhelp
+      notes:
+      - en: >
+          Requires username or Social Security number (or ITIN),
+          account/loan/card number (or birthdate, for mortgage or
+          employer-sponsored retirement plan customers), and
+          Debit/ATM card number and PIN. Password change form
+          is presented immediately after entering all of these.
 username:
   value:
     length:

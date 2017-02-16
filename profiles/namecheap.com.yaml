@@ -9,9 +9,9 @@ password:
     - classes:
       - nonspaces
   reset:
-    url: https://ap.www.namecheap.com/ResetPassword
     flow:
       request:
+        url: https://ap.www.namecheap.com/ResetPassword
         form:
           account:
             accepts: username email domain

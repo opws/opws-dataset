@@ -1,9 +1,9 @@
 name: Yahoo
 password:
   reset:
-    url: https://edit.yahoo.com/forgotroot
     flow:
       request:
+        url: https://edit.yahoo.com/forgotroot
         form:
           account:
             accepts: username email

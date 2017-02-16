@@ -13,9 +13,9 @@ password:
     - en: Password editing suggests using at least 1 number
           but does not require it.
   reset:
-    url: https://launchpad.37signals.com/forgot_password
     flow:
       request:
+        url: https://launchpad.37signals.com/forgot_password
         form:
           account:
             accepts: email

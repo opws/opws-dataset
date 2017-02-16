@@ -1,9 +1,9 @@
 name: Coderbyte
 password:
   reset:
-    url: http://coderbyte.com/sl/forgotpassword/
     flow:
       request:
+        url: http://coderbyte.com/sl/forgotpassword/
         form:
           account:
             accepts: email

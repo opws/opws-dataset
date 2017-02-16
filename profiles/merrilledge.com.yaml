@@ -13,9 +13,9 @@ password:
       classes:
       - spaces
   reset:
-    url: https://olui2.fs.ml.com/login/ForgotPassword.aspx
     flow:
       request:
+        url: https://olui2.fs.ml.com/login/ForgotPassword.aspx
         form:
           account:
             accepts: username

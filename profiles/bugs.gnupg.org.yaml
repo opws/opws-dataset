@@ -4,9 +4,9 @@ password:
     length:
       min: 1
   reset:
-    url: https://bugs.gnupg.org/gnupg/user?@template=forgotten
     randomize:
       request:
+        url: https://bugs.gnupg.org/gnupg/user?@template=forgotten
         form:
           account:
             accepts: email username

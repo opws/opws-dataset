@@ -4,9 +4,9 @@ password:
     length:
       min: 8
   reset:
-    url: https://accounts.makerbot.com/forgot
     flow:
       request:
+        url: https://accounts.makerbot.com/forgot
         form:
           account:
             accepts: email

@@ -11,9 +11,9 @@ password:
       classes:
       - spaces
   reset:
-    url: https://idp.hrblock.com/idp/Authn/DForgotCredentials.html
     flow:
       request:
+        url: https://idp.hrblock.com/idp/Authn/DForgotCredentials.html
         form:
           account:
             accepts: username firstname+lastname+ssn+dob

@@ -9,9 +9,9 @@ password:
       - numbers
       - punctuation
   reset:
-    url: https://manager.linode.com/session/forgot/password
     flow:
       request:
+        url: https://manager.linode.com/session/forgot/password
         form:
           account:
             accepts: username

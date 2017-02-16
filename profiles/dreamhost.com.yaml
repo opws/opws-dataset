@@ -10,9 +10,9 @@ password:
       dictionaries:
       - english
   reset:
-    url: https://panel.dreamhost.com/login/forgot.cgi
     flow:
       request:
+        url: https://panel.dreamhost.com/login/forgot.cgi
         form:
           account:
             accepts: email

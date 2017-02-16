@@ -1,9 +1,9 @@
 name: coderbits
 password:
   reset:
-    url: https://coderbits.com/passwordreset/initiate
     flow:
       request:
+        url: https://coderbits.com/passwordreset/initiate
         form:
           account:
             accepts: username email

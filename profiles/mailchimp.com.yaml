@@ -12,9 +12,9 @@ password:
       - numbers
       - specials
   reset:
-    url: https://login.mailchimp.com/login/forgot
     flow:
       request:
+        url: https://login.mailchimp.com/login/forgot
         form:
           account:
             accepts: username

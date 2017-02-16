@@ -10,9 +10,9 @@ password:
       - letters
       - numbers
   reset:
-    url: https://disneyworld.disney.go.com/login/
     flow:
       request:
+        url: https://disneyworld.disney.go.com/login/
         form:
           account:
             accepts: username email

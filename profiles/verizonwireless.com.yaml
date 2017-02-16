@@ -503,9 +503,9 @@ password:
       - yyyy
       - zzzz
   reset:
-    url: https://login.verizonwireless.com/accessmanager/public/c/fp/start
     flow:
       request:
+        url: https://login.verizonwireless.com/accessmanager/public/c/fp/start
         form:
           account:
             accepts: phone

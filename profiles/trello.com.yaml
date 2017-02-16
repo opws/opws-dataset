@@ -6,9 +6,9 @@ password:
       oldpassword:
         input: none
   reset:
-    url: https://trello.com/forgot
     flow:
       request:
+        url: https://trello.com/forgot
         form:
           account:
             accepts: email

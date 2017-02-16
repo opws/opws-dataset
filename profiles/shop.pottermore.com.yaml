@@ -10,9 +10,9 @@ password:
       - uppers
       - lowers
   reset:
-    url: https://shop.pottermore.com/passwordrecovery
     flow:
       request:
+        url: https://shop.pottermore.com/passwordrecovery
         form:
           account:
             accepts: email

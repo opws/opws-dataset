@@ -9,9 +9,9 @@ password:
       - numbers
       - letters
   reset:
-    url: https://www.pave.com/forgot_password
     flow:
       request:
+        url: https://www.pave.com/forgot_password
         form:
           account:
             accepts: email

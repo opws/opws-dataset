@@ -1,9 +1,9 @@
 name: Twilio
 password:
   reset:
-    url: https://www.twilio.com/reset-password
     flow:
       request:
+        url: https://www.twilio.com/reset-password
         form:
           account:
             accepts: email

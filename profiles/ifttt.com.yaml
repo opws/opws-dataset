@@ -9,9 +9,9 @@ password:
     - classes:
       - nonspaces
   reset:
-    url: https://ifttt.com/forgot
     flow:
       request:
+        url: https://ifttt.com/forgot
         form:
           account:
             accepts: email

@@ -4,9 +4,9 @@ password:
     length:
       min: 5
   reset:
-    url: https://neocities.org/password_reset
     randomize:
       request:
+        url: https://neocities.org/password_reset
         form:
           account:
             accepts: email

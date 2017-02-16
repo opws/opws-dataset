@@ -1,9 +1,9 @@
 name: Koding
 password:
   reset:
-    url: https://koding.com/Recover
     flow:
       request:
+        url: https://koding.com/Recover
         form:
           account:
             accepts: username email

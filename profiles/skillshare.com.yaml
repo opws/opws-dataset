@@ -8,9 +8,9 @@ password:
     - classes:
       - nonspaces
   reset:
-    url: https://www.skillshare.com/reset-password
     flow:
       request:
+        url: https://www.skillshare.com/reset-password
         form:
           account:
             accepts: email

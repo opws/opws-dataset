@@ -4,9 +4,9 @@ password:
     length:
       min: 6
   reset:
-    url: http://www.reddit.com/password
     flow:
       request:
+        url: http://www.reddit.com/password
         form:
           account:
             accepts: username

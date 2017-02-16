@@ -1,9 +1,9 @@
 name: Path
 password:
   reset:
-    url: https://path.com/forgot-password
     flow:
       request:
+        url: https://path.com/forgot-password
         form:
           account:
             accepts: email

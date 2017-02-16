@@ -1,9 +1,9 @@
 name: Mammoth
 password:
   reset:
-    url: https://mammothhq.com/users/password/new
     flow:
       request:
+        url: https://mammothhq.com/users/password/new
         form:
           account:
             accepts: email

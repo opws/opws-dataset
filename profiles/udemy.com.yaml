@@ -5,9 +5,9 @@ password:
       min: 6
       max: 64
   reset:
-    url: https://www.udemy.com/user/forgot-password
     flow:
       request:
+        url: https://www.udemy.com/user/forgot-password
         form:
           account:
             accepts: email

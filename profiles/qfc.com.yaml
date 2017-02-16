@@ -10,9 +10,9 @@ password:
       - letters
       - numbers
   reset:
-    url: https://www.qfc.com/forgotPassword
     flow:
       request:
+        url: https://www.qfc.com/forgotPassword
         form:
           account:
             accepts: email

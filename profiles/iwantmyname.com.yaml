@@ -1,9 +1,9 @@
 name: iWantMyName
 password:
   reset:
-    url: https://iwantmyname.com/reset_password
     flow:
       request:
+        url: https://iwantmyname.com/reset_password
         form:
           account:
             accepts: email domain

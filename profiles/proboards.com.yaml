@@ -5,9 +5,9 @@ password:
       min: 6
       max: 100
   reset:
-    url: https://login.proboards.com/forgot
     flow:
       request:
+        url: https://login.proboards.com/forgot
         form:
           account:
             accepts: email

@@ -8,9 +8,9 @@ password:
     - classes:
       - nonspaces
   reset:
-    url: https://darksky.net/dev/reset/password
     flow:
       request:
+        url: https://darksky.net/dev/reset/password
         form:
           account:
             accepts: email

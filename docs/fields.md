@@ -92,7 +92,7 @@ Array of restrictions on what passwords *must* do (other than those described by
 
 Array of restrictions on what passwords *must not* do (other than those described by a `blacklist` or `whitelist` object).
 
-## password.reset.url
+## password.reset.flow.request.url, password.reset.randomize.request.url, password.reset.onetime.request.url, password.reset.replacement.url
 
 The URL of the site's "reset password" page.
 

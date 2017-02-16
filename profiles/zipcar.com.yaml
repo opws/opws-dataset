@@ -9,9 +9,9 @@ password:
       oldpassword:
         input: required
   reset:
-    url: https://members.zipcar.com/register/forgot-password
     flow:
       request:
+        url: https://members.zipcar.com/register/forgot-password
         form:
           account:
             accepts: email

@@ -4,9 +4,9 @@ password:
     length:
       min: 1
   reset:
-    url: https://portal.respoke.io/#/password-reset
     flow:
       request:
+        url: https://portal.respoke.io/#/password-reset
         form:
           account:
             accepts: email

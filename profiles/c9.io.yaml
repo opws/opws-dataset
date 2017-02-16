@@ -8,9 +8,9 @@ password:
         to the displayed "strength-o-meter" (which is just a progress
         bar of the password's length up to 24 characters).
   reset:
-    url: https://c9.io/auth/password/reset
     flow:
       request:
+        url: https://c9.io/auth/password/reset
         form:
           account:
             accepts: username email

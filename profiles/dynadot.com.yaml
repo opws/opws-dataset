@@ -9,9 +9,9 @@ password:
       classes:
       - spaces
   reset:
-    url: https://www.dynadot.com/forgot.html
     flow:
       request:
+        url: https://www.dynadot.com/forgot.html
         form:
           account:
             accepts: email email+username

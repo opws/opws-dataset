@@ -4,9 +4,9 @@ password:
     length:
       min: 6
   reset:
-    url: https://id.docker.com/reset-password/
     flow:
       request:
+        url: https://id.docker.com/reset-password/
         form:
           account:
             accepts: email

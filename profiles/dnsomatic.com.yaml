@@ -15,9 +15,9 @@ password:
       variables:
       - username # or "part of" your username?
   reset:
-    url: https://www.dnsomatic.com/account/#pwdreset
     flow:
       request:
+        url: https://www.dnsomatic.com/account/#pwdreset
         form:
           account:
             accepts: email

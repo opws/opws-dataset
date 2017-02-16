@@ -16,9 +16,9 @@ password:
       - numbers
       - symbols
   reset:
-    url: https://help.steampowered.com/en/wizard/HelpChangePassword
     flow:
       request:
+        url: https://help.steampowered.com/en/wizard/HelpChangePassword
         form:
           account:
             accepts: username email phone

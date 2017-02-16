@@ -1,4 +1,6 @@
 name: WorkFlowy
 password:
   reset:
-    url: https://workflowy.com/accounts/password_reset/
+    flow:
+      request:
+        url: https://workflowy.com/accounts/password_reset/

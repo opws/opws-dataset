@@ -5,9 +5,9 @@ password:
       min: 8
       max: 35
   reset:
-    url: http://www.guru.com/forgotsignin.aspx
     flow:
       request:
+        url: http://www.guru.com/forgotsignin.aspx
         form:
           account:
             accepts: email

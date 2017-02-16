@@ -4,9 +4,9 @@ password:
     length:
       min: 8
   reset:
-    url: https://www.google.com/accounts/recovery
     flow:
       request:
+        url: https://www.google.com/accounts/recovery
         form:
           account:
             accepts: email

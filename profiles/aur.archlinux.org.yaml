@@ -1,9 +1,9 @@
 name: AUR
 password:
   reset:
-    url: https://aur.archlinux.org/passreset/
     flow:
       request:
+        url: https://aur.archlinux.org/passreset/
         form:
           account:
             accepts: email

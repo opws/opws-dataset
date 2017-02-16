@@ -1,9 +1,9 @@
 name: Wikimedia Foundation
 password:
   reset:
-    url: https://commons.wikimedia.org/wiki/Special:PasswordReset
     onetime:
       request:
+        url: https://commons.wikimedia.org/wiki/Special:PasswordReset
         form:
           account:
             accepts: username email

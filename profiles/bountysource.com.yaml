@@ -18,8 +18,12 @@ password:
         newpassword:
           input: none
   reset:
-    url: https://www.bountysource.com/signin
     flow:
+      request:
+        url: https://www.bountysource.com/signin
+        notes:
+        - en: Enter email, then a "Forgot?" link will appear
+              by the password field.
       response:
         email:
           sender: support@bountysource.com
@@ -33,9 +37,6 @@ password:
         sessions:
           own: login
         expire: now
-    notes:
-    - en: Enter email, then a "Forgot?" link will appear
-          by the password field.
 registration:
   url: https://www.bountysource.com/signin
   form:

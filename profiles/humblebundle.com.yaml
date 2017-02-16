@@ -4,9 +4,9 @@ password:
     length:
       min: 4
   reset:
-    url: https://www.humblebundle.com/user/forgot
     flow:
       request:
+        url: https://www.humblebundle.com/user/forgot
         form:
           account:
             accepts: email

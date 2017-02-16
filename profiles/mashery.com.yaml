@@ -9,9 +9,9 @@ password:
       - letters
       - numbers
   reset:
-    url: https://secure.mashery.com/member/lost/
     flow:
       request:
+        url: https://secure.mashery.com/member/lost/
         form:
           account:
             accepts: email+username

@@ -1,9 +1,9 @@
 name: Arch Linux Forums
 password:
   reset:
-    url: https://bbs.archlinux.org/login.php?action=forget
     flow:
       request:
+        url: https://bbs.archlinux.org/login.php?action=forget
         form:
           account:
             accepts: email

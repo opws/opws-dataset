@@ -1,9 +1,9 @@
 name: XirSys
 password:
   reset:
-    url: https://manage.xirsys.com/forgotten
     flow:
       request:
+        url: https://manage.xirsys.com/forgotten
         form:
           account:
             accepts: username email

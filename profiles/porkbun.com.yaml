@@ -4,9 +4,9 @@ password:
     length:
       min: 6
   reset:
-    url: https://porkbun.com/account/forgot
     flow:
       request:
+        url: https://porkbun.com/account/forgot
         form:
           account:
             accepts: email

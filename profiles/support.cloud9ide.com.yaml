@@ -1,9 +1,9 @@
 name: Cloud9 IDE Support
 password:
   reset:
-    url: http://support.cloud9ide.com/access/help
     flow:
       request:
+        url: http://support.cloud9ide.com/access/help
         form:
           account:
             accepts: email

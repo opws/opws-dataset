@@ -1,9 +1,9 @@
 name: ScraperWiki
 password:
   reset:
-    url: https://scraperwiki.com/accounts/password/reset/
     flow:
       request:
+        url: https://scraperwiki.com/accounts/password/reset/
         form:
           account:
             accepts: email

@@ -6,9 +6,9 @@ password:
     must:
     - en: contain a lowercase letter and number if shorter than 16 characters
   reset:
-    url: https://github.com/password_reset
     flow:
       request:
+        url: https://github.com/password_reset
         form:
           account:
             accepts: email

@@ -4,9 +4,9 @@ password:
     length:
       min: 6
   reset:
-    url: https://www.yammer.com/forgotten_password/new
     flow:
       request:
+        url: https://www.yammer.com/forgotten_password/new
         form:
           account:
             accepts: email

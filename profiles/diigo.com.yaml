@@ -5,9 +5,9 @@ password:
       min: 6
       max: 32
   reset:
-    url: https://www.diigo.com/user_mana2/forgot
     flow:
       request:
+        url: https://www.diigo.com/user_mana2/forgot
         form:
           account:
             accepts: username email

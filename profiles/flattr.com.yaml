@@ -1,9 +1,9 @@
 name: Flattr
 password:
   reset:
-    url: https://flattr.com/forgot
     flow:
       request:
+        url: https://flattr.com/forgot
         form:
           account:
             accepts: email

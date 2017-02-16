@@ -14,9 +14,9 @@ password:
       classes:
       - spaces
   reset:
-    url: https://www.washingtonconnection.org/authservice/resetpassword.go
     flow:
       request:
+        url: https://www.washingtonconnection.org/authservice/resetpassword.go
         form:
           account:
             accepts: username+email

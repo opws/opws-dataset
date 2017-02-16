@@ -11,9 +11,9 @@ password:
       - lowers
       - numbers
   reset:
-    url: https://*.residentportal.com/resident_portal/?module=forgot_password&action=forgot_password
     flow:
       request:
+        url: https://*.residentportal.com/resident_portal/?module=forgot_password&action=forgot_password
         form:
           account:
             accepts: email

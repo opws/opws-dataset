@@ -5,9 +5,9 @@ password:
       min: 6
       max: 30
   reset:
-    url: https://memit.com/user/resetpassword
     flow:
       request:
+        url: https://memit.com/user/resetpassword
         form:
           account:
             accepts: email username       

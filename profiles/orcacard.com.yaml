@@ -17,9 +17,9 @@ password:
       - username
       previous: 4
   reset:
-    url: https://orcacard.com/ERG-Seattle/p5_001.do
     onetime:
       request:
+        url: https://orcacard.com/ERG-Seattle/p5_001.do
         form:
           account:
             accepts: firstname+lastname+email+cardnumber+cvn+question

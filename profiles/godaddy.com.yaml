@@ -12,9 +12,9 @@ password:
       - uppers
       - numbers
   reset:
-    url: https://idp.godaddy.com/Account/AccountRetrieval.aspx
     flow:
       request:
+        url: https://idp.godaddy.com/Account/AccountRetrieval.aspx
         form:
           account:
             accepts: username+email accountno+email

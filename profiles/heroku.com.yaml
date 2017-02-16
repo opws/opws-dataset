@@ -4,9 +4,9 @@ password:
     length:
       min: 8
   reset:
-    url: https://id.heroku.com/account/password/reset
     flow:
       request:
+        url: https://id.heroku.com/account/password/reset
         form:
           account:
             accepts: email

@@ -6,9 +6,9 @@ password:
     mustnot:
     - en: be all the same character
   reset:
-    url: https://www.linkedin.com/passwordReset
     flow:
       request:
+        url: https://www.linkedin.com/passwordReset
         form:
           account:
             accepts: email phone

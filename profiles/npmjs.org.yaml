@@ -1,9 +1,9 @@
 name: npm
 password:
   reset:
-    url: https://npmjs.org/forgot
     flow:
       request:
+        url: https://npmjs.org/forgot
         form:
           account:
             accepts: username email

@@ -1,9 +1,9 @@
 name: CenturyLink
 password:
   reset:
-    url: https://eam.centurylink.com/eam/loginTrouble/forgotPassword.do
     flow:
       request:
+        url: https://eam.centurylink.com/eam/loginTrouble/forgotPassword.do
         form:
           account:
             accepts: username

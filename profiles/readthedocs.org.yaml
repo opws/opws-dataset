@@ -4,9 +4,9 @@ password:
     length:
       min: 6
   reset:
-    url: https://readthedocs.org/accounts/password/reset/
     flow:
       request:
+        url: https://readthedocs.org/accounts/password/reset/
         form:
           account:
             accepts: email

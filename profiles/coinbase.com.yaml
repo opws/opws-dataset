@@ -8,9 +8,9 @@ password:
         Passwords must be rated "good" and not "too weak" by
         an opaque judgment algorithm.
   reset:
-    url: https://coinbase.com/password_resets/new
     flow:
       request:
+        url: https://coinbase.com/password_resets/new
         form:
           account:
             accepts: email

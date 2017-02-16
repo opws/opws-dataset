@@ -9,9 +9,9 @@ password:
       - numbers
       - letters
   reset:
-    url: https://p2pu.org/en/forgot/
     flow:
       request:
+        url: https://p2pu.org/en/forgot/
         form:
           account:
             accepts: username email

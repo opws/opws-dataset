@@ -8,9 +8,9 @@ password:
       - english
       - common
   reset:
-    url: https://digital.darkhorse.com/accounts/password_reset/
     flow:
       request:
+        url: https://digital.darkhorse.com/accounts/password_reset/
         form:
           account:
             accepts: email

@@ -9,9 +9,9 @@ password:
     - classes:
       - nonspaces
   reset:
-    url: https://auth.getpebble.com/users/password/new
     flow:
       request:
+        url: https://auth.getpebble.com/users/password/new
         form:
           account:
             accepts: email

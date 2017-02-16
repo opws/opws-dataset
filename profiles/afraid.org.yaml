@@ -5,9 +5,9 @@ password:
       min: 4
       max: 16
   reset:
-    url: https://freedns.afraid.org/password/
     randomize:
       request:
+        url: https://freedns.afraid.org/password/
         form:
           account:
             accepts: username email

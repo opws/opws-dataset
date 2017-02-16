@@ -4,9 +4,9 @@ password:
     length:
       min: 5
   reset:
-    url: https://aytm.com/users/restore-password
     flow:
       request:
+        url: https://aytm.com/users/restore-password
         form:
           account:
             accepts: email

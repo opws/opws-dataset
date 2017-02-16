@@ -6,9 +6,9 @@ password:
         Simple has its own passphrase strength grading system,
         and a user's passphrase must be at least a "grade C" to pass.
   reset:
-    url: https://bank.simple.com/forgot-password
     flow:
       request:
+        url: https://bank.simple.com/forgot-password
         form:
           account:
             accepts: username+phone email+phone

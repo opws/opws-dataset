@@ -4,9 +4,9 @@ password:
     length:
       min: 5
   reset:
-    url: http://www.doublefine.com/forums/member/forgot_password/
     flow:
       request:
+        url: http://www.doublefine.com/forums/member/forgot_password/
         form:
           account:
             accepts: email

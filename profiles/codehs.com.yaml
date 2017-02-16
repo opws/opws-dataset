@@ -1,9 +1,9 @@
 name: CodeHS
 password:
   reset:
-    url: http://www.codehs.com/forgot_password
     flow:
       request:
+        url: http://www.codehs.com/forgot_password
         form:
           account:
             accepts: email

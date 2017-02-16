@@ -15,9 +15,9 @@ password:
       - spaces
       - nonprinting
   reset:
-    url: https://www.paypal.com/webapps/accountrecovery/passwordrecovery
     flow:
       request:
+        url: https://www.paypal.com/webapps/accountrecovery/passwordrecovery
         form:
           account:
             accepts: email

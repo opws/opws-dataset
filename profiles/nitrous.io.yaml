@@ -1,9 +1,9 @@
 name: Nitrous.IO
 password:
   reset:
-    url: https://www.nitrous.io/users/password/new
     flow:
       request:
+        url: https://www.nitrous.io/users/password/new
         form:
           account:
             accepts: email

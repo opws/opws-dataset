@@ -4,9 +4,9 @@ password:
     length:
       min: 8
   reset:
-    url: https://secure.imdb.com/register-imdb/forgotten
     flow:
       request:
+        url: https://secure.imdb.com/register-imdb/forgotten
         form:
           account:
             accepts: email

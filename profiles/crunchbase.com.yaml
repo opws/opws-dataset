@@ -5,11 +5,11 @@ password:
       min: 8
       max: 128
   reset:
-    url: https://www.crunchbase.com/app/login
-    notes:
-    - en: Click the "Forgot password?" button.
     flow:
       request:
+        url: https://www.crunchbase.com/app/login
+        notes:
+        - en: Click the "Forgot password?" button.
         form:
           account:
             accepts: email

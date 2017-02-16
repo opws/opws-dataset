@@ -4,9 +4,9 @@ password:
     length:
       min: 6
   reset:
-    url: https://secure-www.zappos.com/password/reset
     flow:
       request:
+        url: https://secure-www.zappos.com/password/reset
         form:
           account:
             accepts: email

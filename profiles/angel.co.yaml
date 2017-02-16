@@ -9,9 +9,9 @@ password:
     - classes:
       - nonspaces
   reset:
-    url: https://angel.co/users/password/new
     flow:
       request:
+        url: https://angel.co/users/password/new
         form:
           account:
             accepts: email

@@ -4,9 +4,9 @@ password:
     length:
       min: 1
   reset:
-    url: http://www.avclub.com/users/reset_password/
     flow:
       request:
+        url: http://www.avclub.com/users/reset_password/
         form:
           account:
             accepts: email

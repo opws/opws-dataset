@@ -7,9 +7,9 @@ password:
     notes:
     - en: Registration lists the maximum password length as 50 characters.
   reset:
-    url: https://www.netflix.com/LoginHelp
     flow:
       request:
+        url: https://www.netflix.com/LoginHelp
         form:
           account:
             accepts: email phone firstname+lastname+creditcard

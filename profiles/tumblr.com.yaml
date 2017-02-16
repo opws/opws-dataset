@@ -1,9 +1,9 @@
 name: Tumblr
 password:
   reset:
-    url: https://www.tumblr.com/forgot_password
     flow:
       request:
+        url: https://www.tumblr.com/forgot_password
         form:
           account:
             accepts: email

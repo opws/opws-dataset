@@ -11,9 +11,9 @@ password:
       - numbers
       - symbols
   reset:
-    url: http://www.topcoder.com/password-recovery/
     flow:
       request:
+        url: http://www.topcoder.com/password-recovery/
         form:
           account:
             accepts: username email

@@ -13,9 +13,9 @@ password:
       - numbers
       - symbols
   reset:
-    url: https://www.name.com/account/credentials/password
     flow:
       request:
+        url: https://www.name.com/account/credentials/password
         form:
           account:
             accepts: domain username

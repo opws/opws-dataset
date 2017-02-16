@@ -9,9 +9,9 @@ password:
       classes:
       - spaces
   reset:
-    url: https://www.namesilo.com/lost_password.php
     flow:
       request:
+        url: https://www.namesilo.com/lost_password.php
         form:
           account:
             accepts: username domain

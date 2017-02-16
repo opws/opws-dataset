@@ -1,9 +1,9 @@
 name: WiBit.Net
 password:
   reset:
-    url: https://www.wibit.net/forgotPassword
     flow:
       request:
+        url: https://www.wibit.net/forgotPassword
         form:
           account:
             accepts: email

@@ -5,9 +5,9 @@ password:
       min: 6
       max: 256
   reset:
-    url: http://www.okcupid.com/lostpassword
     flow:
       request:
+        url: http://www.okcupid.com/lostpassword
         form:
           account:
             accepts: username email

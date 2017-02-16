@@ -407,9 +407,9 @@ password:
       - zxcvbnm
       - zzzzzz
   reset:
-    url: https://twitter.com/account/begin_password_reset
     flow:
       request:
+        url: https://twitter.com/account/begin_password_reset
         form:
           account:
             accepts: email phone username

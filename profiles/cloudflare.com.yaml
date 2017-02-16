@@ -4,9 +4,9 @@ password:
     length:
       min: 6
   reset:
-    url: https://www.cloudflare.com/a/forgot-password
     flow:
       request:
+        url: https://www.cloudflare.com/a/forgot-password
         form:
           account:
             accepts: email+domain
