@@ -1,17 +1,11 @@
 name: Tumblr
-password:
-  reset:
-    flow:
-      request:
-        url: https://www.tumblr.com/forgot_password
-        form:
-          account:
-            accepts: email
-  change:
-    url: https://www.tumblr.com/settings/account#changepassword
-    form:
-      oldpassword:
-        input: required
-      repeat:
-        newpassword:
-          input: none
+use: yahoo.com
+login:
+  url: https://www.tumblr.com/login
+  form:
+    account:
+      accepts: email
+    password:
+      characters: hidden
+reviewed:
+  date: 2017-02-16T11:24:58.793Z
