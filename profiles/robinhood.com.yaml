@@ -3,5 +3,46 @@ password:
   value:
     length:
       min: 10
+  reset:
+    flow:
+      request:
+        url: https://robinhood.com/signup/reset_password/
+        form:
+          account:
+            accepts: email
+      response:
+        email:
+          sender: notifications@robinhood.com
+          body: firstname username link
 registration:
   url: https://www.robinhood.com/signup/
+  form:
+    firstname:
+      input: required
+    lastname:
+      input: required
+    email:
+      input: required
+    username:
+      input: required
+    password:
+      input: required
+      characters: hidden
+    repeat:
+      password:
+        input: required
+        characters: hidden
+      email:
+        input: none
+login:
+  url: https://robinhood.com/signup/login/
+  form:
+    account:
+      accepts: username
+    password:
+      characters: hidden
+terms:
+  service:
+    url: https://d2ue93q3u507c2.cloudfront.net/assets/robinhood/legal/Robinhood%20Terms%20and%20Conditions.pdf
+reviewed:
+  date: 2017-02-16T11:58:39.730Z
