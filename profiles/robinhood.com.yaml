@@ -9,11 +9,11 @@ password:
         url: https://robinhood.com/signup/reset_password/
         form:
           account:
-            accepts: email
+            accepts: [email]
       response:
         email:
           sender: notifications@robinhood.com
-          body: firstname username link
+          body: [firstname, username, link]
 registration:
   url: https://www.robinhood.com/signup/
   form:
@@ -38,7 +38,7 @@ login:
   url: https://robinhood.com/signup/login/
   form:
     account:
-      accepts: username
+      accepts: [username]
     password:
       characters: hidden
 terms:

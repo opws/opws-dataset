@@ -6,6 +6,6 @@ password:
         url: https://coderbits.com/passwordreset/initiate
         form:
           account:
-            accepts: username email
+            accepts: [username, email]
   change:
     url: https://coderbits.com/account/settings#tab-account

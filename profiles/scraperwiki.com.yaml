@@ -6,6 +6,6 @@ password:
         url: https://scraperwiki.com/accounts/password/reset/
         form:
           account:
-            accepts: email
+            accepts: [email]
   change:
     url: https://scraperwiki.com/accounts/password/change/

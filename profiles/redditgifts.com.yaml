@@ -9,11 +9,11 @@ password:
         url: http://redditgifts.com/profiles/password/reset/
         form:
           account:
-            accepts: email
+            accepts: [email]
       response:
         email:
           sender: support@redditgifts.com
-          body: link
+          body: [link]
       change:
         form:
           newpassword:
@@ -58,7 +58,7 @@ login:
   url: https://www.redditgifts.com/profiles/login/
   form:
     account:
-      accepts: email
+      accepts: [email]
     password:
       characters: hidden
 terms:

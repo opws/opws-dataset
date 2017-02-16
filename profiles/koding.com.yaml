@@ -6,6 +6,6 @@ password:
         url: https://koding.com/Recover
         form:
           account:
-            accepts: username email
+            accepts: [username, email]
   change:
     url: https://koding.com/Account

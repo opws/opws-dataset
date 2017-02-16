@@ -26,11 +26,11 @@ password:
         url: https://adobeid.services.adobe.com/renga-idprovider/pages/start_forgot_password?client_id=SunbreakWebUI1&callback=https%3A%2F%2Fadobelogin.com%2F&client_redirect=https%3A%2F%2Fadobelogin.com&denied_callback=https%3A%2F%2Fadobelogin.com&display=web_v2
         form:
           account:
-            accepts: email
+            accepts: [email]
       response:
         email:
           sender: account-noreply@adobe.com
-          body: firstname lastname url
+          body: [firstname, lastname, url]
         expire: 72h
       submit:
         sessions:

@@ -14,7 +14,7 @@ password:
         url: https://manager.linode.com/session/forgot/password
         form:
           account:
-            accepts: username
+            accepts: [username]
   change:
     url: https://manager.linode.com/profile/index#password
 totp: optional

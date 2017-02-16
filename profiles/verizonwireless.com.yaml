@@ -508,7 +508,7 @@ password:
         url: https://login.verizonwireless.com/accessmanager/public/c/fp/start
         form:
           account:
-            accepts: phone
+            accepts: [phone]
           captcha:
             type: recaptcha
 username:
@@ -530,7 +530,7 @@ username:
     request:
       form:
         account:
-          accepts: phone
+          accepts: [phone]
         captcha:
           type: recaptcha
 questions:
@@ -574,7 +574,7 @@ login:
   url: https://www.verizonwireless.com/my-verizon/
   form:
     account:
-      accepts: username phone
+      accepts: [username, phone]
 statements:
   privacy:
     url: https://www.verizon.com/about/privacy/privacy-policy-summary

@@ -9,13 +9,13 @@ password:
         url: https://secure-www.zappos.com/password/reset
         form:
           account:
-            accepts: email
+            accepts: [email]
           captcha:
             type: alphanumeric
       response:
         email:
           sender: cs@zappos.com
-          body: url
+          body: [url]
       change:
         form:
           newpassword:

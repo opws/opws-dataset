@@ -9,7 +9,7 @@ password:
         url: https://www.cloudflare.com/a/forgot-password
         form:
           account:
-            accepts: email+domain
+            accepts: [email+domain]
           captcha:
             type: recaptcha
         notes:
@@ -17,7 +17,7 @@ password:
       response:
         email:
           sender: no-reply@cloudflare.com
-          body: url token
+          body: [url, code]
         expire: 2h
       change:
         form:

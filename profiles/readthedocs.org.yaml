@@ -9,11 +9,11 @@ password:
         url: https://readthedocs.org/accounts/password/reset/
         form:
           account:
-            accepts: email
+            accepts: [email]
       response:
         email:
           sender: support@readthedocs.org
-          body: url username
+          body: [url, username]
       submit:
         sessions:
           own: unchanged # assumed based on previous "token.login: no"

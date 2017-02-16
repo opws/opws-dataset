@@ -6,6 +6,6 @@ password:
         url: https://flattr.com/forgot
         form:
           account:
-            accepts: email
+            accepts: [email]
   change:
     url: https://flattr.com/authaccounts/editpassword

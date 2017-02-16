@@ -11,11 +11,11 @@ password:
         url: https://bank.simple.com/forgot-password
         form:
           account:
-            accepts: username+phone email+phone
+            accepts: [username+phone, email+phone]
       response:
         email:
           sender: notify@simple.com
-          body: url
+          body: [url]
         expire: 30m
     notes:
     - en: Sends tokens via email and SMS, both are needed.
@@ -41,7 +41,7 @@ username:
     request:
       form:
         account:
-          accepts: email+phone
+          accepts: [email+phone]
 registration:
   url: https://arrow.simple.com/account
   form:
@@ -55,7 +55,7 @@ login:
   url: https://bank.simple.com/signin
   form:
     account:
-      accepts: username
+      accepts: [username]
     password:
       characters: showable
 reviewed:

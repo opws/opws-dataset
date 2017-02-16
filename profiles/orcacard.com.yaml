@@ -22,11 +22,11 @@ password:
         url: https://orcacard.com/ERG-Seattle/p5_001.do
         form:
           account:
-            accepts: firstname+lastname+email+cardnumber+cvn+question
+            accepts: [firstname+lastname+email+cardnumber+cvn+question]
       response:
         email:
           sender: contactus@orcacard.com
-          body: firstname lastname username password
+          body: [firstname, lastname, username, password]
   change:
     url: https://orcacard.com/ERG-Seattle/p7_007.do
     form:

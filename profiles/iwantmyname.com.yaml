@@ -6,6 +6,6 @@ password:
         url: https://iwantmyname.com/reset_password
         form:
           account:
-            accepts: email domain
+            accepts: [email, domain]
   change:
     url: https://iwantmyname.com/dashboard/account/login

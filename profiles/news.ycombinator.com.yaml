@@ -9,11 +9,11 @@ password:
         url: https://news.ycombinator.com/forgot
         form:
           account:
-            accepts: username
+            accepts: [username]
       response:
         email:
           sender: hn@ycombinator.com
-          body: url
+          body: [url]
       change:
         form:
           newpassword:
@@ -64,7 +64,7 @@ login:
   url: https://news.ycombinator.com/login
   form:
     account:
-      accepts: username
+      accepts: [username]
     password:
       characters: hidden
 reviewed:

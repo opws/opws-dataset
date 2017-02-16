@@ -28,6 +28,21 @@ function isLeafType(val) {
     val instanceof Date;
 }
 
+function assertIsTokenArray(fieldName, profile) {
+  var parts = fieldName.split('.');
+  var subject = profile[parts[0]];
+  var i;
+  for (i = 1; subject && i < parts.length; i++) {
+    subject = subject[parts[i]];
+  }
+  if (subject) {
+    assert(Array.isArray(subject), fieldName + ' not an array');
+    for (i = 0; i < subject.length; i++) {
+      assert(!/ /.exec(subject[i]), fieldName + ' has spaces');
+    }
+  }
+}
+
 function validateDocumentedFields(doc,done) {
   var failures = [];
   function checkKeys(prefix, obj) {
@@ -80,6 +95,24 @@ describe('YAML file', function() {
             if (err) return done(err);
             assert(yaml.load(content, {filename: filename}).name,
               filename + ' does not contain a name entry');
+            return done();
+          });
+      });
+
+      it('should anticipate schema arrays',
+        function(done) {
+          fs.readFile(filename, 'utf8', function(err, content) {
+            if (err) return done(err);
+            var profile = yaml.load(content, {filename: filename});
+            assertIsTokenArray('password.reset.flow.request.form.account.accepts', profile);
+            assertIsTokenArray('password.reset.randomize.request.form.account.accepts', profile);
+            assertIsTokenArray('password.reset.onetime.request.form.account.accepts', profile);
+            assertIsTokenArray('username.reminder.request.form.account.accepts', profile);
+            assertIsTokenArray('login.form.account.accepts', profile);
+            assertIsTokenArray('password.reset.flow.response.email.body', profile);
+            assertIsTokenArray('password.reset.randomize.response.email.body', profile);
+            assertIsTokenArray('password.reset.onetime.response.email.body', profile);
+            assertIsTokenArray('password.reset.flow.open.expects', profile);
             return done();
           });
       });

@@ -9,7 +9,7 @@ password:
         url: https://porkbun.com/account/forgot
         form:
           account:
-            accepts: email
+            accepts: [email]
   change:
     url: https://porkbun.com/account
     form:

@@ -14,11 +14,11 @@ password:
         url: https://angel.co/users/password/new
         form:
           account:
-            accepts: email
+            accepts: [email]
       response:
         email:
           sender: team@angel.co
-          body: link
+          body: [link]
   change:
     url: https://angel.co/settings/password
     form:

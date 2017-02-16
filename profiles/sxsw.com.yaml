@@ -14,7 +14,7 @@ password:
         url: https://auth.sxsw.com/users/password/new
         form:
           account:
-            accepts: email
+            accepts: [email]
   change:
     url: https://auth.sxsw.com/users/edit
     form:

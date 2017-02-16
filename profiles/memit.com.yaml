@@ -10,7 +10,7 @@ password:
         url: https://memit.com/user/resetpassword
         form:
           account:
-            accepts: email username       
+            accepts: [email, username]
   change:
     url: https://memit.com/user/profile/#password_reset
 username:
@@ -42,8 +42,8 @@ registration:
 login:
   url: http://memit.com/?login=true
   form:
-    account: 
-      accepts: username email
+    account:
+      accepts: [username, email]
     password:
       characters: hidden
     persist:

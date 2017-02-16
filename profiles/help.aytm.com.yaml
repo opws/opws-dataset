@@ -9,4 +9,4 @@ password:
         url: http://help.aytm.com/access/help
         form:
           account:
-            accepts: email
+            accepts: [email]

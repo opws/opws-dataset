@@ -17,13 +17,13 @@ password:
         url: https://login.mailchimp.com/login/forgot
         form:
           account:
-            accepts: username
+            accepts: [username]
           captcha:
             type: recaptcha
       response:
         email:
           sender: confirm@mailchimp.com
-          body: username link
+          body: [username, link]
       submit:
         sessions:
           own: unchanged # assumed based on previous "token.login: no"

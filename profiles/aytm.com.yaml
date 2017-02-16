@@ -9,10 +9,10 @@ password:
         url: https://aytm.com/users/restore-password
         form:
           account:
-            accepts: email
+            accepts: [email]
       response:
         email:
-          body: link url
+          body: [link, url]
   change:
     url: https://aytm.com/users/account-setting?current_tab=change_password
 registration:

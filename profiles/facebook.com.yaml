@@ -14,11 +14,11 @@ password:
         url: https://www.facebook.com/recover/initiate
         form:
           account:
-            accepts: email phone username fullname
+            accepts: [email, phone, username, fullname]
       response:
         email:
           sender: security@facebookmail.com
-          body: firstname link token
+          body: [firstname, link, code]
       change:
         form:
           newpassword:
@@ -64,7 +64,7 @@ login:
   url: https://www.facebook.com/login
   form:
     account:
-      accepts: email phone
+      accepts: [email, phone]
     password:
       characters: hidden
 sessions:

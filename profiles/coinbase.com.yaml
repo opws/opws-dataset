@@ -13,11 +13,11 @@ password:
         url: https://coinbase.com/password_resets/new
         form:
           account:
-            accepts: email
+            accepts: [email]
       response:
         email:
           sender: no-reply@coinbase.com
-          body: link
+          body: [link]
       change:
         form:
           newpassword:
@@ -64,7 +64,7 @@ login:
   url: https://www.coinbase.com/signin
   form:
     account:
-      accepts: email
+      accepts: [email]
     password:
       characters: hidden
     persist:

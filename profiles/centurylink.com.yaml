@@ -6,7 +6,7 @@ password:
         url: https://eam.centurylink.com/eam/loginTrouble/forgotPassword.do
         form:
           account:
-            accepts: username
+            accepts: [username]
   change:
     url: https://shop.centurylink.com/MasterWebPortal/freeRange/acctMgmt/ManageMyProfile_goToChangeProfilePassword.action
 username:
@@ -15,7 +15,7 @@ username:
     request:
       form:
         account:
-          accepts: email
+          accepts: [email]
 registration:
   url: https://eam.centurylink.com/eam/registration.do
 login:

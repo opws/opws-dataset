@@ -17,7 +17,7 @@ password:
         url: https://fortress.wa.gov/dor/efile/FortressLogon/RetrievePassword.aspx
         form:
           account:
-            accepts: email
+            accepts: [email]
           captcha:
             type: alphanumeric
   change:
@@ -34,7 +34,7 @@ username:
     request:
       form:
         account:
-          accepts: email
+          accepts: [email]
         captcha:
           type: alphanumeric
 login:

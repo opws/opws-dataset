@@ -13,11 +13,11 @@ password:
         url: https://www.skillshare.com/reset-password
         form:
           account:
-            accepts: email
+            accepts: [email]
       response:
         email:
           sender: hello@skillshare.com
-          body: firstname link url
+          body: [firstname, link, url]
       change:
         form:
           newpassword:
@@ -69,7 +69,7 @@ login:
   url: https://www.skillshare.com/login
   form:
     account:
-      accepts: email
+      accepts: [email]
     password:
       characters: hidden
     persist:

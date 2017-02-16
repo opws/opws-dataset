@@ -10,13 +10,13 @@ password:
         url: https://login.proboards.com/forgot
         form:
           account:
-            accepts: email
+            accepts: [email]
           captcha:
             type: funcaptcha
       response:
         email:
           sender: noreply@proboards.com
-          body: url
+          body: [url]
         expire: 1h
       change:
         form:
@@ -62,7 +62,7 @@ login:
   url: https://login.proboards.com/login
   form:
     account:
-      accepts: email
+      accepts: [email]
     password:
       characters: hidden
     persist:

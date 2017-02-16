@@ -18,11 +18,11 @@ password:
         url: https://launchpad.37signals.com/forgot_password
         form:
           account:
-            accepts: email
+            accepts: [email]
       response:
         email:
           sender: support@basecamp.com
-          body: username link
+          body: [username, link]
       submit:
         sessions:
           own: login

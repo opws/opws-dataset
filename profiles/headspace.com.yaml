@@ -14,7 +14,7 @@ password:
         url: https://www.headspace.com/login/forgotten-password
         form:
           account:
-            accepts: email
+            accepts: [email]
   change:
     url: https://www.headspace.com/my/settings/about-you#user_profile_password_first
     form:

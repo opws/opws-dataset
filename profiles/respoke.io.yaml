@@ -9,7 +9,7 @@ password:
         url: https://portal.respoke.io/#/password-reset
         form:
           account:
-            accepts: email
+            accepts: [email]
   change:
     url: https://portal.respoke.io/#/account?section=Profile
     form:

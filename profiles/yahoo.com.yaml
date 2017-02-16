@@ -6,7 +6,7 @@ password:
         url: https://edit.yahoo.com/forgotroot
         form:
           account:
-            accepts: username email
+            accepts: [username, email]
   change:
     url: https://edit.yahoo.com/config/change_pw
 report:

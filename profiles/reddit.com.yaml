@@ -9,11 +9,11 @@ password:
         url: http://www.reddit.com/password
         form:
           account:
-            accepts: username
+            accepts: [username]
       response:
         email:
           sender: reddit@reddit.com
-          body: username url
+          body: [username, url]
       change:
         form:
           newpassword:
@@ -76,7 +76,7 @@ login:
   url: https://www.reddit.com/login
   form:
     account:
-      accepts: username
+      accepts: [username]
     password:
       characters: hidden
     persist:

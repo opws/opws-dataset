@@ -15,7 +15,7 @@ password:
         url: https://disneyworld.disney.go.com/login/
         form:
           account:
-            accepts: username email
+            accepts: [username, email]
 registration:
   url: https://disneyworld.disney.go.com/registration/
 login:

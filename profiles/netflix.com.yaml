@@ -12,11 +12,11 @@ password:
         url: https://www.netflix.com/LoginHelp
         form:
           account:
-            accepts: email phone firstname+lastname+creditcard
+            accepts: [email, phone, firstname+lastname+creditcard]
       response:
         email:
           sender: info@mailer.netflix.com
-          body: firstname link
+          body: [firstname, link]
       change:
         form:
           newpassword:
@@ -55,7 +55,7 @@ login:
   url: https://www.netflix.com/login
   form:
     account:
-      accepts: email
+      accepts: [email]
     password:
       characters: hidden
     persist:

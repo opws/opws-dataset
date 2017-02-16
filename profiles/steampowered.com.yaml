@@ -21,11 +21,11 @@ password:
         url: https://help.steampowered.com/en/wizard/HelpChangePassword
         form:
           account:
-            accepts: username email phone
+            accepts: [username, email, phone]
       response:
         email:
           sender: noreply@steampowered.com
-          body: token
+          body: [code]
       change:
         form:
           newpassword:
@@ -77,7 +77,7 @@ login:
   url: https://store.steampowered.com/login/
   form:
     account:
-      accepts: username
+      accepts: [username]
     password:
       characters: hidden
 terms:

@@ -412,11 +412,11 @@ password:
         url: https://twitter.com/account/begin_password_reset
         form:
           account:
-            accepts: email phone username
+            accepts: [email, phone, username]
       response:
         email:
           sender: password@twitter.com
-          body: username link
+          body: [username, link]
       change:
         form:
           newpassword:
@@ -464,7 +464,7 @@ login:
   url: https://twitter.com/login
   form:
     account:
-      accepts: phone email username
+      accepts: [phone, email, username]
 terms:
   service:
     url: https://twitter.com/tos

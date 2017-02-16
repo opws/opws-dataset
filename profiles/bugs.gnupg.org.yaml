@@ -9,11 +9,11 @@ password:
         url: https://bugs.gnupg.org/gnupg/user?@template=forgotten
         form:
           account:
-            accepts: email username
+            accepts: [email, username]
       response:
         email:
           sender: bitbucket@bugs.g10code.com
-          body: username url
+          body: [username, url]
       open:
         result: send
         sessions:

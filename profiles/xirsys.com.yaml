@@ -6,4 +6,4 @@ password:
         url: https://manage.xirsys.com/forgotten
         form:
           account:
-            accepts: username email
+            accepts: [username, email]

@@ -9,7 +9,7 @@ password:
         url: https://id.heroku.com/account/password/reset
         form:
           account:
-            accepts: email
+            accepts: [email]
   change:
     url: https://dashboard.heroku.com/account
     form:

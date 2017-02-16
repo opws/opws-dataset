@@ -19,7 +19,7 @@ password:
       request:
         form:
           account:
-            accepts: email # Does the reset page accept email address, or username?
+            accepts: [email] # Does the reset page accept email address, or username?
   change:
     url: https://example.com/account/changepassword
     form:
@@ -41,7 +41,7 @@ login:
   url: https://example.com/login
   form:
     account:
-      accepts: username # Can you log in with an email address? Username?
+      accepts: [username] # Can you log in with an email address? Username?
     password:
       characters: hidden # Is the login password showable?
 terms:
@@ -64,13 +64,13 @@ password:
       request:
         form:
           account:
-            accepts: email # Does the reset page accept email address, or username?
+            accepts: [email] # Does the reset page accept email address, or username?
           captcha:
             type: word # Is there a captcha?
       response:
         email:
           sender: sender@example.com # What address does a reset email come from?
-          body: username url # Does the email contain a URL? A link? User info?
+          body: [username, url] # Does the email contain a URL? A link? User info?
         expire: 24h # How long until the link expires?
       submit:
         destination:

@@ -6,4 +6,4 @@ password:
         url: http://www.html5-ninja.com/#/account
         form:
           account:
-            accepts: email
+            accepts: [email]

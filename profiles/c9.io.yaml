@@ -13,11 +13,11 @@ password:
         url: https://c9.io/auth/password/reset
         form:
           account:
-            accepts: username email
+            accepts: [username, email]
       response:
         email:
           sender: support@c9.io
-          body: firstname url
+          body: [firstname, url]
         expire: 15m
   change:
     url: https://c9.io/account/settings

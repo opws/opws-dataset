@@ -4,7 +4,7 @@ login:
   url: https://www.tumblr.com/login
   form:
     account:
-      accepts: email
+      accepts: [email]
     password:
       characters: hidden
 reviewed:

@@ -9,7 +9,7 @@ password:
         url: https://manage.stripe.com/reset
         form:
           account:
-            accepts: email
+            accepts: [email]
   change:
     url: https://manage.stripe.com/account
     form:

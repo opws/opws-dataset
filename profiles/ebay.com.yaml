@@ -31,11 +31,11 @@ password:
         url: https://fyp.ebay.com/EnterUserInfo
         form:
           account:
-            accepts: email username
+            accepts: [email, username]
       response:
         email:
           sender: ebay@ebay.com
-          body: firstname url
+          body: [firstname, url]
         expire: 24h
       submit:
         destination:

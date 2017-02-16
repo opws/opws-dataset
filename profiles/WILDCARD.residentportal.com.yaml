@@ -16,10 +16,10 @@ password:
         url: https://*.residentportal.com/resident_portal/?module=forgot_password&action=forgot_password
         form:
           account:
-            accepts: email
+            accepts: [email]
       response:
         email:
-          body: link
+          body: [link]
         expire: 72h
       change:
         form:

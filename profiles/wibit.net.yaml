@@ -6,12 +6,12 @@ password:
         url: https://www.wibit.net/forgotPassword
         form:
           account:
-            accepts: email
+            accepts: [email]
           captcha:
             type: letters
       response:
         email:
           sender: no-reply@wibit.net
-          body: temp
+          body: [temp]
   change:
     url: https://www.wibit.net/myAccount

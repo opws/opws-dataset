@@ -14,6 +14,6 @@ password:
         url: https://p2pu.org/en/forgot/
         form:
           account:
-            accepts: username email
+            accepts: [username, email]
   change:
     url: https://p2pu.org/en/profile/edit/password/

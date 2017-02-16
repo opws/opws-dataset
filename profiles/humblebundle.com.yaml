@@ -9,11 +9,11 @@ password:
         url: https://www.humblebundle.com/user/forgot
         form:
           account:
-            accepts: email
+            accepts: [email]
       response:
         email:
           sender: contact@humblebundle.com
-          body: url
+          body: [url]
       change:
         form:
           repeat:

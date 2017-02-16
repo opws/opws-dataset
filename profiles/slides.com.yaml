@@ -22,11 +22,11 @@ password:
         url: https://slides.com/users/password/new
         form:
           account:
-            accepts: email
+            accepts: [email]
       response:
         email:
           sender: no-reply@slides.com
-          body: link
+          body: [link]
       submit:
         destination:
           page: login

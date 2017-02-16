@@ -10,7 +10,7 @@ password:
         url: https://www.diigo.com/user_mana2/forgot
         form:
           account:
-            accepts: username email
+            accepts: [username, email]
   change:
     url: https://www.diigo.com/setting#account_setting
 username:

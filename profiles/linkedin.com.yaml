@@ -11,11 +11,11 @@ password:
         url: https://www.linkedin.com/passwordReset
         form:
           account:
-            accepts: email phone
+            accepts: [email, phone]
       response:
         email:
           sender: security-noreply@linkedin.com
-          body: firstname link url
+          body: [firstname, link, url]
         expire: 24h
       change:
         form:

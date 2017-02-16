@@ -11,10 +11,10 @@ password:
         url: https://my.gocurb.com/signin#resetPassword
         form:
           account:
-            accepts: email
+            accepts: [email]
       response:
         email:
-          body: link
+          body: [link]
   change:
     url: https://my.gocurb.com/myaccount#password
     form:

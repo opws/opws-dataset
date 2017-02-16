@@ -9,11 +9,11 @@ password:
         url: https://www.mapbox.com/#active1
         form:
           account:
-            accepts: email
+            accepts: [email]
       response:
         email:
           sender: noreply@mapbox.com
-          body: username link
+          body: [username, link]
         expire: 24h
       change:
         form:
@@ -66,7 +66,7 @@ login:
   url: https://www.mapbox.com/#signin
   form:
     account:
-      accepts: username email
+      accepts: [username, email]
     password:
       characters: hidden
 terms:

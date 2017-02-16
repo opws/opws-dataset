@@ -20,13 +20,13 @@ password:
         url: https://www.paypal.com/webapps/accountrecovery/passwordrecovery
         form:
           account:
-            accepts: email
+            accepts: [email]
           captcha:
             type: alphanumeric
       response:
         email:
           sender: service@paypal.com
-          body: token
+          body: [code]
   change:
     url: https://www.paypal.com/us/cgi-bin/webscr?cmd=_profile-password-start
     form:

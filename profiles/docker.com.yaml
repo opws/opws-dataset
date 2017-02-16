@@ -9,11 +9,11 @@ password:
         url: https://id.docker.com/reset-password/
         form:
           account:
-            accepts: email
+            accepts: [email]
       response:
         email:
           sender: no-reply@notify.docker.com
-          body: link username
+          body: [link, username]
       change:
         form:
           newpassword:
@@ -45,7 +45,7 @@ login:
   url: https://cloud.docker.com/login/
   form:
     account:
-      accepts: username
+      accepts: [username]
     password:
       characters: hidden
 registration:

@@ -18,7 +18,7 @@ password:
         url: https://olui2.fs.ml.com/login/ForgotPassword.aspx
         form:
           account:
-            accepts: username
+            accepts: [username]
 username:
   reminder:
     url: https://olui2.fs.ml.com/login/ForgotUserId.aspx

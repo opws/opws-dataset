@@ -10,11 +10,11 @@ password:
         url: http://www.okcupid.com/lostpassword
         form:
           account:
-            accepts: username email
+            accepts: [username, email]
       response:
         email:
           sender: bounces@mail1.oknotify2.com
-          body: username link
+          body: [username, link]
       submit:
         sessions:
           own: login

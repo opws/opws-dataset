@@ -9,11 +9,11 @@ password:
         url: https://secure.imdb.com/register-imdb/forgotten
         form:
           account:
-            accepts: email
+            accepts: [email]
       response:
         email:
           sender: do-not-reply-here@imdb.com
-          body: url
+          body: [url]
 registration:
   url: https://secure.imdb.com/register-imdb/register
   form:

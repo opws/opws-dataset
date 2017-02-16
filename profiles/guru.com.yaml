@@ -10,10 +10,10 @@ password:
         url: http://www.guru.com/forgotsignin.aspx
         form:
           account:
-            accepts: email
+            accepts: [email]
       response:
         email:
-          body: username link
+          body: [username, link]
       submit:
         sessions:
           own: unchanged # assumed based on previous "token.login: no"

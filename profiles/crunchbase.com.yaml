@@ -12,11 +12,11 @@ password:
         - en: Click the "Forgot password?" button.
         form:
           account:
-            accepts: email
+            accepts: [email]
       response:
         email:
           sender: support@crunchbase.com
-          body: firstname url
+          body: [firstname, url]
       change:
         form:
           newpassword:
@@ -77,7 +77,7 @@ login:
   url: https://www.crunchbase.com/app/login
   form:
     account:
-      accepts: email
+      accepts: [email]
     password:
       characters: hidden
 terms:

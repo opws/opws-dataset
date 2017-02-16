@@ -10,13 +10,13 @@ password:
         url: https://www.udemy.com/user/forgot-password
         form:
           account:
-            accepts: email
+            accepts: [email]
           captcha:
             type: recaptcha
       response:
         email:
           sender: no-reply@e.udemymail.com
-          body: firstname link
+          body: [firstname, link]
       change:
         form:
           newpassword:
@@ -64,7 +64,7 @@ login:
   url: https://www.udemy.com/join/login-popup/
   form:
     account:
-      accepts: email
+      accepts: [email]
     password:
       characters: hidden
 thirdparty:

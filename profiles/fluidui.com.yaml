@@ -9,11 +9,11 @@ password:
         url: https://www.fluidui.com/editor/live/recoverPassword/
         form:
           account:
-            accepts: email
+            accepts: [email]
       response:
         email:
           sender: support@fluidui.com
-          body: url
+          body: [url]
       change:
         form:
           newpassword:
@@ -64,7 +64,7 @@ login:
   url: https://www.fluidui.com/editor/live/#signin
   form:
     account:
-      accepts: email
+      accepts: [email]
     password:
       characters: hidden
 terms:

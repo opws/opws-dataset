@@ -6,10 +6,10 @@ password:
         url: https://commons.wikimedia.org/wiki/Special:PasswordReset
         form:
           account:
-            accepts: username email
+            accepts: [username, email]
       response:
         email:
-          body: password
+          body: [password]
         expire: 7d
   change:
     url: https://commons.wikimedia.org/wiki/Special:ChangePassword

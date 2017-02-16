@@ -14,14 +14,14 @@ password:
         url: https://www.namesilo.com/lost_password.php
         form:
           account:
-            accepts: username domain
+            accepts: [username, domain]
         notes:
         - en: >
             Also requires the answer to the user's security question.
       response:
         email:
           sender: support@namesilo.com
-          body: firstname url origin
+          body: [firstname, url, origin]
         expire: 24h
       change:
         form:
@@ -77,7 +77,7 @@ login:
   url: https://www.namesilo.com/login.php
   form:
     account:
-      accepts: username domain
+      accepts: [username, domain]
     password:
       characters: hidden
 reviewed:

@@ -16,7 +16,7 @@ password:
         url: https://projecteuler.net/reset_password
         form:
           account:
-            accepts: username+email
+            accepts: [username+email]
   change:
     url: https://projecteuler.net/account
 username:
@@ -25,6 +25,6 @@ username:
     request:
       form:
         account:
-          accepts: email
+          accepts: [email]
 redflags:
 - '"Remember Me" creates a p_key cookie rather than changing your session.'

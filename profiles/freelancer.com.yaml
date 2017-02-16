@@ -6,7 +6,7 @@ password:
         url: https://www.freelancer.com/#forgot-password-toggle
         form:
           account:
-            accepts: email
+            accepts: [email]
   change:
     url: https://www.freelancer.com/users/settings.php#AccountSettings
 redflags:

@@ -9,6 +9,6 @@ password:
         url: http://www.doublefine.com/forums/member/forgot_password/
         form:
           account:
-            accepts: email
+            accepts: [email]
   change:
     url: http://www.doublefine.com/forums/member/edit_userpass/

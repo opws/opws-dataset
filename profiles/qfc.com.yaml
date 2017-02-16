@@ -15,11 +15,11 @@ password:
         url: https://www.qfc.com/forgotPassword
         form:
           account:
-            accepts: email
+            accepts: [email]
       response:
         email:
           sender: QFC@e.qfcemail.com
-          body: link
+          body: [link]
         expire: 24h
       change:
         form:
@@ -48,7 +48,7 @@ login:
   url: https://www.qfc.com/signin
   form:
     account:
-      accepts: email
+      accepts: [email]
     password:
       characters: hidden
     persist:

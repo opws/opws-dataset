@@ -6,6 +6,6 @@ password:
         url: http://coderbyte.com/sl/forgotpassword/
         form:
           account:
-            accepts: email
+            accepts: [email]
   change:
     url: http://coderbyte.com/CodingArea/Settings/

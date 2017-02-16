@@ -9,6 +9,6 @@ password:
         url: https://www.laptopscreen.com/English/section/password-recovery/
         form:
           account:
-            accepts: email
+            accepts: [email]
   change:
     url: https://www.laptopscreen.com/English/profile/

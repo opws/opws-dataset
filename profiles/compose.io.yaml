@@ -10,11 +10,11 @@ password:
         url: https://app.compose.io/users/password/new
         form:
           account:
-            accepts: email
+            accepts: [email]
       response:
         email:
           sender: support@compose.io
-          body: url
+          body: [url]
       submit:
         sessions:
           own: unchanged # assumed based on previous "token.login: no"

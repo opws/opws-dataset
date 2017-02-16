@@ -14,11 +14,11 @@ password:
         url: https://ifttt.com/forgot
         form:
           account:
-            accepts: email
+            accepts: [email]
       response:
         email:
           sender: welcome@ifttt.com
-          body: username link
+          body: [username, link]
       submit:
         sessions:
           own: login

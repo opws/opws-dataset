@@ -6,4 +6,4 @@ password:
         url: http://support.cloud9ide.com/access/help
         form:
           account:
-            accepts: email
+            accepts: [email]

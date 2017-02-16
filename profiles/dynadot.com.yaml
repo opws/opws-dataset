@@ -14,11 +14,11 @@ password:
         url: https://www.dynadot.com/forgot.html
         form:
           account:
-            accepts: email email+username
+            accepts: [email, email+username]
       response:
         email:
           sender: accounts@dynadot.com
-          body: link
+          body: [link]
       submit:
         sessions:
           own: unchanged # assumed based on previous "token.login: no"

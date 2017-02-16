@@ -14,7 +14,7 @@ password:
         url: https://members.zipcar.com/register/forgot-password
         form:
           account:
-            accepts: email
+            accepts: [email]
       response:
         email:
-          body: username token
+          body: [username, code]

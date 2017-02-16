@@ -11,4 +11,4 @@ password:
         url: https://trello.com/forgot
         form:
           account:
-            accepts: email
+            accepts: [email]

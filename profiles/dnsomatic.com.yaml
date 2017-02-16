@@ -20,11 +20,11 @@ password:
         url: https://www.dnsomatic.com/account/#pwdreset
         form:
           account:
-            accepts: email
+            accepts: [email]
       response:
         email:
           sender: accounts@dnsomatic.com
-          body: url username
+          body: [url, username]
         expire: 3h
       submit:
         sessions:

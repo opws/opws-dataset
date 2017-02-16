@@ -98,7 +98,9 @@ The URL of the site's "reset password" page.
 
 ## password.reset.flow.request.form.account.accepts, password.reset.randomize.request.form.account.accepts, password.reset.onetime.request.form.account.accepts
 
-A space-separated token string of what identifiers the site needs to request an email to enter password reset flow. (Usually some combination of "email" and/or "username".)
+An array of what identifiers the site needs to request an email to enter password reset flow. (Usually some combination of "email" and/or "username".)
+
+`domain`, sometimes seen with services like domain registrars, refers to a domain attached to the account, ie. one the customer has set up or purchased.
 
 When sites *require multiple* identifiers, they are joined with a plus (`+`).
 
@@ -118,22 +120,23 @@ What email address the password reset response comes from.
 
 ## password.reset.flow.response.email.body, password.reset.randomize.response.email.body, password.reset.onetime.response.email.body
 
-A space-separated token string of data the reset mechanism responds with (usually via email):
+An array of data the reset mechanism responds with (usually via email):
 
 - username: Your username on the site.
 - firstname: A "first name" set on your profile.
 - lastname: A "last name" set on your profile.
 - url: a URL (possibly linked) to the page to reset the password.
 - link: A link (without the URL visible) to reset the password.
-- token: A token that can be typed on a page (may also be part of a link/URL) to bring you to the reset screen.
+- code: A token that can be typed on a page (may also be part of a link/URL) to bring you to the reset screen.
 - password: The random password, for "password.reset.randomize" and "password.reset.onetime" methods.
 - origin: Data identifying the source for the reset request, such as the IP address it was posted from.
 
 ## password.reset.flow.open.expects
 
-Space-separated string of things the password reset page expects before resetting the password. Tokens:
+Array of things the password reset page expects as proof of identity before resetting the password. Tokens:
 
 - "origin" (IP address requesting the page must be the same IP the email was requested from)
+- "knowledge" (The answer to a "security question" set up with the account)
 
 ## password.reset.flow.response.expire, password.reset.onetime.response.expire
 
@@ -233,7 +236,7 @@ The URL of the page to send a username reminder to an email address (when separa
 
 ## username.reminder.request.form.account.accepts
 
-A space-separated token string of what identifiers the site needs to send a username reminder. (Usually just "email".)
+An array of what identifiers the site needs to send a username reminder. (Usually just "email".)
 
 When sites *require multiple* identifiers, they are joined with a plus (`+`). (For example, simple.com requires an email *and* phone number, so its `username.remind.accept` value is "email+phone".)
 
@@ -307,7 +310,7 @@ The URL of the page to log in, as a user.
 
 ## login.form.account.accepts
 
-A space-separated token string of what identifiers the site accepts to identify the account logging in. (Usually some combination of "email" and/or "username".)
+An array of what identifiers the site accepts to identify the account logging in. (Usually some combination of "email" and/or "username".)
 
 ## login.form.password.characters
 

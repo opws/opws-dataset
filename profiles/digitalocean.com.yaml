@@ -13,7 +13,7 @@ password:
         url: https://www.digitalocean.com/forgot_password/new
         form:
           account:
-            accepts: email
+            accepts: [email]
   change:
     url: https://www.digitalocean.com/settings#edit-password
 totp: optional

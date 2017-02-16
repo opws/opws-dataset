@@ -9,11 +9,11 @@ password:
         url: https://neocities.org/password_reset
         form:
           account:
-            accepts: email
+            accepts: [email]
       response:
         email:
           sender: web@neocities.org
-          body: url token password
+          body: [url, code, password]
       open:
         result: change
         sessions: # based on previous "invalidate: no"

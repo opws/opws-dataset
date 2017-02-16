@@ -18,16 +18,16 @@ password:
         url: https://www.odesk.com/reset/password
         form:
           account:
-            accepts: email
+            accepts: [email]
           captcha:
             type: letters
       response:
         email:
           sender: donotreply@odesk.com
-          body: url
+          body: [url]
         expire: 1h
       open:
-        expects: question-answer
+        expects: [knowledge]
       submit:
         sessions:
           own: unchanged # assumed based on previous "token.login: no"

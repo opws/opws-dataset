@@ -13,11 +13,11 @@ password:
         url: https://digital.darkhorse.com/accounts/password_reset/
         form:
           account:
-            accepts: email
+            accepts: [email]
       response:
         email:
           sender: digital.service@darkhorse.com
-          body: firstname url
+          body: [firstname, url]
       submit:
         sessions:
           own: unchanged # assumed based on previous "token.login: no"

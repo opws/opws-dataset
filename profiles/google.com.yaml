@@ -9,7 +9,7 @@ password:
         url: https://www.google.com/accounts/recovery
         form:
           account:
-            accepts: email
+            accepts: [email]
   change:
     url: https://accounts.google.com/EditPasswd
     form:

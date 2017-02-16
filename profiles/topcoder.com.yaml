@@ -16,4 +16,4 @@ password:
         url: http://www.topcoder.com/password-recovery/
         form:
           account:
-            accepts: username email
+            accepts: [username, email]

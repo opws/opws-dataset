@@ -9,11 +9,11 @@ password:
         url: https://accounts.makerbot.com/forgot
         form:
           account:
-            accepts: email
+            accepts: [email]
       response:
         email:
           sender: no-reply@thingiverse.com
-          body: link
+          body: [link]
       change:
         form:
           newpassword:
@@ -43,7 +43,7 @@ login:
   url: https://accounts.makerbot.com/
   form:
     account:
-      accepts: username email
+      accepts: [username, email]
     password:
       characters: hidden
     persist:

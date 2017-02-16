@@ -21,7 +21,7 @@ password:
         url: https://www.wahealthplanfinder.org/HBEWeb/Annon_DisplayForgotPasswordGetUserName.action
         form:
           account:
-            accepts: username
+            accepts: [username]
   change:
     url: https://www.wahealthplanfinder.org/HBEWeb/DisplayPasswordChangePassword.action
     form:
@@ -47,7 +47,7 @@ username:
     request:
       form:
         account:
-          accepts: email
+          accepts: [email]
 registration:
   url: https://www.wahealthplanfinder.org/HBEWeb/Annon_DisplayCreateAccountLanding.action
   form:

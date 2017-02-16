@@ -9,7 +9,7 @@ password:
         url: http://www.avclub.com/users/reset_password/
         form:
           account:
-            accepts: email
+            accepts: [email]
   change:
     url: http://www.avclub.com/users/me/settings/
 login:

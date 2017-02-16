@@ -9,7 +9,7 @@ password:
         url: https://www.yammer.com/forgotten_password/new
         form:
           account:
-            accepts: email
+            accepts: [email]
   change:
     url: https://www.yammer.com/account/password
     form:

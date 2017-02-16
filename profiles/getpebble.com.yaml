@@ -14,13 +14,13 @@ password:
         url: https://auth.getpebble.com/users/password/new
         form:
           account:
-            accepts: email
+            accepts: [email]
           captcha:
             type: recaptcha
       response:
         email:
           sender: support@pebble.com
-          body: link
+          body: [link]
   change:
     url: https://auth.getpebble.com/users/edit
     form:

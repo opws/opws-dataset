@@ -27,7 +27,7 @@ password:
       response:
         email:
           sender: support@bountysource.com
-          body: code url
+          body: [code, url]
       change:
         form:
           repeat:

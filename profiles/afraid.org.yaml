@@ -10,13 +10,13 @@ password:
         url: https://freedns.afraid.org/password/
         form:
           account:
-            accepts: username email
+            accepts: [username, email]
           captcha:
             type: question
       response:
         email:
           sender: dnsadmin@afraid.org
-          body: url username password origin
+          body: [url, username, password, origin]
       open:
         result: change
   change:

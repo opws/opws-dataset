@@ -19,7 +19,7 @@ password:
         url: https://www.washingtonconnection.org/authservice/resetpassword.go
         form:
           account:
-            accepts: username+email
+            accepts: [username+email]
           captcha:
             type: word
 username:
@@ -38,7 +38,7 @@ username:
     request:
       form:
         account:
-          accepts: email
+          accepts: [email]
         captcha:
           type: word
 registration:

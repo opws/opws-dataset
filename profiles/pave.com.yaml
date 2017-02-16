@@ -14,7 +14,7 @@ password:
         url: https://www.pave.com/forgot_password
         form:
           account:
-            accepts: email
+            accepts: [email]
   change:
     url: https://www.pave.com/settings
     form:

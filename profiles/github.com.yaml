@@ -11,11 +11,11 @@ password:
         url: https://github.com/password_reset
         form:
           account:
-            accepts: email
+            accepts: [email]
       response:
         email:
           sender: noreply@github.com
-          body: url
+          body: [url]
         expire: 24h
       submit:
         sessions:
