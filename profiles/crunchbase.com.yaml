@@ -1,24 +1,90 @@
-name: CrunchBase
+name: Crunchbase
 password:
   value:
     length:
-      min: 3
-      max: 40
-  contents:
-    required:
-    - classes:
-      - nonspaces
+      min: 8
+      max: 128
   reset:
-    url: http://www.crunchbase.com/recovery/new
+    url: https://www.crunchbase.com/app/login
+    notes:
+    - en: Click the "Forgot password?" button.
     flow:
       request:
         form:
           account:
             accepts: email
+      response:
+        email:
+          sender: support@crunchbase.com
+          body: firstname url
+      change:
+        form:
+          newpassword:
+            characters: hidden
+          repeat:
+            newpassword:
+              input: required
+              characters: hidden
+      submit:
+        destination:
+          page: home
+        sessions:
+          own: login
+        expire: now
   change:
-    url: http://www.crunchbase.com/user/ + username + /edit#change-pw
+    url: https://www.crunchbase.com/app/account
+    notes:
+    - en: Click the "Password" button.
+    - en: >
+        "Current password" input is not displayed when the account has no
+        password set (ie. when it was registered via third-party
+        authentication).
     form:
       oldpassword:
+        input: required
+        characters: hidden
+      newpassword:
+        characters: hidden
+      repeat:
+        newpassword:
+          input: required
+          characters: hidden
+registration:
+  url: https://www.crunchbase.com/app/register
+  form:
+    email:
+      input: required
+    firstname:
+      input: required
+    lastname:
+      input: required
+    password:
+      characters: hidden
+    repeat:
+      password:
+        characters: hidden
+      email:
         input: none
-redflags:
-- en: Passwords consisting entirely of spaces raise "Password cannot be blank" errors.
+    terms:
+      agreement: implicit
+thirdparty:
+  auth:
+    providers:
+    - linkedin.com
+    - facebook.com
+    - twitter.com
+login:
+  url: https://www.crunchbase.com/app/login
+  form:
+    account:
+      accepts: email
+    password:
+      characters: hidden
+terms:
+  service:
+    url: https://about.crunchbase.com/docs/terms-of-service/
+statements:
+  privacy:
+    url: https://about.crunchbase.com/docs/privacy-policy/
+reviewed:
+  date: 2017-02-15T06:37:44.928Z
