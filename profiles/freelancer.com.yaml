@@ -1,13 +1,81 @@
 name: Freelancer
 password:
+  value:
+    length:
+      min: 6
+  contents:
+    required:
+    - atleast: 2
+      classes:
+      - uppers
+      - lowers
+      - numbers
   reset:
     flow:
       request:
-        url: https://www.freelancer.com/#forgot-password-toggle
+        url: https://m.freelancer.com/reset-password
         form:
           account:
             accepts: [email]
+      response:
+        email:
+          sender: noreply@freelancer.com
+          body: [username, link]
+      change:
+        form:
+          newpassword:
+            characters: hidden
+          repeat:
+            newpassword:
+              input: required
+              characters: hidden
+      submit:
+        destination:
+          page: home
+        sessions:
+          own: login
+        expire: now
   change:
-    url: https://www.freelancer.com/users/settings.php#AccountSettings
-redflags:
-- Password selection rejects any password without numbers as "weak".
+    url: https://www.freelancer.com/users/settings.php#PasswordSettings
+    form:
+      oldpassword:
+        input: required
+        characters: hidden
+      newpassword:
+        characters: hidden
+      repeat:
+        newpassword:
+          input: required
+          characters: hidden
+thirdparty:
+  auth:
+    providers:
+    - facebook.com
+registration:
+  url: https://www.freelancer.com/signup
+  form:
+    email:
+      input: required
+    username:
+      input: required
+    password:
+      characters: hidden
+    terms:
+      agreement: implicit
+terms:
+  service:
+    url: https://www.freelancer.com/about/terms
+statements:
+  privacy:
+    url: https://www.freelancer.com/about/privacy
+login:
+  url: https://www.freelancer.com/login
+  form:
+    account:
+      accepts: [email, username]
+    password:
+      characters: hidden
+    persist:
+      checkbox: unchecked
+reviewed:
+  date: 2017-02-17T11:02:39.024Z
