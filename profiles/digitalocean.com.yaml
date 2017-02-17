@@ -16,4 +16,3 @@ password:
             accepts: [email]
   change:
     url: https://www.digitalocean.com/settings#edit-password
-totp: optional

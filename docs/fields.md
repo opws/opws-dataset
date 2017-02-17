@@ -354,10 +354,6 @@ The URL of a page to retrieve API key(s).
 
 The URL of a page to report security breaches to.
 
-## totp
-
-A string describing a site's support of Time-based One Time Password (RFC 6238), as used by Google Authenticator, for two-factor authentication security. (Rare.)
-
 ## questions
 
 List of security questions. Each item that is a string should be interpreted as a required question: each item that is an object may have "required" or "optional" fields with the number of questions that may or must have answers given, and an "options" list of options that may be chosen.

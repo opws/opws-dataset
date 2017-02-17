@@ -32,6 +32,5 @@ password:
         input: required
 login:
   url: https://panel.dreamhost.com/
-totp: optional
 reviewed:
   date: 2016-04-26T12:34:20.172Z

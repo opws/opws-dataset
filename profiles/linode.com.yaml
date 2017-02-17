@@ -17,4 +17,3 @@ password:
             accepts: [username]
   change:
     url: https://manager.linode.com/profile/index#password
-totp: optional
