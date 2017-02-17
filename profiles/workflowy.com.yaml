@@ -1,6 +1,68 @@
 name: WorkFlowy
 password:
+  value:
+    length:
+      min: 1
   reset:
     flow:
       request:
         url: https://workflowy.com/accounts/password_reset/
+        form:
+          account:
+            accepts: [email]
+      response:
+        email:
+          sender: help@workflowy.com
+          body: [url, username]
+      change:
+        form:
+          newpassword:
+            characters: hidden
+          repeat:
+            newpassword:
+              input: required
+              characters: hidden
+      submit:
+        destination:
+          page: stub
+        sessions:
+          own: unchanged
+        expire: now
+  change:
+    url: https://workflowy.com/#
+    notes:
+    - en: >
+        Click the upper-right-hand corner menu, then "Settings", then
+        "Change password" in the gray Account box.
+    form:
+      oldpassword:
+        input: required
+        characters: hidden
+      newpassword:
+        characters: hidden
+      repeat:
+        newpassword:
+          input: required
+          characters: hidden
+registration:
+  url: https://workflowy.com/accounts/register/
+  form:
+    email:
+      input: required
+    repeat:
+      email:
+        input: required
+      password:
+        input: none
+    password:
+      characters: hidden
+      input: required
+login:
+  url: https://workflowy.com/accounts/login/
+  form:
+    account:
+      accepts: [email]
+    password:
+      characters: hidden
+reviewed:
+  date: 2017-02-17T13:56:40.440Z
