@@ -3,8 +3,49 @@ password:
   value:
     length:
       min: 6
+      max: 20
   contents:
+    required:
+    - classes:
+      - letters
+      - numbers
     blacklist:
       classes:
-      - spaces
       - special
+  reset:
+    flow:
+      request:
+        url: https://subscription.timeinc.com/storefront/universalForgotPassword.ep?magcode=RS
+        form:
+          email:
+            input: required
+          repeat:
+            email:
+              input: required
+      response:
+        email:
+          sender: donot.reply@customersvc.com
+          body: [fullname, link, code]
+      change:
+        form:
+          newpassword:
+            characters: hidden
+          repeat:
+            newpassword:
+              input: required
+              characters: hidden
+      submit:
+        destination:
+          page: stub
+        sessions:
+          own: unchanged
+        expire: now
+login:
+  url: https://auth.archive.rollingstone.com/
+  form:
+    account:
+      accepts: [username, email]
+    password:
+      characters: hidden
+reviewed:
+  date: 2017-02-17T14:30:29.992Z

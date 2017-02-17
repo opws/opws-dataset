@@ -114,6 +114,12 @@ If password reset *requires* an identifier like `email` to identify your account
 
 If password reset requires the email address on the account *in addition to* whatever is used to identify the account (such as a username or account number), this will be `required`.
 
+This may also be used instead of `account` when a *repeated* email input is present.
+
+## password.reset.flow.request.form.repeat.email.input
+
+If password reset requires the email address on the account to be entered *twice*, this will be `required`.
+
 ## password.reset.flow.request.form.phone.input, username.reminder.request.form.phone.input
 
 If requesting a password reset or username reminder requires a phone number *in addition to* whatever is used to identify the account (such as a username or email address), this will be `required`.
