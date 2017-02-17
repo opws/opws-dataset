@@ -1,5 +1,8 @@
 name: AUR
 password:
+  value:
+    length:
+      min: 4
   reset:
     flow:
       request:
@@ -7,5 +10,77 @@ password:
         form:
           account:
             accepts: [email]
+      response:
+        email:
+          sender: notify@aur.archlinux.org
+          body: [username, url]
+      change:
+        form:
+          email:
+            input: required
+          newpassword:
+            characters: hidden
+          repeat:
+            newpassword:
+              input: required
+              characters: hidden
+      submit:
+        destination:
+          page: stub
+        sessions:
+          own: unchanged
+        expire: now
   change:
     url: https://aur.archlinux.org/account/ + username + /edit/
+    form:
+      oldpassword:
+        input: none
+      newpassword:
+        characters: hidden
+      repeat:
+        newpassword:
+          input: required
+          characters: hidden
+username:
+  value:
+    length:
+      min: 3
+      max: 16
+    must:
+    - en: contain no more than one period, underscore, or hyphen
+    - en: start and end with a letter or number
+  contents:
+    whitelist:
+      classes:
+      - letters
+      - numbers
+      strings: ['.', '_', '-']
+registration:
+  url: https://aur.archlinux.org/register/
+  form:
+    username:
+      input: required
+    email:
+      input: required
+    fullname:
+      input: optional
+    password:
+      input: none
+    repeat:
+      password:
+        input: none
+      email:
+        input: none
+  notes:
+  - en: Registering an account sends a password reset email to set a password.
+login:
+  url: https://aur.archlinux.org/login/
+  form:
+    account:
+      accepts: [username, email]
+    password:
+      characters: hidden
+    persist:
+      checkbox: unchecked
+reviewed:
+  date: 2017-02-17T04:16:59.464Z
