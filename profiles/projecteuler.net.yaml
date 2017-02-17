@@ -15,8 +15,10 @@ password:
       request:
         url: https://projecteuler.net/reset_password
         form:
-          account:
-            accepts: [username+email]
+          username:
+            input: required
+          email:
+            input: required
   change:
     url: https://projecteuler.net/account
 username:

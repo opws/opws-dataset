@@ -38,7 +38,7 @@ function assertIsTokenArray(fieldName, profile) {
   if (subject) {
     assert(Array.isArray(subject), fieldName + ' not an array');
     for (i = 0; i < subject.length; i++) {
-      assert(!/ /.exec(subject[i]), fieldName + ' has spaces');
+      assert(/^[a-z]+$/.exec(subject[i]), fieldName + ' has invalid chars');
     }
   }
 }

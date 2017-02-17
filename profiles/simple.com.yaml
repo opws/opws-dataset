@@ -11,7 +11,9 @@ password:
         url: https://bank.simple.com/forgot-password
         form:
           account:
-            accepts: [username+phone, email+phone]
+            accepts: [username, email]
+          phone:
+            input: required
       response:
         email:
           sender: notify@simple.com
@@ -41,7 +43,9 @@ username:
     request:
       form:
         account:
-          accepts: [email+phone]
+          accepts: [email]
+        phone:
+          input: required
 registration:
   url: https://arrow.simple.com/account
   form:

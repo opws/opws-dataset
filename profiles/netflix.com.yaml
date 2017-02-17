@@ -12,7 +12,11 @@ password:
         url: https://www.netflix.com/LoginHelp
         form:
           account:
-            accepts: [email, phone, firstname+lastname+creditcard]
+            accepts: [email, phone]
+          notes:
+          - en: >
+              Also accepts a combination of first name, last name, and credit
+              card number.
       response:
         email:
           sender: info@mailer.netflix.com

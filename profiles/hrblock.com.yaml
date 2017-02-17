@@ -16,7 +16,11 @@ password:
         url: https://idp.hrblock.com/idp/Authn/DForgotCredentials.html
         form:
           account:
-            accepts: [username, firstname+lastname+ssn+birthdate]
+            accepts: [username]
+          notes:
+          - en: >
+              Also accepts a combination of first name, last
+              name, Social Security number, and date of birth.
   change:
     form:
       oldpassword:
@@ -29,7 +33,11 @@ username:
     request:
       form:
         account:
-          accepts: [email, firstname+lastname+ssn+birthdate]
+          accepts: [email]
+        notes:
+        - en: >
+            Also accepts a combination of first name, last
+            name, Social Security number, and date of birth.
 registration:
   url: https://idp.hrblock.com/idp/Authn/DCreateUser.html
 login:

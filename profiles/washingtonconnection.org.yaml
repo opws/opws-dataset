@@ -18,8 +18,10 @@ password:
       request:
         url: https://www.washingtonconnection.org/authservice/resetpassword.go
         form:
-          account:
-            accepts: [username+email]
+          username:
+            input: required
+          email:
+            input: required
           captcha:
             type: word
 username:

@@ -14,7 +14,9 @@ password:
         url: https://www.dynadot.com/forgot.html
         form:
           account:
-            accepts: [email, email+username]
+            accepts: [email]
+          username:
+            input: optional
       response:
         email:
           sender: accounts@dynadot.com

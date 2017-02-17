@@ -13,8 +13,10 @@ password:
       request:
         url: https://secure.mashery.com/member/lost/
         form:
-          account:
-            accepts: [email+username]
+          email:
+            input: required
+          username:
+            input: required
 username:
   reminder:
     url: https://secure.mashery.com/member/lost-username/

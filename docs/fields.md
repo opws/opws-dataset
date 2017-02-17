@@ -100,9 +100,23 @@ The URL of the site's "reset password" page.
 
 An array of what identifiers the site needs to request an email to enter password reset flow. (Usually some combination of "email" and/or "username".)
 
-`domain`, sometimes seen with services like domain registrars, refers to a domain attached to the account, ie. one the customer has set up or purchased.
+When sites require *multiple* inputs, they are split across other fields, with the most likely to represent an account attached to `account`. If more than one field is required to represent the account (like both the username *and* email address), then `account` will not be present, and those other fields will be used instead.
 
-When sites *require multiple* identifiers, they are joined with a plus (`+`).
+## password.reset.flow.request.form.domain.input
+
+If requesting a password reset requires you to provide a domain attached to the account, ie. one the user has purchased or set up with the service, this will be `required`.
+
+## password.reset.flow.request.form.username.input
+
+If password reset *requires* an identifier like `email` to identify your account (ie. `account.accepts` is `[email]`), but optionally includes a field to input your username (presumably to reject the request if you're wrong about your username), this will be `optional`.
+
+## password.reset.flow.request.form.email.input
+
+If password reset requires the email address on the account *in addition to* whatever is used to identify the account (such as a username or account number), this will be `required`.
+
+## password.reset.flow.request.form.phone.input, username.reminder.request.form.phone.input
+
+If requesting a password reset or username reminder requires a phone number *in addition to* whatever is used to identify the account (such as a username or email address), this will be `required`.
 
 ## password.reset.flow.request.form.captcha.type, password.reset.randomize.request.form.captcha.type, password.reset.onetime.request.form.captcha.type
 
@@ -237,6 +251,8 @@ The URL of the page to send a username reminder to an email address (when separa
 ## username.reminder.request.form.account.accepts
 
 An array of what identifiers the site needs to send a username reminder. (Usually just "email".)
+
+`domain`, sometimes seen with services like domain registrars, refers to a domain attached to the account, ie. one the customer has set up or purchased.
 
 When sites *require multiple* identifiers, they are joined with a plus (`+`). (For example, simple.com requires an email *and* phone number, so its `username.remind.accept` value is "email+phone".)
 

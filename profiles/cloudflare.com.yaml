@@ -9,7 +9,9 @@ password:
         url: https://www.cloudflare.com/a/forgot-password
         form:
           account:
-            accepts: [email+domain]
+            accepts: [email]
+          domain:
+            input: required
           captcha:
             type: recaptcha
         notes:
