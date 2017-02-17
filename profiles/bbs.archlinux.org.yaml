@@ -1,21 +1,63 @@
 name: Arch Linux Forums
 password:
+  value:
+    length:
+      min: 6
   reset:
-    flow:
+    randomize:
       request:
         url: https://bbs.archlinux.org/login.php?action=forget
         form:
           account:
             accepts: [email]
+      response:
+        email:
+          sender: noreply@archlinux.org
+          body: [username, password, url]
+      open:
+        sessions:
+          own: unchanged
   change:
     url: https://bbs.archlinux.org/profile.php?action=change_pass&id= + usernumber
+    form:
+      oldpassword:
+        input: required
+        characters: hidden
+      newpassword:
+        characters: hidden
+      repeat:
+        newpassword:
+          input: required
+          characters: hidden
+username:
+  value:
+    length:
+      min: 2
+      max: 25
 registration:
   url: https://bbs.archlinux.org/register.php
   form:
+    username:
+      input: required
+    email:
+      input: required
+    repeat:
+      email:
+        input: required
+      password:
+        input: none
+    password:
+      input: none
     captcha:
       type: question
 login:
   url: https://bbs.archlinux.org/login.php
   form:
+    account:
+      accepts: [username]
+    password:
+      characters: hidden
     persist:
       checkbox: unchecked
+reviewed:
+  date: 2017-02-17T05:08:30.641Z
