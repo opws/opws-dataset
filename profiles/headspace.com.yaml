@@ -15,11 +15,73 @@ password:
         form:
           account:
             accepts: [email]
+      response:
+        email:
+          sender: service@headspace.com
+          body: [firstname, link]
+        expire: 24h
+      change:
+        form:
+          newpassword:
+            characters: hidden
+          repeat:
+            newpassword:
+              input: required
+              characters: hidden
+      submit:
+        destination:
+          page: stub
+        sessions:
+          own: unchanged
+        expire: now
   change:
     url: https://www.headspace.com/my/settings/about-you#user_profile_password_first
     form:
       oldpassword:
         input: none
-redflags:
-- Going to the "Forgotten Password" page when logged in results in a partial
-  page render.
+      newpassword:
+        characters: hidden
+      repeat:
+        newpassword:
+          input: none
+login:
+  url: https://www.headspace.com/login
+  form:
+    account:
+      accepts: [email]
+    password:
+      characters: hidden
+    persist:
+      checkbox: unchecked
+registration:
+  url: https://www.headspace.com/register
+  form:
+    firstname:
+      input: required
+    lastname:
+      input: required
+    email:
+      input: required
+    password:
+      input: required
+      characters: hidden
+    repeat:
+      password:
+        input: none
+      email:
+        input: none
+    terms:
+      agreement: implicit
+terms:
+  service:
+    url: https://www.headspace.com/terms-and-conditions
+statements:
+  privacy:
+    url: https://www.headspace.com/privacy-policy
+thirdparty:
+  auth:
+    providers:
+    - facebook.com
+    - spotify.com
+reviewed:
+  date: 2017-02-17T05:08:30.641Z
