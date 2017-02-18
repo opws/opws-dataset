@@ -16,28 +16,29 @@ password:
         form:
           account:
             accepts: [username, email]
+challenge:
+  questions:
+  - required: 2
+    options:
+    - In what city were you born?
+    - What car do you wish you owned?
+    - What is the farthest you have traveled from home?
+    - What is your father's middle name?
+    - Who is your favorite actor, actress, or celebrity?
+    - Who is your favorite author?
+    - What is your favorite musical band?
+    - Who was your favorite elementary school teacher?
+    - What is your favorite hobby or pastime?
+    - What is your favorite movie?
+    - What is your favorite restaurant?
+    - What is your favorite song?
+    - What is your favorite television show?
+    - What is your favorite vacation spot?
+    - What were the make and model of your first car?
+    - What was the most memorable day of your life?
+    - Who is the person you admire the most?
+    - What is the street name of your childhood home?
 registration:
   url: https://disneyworld.disney.go.com/registration/
 login:
   url: https://disneyworld.disney.go.com/login/
-questions:
-- required: 2
-  options:
-  - In what city were you born?
-  - What car do you wish you owned?
-  - What is the farthest you have traveled from home?
-  - What is your father's middle name?
-  - Who is your favorite actor, actress, or celebrity?
-  - Who is your favorite author?
-  - What is your favorite musical band?
-  - Who was your favorite elementary school teacher?
-  - What is your favorite hobby or pastime?
-  - What is your favorite movie?
-  - What is your favorite restaurant?
-  - What is your favorite song?
-  - What is your favorite television show?
-  - What is your favorite vacation spot?
-  - What were the make and model of your first car?
-  - What was the most memorable day of your life?
-  - Who is the person you admire the most?
-  - What is the street name of your childhood home?

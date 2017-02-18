@@ -156,7 +156,7 @@ An array of data the reset mechanism responds with in its email message:
 Array of things the password reset page expects as proof of identity before resetting the password. Tokens:
 
 - "origin" (IP address requesting the page must be the same IP the email was requested from)
-- "knowledge" (The answer to a "security question" set up with the account)
+- "challenge" (The answer to a "security question" set up with the account)
 
 ## password.reset.flow.response.expire, password.reset.onetime.response.expire
 
@@ -368,9 +368,13 @@ The URL of a page to retrieve API key(s).
 
 The URL of a page to report security breaches to.
 
-## questions
+## challenge.questions
 
-List of security questions. Each item that is a string should be interpreted as a required question: each item that is an object may have "required" or "optional" fields with the number of questions that may or must have answers given, and an "options" list of options that may be chosen.
+List of security questions attached to profiles. Each item may have "required" or "optional" fields with the number of questions that may or must have answers given, and an "options" list of options that may be chosen.
+
+## challenge.answers.value.\*, challenge.answers.contents.\*
+
+Rules governing the input for security questions' answers. See `password.value` and `password.contents` above.
 
 ## statements.privacy.url
 

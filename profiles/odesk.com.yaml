@@ -27,7 +27,7 @@ password:
           body: [url]
         expire: 1h
       open:
-        expects: [knowledge]
+        expects: [challenge]
       submit:
         sessions:
           own: unchanged # assumed based on previous "token.login: no"
@@ -39,22 +39,23 @@ password:
     notes: >
       Security question answer required to authorize account changes from new
       machine.
-questions:
-- required: 1
-  options:
-  - Your mother's maiden name
-  - Your first pet's name
-  - The name of your elementary school
-  - Your elementary school mascot
-  - Your best friend's nickname
-  - Your favorite sports team
-  - Your favorite writer
-  - Your favorite actor
-  - Your favorite singer
-  - Your favorite song
-  - The name of the street you grew up on
-  - Make and model of your first car
-  - The city where you first met your spouse
-  - Other...
+challenge:
+  questions:
+  - required: 1
+    options:
+    - Your mother's maiden name
+    - Your first pet's name
+    - The name of your elementary school
+    - Your elementary school mascot
+    - Your best friend's nickname
+    - Your favorite sports team
+    - Your favorite writer
+    - Your favorite actor
+    - Your favorite singer
+    - Your favorite song
+    - The name of the street you grew up on
+    - Make and model of your first car
+    - The city where you first met your spouse
+    - Other...
 redflags:
 - Password entry in account creation does not enforce length limit.

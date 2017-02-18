@@ -13,20 +13,21 @@ password:
       - uppers
       - lowers
       - numbers
-questions:
-- required: 3
-  options:
-  - What is your favorite pet's name?
-  - What is your favorite hobby?
-  - Favorite sports team?
-  - First name of your best friend?
-  - First name of your first boss?
-  - What was your childhood nickname?
-  - What street did you live on in the third grade?
-  - What school did you attend for sixth grade?
-  - What was the last name of your third grade teacher?
-  - In what city or town was your first job?
-  - What is the name of a college you applied to but didn't attend?
+challenge:
+  questions:
+  - required: 3
+    options:
+    - What is your favorite pet's name?
+    - What is your favorite hobby?
+    - Favorite sports team?
+    - First name of your best friend?
+    - First name of your first boss?
+    - What was your childhood nickname?
+    - What street did you live on in the third grade?
+    - What school did you attend for sixth grade?
+    - What was the last name of your third grade teacher?
+    - In what city or town was your first job?
+    - What is the name of a college you applied to but didn't attend?
 registration:
   url: https://selfservice.travelers.com/registration/
   form:

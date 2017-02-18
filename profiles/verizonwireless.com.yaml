@@ -533,19 +533,24 @@ username:
           accepts: [phone]
         captcha:
           type: recaptcha
-questions:
-- required: 1
-  notes:
-  - en: answer must be between 3 and 40 characters
-  - en: answer may not have leading or trailing spaces
-  options:
-  - Where did you and your spouse first meet?
-  - What was your favorite place to visit as a child?
-  - What was the first live concert you attended?
-  - What is the first name of your best friend?
-  - What was your favorite restaurant in college?
-  - What was the first name of your first roommate?
-  - What is the name of a memorable place?
+challenge:
+  questions:
+  - required: 1
+    options:
+    - Where did you and your spouse first meet?
+    - What was your favorite place to visit as a child?
+    - What was the first live concert you attended?
+    - What is the first name of your best friend?
+    - What was your favorite restaurant in college?
+    - What was the first name of your first roommate?
+    - What is the name of a memorable place?
+  answers:
+    value:
+      length:
+        min: 3
+        max: 40
+      mustnot:
+      - en: begin or end with space
 registration:
   url: https://login.verizonwireless.com/accessmanager/public/c/reg/start
   form:
