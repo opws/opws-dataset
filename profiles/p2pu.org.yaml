@@ -3,6 +3,9 @@ password:
   value:
     length:
       min: 8
+    blacklist:
+      dictionaries:
+      - common
   contents:
     required:
     - classes:
@@ -11,9 +14,65 @@ password:
   reset:
     flow:
       request:
-        url: https://p2pu.org/en/forgot/
+        url: https://courses.p2pu.org/en/forgot/
         form:
           account:
             accepts: [username, email]
+      response:
+        email:
+          sender: no-reply@p2pu.org
+          body: [url]
+      change:
+        form:
+          newpassword:
+            characters: hidden
+          repeat:
+            newpassword:
+              input: required
+              characters: hidden
+      submit:
+        destination:
+          page: stub
+        sessions:
+          own: unchanged
+        expire: now
   change:
-    url: https://p2pu.org/en/profile/edit/password/
+    url: https://courses.p2pu.org/en/profile/edit/password/
+    form:
+      oldpassword:
+        input: none
+      newpassword:
+        characters: hidden
+      repeat:
+        newpassword:
+          input: required
+          characters: hidden
+login:
+  url: https://courses.p2pu.org/en/login/
+  form:
+    account:
+      accepts: [username, email]
+    password:
+      characters: hidden
+    persist:
+      checkbox: unchecked
+registration:
+  url: https://courses.p2pu.org/en/register/
+  form:
+    fullname:
+      input: optional
+    username:
+      input: required
+    password:
+      input: required
+      characters: hidden
+    email:
+      input: required
+    repeat:
+      password:
+        input: required
+        characters: hidden
+      email:
+        input: required
+reviewed:
+  date: 2017-02-18T05:38:36.395Z
