@@ -106,11 +106,11 @@ When sites require *multiple* inputs, they are split across other fields, with t
 
 If requesting a password reset requires you to provide a domain attached to the account, ie. one the user has purchased or set up with the service, this will be `required`.
 
-## password.reset.flow.request.form.username.input
+## password.reset.flow.request.form.username.input, password.reset.onetime.request.form.username.input
 
 If password reset *requires* an identifier like `email` to identify your account (ie. `account.accepts` is `[email]`), but optionally includes a field to input your username (presumably to reject the request if you're wrong about your username), this will be `optional`.
 
-## password.reset.flow.request.form.email.input
+## password.reset.flow.request.form.email.input, password.reset.onetime.request.form.email.input
 
 If password reset requires the email address on the account *in addition to* whatever is used to identify the account (such as a username or account number), this will be `required`.
 
@@ -140,7 +140,7 @@ What email address the password reset response comes from.
 
 ## password.reset.flow.response.email.body, password.reset.randomize.response.email.body, password.reset.onetime.response.email.body
 
-An array of data the reset mechanism responds with (usually via email):
+An array of data the reset mechanism responds with in its email message:
 
 - username: Your username on the site.
 - firstname: A "first name" set on your profile.
@@ -265,6 +265,14 @@ When sites *require multiple* identifiers, they are joined with a plus (`+`). (F
 ## username.reminder.request.form.captcha.type
 
 What kind of captcha (if any) is used to deter automated username reminders. See `password.reset.request.captcha`.
+
+## username.reminder.response.email.sender
+
+What email address the password reset response comes from.
+
+## username.reminder.response.email.body
+
+An array of data the username reminder contains in its email message (including "username"). See the documentation for `password.reset.*.response.email.body` above.
 
 ## username.change.url
 
