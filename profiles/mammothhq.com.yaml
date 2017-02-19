@@ -1,5 +1,8 @@
 name: Mammoth
 password:
+  value:
+    length:
+      min: 8
   reset:
     flow:
       request:
@@ -7,5 +10,67 @@ password:
         form:
           account:
             accepts: [email]
+      response:
+        email:
+          notes:
+            - en: >
+                Sender address is a long random name starting with "bounce" and
+                ending with @email.mammothhq.com
+          body: [link]
+      submit:
+        destination:
+          page: home
+        sessions:
+          own: login
+        expire: unchanged
+      notes:
+      - en: >
+          This is actually a link to be signed in without a password, with
+          which you can then change the password normally.
   change:
-    url: https://mammothhq.com/users/edit
+    url: https://mammothhq.com/user/settings
+    form:
+      oldpassword:
+        input: none
+      newpassword:
+        characters: hidden
+      repeat:
+        newpassword:
+          input: none
+username:
+  value:
+    length:
+      min: 5
+  contents:
+    whitelist:
+      classes:
+      - letters
+      - numbers
+      strings: ['_']
+    required:
+    - classes:
+      - letters
+registration:
+  url: https://mammothhq.com/account/welcome
+  form:
+    username:
+      input: required
+    email:
+      input: required
+    password:
+      input: required
+      characters: hidden
+    repeat:
+      password:
+        input: none
+      email:
+        input: none
+login:
+  url: https://mammothhq.com/sign_in
+  form:
+    account:
+      accepts: [email]
+    password:
+      characters: hidden
+reviewed:
+  date: 2017-02-19T12:29:43.753Z
