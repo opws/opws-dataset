@@ -43,8 +43,8 @@ username:
       - numbers
       strings: ['.', '_', '$']
   reminder:
-    url: https://www.wahealthplanfinder.org/HBEWeb/Annon_DisplayForgotUserName.action
     request:
+      url: https://www.wahealthplanfinder.org/HBEWeb/Annon_DisplayForgotUserName.action
       form:
         account:
           accepts: [email]

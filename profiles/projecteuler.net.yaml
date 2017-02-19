@@ -23,8 +23,8 @@ password:
     url: https://projecteuler.net/account
 username:
   reminder:
-    url: https://projecteuler.net/username_reminder
     request:
+      url: https://projecteuler.net/username_reminder
       form:
         account:
           accepts: [email]

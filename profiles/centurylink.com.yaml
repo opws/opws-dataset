@@ -11,8 +11,8 @@ password:
     url: https://shop.centurylink.com/MasterWebPortal/freeRange/acctMgmt/ManageMyProfile_goToChangeProfilePassword.action
 username:
   reminder:
-    url: https://eam.centurylink.com/eam/loginTrouble/obtainForgottenUserID.do
     request:
+      url: https://eam.centurylink.com/eam/loginTrouble/obtainForgottenUserID.do
       form:
         account:
           accepts: [email]

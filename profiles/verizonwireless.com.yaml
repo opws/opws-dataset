@@ -526,8 +526,8 @@ username:
     - classes:
       - nondigits
   reminder:
-    url: https://login.verizonwireless.com/accessmanager/public/c/fu/start
     request:
+      url: https://login.verizonwireless.com/accessmanager/public/c/fu/start
       form:
         account:
           accepts: [phone]

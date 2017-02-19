@@ -180,6 +180,10 @@ Whether an input to repeat the new password is `required`, `optional`, or not pr
 
 If resetting a password requires you to provide the email address on the account, this will be `required`. A value of `none` would suggest it's not present, but would more likely just not be profiled (as this is rare).
 
+## password.reset.flow.change.form.account.accepts
+
+An array of what identifiers the site needs to request an email to *set a new password* when resetting a new password, if multiple identifiers are accepted (otherwise, this will usually be captured by a field like "email.input"). See `password.reset.form.request.account.accepts` for common enum values.
+
 ## password.reset.flow.submit.expire
 
 If the token does not immediately expire until it is used, the value of this field will be `"now"`.
@@ -250,7 +254,7 @@ Whether other logged-in sessions are logged out (`logout`) or not (`unchanged`) 
 
 Rules on the format of usernames. See `password.value` and `password.contents` above.
 
-## username.reminder.url
+## username.reminder.request.url
 
 The URL of the page to send a username reminder to an email address (when separate from password resetting).
 
@@ -260,7 +264,11 @@ An array of what identifiers the site needs to send a username reminder. (Usuall
 
 `domain`, sometimes seen with services like domain registrars, refers to a domain attached to the account, ie. one the customer has set up or purchased.
 
-When sites *require multiple* identifiers, they are joined with a plus (`+`). (For example, simple.com requires an email *and* phone number, so its `username.remind.accept` value is "email+phone".)
+When sites *require multiple* identifiers, they are described across multiple fields with `input: required`, and this field is often unused (ie. when the multiple inputs are all "account" identifiers).
+
+## username.reminder.request.form.email.input, username.reminder.request.form.domain.input
+
+Fields describing additional required inputs to request a username reminder.
 
 ## username.reminder.request.form.captcha.type
 

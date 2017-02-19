@@ -48,7 +48,8 @@ username:
   change:
     url: https://oam.wellsfargo.com/oam/access/receiver?dest=CHANGE_USERNAME
   reminder:
-    url: https://oam.wellsfargo.com/oamo/identity/help/usernamehelp
+    request:
+      url: https://oam.wellsfargo.com/oamo/identity/help/usernamehelp
     notes:
     - en: Requires Social Security number (or ITIN) and password.
 registration:

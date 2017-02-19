@@ -5,37 +5,113 @@ password:
       min: 9
       max: 255
     mustnot:
-    - en: begin or end with a space
+    - en: start or end with a space
   contents:
     required:
     - classes:
       - uppers
       - numbers
+    blacklist:
+      dictionaries:
+      - common
   reset:
     flow:
       request:
-        url: https://idp.godaddy.com/Account/AccountRetrieval.aspx
+        url: https://sso.godaddy.com/v1/account/reset
         form:
           account:
             accepts: [username, accountno]
           email:
             input: required
           captcha:
-            type: botdetect-vertigo
+            type: recaptcha
       response:
         email:
           body: [link, code]
         expire: 2h
+      change:
+        form:
+          account:
+            accepts: [username, accountno]
+          newpassword:
+            characters: showable
+          repeat:
+            newpassword:
+              input: none
       submit:
+        destination:
+          page: stub
         sessions:
           own: unchanged # assumed based on previous "token.login: no"
   change:
-    url: https://mya.godaddy.com/settings.aspx#settsecurity
+    url: https://account.godaddy.com/security/change-password
     form:
       oldpassword:
         input: required
+        characters: showable
+      newpassword:
+        characters: showable
+      repeat:
+        newpassword:
+          input: none
 username:
   value:
     length:
       min: 5
       max: 30
+  contents:
+    required:
+    - classes:
+      - letters
+  reminder:
+    request:
+      url: https://sso.godaddy.com/v1/account/reset
+      form:
+        email:
+          input: required
+        domain:
+          input: required
+        captcha:
+          type: recaptcha
+registration:
+  url: https://sso.godaddy.com/account/create
+  form:
+    email:
+      input: required
+    username:
+      input: required
+    password:
+      input: required
+      characters: showable
+    repeat:
+      email:
+        input: none
+      password:
+        input: none
+    terms:
+      agreement: implicit
+    notes:
+    - en: >
+        Also requires a 4-digit "Support PIN" that cannot be a single repeated
+        digit or sequential digits.
+terms:
+  service:
+    url: https://godaddy.com/agreements/ShowDoc.aspx?pageid=5403
+statements:
+  privacy:
+    url: https://godaddy.com/agreements/ShowDoc.aspx?pageid=5432
+login:
+  url: https://sso.godaddy.com/v1/
+  form:
+    account:
+      accepts: [username, accountno]
+    password:
+      characters: hidden
+    persist:
+      checkbox: unchecked
+thirdparty:
+  auth:
+    providers:
+    - facebook.com
+reviewed:
+  date: 2017-02-19T14:37:02.497Z

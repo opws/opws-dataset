@@ -39,8 +39,8 @@ username:
     - numbers
     strings: ['.', '_']
   reminder:
-    url: https://bank.simple.com/forgot-username
     request:
+      url: https://bank.simple.com/forgot-username
       form:
         account:
           accepts: [email]

@@ -40,8 +40,8 @@ username:
       - numbers
       strings: ['.', '-', '_', '@']
   reminder:
-    url: https://www.washingtonconnection.org/authservice/forgotusername.go
     request:
+      url: https://www.washingtonconnection.org/authservice/forgotusername.go
       form:
         account:
           accepts: [email]

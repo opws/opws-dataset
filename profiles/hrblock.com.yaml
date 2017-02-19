@@ -29,8 +29,8 @@ password:
     - en: Click "Account Settings" after logging in
 username:
   reminder:
-    url: https://idp.hrblock.com/idp/Authn/DForgotCredentials.html
     request:
+      url: https://idp.hrblock.com/idp/Authn/DForgotCredentials.html
       form:
         account:
           accepts: [email]

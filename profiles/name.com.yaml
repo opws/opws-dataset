@@ -47,8 +47,8 @@ username:
       - numbers
       strings: ['+', '!', '.', '@', '_', '-']
   reminder:
-    url: https://www.name.com/account/credentials/username
     request:
+      url: https://www.name.com/account/credentials/username
       form:
         account:
           accepts: [domain]
