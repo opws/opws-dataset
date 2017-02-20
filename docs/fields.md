@@ -226,13 +226,13 @@ Whether the old password is `required` when changing a password, or not (`none`)
 
 If it's required *before* or *after*, one of the two following documented fields will be present instead: this field should not be present.
 
-## password.change.before.form.oldpassword.input
+## password.change.before.form.oldpassword.input, password.change.before.form.oldpassword.characters
 
-Whether the old password is `required` *before* changing a password. If not, the `password.change.before` object will most likely not be present: however, it's valid for this to be specified all the way down to a value of `none` here.
+Whether the old password is `required` *before* changing a password (and whether its characters are visible). If not, the `password.change.before` object will most likely not be present: however, it's valid for this to be specified all the way down to a value of `none` here.
 
-## password.change.after.form.oldpassword.input
+## password.change.after.form.oldpassword.input, password.change.after.form.oldpassword.characters
 
-Whether the old password is `required` *after* submitting a password change, to approve and commit the new password. If not, the `password.change.after` object will most likely not be present: however, it's valid for this to be specified all the way down to a value of `none` here.
+Whether the old password is `required` *after* submitting a password change (and whether its characters are visible), to approve and commit the new password. If not, the `password.change.after` object will most likely not be present: however, it's valid for this to be specified all the way down to a value of `none` here.
 
 ## password.change.form.repeat.newpassword.input
 

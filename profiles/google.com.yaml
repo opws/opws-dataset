@@ -1,17 +1,91 @@
 name: Google
+username:
+  value:
+    length:
+      min: 6
+      max: 30
+  contents:
+    whitelist:
+      classes:
+      - letters
+      - numbers
+      strings: ['.']
+  notes:
+  - en: >
+      "Username" here describes the name for Gmail addresses. Users do not have
+      to set up a Gmail account name if they use their own email address.
 password:
   value:
     length:
       min: 8
+    blacklist:
+      dictionaries:
+      - common
+      notes:
+      - en: >
+          "Recently-used" passwords are rejected as well.
+    mustnot:
+    - en: start or end with a blank space
   reset:
     flow:
       request:
-        url: https://www.google.com/accounts/recovery
+        url: https://accounts.google.com/signin/recovery
         form:
           account:
             accepts: [email]
+      response:
+        email:
+          sender: noreply@google.com
+          body: [firstname, username, code]
+      change:
+        form:
+          newpassword:
+            characters: hidden
+          repeat:
+            newpassword:
+              input: required
+              characters: hidden
+      submit:
+        destination:
+          page: stub
+        sessions:
+          own: login
   change:
     url: https://accounts.google.com/EditPasswd
+    before:
+      form:
+        oldpassword:
+          input: required
+          characters: hidden
     form:
-      oldpassword:
+      newpassword:
+        characters: showable
+      repeat:
+        newpassword:
+          input: required
+          characters: showable
+registration:
+  url: https://accounts.google.com/SignUp
+  form:
+    firstname:
+      input: required
+    lastname:
+      input: required
+    password:
+      characters: hidden
+    repeat:
+      password:
         input: required
+        characters: hidden
+      email:
+        input: none
+    birthdate:
+      input: required
+    phone:
+      input: optional
+  notes:
+  - en: >
+      Registration accepts either an existing email address or a new Gmail
+      address to register.
+reviewed:
+  date: 2017-02-20T01:51:03.146Z
