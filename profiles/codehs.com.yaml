@@ -3,9 +3,64 @@ password:
   reset:
     flow:
       request:
-        url: http://www.codehs.com/forgot_password
+        url: https://www.codehs.com/forgot_password
         form:
           account:
             accepts: [email]
+      response:
+        email:
+          sender: hello@codehs.com
+          body: [link]
+      change:
+        form:
+          newpassword:
+            characters: hidden
+          repeat:
+            newpassword:
+              input: required
+              characters: hidden
+      submit:
+        sessions:
+          own: unchanged
   change:
-    url: http://www.codehs.com/change_password
+    url: https://www.codehs.com/change_password
+    form:
+      oldpassword:
+        input: none
+      newpassword:
+        characters: hidden
+      repeat:
+        newpassword:
+          input: required
+          characters: hidden
+  notes:
+  - en: >
+      You can technically set a zero-length password, though the login page
+      treats password input as "required".
+registration:
+  url: https://codehs.com/signup/begin
+  form:
+    firstname:
+      input: required
+    lastname:
+      input: required
+    email:
+      input: required
+    password:
+      input: required
+      characters: hidden
+    repeat:
+      password:
+        input: required
+        characters: hidden
+      email:
+        input: none
+login:
+  url: https://codehs.com/login
+  form:
+    account:
+      accepts: [email]
+    password:
+      characters: hidden
+reviewed:
+  date: 2017-02-20T14:47:42.999Z
