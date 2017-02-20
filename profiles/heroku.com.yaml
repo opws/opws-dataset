@@ -3,6 +3,12 @@ password:
   value:
     length:
       min: 8
+  notes:
+  - en: >
+      Setting a password after registration only accepts passwords that
+      contain a combination of letters, numbers, and/or symbols
+      (consisting of more than one of these). This restriction is not
+      enforced when changing the password after registration.
   reset:
     flow:
       request:
@@ -10,8 +16,60 @@ password:
         form:
           account:
             accepts: [email]
+      response:
+        email:
+          sender: noreply@heroku.com
+          body: [url]
+      change:
+        form:
+          newpassword:
+            characters: hidden
+          repeat:
+            newpassword:
+              input: required
+              characters: hidden
+      submit:
+        destination:
+          page: login
+        sessions:
+          own: logout
+        expire: now
   change:
-    url: https://dashboard.heroku.com/account
+    url: https://dashboard.heroku.com/account#current-password
     form:
       oldpassword:
         input: required
+        characters: hidden
+      newpassword:
+        characters: hidden
+      repeat:
+        newpassword:
+          input: required
+          characters: hidden
+    sessions:
+      own: unchanged
+registration:
+  url: https://signup.heroku.com/
+  form:
+    firstname:
+      input: required
+    lastname:
+      input: required
+    email:
+      input: required
+    captcha:
+      type: recaptcha
+    password:
+      input: none
+    repeat:
+      email:
+        input: none
+login:
+  url: https://id.heroku.com/login
+  form:
+    account:
+      accepts: [email]
+    password:
+      characters: hidden
+reviewed:
+  date: 2017-02-20T21:12:52.641Z
