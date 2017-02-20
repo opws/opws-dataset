@@ -3,6 +3,8 @@ password:
   value:
     length:
       min: 8
+    blacklist:
+      previous: 3
   contents:
     required:
     - classes:
@@ -17,7 +19,43 @@ password:
             input: required
           username:
             input: required
+      response:
+        email:
+          sender: noreply@mashery.com
+          body: [url]
+      change:
+        form:
+          newpassword:
+            characters: hidden
+          repeat:
+            newpassword:
+              input: required
+              characters: hidden
+      submit:
+        destination:
+          page: stub
+        sessions:
+          own: login
+        expire: now
+  change:
+    url: https://secure.mashery.com/member/passwd/
+    form:
+      oldpassword:
+        input: required
+        characters: hidden
+      newpassword:
+        characters: hidden
+      repeat:
+        newpassword:
+          input: required
+          characters: hidden
 username:
+  contents:
+    whitelist:
+      classes:
+      - letters
+      - numbers
+      strings: ['_']
   reminder:
     request:
       url: https://secure.mashery.com/member/lost-username/
@@ -26,6 +64,32 @@ username:
           accepts: [email]
 registration:
   url: http://developer.mashery.com/member/register
+  form:
+    firstname:
+      input: optional
+    lastname:
+      input: optional
+    email:
+      input: required
+    repeat:
+      email:
+        input: required
+      password:
+        input: required
+        characters: hidden
+    username:
+      input: required
+    fullname:
+      input: required
+    password:
+      input: required
+      characters: hidden
 login:
   url: https://secure.mashery.com/login/
-notes: User management is on the "secure" subdomain, the only one that supports HTTPS.
+  form:
+    account:
+      accepts: [username]
+    password:
+      characters: hidden
+reviewed:
+  date: 2017-02-20T01:37:50.078Z
