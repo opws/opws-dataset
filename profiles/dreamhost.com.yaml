@@ -8,7 +8,7 @@ password:
     - en: start or end with a space
     blacklist:
       dictionaries:
-      - english
+      - theme: english
   reset:
     flow:
       request:

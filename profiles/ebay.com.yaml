@@ -6,7 +6,7 @@ password:
       max: 64
     blacklist:
       dictionaries:
-      - common
+      - theme: common
       previous: yes
     notes:
     - url: http://pages.ebay.com/help/new/contextual/create_password.html
@@ -69,7 +69,7 @@ username:
       strings:
       - "ebay"
       dictionaries:
-      - profanity
+      - theme: profanity
   change:
     url: https://scgi.ebay.com/ws/eBayISAPI.dll?ChangeUserId
     form:

@@ -34,23 +34,20 @@ Character class names used:
 - nonspaces (anything that isn't whitespace)
 - nonprinting (unprintable characters)
 
-## password.value.blacklist.strings
-
-An array of specific passwords that are not allowed.
-
-This will only be defined if the site *actually disallows specific password values*, and those values can't be conveyed as `password.contents.blacklist.dictionaries` (heterogenous blacklists that aren't exposed as a public-readable dictionary file will be listed in this fashion).
-
 ## password.contents.blacklist.strings
 
 Specific characters and sequences which passwords may not contain.
 
 ## password.value.blacklist.dictionaries, password.contents.blacklist.dictionaries
 
-Array of keywords describing sets of a words that a password may not match or contain, respectively:
+Array of objects describing sets of a words that a password may not match or contain, respectively. The `theme` of each object specifies what kind of dictionary it is:
 
 - `english`: English words.
 - `profanity`: Profane words (probably English ones).
+- `offensive`: Similar to "profanity", may be broader.
 - `common`: Common passwords like "abc123" or "qweasd".
+
+The `entries` value, if present, enumerates *every string* in the blacklist dictionary.
 
 ## password.value.blacklist.variables, password.contents.blacklist.variables
 

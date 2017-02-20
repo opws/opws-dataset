@@ -5,8 +5,8 @@ password:
       min: 6
     blacklist:
       dictionaries:
-      - english
-      - common
+      - theme: english
+      - theme: common
   reset:
     flow:
       request:

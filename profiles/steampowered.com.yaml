@@ -6,7 +6,7 @@ password:
       max: 64
     blacklist:
       dictionaries:
-      - common
+      - theme: common
   contents:
     required:
     - atleast: 3

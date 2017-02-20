@@ -5,7 +5,7 @@ password:
       min: 8
     blacklist:
       dictionaries:
-      - common
+      - theme: common
   contents:
     required:
     - classes:

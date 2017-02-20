@@ -5,8 +5,8 @@ password:
       min: 8
     blacklist:
       dictionaries:
-      - english
-      - common
+      - theme: english
+      - theme: common
       variables:
       - username
     notes:

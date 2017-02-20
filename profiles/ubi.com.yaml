@@ -56,7 +56,7 @@ username:
       - numbers
     blacklist:
       dictionaries:
-      - offensive
+      - theme: offensive
 registration:
   url: https://connect.ubi.com/Default/CreateAccount?appId=c5393f10-7ac7-4b4f-90fa-21f8f3451a04
   form:

@@ -13,7 +13,7 @@ password:
       - numbers
     blacklist:
       dictionaries:
-      - common
+      - theme: common
   reset:
     flow:
       request:

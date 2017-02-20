@@ -6,8 +6,8 @@ password:
       max: 100
     blacklist:
       dictionaries:
-      - common
-      - english
+      - theme: common
+      - theme: english
       variables:
       - username
       - firstname
