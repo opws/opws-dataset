@@ -1,5 +1,16 @@
 name: Path
 password:
+  value:
+    length:
+      min: 6
+      max: 256
+    mustnot:
+    - en: be all the same letter
+    - en: be a slice of the alphabet forwards or backwards
+  contents:
+    required:
+    - classes:
+      - letters
   reset:
     flow:
       request:
@@ -7,5 +18,59 @@ password:
         form:
           account:
             accepts: [email]
+      response:
+        email:
+          sender: noreply@path.com
+          body: [firstname, url]
+      change:
+        form:
+          newpassword:
+            characters: hidden
+          repeat:
+            newpassword:
+              input: required
+              characters: hidden
+      submit:
+        destination:
+          page: home
+        sessions:
+          own: logout
+        expire: now
   change:
-    url: https://path.com/settings
+    url: https://path.com/account
+    form:
+      oldpassword:
+        input: required
+        characters: hidden
+      newpassword:
+        characters: hidden
+      repeat:
+        newpassword:
+          input: required
+          characters: hidden
+    sessions:
+      own: logout
+registration:
+  url: https://path.com/signup
+  form:
+    fullname:
+      input: required
+    email:
+      input: required
+    password:
+      input: required
+      characters: hidden
+    repeat:
+      email:
+        input: none
+      password:
+        input: none
+login:
+  url: https://path.com/login
+  form:
+    account:
+      accepts: [email]
+    password:
+      characters: hidden
+reviewed:
+  date: 2017-02-20T13:05:18.328Z
