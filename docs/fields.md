@@ -156,7 +156,6 @@ An array of data the reset mechanism responds with in its email message:
 Array of things the password reset page expects as proof of identity before resetting the password. Tokens:
 
 - "origin" (IP address requesting the page must be the same IP the email was requested from)
-- "challenge" (The answer to a "security question" set up with the account)
 
 ## password.reset.flow.response.expire, password.reset.onetime.response.expire
 
@@ -167,6 +166,10 @@ How long after issuance the reset token is valid for, as a human-abbreviated str
 How long after beginning the post-response step (ie. following the link) the reset token is valid for, as a human-abbreviated string ("24h" is common).
 
 If the token may not be used to re-open the password reset flow after the first time it is used, this value will be `"now"`.
+
+## password.reset.flow.change.form.challenge.input
+
+If resetting your password requires the answer to one of the questions from `challenge.questions`, this will be `required`.
 
 ## password.reset.flow.change.form.newpassword.characters, password.reset.flow.change.form.repeat.newpassword.characters
 

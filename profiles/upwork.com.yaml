@@ -1,0 +1,139 @@
+name: Upwork
+password:
+  value:
+    length:
+      min: 8
+      max: 60
+  contents:
+    required:
+    - classes:
+      - letters
+    - atleast: 1
+      classes:
+      - numbers
+      - symbols
+  reset:
+    flow:
+      request:
+        url: https://www.upwork.com/reset/password
+        form:
+          account:
+            accepts: [email]
+          captcha:
+            type: letters
+      response:
+        email:
+          sender: donotreply@upwork.com
+          body: [firstname, link]
+        expire: 4h
+      change:
+        form:
+          challenge:
+            input: required
+          newpassword:
+            characters: hidden
+          repeat:
+            newpassword:
+              characters: hidden
+      submit:
+        destination:
+          page: login
+        sessions:
+          own: logout
+        expire: now
+  change:
+    url: https://www.upwork.com/ab/account-security/change-password
+    before:
+      form:
+        oldpassword:
+          input: required
+          characters: hidden
+    form:
+      oldpassword:
+        input: required
+        characters: hidden
+      newpassword:
+        characters: hidden
+      repeat:
+        newpassword:
+          input: required
+          characters: hidden
+    notes: >
+      Security question answer required to authorize account changes from new
+      machine.
+username:
+  value:
+    length:
+      min: 4
+      max: 16
+    whitelist:
+      classes:
+      - letters
+      - numbers
+      strings: ['-', '_']
+    notes:
+    - en: >
+        Starting a username with a hyphen returns the error "Special
+        characters are not allowed."
+challenge:
+  questions:
+  - required: 1
+    options:
+    - Your mother's maiden name
+    - Your first pet's name
+    - The name of your elementary school
+    - Your elementary school mascot
+    - Your best friend's nickname
+    - Your favorite sports team
+    - Your favorite writer
+    - Your favorite actor
+    - Your favorite singer
+    - Your favorite song
+    - The name of the street you grew up on
+    - Make and model of your first car
+    - The city where you first met your spouse
+    - Other...
+  answers:
+    value:
+      must:
+      - en: contain four consecutive alphanumeric characters
+registration:
+  url: https://www.upwork.com/signup/
+  form:
+    firstname:
+      input: required
+    lastname:
+      input: required
+    email:
+      input: required
+    username:
+      input: required
+    password:
+      input: required
+      characters: hidden
+    repeat:
+      email:
+        input: none
+      password:
+        input: none
+    captcha:
+      type: alphanumeric
+    terms:
+      agreement: checkbox
+terms:
+  service:
+    url: https://www.upwork.com/info/terms/
+statements:
+  privacy:
+    url: https://www.upwork.com/info/terms/privacy/
+login:
+  url: https://www.upwork.com/ab/account-security/login
+  form:
+    account:
+      accepts: [username, email]
+    password:
+      characters: hidden
+    persist:
+      checkbox: unchecked
+reviewed:
+  date: 2017-02-20T10:40:26.359Z

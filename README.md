@@ -24,7 +24,7 @@ it uses).
 ## Layout
 
 Entries for domains are in [YAML](http://yaml.org/) files in the "profiles"
-directory. The filename of each file, minus the .yaml extension, is the 
+directory. The filename of each file, minus the .yaml extension, is the
 lower-case base domain name of the site being profiled.
 
 Domains are listed by the least-specific component of the domain necessary to
@@ -41,6 +41,12 @@ entail).
 When lower-level domains have their own separate profiles (such as Arch Linux's
 AUR and BBS), their filenames include the lower domain components, like
 `aur.archlinux.org.yaml` and `bbs.archlinux.org.yaml`.
+
+### Legacies
+
+The "legacies" directory contains files with names similar to those of
+"profiles", but the YAML documents it contains describe lists of events noting
+*what happened* to sites at those names, such as a move to a new name.
 
 ## Notes on URLs
 
