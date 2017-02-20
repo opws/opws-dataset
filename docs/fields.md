@@ -158,6 +158,10 @@ Array of things the password reset page expects as proof of identity before rese
 
 How long after issuance the reset token is valid for, as a human-abbreviated string ("24h" is common).
 
+## password.reset.flow.open.sessions.own
+
+If opening the password reset link logs you in, this will be `login`.
+
 ## password.reset.flow.open.expire
 
 How long after beginning the post-response step (ie. following the link) the reset token is valid for, as a human-abbreviated string ("24h" is common).

@@ -11,12 +11,43 @@ password:
   reset:
     flow:
       request:
-        url: https://www.pave.com/forgot_password
+        url: https://www.pave.com/forgot-password
         form:
           account:
             accepts: [email]
+      response:
+        email:
+          sender: team@pave.com
+          body: [firstname, url]
+        expire: 4h
+      open:
+        sessions:
+          own: login
+        expire: now
+      notes:
+      - en: >
+          Following the link from the password reset email directs to
+          https://www.pave.com/password-reset, which fails to load with a
+          "Page not found" error. However, as following the reset link also
+          logs you in, and password change does not require the original
+          password, you can use your account settings to change the password.
   change:
     url: https://www.pave.com/settings
     form:
       oldpassword:
         input: none
+      newpassword:
+        characters: hidden
+      repeat:
+        newpassword:
+          input: required
+          characters: hidden
+login:
+  url: https://www.pave.com/login
+  form:
+    account:
+      accepts: [email]
+    password:
+      characters: hidden
+reviewed:
+  date: 2017-02-20T18:13:56.870Z
