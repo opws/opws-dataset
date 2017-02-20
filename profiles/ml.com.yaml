@@ -1,0 +1,39 @@
+name: Merrill Lynch
+password:
+  value:
+    length:
+      min: 8
+      max: 20
+  contents:
+    required:
+    - classes:
+      - letters
+      - numbers
+    blacklist:
+      classes:
+      - spaces
+  reset:
+    flow:
+      request:
+        url: https://olui2.fs.ml.com/login/ForgotPassword.aspx
+        form:
+          account:
+            accepts: [username]
+username:
+  reminder:
+    request:
+      url: https://olui2.fs.ml.com/login/ForgotUserId.aspx
+      form:
+        account:
+          accepts: [email]
+registration:
+  url: https://olui2.fs.ml.com/Enrollment/Registration.aspx
+login:
+  url: https://olui2.fs.ml.com/login/login.aspx
+  form:
+    account:
+      accepts: [username]
+    password:
+      characters: hidden
+reviewed:
+  date: 2017-02-20T20:41:11.251Z
