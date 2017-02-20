@@ -2,13 +2,84 @@ name: Double Fine
 password:
   value:
     length:
-      min: 5
+      min: 3
+  notes:
+  - en: >
+      Password input includes a list of what makes a "good" password, but
+      these are not the actual password requirements.
   reset:
     flow:
       request:
-        url: http://www.doublefine.com/forums/member/forgot_password/
+        url: https://forums.doublefine.com/lostpassword/
         form:
           account:
             accepts: [email]
+      response:
+        email:
+          sender: info@doublefine.com
+          body: [username, link]
+      change:
+        form:
+          newpassword:
+            characters: hidden
+          repeat:
+            newpassword:
+              input: required
+              characters: hidden
+      submit:
+        destination:
+          page: home
+        sessions:
+          own: login
+        expire: now
   change:
-    url: http://www.doublefine.com/forums/member/edit_userpass/
+    url: https://forums.doublefine.com/settings/password/
+    form:
+      oldpassword:
+        input: required
+        characters: hidden
+      newpassword:
+        characters: hidden
+      repeat:
+        newpassword:
+          input: required
+          characters: hidden
+username:
+  value:
+    length:
+      min: 3
+      max: 26
+registration:
+  url: https://forums.doublefine.com/register/
+  form:
+    username:
+      input: required
+    email:
+      input: required
+    password:
+      input: required
+      characters: hidden
+    repeat:
+      password:
+        input: required
+        characters: hidden
+      email:
+        input: none
+    captcha:
+      type: recaptcha
+      notes:
+      - en: Also has a CAPTCHA question ("Name a Double Fine game").
+    terms:
+      agreement: checkbox
+terms:
+  use:
+    url: https://forums.doublefine.com/terms/
+login:
+  url: https://forums.doublefine.com/login/
+  form:
+    account:
+      accepts: [username, email]
+    persist:
+      checkbox: checked
+reviewed:
+  date: 2017-02-20T03:42:23.829Z
