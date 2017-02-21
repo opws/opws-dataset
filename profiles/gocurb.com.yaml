@@ -2,9 +2,16 @@ name: Curb
 password:
   value:
     length:
-      min: 6
+      min: 8
     notes:
     - en: 14-character limit when registering on Android
+  contents:
+    required:
+    - classes:
+      - uppers
+      - lowers
+      - numbers
+      - symbols
   reset:
     flow:
       request:
@@ -14,13 +21,59 @@ password:
             input: required
       response:
         email:
+          sender: support@gocurb.com
           body: [link]
+        expire: 20m
+      change:
+        form:
+          newpassword:
+            characters: hidden
+          repeat:
+            newpassword:
+              input: required
+              characters: hidden
+      submit:
+        destination:
+          page: stub
+        sessions:
+          own: unchanged
+        expire: unchanged
   change:
     url: https://my.gocurb.com/myaccount#password
     form:
       oldpassword:
         input: none
+      newpassword:
+        characters: hidden
+      repeat:
+        newpassword:
+          input: required
+          characters: hidden
 registration:
   url: https://my.gocurb.com/signup
+  form:
+    firstname:
+      input: required
+    lastname:
+      input: required
+    phone:
+      input: required
+    email:
+      input: required
+    password:
+      input: required
+      characters: hidden
+    repeat:
+      email:
+        input: none
+      password:
+        input: none
 login:
   url: https://my.gocurb.com/signin
+  form:
+    email:
+      input: required
+    password:
+      characters: hidden
+reviewed:
+  date: 2017-02-21T23:15:53.413Z
