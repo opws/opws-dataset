@@ -1,0 +1,65 @@
+name: Compose
+password:
+  value:
+    length:
+      min: 6
+  reset:
+    flow:
+      request:
+        url: https://app.compose.io/password_resets/new
+        form:
+          account:
+            accepts: [email]
+      response:
+        email:
+          sender: support@compose.io
+          body: [url]
+        expire: 15m
+      change:
+        form:
+          newpassword:
+            characters: hidden
+          repeat:
+            newpassword:
+              input: required
+              characters: hidden
+      submit:
+        sessions:
+          own: unchanged
+        expire: unchanged
+  change:
+    url: https://app.compose.io/account#user_current_password
+    form:
+      oldpassword:
+        input: required
+        characters: hidden
+      newpassword:
+        characters: hidden
+      repeat:
+        newpassword:
+          input: required
+          characters: hidden
+registration:
+  url: https://compose.com/signup
+  form:
+    fullname:
+      input: required
+    email:
+      input: required
+    password:
+      input: required
+      characters: hidden
+    repeat:
+      email:
+        input: none
+      password:
+        input: none
+login:
+  url: https://app.compose.io/session/new
+  form:
+    account:
+      accepts: [email]
+    password:
+      characters: hidden
+reviewed:
+  date: 2017-02-21T06:20:36.743Z
