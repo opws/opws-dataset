@@ -19,8 +19,8 @@ password:
       request:
         url: https://www.paypal.com/webapps/accountrecovery/passwordrecovery
         form:
-          account:
-            accepts: [email]
+          email:
+            input: required
           captcha:
             type: alphanumeric
       response:

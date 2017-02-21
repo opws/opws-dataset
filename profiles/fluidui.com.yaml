@@ -8,8 +8,8 @@ password:
       request:
         url: https://www.fluidui.com/editor/live/recoverPassword/
         form:
-          account:
-            accepts: [email]
+          email:
+            input: required
       response:
         email:
           sender: support@fluidui.com
@@ -63,8 +63,8 @@ registration:
 login:
   url: https://www.fluidui.com/editor/live/#signin
   form:
-    account:
-      accepts: [email]
+    email:
+      input: required
     password:
       characters: hidden
 terms:

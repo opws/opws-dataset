@@ -8,8 +8,8 @@ password:
       request:
         url: https://bbs.archlinux.org/login.php?action=forget
         form:
-          account:
-            accepts: [email]
+          email:
+            input: required
       response:
         email:
           sender: noreply@archlinux.org
@@ -53,8 +53,8 @@ registration:
 login:
   url: https://bbs.archlinux.org/login.php
   form:
-    account:
-      accepts: [username]
+    username:
+      input: required
     password:
       characters: hidden
     persist:

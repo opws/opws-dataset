@@ -8,8 +8,8 @@ password:
       request:
         url: https://secure.imdb.com/register-imdb/forgotten
         form:
-          account:
-            accepts: [email]
+          email:
+            input: required
       response:
         email:
           sender: do-not-reply-here@imdb.com

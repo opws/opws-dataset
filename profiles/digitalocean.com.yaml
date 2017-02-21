@@ -12,7 +12,7 @@ password:
       request:
         url: https://www.digitalocean.com/forgot_password/new
         form:
-          account:
-            accepts: [email]
+          email:
+            input: required
   change:
     url: https://www.digitalocean.com/settings#edit-password

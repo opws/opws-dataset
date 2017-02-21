@@ -12,8 +12,8 @@ password:
       request:
         url: https://darksky.net/dev/reset/password
         form:
-          account:
-            accepts: [email]
+          email:
+            input: required
   change:
     url: https://darksky.net/dev/account/edit
     form:

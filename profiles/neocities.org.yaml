@@ -8,8 +8,8 @@ password:
       request:
         url: https://neocities.org/password_reset
         form:
-          account:
-            accepts: [email]
+          email:
+            input: required
       response:
         email:
           sender: web@neocities.org

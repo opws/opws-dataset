@@ -8,8 +8,8 @@ password:
       request:
         url: https://manage.stripe.com/reset
         form:
-          account:
-            accepts: [email]
+          email:
+            input: required
   change:
     url: https://manage.stripe.com/account
     form:

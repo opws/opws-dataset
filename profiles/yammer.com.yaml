@@ -8,8 +8,8 @@ password:
       request:
         url: https://www.yammer.com/forgotten_password/new
         form:
-          account:
-            accepts: [email]
+          email:
+            input: required
   change:
     url: https://www.yammer.com/account/password
     form:

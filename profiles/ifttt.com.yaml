@@ -13,8 +13,8 @@ password:
       request:
         url: https://ifttt.com/forgot
         form:
-          account:
-            accepts: [email]
+          email:
+            input: required
       response:
         email:
           sender: welcome@ifttt.com

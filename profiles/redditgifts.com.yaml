@@ -8,8 +8,8 @@ password:
       request:
         url: http://redditgifts.com/profiles/password/reset/
         form:
-          account:
-            accepts: [email]
+          email:
+            input: required
       response:
         email:
           sender: support@redditgifts.com
@@ -57,8 +57,8 @@ registration:
 login:
   url: https://www.redditgifts.com/profiles/login/
   form:
-    account:
-      accepts: [email]
+    email:
+      input: required
     password:
       characters: hidden
 terms:

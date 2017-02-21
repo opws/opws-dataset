@@ -9,8 +9,8 @@ password:
       request:
         url: https://login.gog.com/password/request
         form:
-          account:
-            accepts: [email]
+          email:
+            input: required
           captcha:
             type: recaptcha
         notes:

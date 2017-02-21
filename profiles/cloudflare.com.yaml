@@ -8,8 +8,8 @@ password:
       request:
         url: https://www.cloudflare.com/a/forgot-password
         form:
-          account:
-            accepts: [email]
+          email:
+            input: required
           domain:
             input: required
           captcha:

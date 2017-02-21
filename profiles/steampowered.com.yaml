@@ -76,8 +76,8 @@ registration:
 login:
   url: https://store.steampowered.com/login/
   form:
-    account:
-      accepts: [username]
+    username:
+      input: required
     password:
       characters: hidden
 terms:

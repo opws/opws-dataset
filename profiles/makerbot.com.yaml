@@ -8,8 +8,8 @@ password:
       request:
         url: https://accounts.makerbot.com/forgot
         form:
-          account:
-            accepts: [email]
+          email:
+            input: required
       response:
         email:
           sender: no-reply@thingiverse.com

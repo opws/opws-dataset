@@ -16,8 +16,8 @@ password:
       request:
         url: https://path.com/forgot-password
         form:
-          account:
-            accepts: [email]
+          email:
+            input: required
       response:
         email:
           sender: noreply@path.com
@@ -68,8 +68,8 @@ registration:
 login:
   url: https://path.com/login
   form:
-    account:
-      accepts: [email]
+    email:
+      input: required
     password:
       characters: hidden
 reviewed:

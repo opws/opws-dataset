@@ -9,8 +9,8 @@ password:
       request:
         url: https://login.proboards.com/forgot
         form:
-          account:
-            accepts: [email]
+          email:
+            input: required
           captcha:
             type: funcaptcha
       response:
@@ -61,8 +61,8 @@ registration:
 login:
   url: https://login.proboards.com/login
   form:
-    account:
-      accepts: [email]
+    email:
+      input: required
     password:
       characters: hidden
     persist:

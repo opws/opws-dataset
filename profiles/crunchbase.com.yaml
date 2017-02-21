@@ -11,8 +11,8 @@ password:
         notes:
         - en: Click the "Forgot password?" button.
         form:
-          account:
-            accepts: [email]
+          email:
+            input: required
       response:
         email:
           sender: support@crunchbase.com
@@ -76,8 +76,8 @@ thirdparty:
 login:
   url: https://www.crunchbase.com/app/login
   form:
-    account:
-      accepts: [email]
+    email:
+      input: required
     password:
       characters: hidden
 terms:

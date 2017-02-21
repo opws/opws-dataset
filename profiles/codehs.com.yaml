@@ -5,8 +5,8 @@ password:
       request:
         url: https://www.codehs.com/forgot_password
         form:
-          account:
-            accepts: [email]
+          email:
+            input: required
       response:
         email:
           sender: hello@codehs.com
@@ -58,8 +58,8 @@ registration:
 login:
   url: https://codehs.com/login
   form:
-    account:
-      accepts: [email]
+    email:
+      input: required
     password:
       characters: hidden
 reviewed:

@@ -14,8 +14,8 @@ password:
       request:
         url: https://shop.pottermore.com/passwordrecovery
         form:
-          account:
-            accepts: [email]
+          email:
+            input: required
   change:
     url: https://shop.pottermore.com/customer/info#ChangePassword
     form:

@@ -13,8 +13,8 @@ password:
       request:
         url: https://www.pave.com/forgot-password
         form:
-          account:
-            accepts: [email]
+          email:
+            input: required
       response:
         email:
           sender: team@pave.com
@@ -45,8 +45,8 @@ password:
 login:
   url: https://www.pave.com/login
   form:
-    account:
-      accepts: [email]
+    email:
+      input: required
     password:
       characters: hidden
 reviewed:

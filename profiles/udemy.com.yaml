@@ -9,8 +9,8 @@ password:
       request:
         url: https://www.udemy.com/user/forgot-password
         form:
-          account:
-            accepts: [email]
+          email:
+            input: required
           captcha:
             type: recaptcha
       response:
@@ -63,8 +63,8 @@ registration:
 login:
   url: https://www.udemy.com/join/login-popup/
   form:
-    account:
-      accepts: [email]
+    email:
+      input: required
     password:
       characters: hidden
 thirdparty:

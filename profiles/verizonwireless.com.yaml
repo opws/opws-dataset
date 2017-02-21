@@ -511,8 +511,8 @@ password:
       request:
         url: https://login.verizonwireless.com/accessmanager/public/c/fp/start
         form:
-          account:
-            accepts: [phone]
+          phone:
+            input: required
           captcha:
             type: recaptcha
 username:
@@ -533,8 +533,8 @@ username:
     request:
       url: https://login.verizonwireless.com/accessmanager/public/c/fu/start
       form:
-        account:
-          accepts: [phone]
+        phone:
+          input: required
         captcha:
           type: recaptcha
 challenge:

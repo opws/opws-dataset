@@ -8,8 +8,8 @@ password:
       request:
         url: https://news.ycombinator.com/forgot
         form:
-          account:
-            accepts: [username]
+          username:
+            input: required
       response:
         email:
           sender: hn@ycombinator.com
@@ -63,8 +63,8 @@ registration:
 login:
   url: https://news.ycombinator.com/login
   form:
-    account:
-      accepts: [username]
+    username:
+      input: required
     password:
       characters: hidden
 reviewed:

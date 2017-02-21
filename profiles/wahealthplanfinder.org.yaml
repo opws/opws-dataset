@@ -20,8 +20,8 @@ password:
       request:
         url: https://www.wahealthplanfinder.org/HBEWeb/Annon_DisplayForgotPasswordGetUserName.action
         form:
-          account:
-            accepts: [username]
+          username:
+            input: required
   change:
     url: https://www.wahealthplanfinder.org/HBEWeb/DisplayPasswordChangePassword.action
     form:
@@ -46,8 +46,8 @@ username:
     request:
       url: https://www.wahealthplanfinder.org/HBEWeb/Annon_DisplayForgotUserName.action
       form:
-        account:
-          accepts: [email]
+        email:
+          input: required
 challenge:
   questions:
   - required: 3

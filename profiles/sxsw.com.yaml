@@ -13,8 +13,8 @@ password:
       request:
         url: https://auth.sxsw.com/users/password/new
         form:
-          account:
-            accepts: [email]
+          email:
+            input: required
   change:
     url: https://auth.sxsw.com/users/edit
     form:

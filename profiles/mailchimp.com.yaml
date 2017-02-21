@@ -16,8 +16,8 @@ password:
       request:
         url: https://login.mailchimp.com/login/forgot
         form:
-          account:
-            accepts: [username]
+          username:
+            input: required
           captcha:
             type: recaptcha
       response:

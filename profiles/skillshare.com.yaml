@@ -12,8 +12,8 @@ password:
       request:
         url: https://www.skillshare.com/reset-password
         form:
-          account:
-            accepts: [email]
+          email:
+            input: required
       response:
         email:
           sender: hello@skillshare.com
@@ -68,8 +68,8 @@ registration:
 login:
   url: https://www.skillshare.com/login
   form:
-    account:
-      accepts: [email]
+    email:
+      input: required
     password:
       characters: hidden
     persist:

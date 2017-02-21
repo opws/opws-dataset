@@ -35,8 +35,8 @@ terms:
 login:
   url: https://www.tarsnap.com/manage.cgi
   form:
-    account:
-      accepts: [email]
+    email:
+      input: required
     password:
       characters: hidden
 reviewed:

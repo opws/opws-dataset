@@ -10,8 +10,8 @@ password:
       request:
         url: https://github.com/password_reset
         form:
-          account:
-            accepts: [email]
+          email:
+            input: required
       response:
         email:
           sender: noreply@github.com

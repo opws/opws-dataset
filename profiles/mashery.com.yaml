@@ -60,8 +60,8 @@ username:
     request:
       url: https://secure.mashery.com/member/lost-username/
       form:
-        account:
-          accepts: [email]
+        email:
+          input: required
 registration:
   url: http://developer.mashery.com/member/register
   form:
@@ -87,8 +87,8 @@ registration:
 login:
   url: https://secure.mashery.com/login/
   form:
-    account:
-      accepts: [username]
+    username:
+      input: required
     password:
       characters: hidden
 reviewed:

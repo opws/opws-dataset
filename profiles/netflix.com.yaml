@@ -58,8 +58,8 @@ registration:
 login:
   url: https://www.netflix.com/login
   form:
-    account:
-      accepts: [email]
+    email:
+      input: required
     password:
       characters: hidden
     persist:

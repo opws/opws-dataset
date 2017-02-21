@@ -15,8 +15,8 @@ password:
       request:
         url: https://*.residentportal.com/resident_portal/?module=forgot_password&action=forgot_password
         form:
-          account:
-            accepts: [email]
+          email:
+            input: required
       response:
         email:
           body: [link]

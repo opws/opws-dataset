@@ -8,8 +8,8 @@ password:
       request:
         url: http://www.avclub.com/users/reset_password/
         form:
-          account:
-            accepts: [email]
+          email:
+            input: required
   change:
     url: http://www.avclub.com/users/me/settings/
 login:

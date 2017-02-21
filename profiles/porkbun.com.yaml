@@ -8,8 +8,8 @@ password:
       request:
         url: https://porkbun.com/account/forgot
         form:
-          account:
-            accepts: [email]
+          email:
+            input: required
   change:
     url: https://porkbun.com/account
     form:

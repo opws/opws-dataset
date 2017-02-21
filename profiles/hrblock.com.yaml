@@ -15,8 +15,8 @@ password:
       request:
         url: https://idp.hrblock.com/idp/Authn/DForgotCredentials.html
         form:
-          account:
-            accepts: [username]
+          username:
+            input: required
           notes:
           - en: >
               Also accepts a combination of first name, last
@@ -32,8 +32,8 @@ username:
     request:
       url: https://idp.hrblock.com/idp/Authn/DForgotCredentials.html
       form:
-        account:
-          accepts: [email]
+        email:
+          input: required
         notes:
         - en: >
             Also accepts a combination of first name, last

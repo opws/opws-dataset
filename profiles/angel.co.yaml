@@ -13,8 +13,8 @@ password:
       request:
         url: https://angel.co/users/password/new
         form:
-          account:
-            accepts: [email]
+          email:
+            input: required
       response:
         email:
           sender: team@angel.co

@@ -8,8 +8,8 @@ password:
       request:
         url: http://www.reddit.com/password
         form:
-          account:
-            accepts: [username]
+          username:
+            input: required
       response:
         email:
           sender: reddit@reddit.com
@@ -75,8 +75,8 @@ registration:
 login:
   url: https://www.reddit.com/login
   form:
-    account:
-      accepts: [username]
+    username:
+      input: required
     password:
       characters: hidden
     persist:

@@ -14,8 +14,8 @@ password:
       request:
         url: https://www.qfc.com/forgotPassword
         form:
-          account:
-            accepts: [email]
+          email:
+            input: required
       response:
         email:
           sender: QFC@e.qfcemail.com
@@ -47,8 +47,8 @@ password:
 login:
   url: https://www.qfc.com/signin
   form:
-    account:
-      accepts: [email]
+    email:
+      input: required
     password:
       characters: hidden
     persist:

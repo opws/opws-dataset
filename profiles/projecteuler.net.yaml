@@ -26,7 +26,7 @@ username:
     request:
       url: https://projecteuler.net/username_reminder
       form:
-        account:
-          accepts: [email]
+        email:
+          input: required
 redflags:
 - '"Remember Me" creates a p_key cookie rather than changing your session.'

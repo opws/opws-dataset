@@ -43,8 +43,8 @@ username:
     request:
       url: https://www.washingtonconnection.org/authservice/forgotusername.go
       form:
-        account:
-          accepts: [email]
+        email:
+          input: required
         captcha:
           type: word
     response:

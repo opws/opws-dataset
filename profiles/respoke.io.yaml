@@ -8,8 +8,8 @@ password:
       request:
         url: https://portal.respoke.io/#/password-reset
         form:
-          account:
-            accepts: [email]
+          email:
+            input: required
   change:
     url: https://portal.respoke.io/#/account?section=Profile
     form:

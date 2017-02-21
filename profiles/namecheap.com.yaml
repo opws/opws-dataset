@@ -66,8 +66,8 @@ registration:
 login:
   url: https://www.namecheap.com/myaccount/login.aspx
   form:
-    account:
-      accepts: [username]
+    username:
+      input: required
     password:
       characters: hidden
 reviewed:

@@ -10,8 +10,8 @@ password:
       request:
         url: https://my.gocurb.com/signin#resetPassword
         form:
-          account:
-            accepts: [email]
+          email:
+            input: required
       response:
         email:
           body: [link]

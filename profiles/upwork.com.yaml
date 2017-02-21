@@ -17,8 +17,8 @@ password:
       request:
         url: https://www.upwork.com/reset/password
         form:
-          account:
-            accepts: [email]
+          email:
+            input: required
           captcha:
             type: letters
       response:

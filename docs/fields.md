@@ -93,25 +93,23 @@ Array of restrictions on what passwords *must not* do (other than those describe
 
 The URL of the site's "reset password" page.
 
-## password.reset.flow.request.form.account.accepts, password.reset.randomize.request.form.account.accepts, password.reset.onetime.request.form.account.accepts
+## password.reset.flow.request.form.username.input, password.reset.randomize.request.form.username.input, password.reset.onetime.request.form.username.input
 
-An array of what identifiers the site needs to request an email to enter password reset flow. (Usually some combination of "email" and/or "username".)
+If password reset requires a username to identify the account, this will be `required`.
 
-When sites require *multiple* inputs, they are split across other fields, with the most likely to represent an account attached to `account`. If more than one field is required to represent the account (like both the username *and* email address), then `account` will not be present, and those other fields will be used instead.
+If password reset *requires* an identifier like `email` to identify your account (ie. `account.accepts` is `[email]`), but optionally includes a field to input your username (presumably to reject the request if you're wrong about your username), this will be `optional`.
+
+## password.reset.flow.request.form.email.input, password.reset.randomize.request.form.email.input, password.reset.onetime.request.form.email.input
+
+If password reset requires the email address to identify the account, this will be `required`.
 
 ## password.reset.flow.request.form.domain.input
 
 If requesting a password reset requires you to provide a domain attached to the account, ie. one the user has purchased or set up with the service, this will be `required`.
 
-## password.reset.flow.request.form.username.input, password.reset.onetime.request.form.username.input
+## password.reset.flow.request.form.account.accepts, password.reset.randomize.request.form.account.accepts, password.reset.onetime.request.form.account.accepts
 
-If password reset *requires* an identifier like `email` to identify your account (ie. `account.accepts` is `[email]`), but optionally includes a field to input your username (presumably to reject the request if you're wrong about your username), this will be `optional`.
-
-## password.reset.flow.request.form.email.input, password.reset.onetime.request.form.email.input
-
-If password reset requires the email address on the account *in addition to* whatever is used to identify the account (such as a username or account number), this will be `required`.
-
-This may also be used instead of `account` when a *repeated* email input is present.
+An array of what identifiers the site needs to request an email to enter password reset flow, if it has one input that accepts multiple types of identifier. (Usually `email` and `username`.)
 
 ## password.reset.flow.request.form.repeat.email.input
 
@@ -350,9 +348,13 @@ Whether any Terms and Conditions the site requires users to comply with are acce
 
 The URL of the page to log in, as a user.
 
+## login.form.email.input, login.form.username.input
+
+When login takes an email address or username, one of these will be `required`. When login accepts *more than one* type of account identification, they will be listed in an array under `login.form.account.accepts`.
+
 ## login.form.account.accepts
 
-An array of what identifiers the site accepts to identify the account logging in. (Usually some combination of "email" and/or "username".)
+When login has one field that supports multiple forms of login, this will be an array containing the identifiers it accepts (usually `username` and `email`).
 
 ## login.form.password.characters
 

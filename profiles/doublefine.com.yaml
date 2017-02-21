@@ -12,8 +12,8 @@ password:
       request:
         url: https://forums.doublefine.com/lostpassword/
         form:
-          account:
-            accepts: [email]
+          email:
+            input: required
       response:
         email:
           sender: info@doublefine.com

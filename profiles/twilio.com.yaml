@@ -5,7 +5,7 @@ password:
       request:
         url: https://www.twilio.com/reset-password
         form:
-          account:
-            accepts: [email]
+          email:
+            input: required
   change:
     url: https://www.twilio.com/user/settings#password-row

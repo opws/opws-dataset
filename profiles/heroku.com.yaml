@@ -14,8 +14,8 @@ password:
       request:
         url: https://id.heroku.com/account/password/reset
         form:
-          account:
-            accepts: [email]
+          email:
+            input: required
       response:
         email:
           sender: noreply@heroku.com
@@ -67,8 +67,8 @@ registration:
 login:
   url: https://id.heroku.com/login
   form:
-    account:
-      accepts: [email]
+    email:
+      input: required
     password:
       characters: hidden
 reviewed:

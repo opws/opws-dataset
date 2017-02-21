@@ -8,8 +8,8 @@ password:
       request:
         url: https://www.mapbox.com/#active1
         form:
-          account:
-            accepts: [email]
+          email:
+            input: required
       response:
         email:
           sender: noreply@mapbox.com

@@ -9,8 +9,8 @@ password:
       request:
         url: http://www.guru.com/forgotsignin.aspx
         form:
-          account:
-            accepts: [email]
+          email:
+            input: required
       response:
         email:
           body: [username, link]

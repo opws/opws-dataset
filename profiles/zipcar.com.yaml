@@ -13,8 +13,8 @@ password:
       request:
         url: https://members.zipcar.com/register/forgot-password
         form:
-          account:
-            accepts: [email]
+          email:
+            input: required
       response:
         email:
           body: [username, code]

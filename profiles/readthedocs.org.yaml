@@ -8,8 +8,8 @@ password:
       request:
         url: https://readthedocs.org/accounts/password/reset/
         form:
-          account:
-            accepts: [email]
+          email:
+            input: required
       response:
         email:
           sender: support@readthedocs.org

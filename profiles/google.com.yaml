@@ -31,8 +31,8 @@ password:
       request:
         url: https://accounts.google.com/signin/recovery
         form:
-          account:
-            accepts: [email]
+          email:
+            input: required
       response:
         email:
           sender: noreply@google.com

@@ -8,8 +8,8 @@ password:
       request:
         url: https://aytm.com/users/restore-password
         form:
-          account:
-            accepts: [email]
+          email:
+            input: required
       response:
         email:
           body: [link, url]

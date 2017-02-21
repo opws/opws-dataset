@@ -42,8 +42,8 @@ username:
     request:
       url: https://bank.simple.com/forgot-username
       form:
-        account:
-          accepts: [email]
+        email:
+          input: required
         phone:
           input: required
 registration:
@@ -58,8 +58,8 @@ registration:
 login:
   url: https://bank.simple.com/signin
   form:
-    account:
-      accepts: [username]
+    username:
+      input: required
     password:
       characters: showable
 reviewed:

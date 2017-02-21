@@ -13,8 +13,8 @@ password:
       request:
         url: https://auth.getpebble.com/users/password/new
         form:
-          account:
-            accepts: [email]
+          email:
+            input: required
           captcha:
             type: recaptcha
       response:

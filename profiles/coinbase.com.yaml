@@ -12,8 +12,8 @@ password:
       request:
         url: https://coinbase.com/password_resets/new
         form:
-          account:
-            accepts: [email]
+          email:
+            input: required
       response:
         email:
           sender: no-reply@coinbase.com
@@ -63,8 +63,8 @@ registration:
 login:
   url: https://www.coinbase.com/signin
   form:
-    account:
-      accepts: [email]
+    email:
+      input: required
     password:
       characters: hidden
     persist:

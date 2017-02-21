@@ -15,8 +15,8 @@ password:
       request:
         url: https://m.freelancer.com/reset-password
         form:
-          account:
-            accepts: [email]
+          email:
+            input: required
       response:
         email:
           sender: noreply@freelancer.com

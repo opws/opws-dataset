@@ -13,8 +13,8 @@ password:
       request:
         url: https://www.headspace.com/login/forgotten-password
         form:
-          account:
-            accepts: [email]
+          email:
+            input: required
       response:
         email:
           sender: service@headspace.com
@@ -47,8 +47,8 @@ password:
 login:
   url: https://www.headspace.com/login
   form:
-    account:
-      accepts: [email]
+    email:
+      input: required
     password:
       characters: hidden
     persist:

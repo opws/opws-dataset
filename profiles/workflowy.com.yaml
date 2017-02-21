@@ -8,8 +8,8 @@ password:
       request:
         url: https://workflowy.com/accounts/password_reset/
         form:
-          account:
-            accepts: [email]
+          email:
+            input: required
       response:
         email:
           sender: help@workflowy.com
@@ -60,8 +60,8 @@ registration:
 login:
   url: https://workflowy.com/accounts/login/
   form:
-    account:
-      accepts: [email]
+    email:
+      input: required
     password:
       characters: hidden
 reviewed:

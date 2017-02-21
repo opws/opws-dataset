@@ -8,8 +8,8 @@ password:
       request:
         url: https://robinhood.com/signup/reset_password/
         form:
-          account:
-            accepts: [email]
+          email:
+            input: required
       response:
         email:
           sender: notifications@robinhood.com
@@ -37,8 +37,8 @@ registration:
 login:
   url: https://robinhood.com/signup/login/
   form:
-    account:
-      accepts: [username]
+    username:
+      input: required
     password:
       characters: hidden
 terms:

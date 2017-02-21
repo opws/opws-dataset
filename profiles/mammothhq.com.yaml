@@ -8,8 +8,8 @@ password:
       request:
         url: https://mammothhq.com/users/password/new
         form:
-          account:
-            accepts: [email]
+          email:
+            input: required
       response:
         email:
           notes:
@@ -68,8 +68,8 @@ registration:
 login:
   url: https://mammothhq.com/sign_in
   form:
-    account:
-      accepts: [email]
+    email:
+      input: required
     password:
       characters: hidden
 reviewed:

@@ -5,7 +5,7 @@ password:
       request:
         url: http://coderbyte.com/sl/forgotpassword/
         form:
-          account:
-            accepts: [email]
+          email:
+            input: required
   change:
     url: http://coderbyte.com/CodingArea/Settings/

@@ -3,8 +3,8 @@ use: yahoo.com
 login:
   url: https://www.tumblr.com/login
   form:
-    account:
-      accepts: [email]
+    email:
+      input: required
     password:
       characters: hidden
 reviewed:

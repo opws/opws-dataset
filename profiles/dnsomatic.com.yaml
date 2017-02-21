@@ -19,8 +19,8 @@ password:
       request:
         url: https://www.dnsomatic.com/account/#pwdreset
         form:
-          account:
-            accepts: [email]
+          email:
+            input: required
       response:
         email:
           sender: accounts@dnsomatic.com

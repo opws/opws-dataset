@@ -8,8 +8,8 @@ password:
       request:
         url: https://secure-www.zappos.com/password/reset
         form:
-          account:
-            accepts: [email]
+          email:
+            input: required
           captcha:
             type: alphanumeric
       response:

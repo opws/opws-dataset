@@ -5,7 +5,7 @@ password:
       request:
         url: https://www.eventbrite.com/resetpassword
         form:
-          account:
-            accepts: [email]
+          email:
+            input: required
   change:
     url: https://www.eventbrite.com/password

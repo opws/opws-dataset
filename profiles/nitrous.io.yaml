@@ -5,7 +5,7 @@ password:
       request:
         url: https://www.nitrous.io/users/password/new
         form:
-          account:
-            accepts: [email]
+          email:
+            input: required
   change:
     url: https://www.nitrous.io/users/edit#user_password

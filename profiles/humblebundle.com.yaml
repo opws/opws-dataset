@@ -8,8 +8,8 @@ password:
       request:
         url: https://www.humblebundle.com/user/forgot
         form:
-          account:
-            accepts: [email]
+          email:
+            input: required
       response:
         email:
           sender: contact@humblebundle.com

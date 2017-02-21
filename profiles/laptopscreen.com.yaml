@@ -8,7 +8,7 @@ password:
       request:
         url: https://www.laptopscreen.com/English/section/password-recovery/
         form:
-          account:
-            accepts: [email]
+          email:
+            input: required
   change:
     url: https://www.laptopscreen.com/English/profile/

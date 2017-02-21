@@ -12,8 +12,8 @@ password:
       request:
         url: https://digital.darkhorse.com/accounts/password_reset/
         form:
-          account:
-            accepts: [email]
+          email:
+            input: required
       response:
         email:
           sender: digital.service@darkhorse.com

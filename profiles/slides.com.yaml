@@ -21,8 +21,8 @@ password:
       request:
         url: https://slides.com/users/password/new
         form:
-          account:
-            accepts: [email]
+          email:
+            input: required
       response:
         email:
           sender: no-reply@slides.com

@@ -8,8 +8,8 @@ password:
       request:
         url: https://aur.archlinux.org/passreset/
         form:
-          account:
-            accepts: [email]
+          email:
+            input: required
       response:
         email:
           sender: notify@aur.archlinux.org

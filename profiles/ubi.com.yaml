@@ -18,8 +18,8 @@ password:
       request:
         url: https://connect.ubi.com/Default/ForgotPassword?appId=c5393f10-7ac7-4b4f-90fa-21f8f3451a04
         form:
-          account:
-            accepts: [email]
+          email:
+            input: required
       response:
         email:
           sender: AccountSupport@ubi.com
@@ -79,8 +79,8 @@ registration:
 login:
   url: https://connect.ubi.com/Default/Login?appId=c5393f10-7ac7-4b4f-90fa-21f8f3451a04
   form:
-    account:
-      accepts: [email]
+    email:
+      input: required
     password:
       characters: hidden
     persist:

@@ -8,8 +8,8 @@ password:
       request:
         url: https://id.docker.com/reset-password/
         form:
-          account:
-            accepts: [email]
+          email:
+            input: required
       response:
         email:
           sender: no-reply@notify.docker.com
@@ -44,8 +44,8 @@ username:
 login:
   url: https://cloud.docker.com/login/
   form:
-    account:
-      accepts: [username]
+    username:
+      input: required
     password:
       characters: hidden
 registration:

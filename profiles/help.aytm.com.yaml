@@ -8,5 +8,5 @@ password:
       request:
         url: http://help.aytm.com/access/help
         form:
-          account:
-            accepts: [email]
+          email:
+            input: required
