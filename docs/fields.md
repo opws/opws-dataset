@@ -57,11 +57,15 @@ Array of keywords describing other fields of the user's profile that a password 
 - `firstname`
 - `lastname`
 
-## password.value.blacklist.previous, password.contents.blacklist.previous
+## password.value.blacklist.previous.count, password.contents.blacklist.previous.count
 
-Number of retained, previously-used passwords that a password may not match or contain, respectively. When the number is not known, this field's value will just be `yes`.
+Number of retained, previously-used passwords that a password may not match or contain, respectively.
 
-(`password.contents.blacklist.previous` implies that a site is retaining the plaintext of the user's passwords, and is a *huge* red flag compared to `password.value.blacklist.previous`, which only implies that previous *hashes* are retained.)
+(`password.contents.blacklist.previous.count` implies that a site is retaining the plaintext of the user's passwords, and is a *huge* red flag compared to `password.value.blacklist.previous.count`, which only implies that previous *hashes* are retained.)
+
+## password.value.blacklist.previous.period
+
+Period of time passwords may not be reused for, as a string like "90d" for 90 days (or "forever", if there doesn't appear to be a limit).
 
 ## password.contents.whitelist
 

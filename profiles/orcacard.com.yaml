@@ -15,7 +15,8 @@ password:
     blacklist:
       variables:
       - username
-      previous: 4
+      previous:
+        count: 4
   reset:
     onetime:
       request:

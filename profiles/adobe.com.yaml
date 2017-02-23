@@ -12,7 +12,8 @@ password:
       - username
       - firstname
       - lastname
-      previous: yes
+      previous:
+        period: forever
   contents:
     required:
     - classes:

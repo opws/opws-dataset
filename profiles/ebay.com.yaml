@@ -7,7 +7,8 @@ password:
     blacklist:
       dictionaries:
       - theme: common
-      previous: yes
+      previous:
+        period: forever
     notes:
     - url: http://pages.ebay.com/help/new/contextual/create_password.html
   contents:

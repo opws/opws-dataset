@@ -4,7 +4,8 @@ password:
     length:
       min: 8
     blacklist:
-      previous: 3
+      previous:
+        count: 3
   contents:
     required:
     - classes:
