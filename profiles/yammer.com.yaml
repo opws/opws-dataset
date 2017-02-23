@@ -2,7 +2,204 @@ name: Yammer
 password:
   value:
     length:
-      min: 6
+      min: 8
+      notes:
+      - en: Resetting a password only enforces a length limit of 6.
+    blacklist:
+      dictionaries:
+      - theme: common
+        entries: # BANNED_PASSWORDS, line 288 of registration completion page source
+        - "11111111"
+        - 1232323q
+        - "12345678"
+        - "123456789"
+        - 123456789a
+        - 123456789q
+        - 12345qwert
+        - 1234qwer
+        - 12qwaszx
+        - 1q2w3e4r
+        - 1q2w3e4r5t
+        - 1qaz2wsx
+        - 1qazxsw2
+        - aaaaaaaa
+        - abcd1234
+        - access14
+        - airborne
+        - alejandra
+        - alejandro
+        - alexande
+        - alexander
+        - alexandr
+        - american
+        - anderson
+        - asdf1234
+        - asdfasdf
+        - asdfghjk
+        - asdfghjkl
+        - babygirl
+        - baseball
+        - benjamin
+        - bigdaddy
+        - blink182
+        - bollocks
+        - brittany
+        - brooklyn
+        - budlight
+        - bulldogs
+        - bullshit
+        - butthead
+        - cardinal
+        - carolina
+        - caroline
+        - champion
+        - changeme
+        - cherokee
+        - chevelle
+        - christin
+        - cocacola
+        - colorado
+        - computer
+        - consumer
+        - corvette
+        - courtney
+        - creative
+        - danielle
+        - darkness
+        - darkside
+        - december
+        - dickhead
+        - dolphins
+        - drowssap
+        - einstein
+        - electric
+        - elephant
+        - elizabet
+        - estrella
+        - explorer
+        - firebird
+        - fktrcfylh
+        - football
+        - franklin
+        - freepass
+        - freeuser
+        - garfield
+        - godzilla
+        - guinness
+        - hardcore
+        - hello123
+        - iloveyou
+        - infinity
+        - internet
+        - jennifer
+        - jonathan
+        - jordan23
+        - juventus
+        - kawasaki
+        - kimberly
+        - kristina
+        - lacrosse
+        - lasvegas
+        - lifehack
+        - liverpoo
+        - liverpool
+        - logitech
+        - lovelove
+        - loverboy
+        - mariposa
+        - marlboro
+        - marshall
+        - maryjane
+        - maverick
+        - mercedes
+        - metallic
+        - metallica
+        - michael1
+        - michelle
+        - michigan
+        - midnight
+        - minecraft
+        - mistress
+        - mitchell
+        - motorola
+        - mountain
+        - ncc1701d
+        - nicholas
+        - nintendo
+        - november
+        - pakistan
+        - panthers
+        - paradise
+        - passport
+        - passw0rd
+        - password
+        - password1
+        - password12
+        - password123
+        - patricia
+        - patriots
+        - pearljam
+        - peekaboo
+        - platinum
+        - poohbear
+        - predator
+        - princess
+        - q1w2e3r4
+        - q1w2e3r4t5
+        - qazwsxedc
+        - qweasdzxc
+        - qwer1234
+        - qwerty12
+        - qwerty123
+        - qwertyui
+        - qwertyuiop
+        - redskins
+        - redwings
+        - rolltide
+        - rush2112
+        - samantha
+        - scarface
+        - scorpion
+        - scotland
+        - sebastian
+        - security
+        - semperfi
+        - shithead
+        - simpsons
+        - slipknot
+        - snickers
+        - snowball
+        - softball
+        - spiderma
+        - spiderman
+        - spitfire
+        - srinivas
+        - stargate
+        - startrek
+        - starwars
+        - steelers
+        - sunshine
+        - superman
+        - svetlana
+        - swimming
+        - swordfis
+        - tequiero
+        - trustno1
+        - usuckballz1
+        - valentin
+        - veronica
+        - victoria
+        - virginia
+        - vladimir
+        - warcraft
+        - westside
+        - whatever
+        - wildcats
+        - williams
+        - wolfpack
+        - wolverin
+        - xxxxxxxx
+        - zaq12wsx
   reset:
     flow:
       request:
@@ -10,12 +207,70 @@ password:
         form:
           email:
             input: required
+      response:
+        email:
+          sender: notifications@yammer.com
+          body: [url]
+      change:
+        form:
+          newpassword:
+            characters: hidden
+          repeat:
+            newpassword:
+              input: required
+              characters: hidden
+      submit:
+        destination:
+          page: home
+        sessions:
+          own: login
+        expire: now
   change:
     url: https://www.yammer.com/account/password
     form:
       oldpassword:
         input: required
+        characters: hidden
+      newpassword:
+        characters: hidden
+      repeat:
+        newpassword:
+          input: required
+          characters: hidden
 registration:
   url: https://www.yammer.com/signup
+  form:
+    email:
+      input: required
+    firstname:
+      input: required
+    lastname:
+      input: required
+    password:
+      input: required
+      characters: hidden
+    repeat:
+      password:
+        input: none
+      email:
+        input: none
+    terms:
+      agreement: implicit
+  notes:
+  - en: >
+      Registration starts with an entered email address, then is completed
+      after following a link sent to that email address.
+terms:
+  use:
+    url: https://products.office.com/en-US/yammer/terms-of-use
 login:
   url: https://www.yammer.com/login
+  form:
+    email:
+      input: required
+    password:
+      characters: hidden
+    persist:
+      checkbox: checked
+reviewed:
+  date: 2017-02-22T11:50:11.993Z
