@@ -2,16 +2,70 @@ name: Stripe
 password:
   value:
     length:
-      min: 1
+      min: 8
+      max: 256
+    must:
+    - en: >
+        contain at least one lowercase, uppercase, number, and special
+        character if shorter than 16 characters
+    mustnot:
+    - en: include a character repeated four or more times consecutively
+  contents:
   reset:
     flow:
       request:
-        url: https://manage.stripe.com/reset
+        url: https://dashboard.stripe.com/reset
         form:
           email:
             input: required
+      response:
+        email:
+          sender: support@stripe.com
+          body: [url]
+      change:
+        form:
+          newpassword:
+            characters: hidden
+          repeat:
+            newpassword:
+              input: none
+      submit:
+        destination:
+          page: stub
+        sessions:
+          own: login
+        expire: now
   change:
-    url: https://manage.stripe.com/account
+    url: https://dashboard.stripe.com/settings/user#change_password
     form:
       oldpassword:
         input: required
+        characters: hidden
+      newpassword:
+        characters: hidden
+      repeat:
+        newpassword:
+          input: none
+registration:
+  url: https://dashboard.stripe.com/register
+  form:
+    email:
+      input: required
+    password:
+      input: required
+      characters: hidden
+    repeat:
+      password:
+        input: required
+        characters: hidden
+login:
+  url: https://dashboard.stripe.com/login
+  form:
+    email:
+      input: required
+    password:
+      characters: hidden
+    persist:
+      checkbox: checked
+reviewed:
+  date: 2017-02-23T22:38:49.847Z
