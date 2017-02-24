@@ -1,0 +1,61 @@
+name: Filestack
+password:
+  value:
+    length:
+      min: 1
+  notes:
+  - en: Password must be at least 6 characters when first registering.
+  reset:
+    randomize:
+      request:
+        url: https://dev.filestack.com/password_reset/
+        form:
+          email:
+            input: required
+      response:
+        email:
+          sender: contact@filestack.com
+          body: [password]
+  change:
+    url: https://dev.filestack.com/account/#password-reset
+    form:
+      oldpassword:
+        input: required
+        characters: hidden
+      newpassword:
+        characters: hidden
+      repeat:
+        newpassword:
+          input: none
+registration:
+  url: https://dev.filestack.com/register/
+  form:
+    fullname:
+      input: required
+    email:
+      input: required
+    password:
+      input: required
+      characters: hidden
+    repeat:
+      password:
+        input: required
+        characters: hidden
+      email:
+        input: none
+    phone:
+      input: required
+login:
+  url: https://dev.filestack.com/login/
+  form:
+    email:
+      input: required
+    password:
+      characters: hidden
+thirdparty:
+  auth:
+    providers:
+    - google.com
+    - "*.slack.com"
+reviewed:
+  date: 2017-02-24T18:51:39.818Z
