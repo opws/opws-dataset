@@ -1,11 +1,69 @@
 name: Coderbyte
 password:
+  value:
+    length:
+      min: 1
+      max: 40
+      notes:
+      - en: >
+          Password change form will accept passwords of any length,
+          but login input has a validation maximum of 40.
   reset:
-    flow:
+    randomize:
       request:
-        url: http://coderbyte.com/sl/forgotpassword/
+        url: https://coderbyte.com/sl/forgotpassword/
         form:
           email:
             input: required
+      response:
+        email:
+          sender: admin@coderbyte.com
+          body: [username, password]
   change:
-    url: http://coderbyte.com/CodingArea/Settings/
+    url: https://coderbyte.com/settings/#new_pass
+    before:
+      form:
+        oldpassword:
+          input: required
+          characters: hidden
+    form:
+      newpassword:
+        characters: hidden
+      repeat:
+        newpassword:
+          input: required
+          characters: hidden
+    sessions:
+      own: logout
+username:
+  value:
+    length:
+      min: 5
+      max: 16
+  contents:
+    whitelist:
+      classes:
+      - letters
+      - numbers
+    required:
+    - classes:
+      - letters
+registration:
+  url: https://coderbyte.com/sl/
+  form:
+    username:
+      input: required
+    email:
+      input: required
+    password:
+      input: required
+      characters: hidden
+login:
+  url: https://coderbyte.com/sl/
+  form:
+    account:
+      accepts: [username, email]
+    password:
+      characters: hidden
+reviewed:
+  date: 2017-02-25T22:56:14.141Z
