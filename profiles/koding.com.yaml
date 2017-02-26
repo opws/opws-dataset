@@ -9,3 +9,5 @@ password:
             accepts: [username, email]
   change:
     url: https://koding.com/Account
+reviewed:
+  date: 2013-10-16T06:50:07Z

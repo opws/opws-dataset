@@ -35,3 +35,5 @@ login:
       characters: showable
 registration:
   url: https://www.guru.com/registeraccount.aspx
+reviewed:
+  date: 2013-10-22T06:29:22Z

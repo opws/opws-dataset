@@ -7,3 +7,5 @@ password:
         form:
           email:
             input: required
+reviewed:
+  date: 2013-05-30T17:41:28Z

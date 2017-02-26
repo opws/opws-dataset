@@ -20,3 +20,5 @@ username:
       max: 16
     must:
     - en: begin with a letter
+reviewed:
+  date: 2013-12-31T06:42:36Z

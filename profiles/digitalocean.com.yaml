@@ -16,3 +16,5 @@ password:
             input: required
   change:
     url: https://www.digitalocean.com/settings#edit-password
+reviewed:
+  date: 2013-06-16T01:33:52Z

@@ -7,3 +7,5 @@ password:
         form:
           account:
             accepts: [username, email]
+reviewed:
+  date: 2013-12-16T01:09:25Z

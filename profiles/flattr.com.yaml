@@ -9,3 +9,5 @@ password:
             input: required
   change:
     url: https://flattr.com/authaccounts/editpassword
+reviewed:
+  date: 2014-01-15T04:41:29Z

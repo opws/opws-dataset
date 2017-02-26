@@ -13,3 +13,5 @@ password:
         expire: 7d
   change:
     url: https://commons.wikimedia.org/wiki/Special:ChangePassword
+reviewed:
+  date: 2013-10-13T05:56:59Z

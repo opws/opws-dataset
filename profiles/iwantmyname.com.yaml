@@ -9,3 +9,5 @@ password:
             accepts: [email, domain]
   change:
     url: https://iwantmyname.com/dashboard/account/login
+reviewed:
+  date: 2013-12-23T02:56:58Z
