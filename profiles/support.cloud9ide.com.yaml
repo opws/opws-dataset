@@ -1,9 +1,0 @@
-name: Cloud9 IDE Support
-password:
-  reset:
-    flow:
-      request:
-        url: http://support.cloud9ide.com/access/help
-        form:
-          email:
-            input: required
