@@ -156,7 +156,7 @@ Array of things the password reset page expects as proof of identity before rese
 
 - "origin" (IP address requesting the page must be the same IP the email was requested from)
 
-## password.reset.flow.response.expire, password.reset.onetime.response.expire
+## password.reset.flow.response.expire, password.reset.randomize.response.expire, password.reset.onetime.response.expire
 
 How long after issuance the reset token is valid for, as a human-abbreviated string ("24h" is common).
 
@@ -190,7 +190,7 @@ If resetting a password requires you to provide the email address on the account
 
 An array of what identifiers the site needs to request an email to *set a new password* when resetting a new password, if multiple identifiers are accepted (otherwise, this will usually be captured by a field like "email.input"). See `password.reset.form.request.account.accepts` for common enum values.
 
-## password.reset.flow.submit.expire
+## password.reset.flow.submit.expire, password.reset.randomize.open.expire
 
 If the token does not immediately expire until it is used, the value of this field will be `"now"`.
 
