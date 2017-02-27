@@ -467,11 +467,11 @@ login:
   form:
     account:
       accepts: [phone, email, username]
-terms:
-  service:
+legal:
+  documents:
+  - name: Terms of Service
     url: https://twitter.com/tos
-statements:
-  privacy:
+  - name: Privacy Policy
     url: https://twitter.com/privacy
 reviewed:
   date: 2017-02-14T08:13:31.422Z

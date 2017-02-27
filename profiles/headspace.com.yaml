@@ -72,11 +72,11 @@ registration:
         input: none
     terms:
       agreement: implicit
-terms:
-  service:
+legal:
+  documents:
+  - name: Terms and Conditions
     url: https://www.headspace.com/terms-and-conditions
-statements:
-  privacy:
+  - name: Privacy Policy
     url: https://www.headspace.com/privacy-policy
 thirdparty:
   auth:

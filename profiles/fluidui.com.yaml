@@ -67,8 +67,9 @@ login:
       input: required
     password:
       characters: hidden
-terms:
-  use:
+legal:
+  documents:
+  - name: Terms of Use
     url: https://www.fluidui.com/terms/
 reviewed:
   date: 2017-02-12T10:49:17.910Z

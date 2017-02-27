@@ -91,13 +91,13 @@ thirdparty:
     - facebook.com
     - sonyentertainmentnetwork.com
     - live.com
-terms:
-  use:
+legal:
+  documents:
+  - name: Terms of Use
     url: https://legal.ubi.com/termsofuse/
-  sale:
+  - name: Terms of Sale
     url: https://legal.ubi.com/termsofsale/
-statements:
-  privacy:
+  - name: Privacy Policy
     url: https://legal.ubi.com/privacypolicy/
 reviewed:
   date: 2017-02-11T22:13:31.941Z

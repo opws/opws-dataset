@@ -72,11 +72,11 @@ thirdparty:
     providers:
     - facebook.com
     - google.com
-terms:
-  use:
+legal:
+  documents:
+  - name: Terms of Use
     url: https://www.udemy.com/terms/
-statements:
-  privacy:
+  - name: Privacy Policy
     url: https://www.udemy.com/terms/privacy/
 reviewed:
   date: 2017-02-12T00:47:03.655Z

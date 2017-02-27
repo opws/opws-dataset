@@ -81,11 +81,11 @@ login:
       characters: hidden
     persist:
       checkbox: unchecked
-terms:
-  use:
+legal:
+  documents:
+  - name: User Agreement
     url: https://www.reddit.com/help/useragreement/
-statements:
-  privacy:
+  - name: Privacy Policy
     url: https://www.reddit.com/help/privacypolicy/
 reviewed:
   date: 2017-02-13T00:23:33.072Z

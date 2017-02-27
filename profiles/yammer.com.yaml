@@ -260,8 +260,9 @@ registration:
   - en: >
       Registration starts with an entered email address, then is completed
       after following a link sent to that email address.
-terms:
-  use:
+legal:
+  documents:
+  - name: Terms of Use
     url: https://products.office.com/en-US/yammer/terms-of-use
 login:
   url: https://www.yammer.com/login

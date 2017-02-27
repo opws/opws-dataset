@@ -120,11 +120,11 @@ registration:
       type: alphanumeric
     terms:
       agreement: checkbox
-terms:
-  service:
+legal:
+  documents:
+  - name: User Agreement
     url: https://www.upwork.com/info/terms/
-statements:
-  privacy:
+  - name: Privacy Policy
     url: https://www.upwork.com/info/terms/privacy/
 login:
   url: https://www.upwork.com/ab/account-security/login

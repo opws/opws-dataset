@@ -29,8 +29,9 @@ registration:
         characters: hidden
     terms:
       agreement: checkbox
-terms:
-  service:
+legal:
+  documents:
+  - name: Terms and Conditions
     url: https://www.tarsnap.com/legal.html
 login:
   url: https://www.tarsnap.com/manage.cgi

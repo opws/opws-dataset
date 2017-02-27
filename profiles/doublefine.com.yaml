@@ -71,8 +71,9 @@ registration:
       - en: Also has a CAPTCHA question ("Name a Double Fine game").
     terms:
       agreement: checkbox
-terms:
-  use:
+legal:
+  documents:
+  - name: Terms of Use # this is how it's linked on the registration form
     url: https://forums.doublefine.com/terms/
 login:
   url: https://forums.doublefine.com/login/

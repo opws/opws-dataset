@@ -80,11 +80,11 @@ login:
       input: required
     password:
       characters: hidden
-terms:
-  service:
+legal:
+  documents:
+  - name: Subscriber Agreement
     url: http://store.steampowered.com/subscriber_agreement/
-statements:
-  privacy:
+  - name: Privacy Policy
     url: http://store.steampowered.com/privacy_agreement/
 reviewed:
   date: 2017-02-12T11:35:31.032Z

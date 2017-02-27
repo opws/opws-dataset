@@ -94,11 +94,11 @@ registration:
     - en: >
         Also requires a 4-digit "Support PIN" that cannot be a single repeated
         digit or sequential digits.
-terms:
-  service:
+legal:
+  documents:
+  - name: Terms of Service
     url: https://godaddy.com/agreements/ShowDoc.aspx?pageid=5403
-statements:
-  privacy:
+  - name: Privacy Policy
     url: https://godaddy.com/agreements/ShowDoc.aspx?pageid=5432
 login:
   url: https://sso.godaddy.com/v1/

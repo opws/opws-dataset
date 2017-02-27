@@ -54,11 +54,11 @@ registration:
       input: required
     terms:
       agreement: checkbox
-terms:
-  service:
+legal:
+  documents:
+  - name: Terms of Service
     url: http://xirsys.com/terms/
-statements:
-  privacy:
+  - name: Privacy Policy
     url: http://xirsys.com/privacy/
 login:
   url: https://dashboard.xirsys.com/signin

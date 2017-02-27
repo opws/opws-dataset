@@ -41,8 +41,9 @@ login:
       input: required
     password:
       characters: hidden
-terms:
-  service:
+legal:
+  documents:
+  - name: Terms and Conditions
     url: https://d2ue93q3u507c2.cloudfront.net/assets/robinhood/legal/Robinhood%20Terms%20and%20Conditions.pdf
 reviewed:
   date: 2017-02-16T11:58:39.730Z

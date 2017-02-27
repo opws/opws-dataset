@@ -394,17 +394,9 @@ List of security questions attached to profiles. Each item may have "required" o
 
 Rules governing the input for security questions' answers. See `password.value` and `password.contents` above.
 
-## statements.privacy.url
+## legal.documents
 
-The URL of a privacy policy / statement for the site.
-
-## statements.security.url
-
-The URL of a posted security statement for the site, such as https://github.com/security.
-
-## terms.service.url, terms.use.url, terms.sale.url
-
-URLs for posted Terms and Conditions of Service, Use, and/or Sale. Usually, a user has to agree to all of these to register an account (see `registration.form.terms.agreement`).
+An array of documents comrpising terms and/or notices of the site. Usually, a user has to agree to all of these to register an account (see `registration.form.terms.agreement`).
 
 ## notes, \*.notes
 

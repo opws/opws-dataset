@@ -584,13 +584,13 @@ login:
   form:
     account:
       accepts: [username, phone]
-statements:
-  privacy:
-    url: https://www.verizon.com/about/privacy/privacy-policy-summary
-terms:
-  service:
+legal:
+  documents:
+  - name: My Verizon Terms and Conditions
     url: https://www.verizonwireless.com/wcms/myverizon/terms.html
-  use:
+  - name: Website Use Terms and Conditions
     url: https://www.verizonwireless.com/one-support/web-use/
+  - name: Privacy Policy
+    url: https://www.verizon.com/about/privacy/privacy-policy-summary
 reviewed:
   date: 2017-02-14T05:51:13.830Z

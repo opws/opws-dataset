@@ -62,11 +62,11 @@ registration:
       characters: hidden
     terms:
       agreement: implicit
-terms:
-  service:
+legal:
+  documents:
+  - name: User Agreement
     url: https://www.freelancer.com/about/terms
-statements:
-  privacy:
+  - name: Privacy Policy
     url: https://www.freelancer.com/about/privacy
 login:
   url: https://www.freelancer.com/login

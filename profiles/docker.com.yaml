@@ -60,11 +60,11 @@ registration:
       characters: hidden
     terms:
       agreement: implicit
-terms:
-  service:
+legal:
+  documents:
+  - name: Terms of Service
     url: https://www.docker.com/docker-terms-service
-statements:
-  privacy:
+  - name: Privacy Policy
     url: https://www.docker.com/docker-privacy-policy
 reviewed:
   date: 2017-02-14T10:00:42.681Z

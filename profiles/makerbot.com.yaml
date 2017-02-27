@@ -72,11 +72,11 @@ registration:
       type: recaptcha
     terms:
       agreement: implicit
-terms:
-  service:
+legal:
+  documents:
+  - name: Terms of Use # though registration calls them "Terms of Service"
     url: http://www.thingiverse.com/legal/terms
-statements:
-  privacy:
+  - name: Privacy Policy
     url: http://www.thingiverse.com/legal/privacy
 reviewed:
   date: 2017-02-14T23:58:07.739Z

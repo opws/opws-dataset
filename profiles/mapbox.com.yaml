@@ -69,11 +69,11 @@ login:
       accepts: [username, email]
     password:
       characters: hidden
-terms:
-  service:
+legal:
+  documents:
+  - name: Terms of Service
     url: https://www.mapbox.com/tos/
-statements:
-  privacy:
+  - name: Privacy Policy
     url: https://www.mapbox.com/privacy/
 reviewed:
   date: 2017-02-14T08:13:31.422Z

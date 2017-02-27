@@ -80,11 +80,11 @@ login:
       input: required
     password:
       characters: hidden
-terms:
-  service:
+legal:
+  documents:
+  - name: Terms of Service
     url: https://about.crunchbase.com/docs/terms-of-service/
-statements:
-  privacy:
+  - name: Privacy Policy
     url: https://about.crunchbase.com/docs/privacy-policy/
 reviewed:
   date: 2017-02-15T06:37:44.928Z
