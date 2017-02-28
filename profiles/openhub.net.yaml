@@ -1,0 +1,68 @@
+name: Open Hub
+password:
+  value:
+    length:
+      min: 5
+  contents:
+    required:
+    - classes:
+      - nonspaces
+  reset:
+    flow:
+      request:
+        url: https://www.openhub.net/password_resets/new
+        form:
+          email:
+            input: required
+  change:
+    url: https://www.openhub.net/accounts/ + username + /password/edit
+    form:
+      oldpassword:
+        input: required
+        characters: hidden
+      newpassword:
+        characters: hidden
+      repeat:
+        newpassword:
+          input: required
+          characters: hidden
+username:
+  value:
+    length:
+      min: 3
+      max: 40
+    must:
+    - en: begin with a letter
+  contents:
+    whitelist:
+      classes:
+      - letters
+      - numbers
+      strings: ['_', '-']
+registration:
+  url: https://www.openhub.net/registrations/new
+  form:
+    username:
+      input: required
+    email:
+      input: required
+    password:
+      input: required
+      characters: hidden
+    repeat:
+      email:
+        input: required
+      password:
+        input: required
+        characters: hidden
+login:
+  url: https://www.openhub.net/sessions/new
+  form:
+    account:
+      accepts: [username, email]
+    password:
+      characters: hidden
+    persist:
+      checkbox: unchecked
+reviewed:
+  date: 2017-02-28T01:56:35.247Z
