@@ -70,7 +70,7 @@ username:
       strings:
       - "ebay"
       dictionaries:
-      - theme: obscenity
+      - theme: obscene
   change:
     url: https://scgi.ebay.com/ws/eBayISAPI.dll?ChangeUserId
     form:
