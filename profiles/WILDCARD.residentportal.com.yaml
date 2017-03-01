@@ -7,9 +7,9 @@ password:
     required:
     - atleast: 2
       classes:
-      - uppers
-      - lowers
-      - numbers
+      - upper
+      - lower
+      - digit
   reset:
     flow:
       request:

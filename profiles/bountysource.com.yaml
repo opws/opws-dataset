@@ -7,8 +7,8 @@ password:
   contents:
     required:
     - classes:
-      - letters
-      - numbers
+      - alpha
+      - digit
   change:
     url: https://www.bountysource.com/settings/accounts
     form:

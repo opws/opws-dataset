@@ -7,7 +7,7 @@ password:
   contents:
     required:
     - classes:
-      - nonspaces
+      - graph
   change:
     url: https://slides.com/users/edit#user_password
     form:
@@ -34,8 +34,8 @@ username:
   contents:
     whitelist:
       classes:
-      - letters
-      - numbers
+      - alpha
+      - digit
       strings: ['-', '_']
 registration:
   url: https://slides.com/users/sign_up

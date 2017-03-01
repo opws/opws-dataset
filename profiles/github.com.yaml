@@ -35,8 +35,8 @@ username:
   contents:
     whitelist:
       classes:
-      - letters
-      - numbers
+      - alpha
+      - digit
       strings: ['-']
 login:
   url: https://github.com/login

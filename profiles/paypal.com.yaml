@@ -8,12 +8,11 @@ password:
     required:
     - atleast: 1
       classes:
-      - digits
-      - symbols
+      - digit
+      - punct
     blacklist:
       classes:
-      - spaces
-      - nonprinting
+      - space
   reset:
     flow:
       request:

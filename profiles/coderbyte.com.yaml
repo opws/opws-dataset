@@ -43,11 +43,11 @@ username:
   contents:
     whitelist:
       classes:
-      - letters
-      - numbers
+      - alpha
+      - digit
     required:
     - classes:
-      - letters
+      - alpha
 registration:
   url: https://coderbyte.com/sl/
   form:

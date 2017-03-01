@@ -46,8 +46,8 @@ username:
   contents:
     whitelist:
       classes:
-      - letters
-      - numbers
+      - alpha
+      - digit
       strings: ['-', '_']
 registration:
   url: https://news.ycombinator.com/login

@@ -44,12 +44,12 @@ username:
   contents:
     whitelist:
       classes:
-      - letters
-      - numbers
+      - alpha
+      - digit
       strings: ['_']
     required:
     - classes:
-      - letters
+      - alpha
 registration:
   url: https://mammothhq.com/account/welcome
   form:

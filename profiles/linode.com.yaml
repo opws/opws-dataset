@@ -4,10 +4,10 @@ password:
     required:
     - atleast: 2
       classes:
-      - lowers
-      - uppers
-      - numbers
-      - punctuation
+      - lower
+      - upper
+      - digit
+      - punct
   reset:
     flow:
       request:

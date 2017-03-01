@@ -6,7 +6,7 @@ password:
   contents:
     required:
     - classes:
-      - nonspaces
+      - graph
   reset:
     flow:
       request:
@@ -36,8 +36,8 @@ username:
   contents:
     whitelist:
       classes:
-      - letters
-      - numbers
+      - alpha
+      - digit
       strings: ['_', '-']
 registration:
   url: https://www.openhub.net/registrations/new

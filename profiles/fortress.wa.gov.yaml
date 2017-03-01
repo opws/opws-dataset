@@ -7,8 +7,8 @@ password:
   contents:
     required:
     - classes:
-      - letters
-      - numbers
+      - alpha
+      - digit
     - atleast: 1
       strings: ['!', '@', '#', '$', '%', '^', '&', '*', '?', '_', '~']
   reset:

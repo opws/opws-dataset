@@ -6,7 +6,7 @@ password:
   contents:
     required:
     - classes:
-      - nonspaces
+      - graph
   reset:
     flow:
       request:

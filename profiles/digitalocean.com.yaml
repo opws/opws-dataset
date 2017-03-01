@@ -6,7 +6,7 @@ password:
   contents:
     required:
     - classes:
-      - letters
+      - alpha
   reset:
     flow:
       request:

@@ -48,8 +48,8 @@ username:
   contents:
     whitelist:
       classes:
-      - lowers
-      - numbers
+      - lower
+      - digit
 registration:
   url: https://www.mapbox.com/signup/
   form:

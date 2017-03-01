@@ -48,8 +48,8 @@ username:
   contents:
     whitelist:
       classes:
-      - letters
-      - numbers
+      - alpha
+      - digit
       strings: ['-', '_']
 registration:
   url: https://www.reddit.com/login

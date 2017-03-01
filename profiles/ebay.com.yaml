@@ -15,13 +15,13 @@ password:
     required:
     - atleast: 2
       classes:
-      - uppers
-      - lowers
-      - numbers
-      - symbols
+      - upper
+      - lower
+      - digit
+      - punct
     blacklist:
       classes:
-      - spaces
+      - space
       strings: [
         "[", "]", "<", ">", "{", "}",
         "//", "'", '"', ";",
@@ -63,8 +63,8 @@ username:
   contents:
     whitelist:
       classes:
-      - letters
-      - numbers
+      - alpha
+      - digit
       strings: ['*', '_', '.', '-']
     blacklist:
       strings:

@@ -7,12 +7,12 @@ password:
   contents:
     whitelist:
       classes:
-      - alphanumeric
+      - alnum
     required:
     - classes:
-      - uppers
-      - lowers
-      - numbers
+      - upper
+      - lower
+      - digit
 challenge:
   questions:
   - required: 3

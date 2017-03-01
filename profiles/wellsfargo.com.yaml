@@ -12,8 +12,8 @@ password:
   contents:
     required:
     - classes:
-      - letters
-      - numbers
+      - alpha
+      - digit
   change:
     url: https://oam.wellsfargo.com/oam/access/receiver?dest=MODIFY_PASSWORD
     form:
@@ -39,11 +39,11 @@ username:
   contents:
     required:
     - classes:
-      - letters
+      - alpha
     whitelist:
       classes:
-      - letters
-      - numbers
+      - alpha
+      - digit
       strings: ['-', '_']
   change:
     url: https://oam.wellsfargo.com/oam/access/receiver?dest=CHANGE_USERNAME

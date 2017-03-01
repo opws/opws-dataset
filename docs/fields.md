@@ -21,18 +21,16 @@ The minimum and maximum length permitted for passwords, respectively.
 
 Array of character types passwords may not contain (such as those from rules that begin "must not contain", or those which trigger errors in the site's password handling).
 
-Character class names used:
+The character class names used [come from POSIX](https://en.wikibooks.org/wiki/Regular_Expressions/POSIX_Basic_Regular_Expressions#Character_classes), although there's no guarantee that the site's interpretation strictly matches POSIX:
 
-- uppers (upper case letters)
-- lowers (lower case letters)
-- numbers (digits)
-- letters
-- nonletters
-- specials (when sites list "special characters": assumed to be non-alphanumeric)
-- punctuation (likely contains all non-alphanumeric-or-space characters)
-- symbols (probably the same as punctuation)
-- nonspaces (anything that isn't whitespace)
-- nonprinting (unprintable characters)
+- alpha (letters)
+- upper (capital letters)
+- lower (small letters)
+- digit (numbers)
+- alnum (letters and numbers)
+- punct (printing characters other than letters or digits)
+- space (whitespace, probably including tab characters)
+- graph (any non-space character)
 
 ## password.contents.blacklist.strings
 

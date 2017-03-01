@@ -8,10 +8,10 @@ password:
     required:
     - atleast: 3
       classes:
-      - uppers
-      - lowers
-      - numbers
-      - specials
+      - upper
+      - lower
+      - digit
+      - punct
     blacklist:
       variables:
       - username
@@ -46,8 +46,8 @@ username:
   contents:
     whitelist:
       classes:
-      - letters
-      - numbers
+      - alpha
+      - digit
 registration:
   url: https://orcacard.com/ERG-Seattle/p4_010.do
   form:

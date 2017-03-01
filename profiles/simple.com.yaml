@@ -35,8 +35,8 @@ password:
 username:
   contents:
     whitelist:
-    - letters
-    - numbers
+    - alpha
+    - digit
     strings: ['.', '_']
   reminder:
     request:

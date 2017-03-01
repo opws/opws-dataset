@@ -9,8 +9,8 @@ password:
   contents:
     required:
     - classes:
-      - numbers
-      - letters
+      - digit
+      - alpha
   reset:
     flow:
       request:

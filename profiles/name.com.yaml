@@ -7,11 +7,11 @@ password:
   contents:
     required:
     - classes:
-      - letters
+      - alpha
     - atleast: 1
       classes:
-      - numbers
-      - symbols
+      - digit
+      - punct
   reset:
     flow:
       request:
@@ -43,8 +43,8 @@ username:
   contents:
     whitelist:
       classes:
-      - letters
-      - numbers
+      - alpha
+      - digit
       strings: ['+', '!', '.', '@', '_', '-']
   reminder:
     request:

@@ -9,7 +9,7 @@ password:
   contents:
     blacklist:
       classes:
-      - spaces
+      - space
   reset:
     flow:
       request:

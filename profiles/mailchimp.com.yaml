@@ -7,10 +7,10 @@ password:
   contents:
     required:
     - classes:
-      - lowers
-      - uppers
-      - numbers
-      - specials
+      - lower
+      - upper
+      - digit
+      - punct
   reset:
     flow:
       request:

@@ -11,10 +11,10 @@ password:
     required:
     - atleast: 3
       classes:
-      - uppers
-      - lowers
-      - numbers
-      - symbols
+      - upper
+      - lower
+      - digit
+      - punct
   reset:
     flow:
       request:
@@ -48,8 +48,8 @@ username:
   contents:
     whitelist:
       classes:
-      - letters
-      - numbers
+      - alpha
+      - digit
       strings: ['_']
 registration:
   url: https://store.steampowered.com/join/

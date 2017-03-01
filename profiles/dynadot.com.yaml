@@ -7,7 +7,7 @@ password:
   contents:
     blacklist:
       classes:
-      - spaces
+      - space
   reset:
     flow:
       request:
@@ -37,8 +37,8 @@ username:
   contents:
     whitelist:
       classes:
-      - letters
-      - numbers
+      - alpha
+      - digit
       strings: ['-', '_']
 registration:
   url: https://www.dynadot.com/create_account.html

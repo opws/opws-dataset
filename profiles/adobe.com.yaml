@@ -17,10 +17,10 @@ password:
   contents:
     required:
     - classes:
-      - uppers
-      - lowers
-      - numbers
-      - symbols
+      - upper
+      - lower
+      - digit
+      - punct
   reset:
     flow:
       request:

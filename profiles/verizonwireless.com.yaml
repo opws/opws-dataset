@@ -283,11 +283,11 @@ password:
   contents:
     required:
     - classes:
-      - numbers
-      - letters
+      - digit
+      - alpha
     blacklist:
       classes:
-      - spaces
+      - space
       dictionaries:
       - theme: common
         entries: # atob(passwordBlackListC).split('|')
@@ -523,8 +523,8 @@ username:
   contents:
     whitelist:
       classes:
-      - letters
-      - numbers
+      - alpha
+      - digit
       strings: ["@", "_", "-", "'", "+", "."]
     required:
     - classes:

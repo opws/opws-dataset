@@ -32,10 +32,9 @@ username:
   contents:
     whitelist:
       classes:
-      - letters
-      - numbers
-      - hyphen
-      - underscore
+      - alpha
+      - digit
+      strings: ['-', '_']
 registration:
   url: https://www.okcupid.com/
   form:

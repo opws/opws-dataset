@@ -7,14 +7,14 @@ password:
   contents:
     required:
     - classes:
-      - uppers
-      - lowers
-      - numbers
+      - upper
+      - lower
+      - digit
     - atleast: 1
       strings: ['!', '$', '#', '^']
     blacklist:
       classes:
-      - spaces
+      - space
   reset:
     flow:
       request:
@@ -35,12 +35,12 @@ username:
   contents:
     required:
     - classes:
-      - letters
-      - numbers
+      - alpha
+      - digit
     whitelist:
       classes:
-      - letters
-      - numbers
+      - alpha
+      - digit
       strings: ['.', '_', '$']
   reminder:
     request:

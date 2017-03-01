@@ -9,8 +9,8 @@ password:
   contents:
     required:
     - classes:
-      - uppers
-      - numbers
+      - upper
+      - digit
     blacklist:
       dictionaries:
       - theme: common
@@ -62,7 +62,7 @@ username:
   contents:
     required:
     - classes:
-      - letters
+      - alpha
   reminder:
     request:
       url: https://sso.godaddy.com/v1/account/reset

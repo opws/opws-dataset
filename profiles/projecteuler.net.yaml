@@ -7,8 +7,8 @@ password:
   contents:
     whitelist:
       classes:
-      - letters
-      - numbers
+      - alpha
+      - digit
       strings: ['.', '-', '_']
   reset:
     flow:

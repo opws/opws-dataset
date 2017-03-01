@@ -7,12 +7,12 @@ password:
   contents:
     required:
     - classes:
-      - letters
-      - numbers
-      - specials
+      - alpha
+      - digit
+      - punct
     blacklist:
       classes:
-      - spaces
+      - space
   reset:
     onetime:
       request:
@@ -36,8 +36,8 @@ username:
   contents:
     whitelist:
       classes:
-      - letters
-      - numbers
+      - alpha
+      - digit
       strings: ['.', '-', '_', '@']
   reminder:
     request:
@@ -104,8 +104,8 @@ challenge:
         max: 30
     contents:
       whitelist:
-      - letters
-      - numbers
+      - alpha
+      - digit
       - space
 registration:
   url: https://www.washingtonconnection.org/authservice/createaccount.go

@@ -52,8 +52,8 @@ username:
   contents:
     whitelist:
       classes:
-      - letters
-      - numbers
+      - alpha
+      - digit
       strings: ['.', '_', '-']
 registration:
   url: https://aur.archlinux.org/register/

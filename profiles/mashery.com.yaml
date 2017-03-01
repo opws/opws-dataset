@@ -9,8 +9,8 @@ password:
   contents:
     required:
     - classes:
-      - letters
-      - numbers
+      - alpha
+      - digit
   reset:
     flow:
       request:
@@ -54,8 +54,8 @@ username:
   contents:
     whitelist:
       classes:
-      - letters
-      - numbers
+      - alpha
+      - digit
       strings: ['_']
   reminder:
     request:

@@ -31,8 +31,8 @@ username:
   value:
     whitelist:
       classes:
-      - letters
-      - numbers
+      - alpha
+      - digit
       - underscore
       - hyphen
 registration:

@@ -7,10 +7,10 @@ password:
   contents:
     required:
     - classes:
-      - uppers
-      - lowers
-      - digits
-      - specials
+      - upper
+      - lower
+      - digit
+      - punct
     blacklist:
       variables:
       - username # or "part of" your username?
@@ -45,8 +45,8 @@ username:
   contents:
     whitelist:
       classes:
-      - letters
-      - numbers
+      - alpha
+      - digit
       strings: ['_', '.', '-']
 registration:
   url: https://www.dnsomatic.com/create/
