@@ -91,9 +91,8 @@ registration:
     terms:
       agreement: implicit
     notes:
-    - en: >
-        Also requires a 4-digit "Support PIN" that cannot be a single repeated
-        digit or sequential digits.
+    - en: Also requires a 4-digit "Support PIN" that cannot be a single
+          repeated digit or sequential digits.
 legal:
   documents:
   - name: Terms of Service

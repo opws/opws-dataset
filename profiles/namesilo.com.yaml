@@ -16,8 +16,7 @@ password:
           account:
             accepts: [username, domain]
         notes:
-        - en: >
-            Also requires the answer to the user's security question.
+        - en: Also requires the answer to the user's security question.
       response:
         email:
           sender: support@namesilo.com

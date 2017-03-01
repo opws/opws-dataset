@@ -5,12 +5,10 @@ password:
       min: 8
       max: 256
     must:
-    - en: >
-        contain at least one lowercase, uppercase, number, and special
-        character if shorter than 16 characters
+    - en: contain at least one lowercase, uppercase, number, and special
+          character if shorter than 16 characters
     mustnot:
     - en: include a character repeated four or more times consecutively
-  contents:
   reset:
     flow:
       request:

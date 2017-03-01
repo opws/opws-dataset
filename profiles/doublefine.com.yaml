@@ -4,9 +4,8 @@ password:
     length:
       min: 3
   notes:
-  - en: >
-      Password input includes a list of what makes a "good" password, but
-      these are not the actual password requirements.
+  - en: Password input includes a list of what makes a "good" password, but
+        these are not the actual password requirements.
   reset:
     flow:
       request:

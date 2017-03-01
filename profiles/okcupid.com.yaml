@@ -4,6 +4,12 @@ password:
     length:
       min: 6
       max: 256
+      notes:
+      - en: Registration restricts password length to 5; password reset and
+            changing restricts password length to 6.
+      - en: Trying to change your password to anything longer than 256
+            characters fails with the error message "Update Failed! Could not
+            update database; please try again later."
   reset:
     flow:
       request:
@@ -53,12 +59,5 @@ thirdparty:
   auth:
     providers:
     - facebook.com
-redflags:
-- en: Registration restricts password length to 5; password reset and changing
-      restricts password length to 6.
-- en: >
-    Trying to change your password to anything longer than 256 characters fails
-    with the error message "Update Failed! Could not update database; please
-    try again later."
 reviewed:
   date: 2016-02-23T00:15:43.893Z

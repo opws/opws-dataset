@@ -46,6 +46,9 @@ username:
       - alpha
       - digit
       strings: ['+', '!', '.', '@', '_', '-']
+    notes:
+    - en: Registration lists backslash as an accepted username character
+          (it is not).
   reminder:
     request:
       url: https://www.name.com/account/credentials/username
@@ -66,7 +69,6 @@ registration:
         input: none
 login:
   url: https://www.name.com/account/login
-redflags:
-- en: Registration lists backslash as an accepted username character (it is not).
+
 reviewed:
   date: 2016-03-09T01:59:14.495Z

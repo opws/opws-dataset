@@ -28,13 +28,12 @@ password:
       own: unchanged
       others: unchanged
 username:
-  value:
+  contents:
     whitelist:
       classes:
       - alpha
       - digit
-      - underscore
-      - hyphen
+      strings: ['_', '-']
 registration:
   url: https://neocities.org/#new
   form:

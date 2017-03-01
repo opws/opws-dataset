@@ -4,9 +4,8 @@ password:
     length:
       min: 8
     notes:
-    - en: >
-        Passwords must be rated "good" and not "too weak" by
-        an opaque judgment algorithm.
+    - en: Passwords must be rated "good" and not "too weak" by
+          an opaque judgment algorithm.
   reset:
     flow:
       request:

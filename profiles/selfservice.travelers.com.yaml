@@ -7,7 +7,8 @@ password:
   contents:
     whitelist:
       classes:
-      - alnum
+      - alpha
+      - digit
     required:
     - classes:
       - upper

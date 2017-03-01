@@ -2,9 +2,8 @@ name: Simple
 password:
   value:
     notes:
-    - en: >
-        Simple has its own passphrase strength grading system,
-        and a user's passphrase must be at least a "grade C" to pass.
+    - en: Simple has its own passphrase strength grading system,
+          and a user's passphrase must be at least a "grade C" to pass.
   reset:
     flow:
       request:
@@ -35,9 +34,10 @@ password:
 username:
   contents:
     whitelist:
-    - alpha
-    - digit
-    strings: ['.', '_']
+      classes:
+      - alpha
+      - digit
+      strings: ['.', '_']
   reminder:
     request:
       url: https://bank.simple.com/forgot-username

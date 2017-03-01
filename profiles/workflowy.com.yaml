@@ -31,9 +31,8 @@ password:
   change:
     url: https://workflowy.com/#
     notes:
-    - en: >
-        Click the upper-right-hand corner menu, then "Settings", then
-        "Change password" in the gray Account box.
+    - en: Click the upper-right-hand corner menu, then "Settings", then
+          "Change password" in the gray Account box.
     form:
       oldpassword:
         input: required

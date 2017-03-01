@@ -27,7 +27,6 @@ The character class names used [come from POSIX](https://en.wikibooks.org/wiki/R
 - upper (capital letters)
 - lower (small letters)
 - digit (numbers)
-- alnum (letters and numbers)
 - punct (printing characters other than letters or digits)
 - space (whitespace, probably including tab characters)
 - graph (any non-space character)

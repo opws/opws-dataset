@@ -1,5 +1,8 @@
 name: CenturyLink
 password:
+  value:
+    mustnot:
+    - en: contain certain characters (such as spaces).
   reset:
     flow:
       request:
@@ -20,7 +23,5 @@ registration:
   url: https://eam.centurylink.com/eam/registration.do
 login:
   url: https://eam.centurylink.com/eam/login.do
-redflags:
-- en: Passwords are not allowed to contain certain characters (such as spaces).
 reviewed:
   date: 2016-03-08T23:13:31.274Z

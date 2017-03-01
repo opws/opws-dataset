@@ -2,11 +2,10 @@ name: Cloud9 IDE
 password:
   value:
     notes:
-    - en: >
-        Password form rejects passwords that are "not strong enough"
-        based on an arbitrary character-class-based formula, unrelated
-        to the displayed "strength-o-meter" (which is just a progress
-        bar of the password's length up to 24 characters).
+    - en: Password form rejects passwords that are "not strong enough"
+          based on an arbitrary character-class-based formula, unrelated
+          to the displayed "strength-o-meter" (which is just a progress
+          bar of the password's length up to 24 characters).
   reset:
     flow:
       request:
@@ -22,9 +21,8 @@ password:
   change:
     url: https://c9.io/account/settings
     notes:
-    - en: >
-        The user settings page features a "Request password" button
-        that initiates a password reset request.
+    - en: The user settings page features a "Request password" button
+          that initiates a password reset request.
 registration:
   url: https://c9.io/signup
 login:

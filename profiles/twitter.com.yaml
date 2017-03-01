@@ -7,25 +7,25 @@ password:
       dictionaries:
       - theme: common
         entries: # JSON.parse(document.getElementById('init-data').value).bannedPasswords.map(rot13)
-        - 000000
-        - 111111
-        - 11111111
-        - 112233
-        - 121212
-        - 123123
-        - 123456
-        - 1234567
-        - 12345678
-        - 123456789
-        - 131313
-        - 232323
-        - 654321
-        - 666666
-        - 696969
-        - 777777
-        - 7777777
-        - 8675309
-        - 987654
+        - '000000'
+        - '111111'
+        - '11111111'
+        - '112233'
+        - '121212'
+        - '123123'
+        - '123456'
+        - '1234567'
+        - '12345678'
+        - '123456789'
+        - '131313'
+        - '232323'
+        - '654321'
+        - '666666'
+        - '696969'
+        - '777777'
+        - '7777777'
+        - '8675309'
+        - '987654'
         - aaaaaa
         - abc123
         - abc123
@@ -459,9 +459,8 @@ registration:
     username:
       input: required
     notes:
-    - en: >
-        Username selection comes after entering full name, email address or
-        phone number, and password.
+    - en: Username selection comes after entering full name, email address or
+          phone number, and password.
 login:
   url: https://twitter.com/login
   form:

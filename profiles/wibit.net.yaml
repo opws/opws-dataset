@@ -12,7 +12,7 @@ password:
       response:
         email:
           sender: no-reply@wibit.net
-          body: [temp]
+          body: [password]
   change:
     url: https://www.wibit.net/myAccount
 reviewed:

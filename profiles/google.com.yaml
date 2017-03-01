@@ -84,8 +84,7 @@ registration:
     phone:
       input: optional
   notes:
-  - en: >
-      Registration accepts either an existing email address or a new Gmail
-      address to register.
+  - en: Registration accepts either an existing email address or a new Gmail
+        address to register.
 reviewed:
   date: 2017-02-20T01:51:03.146Z

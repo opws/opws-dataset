@@ -104,9 +104,10 @@ challenge:
         max: 30
     contents:
       whitelist:
-      - alpha
-      - digit
-      - space
+        classes:
+        - alpha
+        - digit
+        - space
 registration:
   url: https://www.washingtonconnection.org/authservice/createaccount.go
 login:

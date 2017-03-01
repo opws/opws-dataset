@@ -33,10 +33,9 @@ password:
         newpassword:
           input: required
     notes:
-    - en: >
-        Password re-authentication is via prompt after entering the password,
-        and only needs to be entered the first time the password is changed
-        in a session.
+    - en: Password re-authentication is via prompt after entering the password,
+          and only needs to be entered the first time the password is changed
+          in a session.
 registration:
   url: https://www.humblebundle.com/signup
 login:

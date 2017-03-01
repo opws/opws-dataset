@@ -4,11 +4,10 @@ password:
     length:
       min: 8
   notes:
-  - en: >
-      Setting a password after registration only accepts passwords that
-      contain a combination of letters, numbers, and/or symbols
-      (consisting of more than one of these). This restriction is not
-      enforced when changing the password after registration.
+  - en: Setting a password after registration only accepts passwords that
+        contain a combination of letters, numbers, and/or symbols
+        (consisting of more than one of these). This restriction is not
+        enforced when changing the password after registration.
   reset:
     flow:
       request:

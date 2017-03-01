@@ -40,9 +40,8 @@ password:
         newpassword:
           input: none
     notes:
-    - en: >
-        Click the "Home" menu in the upper-right corner, then click "Account
-        Settings", then "Password" to open the password change dialog.
+    - en: Click the "Home" menu in the upper-right corner, then click "Account
+          Settings", then "Password" to open the password change dialog.
 registration:
   url: https://www.fluidui.com/editor/live/#signup
   form:

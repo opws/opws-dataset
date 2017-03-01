@@ -291,39 +291,39 @@ password:
       dictionaries:
       - theme: common
         entries: # atob(passwordBlackListC).split('|')
-        - 0000
-        - 1111
-        - 2222
-        - 3333
-        - 4444
-        - 5555
-        - 6666
-        - 7777
-        - 8888
-        - 9999
-        - 1234
-        - 2000
-        - 6969
-        - 12364
-        - 09876
-        - 98765
-        - 87654
-        - 76543
-        - 65432
-        - 54321
-        - 102030
-        - 112233
-        - 121212
-        - 123123
-        - 123321
-        - 131313
-        - 222222
-        - 654321
-        - 753951
-        - 123qwe
-        - 1q2w3e
-        - 1q2w3e4r
-        - 1qaz2wsx
+        - '0000'
+        - '1111'
+        - '2222'
+        - '3333'
+        - '4444'
+        - '5555'
+        - '6666'
+        - '7777'
+        - '8888'
+        - '9999'
+        - '1234'
+        - '2000'
+        - '6969'
+        - '12364'
+        - '09876'
+        - '98765'
+        - '87654'
+        - '76543'
+        - '65432'
+        - '54321'
+        - '102030'
+        - '112233'
+        - '121212'
+        - '123123'
+        - '123321'
+        - '131313'
+        - '222222'
+        - '654321'
+        - '753951'
+        - '123qwe'
+        - '1q2w3e'
+        - '1q2w3e4r'
+        - '1qaz2wsx'
         - aaaaaa
         - abcd
         - access
@@ -528,7 +528,7 @@ username:
       strings: ["@", "_", "-", "'", "+", "."]
     required:
     - classes:
-      - nondigits
+      - alpha
   reminder:
     request:
       url: https://login.verizonwireless.com/accessmanager/public/c/fu/start
@@ -576,9 +576,8 @@ registration:
     terms:
       agreement: checkbox
   notes:
-  - en: >
-      Registration requires verification by text message first, then presents a
-      form for all other registration data.
+  - en: Registration requires verification by text message first, then
+        presents a form for all other registration data.
 login:
   url: https://www.verizonwireless.com/my-verizon/
   form:

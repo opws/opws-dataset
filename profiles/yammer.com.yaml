@@ -257,9 +257,8 @@ registration:
     terms:
       agreement: implicit
   notes:
-  - en: >
-      Registration starts with an entered email address, then is completed
-      after following a link sent to that email address.
+  - en: Registration starts with an entered email address, then is completed
+        after following a link sent to that email address.
 legal:
   documents:
   - name: Terms of Use

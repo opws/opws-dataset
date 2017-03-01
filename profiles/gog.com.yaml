@@ -4,6 +4,9 @@ password:
     length:
       min: 2
       max: 100
+      notes:
+      - en: The system accepts passwords longer than 100 characters, but does
+            not recognize them when logging in or changing passwords.
   reset:
     flow:
       request:
@@ -28,9 +31,6 @@ password:
     form:
       oldpassword:
         input: required
-redflags:
-- en: The system accepts passwords longer than 100 characters, but does not
-      recognize them when logging in or changing passwords.
 registration:
   url: https://login.gog.com/register
   form:

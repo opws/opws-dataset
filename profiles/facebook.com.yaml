@@ -4,10 +4,9 @@ password:
     length:
       min: 6
   notes:
-  - en: >
-      Resetting a password claims that passwords must not be the same as
-      a previous password (with "must not" in bold), but there doesn't
-      actually seem to be a previous-password prohibition in place.
+  - en: Resetting a password claims that passwords must not be the same as
+        a previous password (with "must not" in bold), but there doesn't
+        actually seem to be a previous-password prohibition in place.
   reset:
     flow:
       request:

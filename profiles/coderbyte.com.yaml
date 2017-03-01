@@ -5,9 +5,8 @@ password:
       min: 1
       max: 40
       notes:
-      - en: >
-          Password change form will accept passwords of any length,
-          but login input has a validation maximum of 40.
+      - en: Password change form will accept passwords of any length,
+            but login input has a validation maximum of 40.
   reset:
     randomize:
       request:
