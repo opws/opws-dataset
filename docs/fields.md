@@ -378,10 +378,6 @@ An array of domains for third party auth providers.
 
 The URL of a page to view and revoke logged-in sessions.
 
-## api.key.retrieval.url
-
-The URL of a page to retrieve API key(s).
-
 ## report.breach.url
 
 The URL of a page to report security breaches to.

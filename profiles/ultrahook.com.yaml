@@ -3,10 +3,6 @@ password:
   value:
     length:
       min: 1
-api:
-  key:
-    retrieval:
-      url: http://www.ultrahook.com/resend
 registration:
   url: http://www.ultrahook.com/register
   form:
