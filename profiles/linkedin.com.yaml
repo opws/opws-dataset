@@ -20,11 +20,11 @@ password:
       change:
         form:
           newpassword:
-            characters: hidden
+            characters: masked
           repeat:
             newpassword:
               input: required
-              characters: hidden
+              characters: masked
       submit:
         destination:
           page: stub
@@ -44,13 +44,13 @@ password:
     form:
       oldpassword:
         input: required
-        characters: hidden
+        characters: masked
       newpassword:
-        characters: hidden
+        characters: masked
       repeat:
         newpassword:
           input: required
-          characters: hidden
+          characters: masked
     sessions:
       own: unchanged
       notes:
@@ -63,7 +63,7 @@ registration:
   form:
     password:
       input: required
-      characters: hidden
+      characters: masked
     repeat:
       email:
         input: none

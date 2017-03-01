@@ -21,9 +21,9 @@ password:
     form:
       oldpassword:
         input: required
-        characters: hidden
+        characters: masked
       newpassword:
-        characters: hidden
+        characters: masked
       repeat:
         newpassword:
           input: none
@@ -36,11 +36,11 @@ registration:
       input: required
     password:
       input: required
-      characters: hidden
+      characters: masked
     repeat:
       password:
         input: required
-        characters: hidden
+        characters: masked
       email:
         input: none
     phone:
@@ -51,7 +51,7 @@ login:
     email:
       input: required
     password:
-      characters: hidden
+      characters: masked
 thirdparty:
   auth:
     providers:

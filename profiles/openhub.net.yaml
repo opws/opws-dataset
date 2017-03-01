@@ -19,13 +19,13 @@ password:
     form:
       oldpassword:
         input: required
-        characters: hidden
+        characters: masked
       newpassword:
-        characters: hidden
+        characters: masked
       repeat:
         newpassword:
           input: required
-          characters: hidden
+          characters: masked
 username:
   value:
     length:
@@ -48,20 +48,20 @@ registration:
       input: required
     password:
       input: required
-      characters: hidden
+      characters: masked
     repeat:
       email:
         input: required
       password:
         input: required
-        characters: hidden
+        characters: masked
 login:
   url: https://www.openhub.net/sessions/new
   form:
     account:
       accepts: [username, email]
     password:
-      characters: hidden
+      characters: masked
     persist:
       checkbox: unchecked
 reviewed:

@@ -33,7 +33,7 @@ registration:
       input: required
     password:
       input: required
-      characters: hidden
+      characters: masked
     repeat:
       password:
         input: none
@@ -45,7 +45,7 @@ login:
     account:
       accepts: [username, email]
     password:
-      characters: hidden
+      characters: masked
     persist:
       checkbox: checked
 thirdparty:

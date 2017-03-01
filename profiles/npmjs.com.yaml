@@ -25,13 +25,13 @@ password:
     form:
       oldpassword:
         input: required
-        characters: hidden
+        characters: masked
       newpassword:
-        characters: hidden
+        characters: masked
       repeat:
         newpassword:
           input: required
-          characters: hidden
+          characters: masked
 username:
   value:
     length:
@@ -54,7 +54,7 @@ registration:
       input: required
     password:
       input: required
-      characters: hidden
+      characters: masked
     repeat:
       email:
         input: none
@@ -74,6 +74,6 @@ login:
     username:
       input: required
     password:
-      characters: hidden
+      characters: masked
 reviewed:
   date: 2017-02-27T04:08:45.387Z

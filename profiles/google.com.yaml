@@ -40,11 +40,11 @@ password:
       change:
         form:
           newpassword:
-            characters: hidden
+            characters: masked
           repeat:
             newpassword:
               input: required
-              characters: hidden
+              characters: masked
       submit:
         destination:
           page: stub
@@ -56,7 +56,7 @@ password:
       form:
         oldpassword:
           input: required
-          characters: hidden
+          characters: masked
     form:
       newpassword:
         characters: showable
@@ -72,11 +72,11 @@ registration:
     lastname:
       input: required
     password:
-      characters: hidden
+      characters: masked
     repeat:
       password:
         input: required
-        characters: hidden
+        characters: masked
       email:
         input: none
     birthdate:

@@ -17,11 +17,11 @@ password:
       change:
         form:
           newpassword:
-            characters: hidden
+            characters: masked
           repeat:
             newpassword:
               input: required
-              characters: hidden
+              characters: masked
       submit:
         destination:
           page: stub
@@ -33,9 +33,9 @@ password:
     form:
       oldpassword:
         input: required
-        characters: hidden
+        characters: masked
       newpassword:
-        characters: hidden
+        characters: masked
       repeat:
         newpassword:
           input: none
@@ -48,16 +48,16 @@ registration:
   form:
     email:
       input: required
-      characters: visible
+      characters: shown
     password:
       input: required
-      characters: hidden
+      characters: masked
     repeat:
       email:
         input: none
       password:
         input: required
-        characters: hidden
+        characters: masked
     notes:
     - en: Must also specify an initial project name and platform.
 login:
@@ -66,7 +66,7 @@ login:
     email:
       input: required
     password:
-      characters: hidden
+      characters: masked
 legal:
   documents:
   - name: Terms of Use

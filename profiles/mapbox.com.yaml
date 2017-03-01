@@ -18,11 +18,11 @@ password:
       change:
         form:
           newpassword:
-            characters: hidden
+            characters: masked
           repeat:
             newpassword:
               input: required
-              characters: hidden
+              characters: masked
       submit:
         destination:
           page: home
@@ -35,11 +35,11 @@ password:
       oldpassword:
         input: none
       newpassword:
-        characters: hidden
+        characters: masked
       repeat:
         newpassword:
           input: required
-          characters: hidden
+          characters: masked
 username:
   value:
     length:
@@ -59,7 +59,7 @@ registration:
       input: required
     password:
       input: required
-      characters: hidden
+      characters: masked
     terms:
       agreement: implicit
 login:
@@ -68,7 +68,7 @@ login:
     account:
       accepts: [username, email]
     password:
-      characters: hidden
+      characters: masked
 legal:
   documents:
   - name: Terms of Service

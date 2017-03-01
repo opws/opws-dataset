@@ -6,6 +6,6 @@ login:
     email:
       input: required
     password:
-      characters: hidden
+      characters: masked
 reviewed:
   date: 2017-02-16T11:24:58.793Z

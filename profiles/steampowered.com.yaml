@@ -29,11 +29,11 @@ password:
       change:
         form:
           newpassword:
-            characters: hidden
+            characters: masked
           repeat:
             newpassword:
               input: required
-              characters: hidden
+              characters: masked
       submit:
         destination:
           page: stub
@@ -58,13 +58,13 @@ registration:
       input: required
     password:
       input: required
-      characters: hidden
+      characters: masked
     email:
       input: required
     repeat:
       password:
         input: required
-        characters: hidden
+        characters: masked
       email:
         input: required
     captcha:
@@ -79,7 +79,7 @@ login:
     username:
       input: required
     password:
-      characters: hidden
+      characters: masked
 legal:
   documents:
   - name: Subscriber Agreement

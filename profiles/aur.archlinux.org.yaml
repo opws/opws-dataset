@@ -19,11 +19,11 @@ password:
           email:
             input: required
           newpassword:
-            characters: hidden
+            characters: masked
           repeat:
             newpassword:
               input: required
-              characters: hidden
+              characters: masked
       submit:
         destination:
           page: stub
@@ -36,11 +36,11 @@ password:
       oldpassword:
         input: none
       newpassword:
-        characters: hidden
+        characters: masked
       repeat:
         newpassword:
           input: required
-          characters: hidden
+          characters: masked
 username:
   value:
     length:
@@ -79,7 +79,7 @@ login:
     account:
       accepts: [username, email]
     password:
-      characters: hidden
+      characters: masked
     persist:
       checkbox: unchecked
 reviewed:

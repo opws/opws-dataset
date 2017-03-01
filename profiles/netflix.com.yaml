@@ -24,11 +24,11 @@ password:
       change:
         form:
           newpassword:
-            characters: hidden
+            characters: masked
           repeat:
             newpassword:
               input: required
-              characters: hidden
+              characters: masked
       submit:
         destination:
           page: settings
@@ -40,13 +40,13 @@ password:
     form:
       oldpassword:
         input: required
-        characters: hidden
+        characters: masked
       newpassword:
-        characters: hidden
+        characters: masked
       repeat:
         newpassword:
           input: required
-          characters: hidden
+          characters: masked
 registration:
   url: https://www.netflix.com/getstarted
   form:
@@ -54,14 +54,14 @@ registration:
       input: required
     password:
       input: required
-      characters: hidden
+      characters: masked
 login:
   url: https://www.netflix.com/login
   form:
     email:
       input: required
     password:
-      characters: hidden
+      characters: masked
     persist:
       checkbox: checked
 thirdparty:

@@ -24,11 +24,11 @@ password:
       change:
         form:
           newpassword:
-            characters: hidden
+            characters: masked
           repeat:
             newpassword:
               input: required
-              characters: hidden
+              characters: masked
       submit:
         destination:
           page: home
@@ -40,13 +40,13 @@ password:
     form:
       oldpassword:
         input: required
-        characters: hidden
+        characters: masked
       newpassword:
-        characters: hidden
+        characters: masked
       repeat:
         newpassword:
           input: required
-          characters: hidden
+          characters: masked
 thirdparty:
   auth:
     providers:
@@ -59,7 +59,7 @@ registration:
     username:
       input: required
     password:
-      characters: hidden
+      characters: masked
     terms:
       agreement: implicit
 legal:
@@ -74,7 +74,7 @@ login:
     account:
       accepts: [email, username]
     password:
-      characters: hidden
+      characters: masked
     persist:
       checkbox: unchecked
 reviewed:

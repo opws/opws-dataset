@@ -106,7 +106,7 @@ login:
     account:
       accepts: [username, accountno]
     password:
-      characters: hidden
+      characters: masked
     persist:
       checkbox: unchecked
 thirdparty:

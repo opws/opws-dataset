@@ -422,11 +422,11 @@ password:
       change:
         form:
           newpassword:
-            characters: hidden
+            characters: masked
           repeat:
             newpassword:
               input: required
-              characters: hidden
+              characters: masked
       submit:
         destination:
           page: stub
@@ -439,13 +439,13 @@ password:
     form:
       oldpassword:
         input: required
-        characters: hidden
+        characters: masked
       newpassword:
-        characters: hidden
+        characters: masked
       repeat:
         newpassword:
           input: required
-          characters: hidden
+          characters: masked
 registration:
   url: https://twitter.com/signup
   form:
@@ -453,7 +453,7 @@ registration:
       input: required
     password:
       input: required
-      characters: hidden
+      characters: masked
     terms:
       agreement: implicit
     username:

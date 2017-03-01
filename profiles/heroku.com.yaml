@@ -23,11 +23,11 @@ password:
       change:
         form:
           newpassword:
-            characters: hidden
+            characters: masked
           repeat:
             newpassword:
               input: required
-              characters: hidden
+              characters: masked
       submit:
         destination:
           page: login
@@ -39,13 +39,13 @@ password:
     form:
       oldpassword:
         input: required
-        characters: hidden
+        characters: masked
       newpassword:
-        characters: hidden
+        characters: masked
       repeat:
         newpassword:
           input: required
-          characters: hidden
+          characters: masked
     sessions:
       own: unchanged
 registration:
@@ -70,6 +70,6 @@ login:
     email:
       input: required
     password:
-      characters: hidden
+      characters: masked
 reviewed:
   date: 2017-02-20T21:12:52.641Z

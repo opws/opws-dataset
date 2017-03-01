@@ -27,11 +27,11 @@ password:
       change:
         form:
           newpassword:
-            characters: hidden
+            characters: masked
           repeat:
             newpassword:
               input: required
-              characters: hidden
+              characters: masked
       submit:
         destination:
           page: login
@@ -64,7 +64,7 @@ registration:
       input: required
     password:
       input: required
-      characters: hidden
+      characters: masked
     repeat:
       email:
         input: none
@@ -82,7 +82,7 @@ login:
     email:
       input: required
     password:
-      characters: hidden
+      characters: masked
     persist:
       checkbox: checked
 thirdparty:

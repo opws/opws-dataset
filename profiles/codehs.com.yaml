@@ -14,11 +14,11 @@ password:
       change:
         form:
           newpassword:
-            characters: hidden
+            characters: masked
           repeat:
             newpassword:
               input: required
-              characters: hidden
+              characters: masked
       submit:
         sessions:
           own: unchanged
@@ -28,11 +28,11 @@ password:
       oldpassword:
         input: none
       newpassword:
-        characters: hidden
+        characters: masked
       repeat:
         newpassword:
           input: required
-          characters: hidden
+          characters: masked
   notes:
   - en: >
       You can technically set a zero-length password, though the login page
@@ -48,11 +48,11 @@ registration:
       input: required
     password:
       input: required
-      characters: hidden
+      characters: masked
     repeat:
       password:
         input: required
-        characters: hidden
+        characters: masked
       email:
         input: none
 login:
@@ -61,6 +61,6 @@ login:
     email:
       input: required
     password:
-      characters: hidden
+      characters: masked
 reviewed:
   date: 2017-02-20T14:47:42.999Z

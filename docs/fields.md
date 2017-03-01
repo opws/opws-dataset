@@ -176,7 +176,7 @@ If resetting your password requires the answer to one of the questions from `cha
 
 ## password.reset.flow.change.form.newpassword.characters, password.reset.flow.change.form.repeat.newpassword.characters
 
-Whether the "new password" inputs have typed characters `hidden` or `visible`, or, if visibility can be toggled, `showable` or `hideable` (from the default states, respectively).
+Whether the "new password" inputs have typed characters `masked` or `shown`, or, if visibility can be toggled, `showable` or `maskable` (from the default states, respectively).
 
 ## password.reset.flow.change.form.repeat.newpassword.input
 

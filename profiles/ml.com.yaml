@@ -34,6 +34,6 @@ login:
     username:
       input: required
     password:
-      characters: hidden
+      characters: masked
 reviewed:
   date: 2017-02-20T20:41:11.251Z

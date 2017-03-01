@@ -25,11 +25,11 @@ password:
       change:
         form:
           newpassword:
-            characters: hidden
+            characters: masked
           repeat:
             newpassword:
               input: required
-              characters: hidden
+              characters: masked
       submit:
         destination:
           page: stub
@@ -42,18 +42,18 @@ password:
       oldpassword:
         input: none
       newpassword:
-        characters: hidden
+        characters: masked
       repeat:
         newpassword:
           input: required
-          characters: hidden
+          characters: masked
 login:
   url: https://courses.p2pu.org/en/login/
   form:
     account:
       accepts: [username, email]
     password:
-      characters: hidden
+      characters: masked
     persist:
       checkbox: unchecked
 registration:
@@ -65,13 +65,13 @@ registration:
       input: required
     password:
       input: required
-      characters: hidden
+      characters: masked
     email:
       input: required
     repeat:
       password:
         input: required
-        characters: hidden
+        characters: masked
       email:
         input: required
 reviewed:

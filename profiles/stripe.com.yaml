@@ -25,7 +25,7 @@ password:
       change:
         form:
           newpassword:
-            characters: hidden
+            characters: masked
           repeat:
             newpassword:
               input: none
@@ -40,9 +40,9 @@ password:
     form:
       oldpassword:
         input: required
-        characters: hidden
+        characters: masked
       newpassword:
-        characters: hidden
+        characters: masked
       repeat:
         newpassword:
           input: none
@@ -53,18 +53,18 @@ registration:
       input: required
     password:
       input: required
-      characters: hidden
+      characters: masked
     repeat:
       password:
         input: required
-        characters: hidden
+        characters: masked
 login:
   url: https://dashboard.stripe.com/login
   form:
     email:
       input: required
     password:
-      characters: hidden
+      characters: masked
     persist:
       checkbox: checked
 reviewed:

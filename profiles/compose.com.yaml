@@ -18,11 +18,11 @@ password:
       change:
         form:
           newpassword:
-            characters: hidden
+            characters: masked
           repeat:
             newpassword:
               input: required
-              characters: hidden
+              characters: masked
       submit:
         sessions:
           own: unchanged
@@ -32,13 +32,13 @@ password:
     form:
       oldpassword:
         input: required
-        characters: hidden
+        characters: masked
       newpassword:
-        characters: hidden
+        characters: masked
       repeat:
         newpassword:
           input: required
-          characters: hidden
+          characters: masked
 registration:
   url: https://compose.com/signup
   form:
@@ -48,7 +48,7 @@ registration:
       input: required
     password:
       input: required
-      characters: hidden
+      characters: masked
     repeat:
       email:
         input: none
@@ -60,6 +60,6 @@ login:
     email:
       input: required
     password:
-      characters: hidden
+      characters: masked
 reviewed:
   date: 2017-02-21T06:20:36.743Z

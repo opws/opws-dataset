@@ -27,7 +27,7 @@ password:
       repeat:
         newpassword: # previously described in a comment? TODO: check this
           input: required
-          characters: hidden
+          characters: masked
 login:
   url: https://www.guru.com/login.aspx
   form:

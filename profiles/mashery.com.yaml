@@ -27,11 +27,11 @@ password:
       change:
         form:
           newpassword:
-            characters: hidden
+            characters: masked
           repeat:
             newpassword:
               input: required
-              characters: hidden
+              characters: masked
       submit:
         destination:
           page: stub
@@ -43,13 +43,13 @@ password:
     form:
       oldpassword:
         input: required
-        characters: hidden
+        characters: masked
       newpassword:
-        characters: hidden
+        characters: masked
       repeat:
         newpassword:
           input: required
-          characters: hidden
+          characters: masked
 username:
   contents:
     whitelist:
@@ -77,20 +77,20 @@ registration:
         input: required
       password:
         input: required
-        characters: hidden
+        characters: masked
     username:
       input: required
     fullname:
       input: required
     password:
       input: required
-      characters: hidden
+      characters: masked
 login:
   url: https://secure.mashery.com/login/
   form:
     username:
       input: required
     password:
-      characters: hidden
+      characters: masked
 reviewed:
   date: 2017-02-20T01:37:50.078Z

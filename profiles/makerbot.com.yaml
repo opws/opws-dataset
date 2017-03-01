@@ -17,10 +17,10 @@ password:
       change:
         form:
           newpassword:
-            characters: hidden
+            characters: masked
           repeat:
             newpassword:
-              characters: hidden
+              characters: masked
       submit:
         destination:
           page: home
@@ -32,20 +32,20 @@ password:
     form:
       oldpassword:
         input: required
-        characters: hidden
+        characters: masked
       newpassword:
-        characters: hidden
+        characters: masked
       repeat:
         newpassword:
           input: required
-          characters: hidden
+          characters: masked
 login:
   url: https://accounts.makerbot.com/
   form:
     account:
       accepts: [username, email]
     password:
-      characters: hidden
+      characters: masked
     persist:
       checkbox: unchecked
 registration:
@@ -61,11 +61,11 @@ registration:
       input: required
     password:
       input: required
-      characters: hidden
+      characters: masked
     repeat:
       password:
         input: required
-        characters: hidden
+        characters: masked
       email:
         input: none
     captcha:

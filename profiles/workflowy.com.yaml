@@ -17,11 +17,11 @@ password:
       change:
         form:
           newpassword:
-            characters: hidden
+            characters: masked
           repeat:
             newpassword:
               input: required
-              characters: hidden
+              characters: masked
       submit:
         destination:
           page: stub
@@ -37,13 +37,13 @@ password:
     form:
       oldpassword:
         input: required
-        characters: hidden
+        characters: masked
       newpassword:
-        characters: hidden
+        characters: masked
       repeat:
         newpassword:
           input: required
-          characters: hidden
+          characters: masked
 registration:
   url: https://workflowy.com/accounts/register/
   form:
@@ -55,7 +55,7 @@ registration:
       password:
         input: none
     password:
-      characters: hidden
+      characters: masked
       input: required
 login:
   url: https://workflowy.com/accounts/login/
@@ -63,6 +63,6 @@ login:
     email:
       input: required
     password:
-      characters: hidden
+      characters: masked
 reviewed:
   date: 2017-02-17T13:56:40.440Z

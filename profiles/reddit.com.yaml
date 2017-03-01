@@ -17,11 +17,11 @@ password:
       change:
         form:
           newpassword:
-            characters: hidden
+            characters: masked
           repeat:
             newpassword:
               input: required
-              characters: hidden
+              characters: masked
       submit:
         destination:
           page: login
@@ -33,13 +33,13 @@ password:
     form:
       oldpassword:
         input: required
-        characters: hidden
+        characters: masked
       newpassword:
-        characters: hidden
+        characters: masked
       repeat:
         newpassword:
           input: required
-          characters: hidden
+          characters: masked
 username:
   value:
     length:
@@ -58,16 +58,16 @@ registration:
       input: required
     password:
       input: required
-      characters: hidden
+      characters: masked
     repeat:
       password:
         input: required
-        characters: hidden
+        characters: masked
       email:
         input: none
     email:
       input: optional
-      characters: visible
+      characters: shown
     captcha:
       type: recaptcha
       notes:
@@ -78,7 +78,7 @@ login:
     username:
       input: required
     password:
-      characters: hidden
+      characters: masked
     persist:
       checkbox: unchecked
 legal:

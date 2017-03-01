@@ -27,11 +27,11 @@ registration:
       input: required
     password:
       input: required
-      characters: hidden
+      characters: masked
     repeat:
       password:
         input: required
-        characters: hidden
+        characters: masked
       email:
         input: none
 login:
@@ -40,7 +40,7 @@ login:
     username:
       input: required
     password:
-      characters: hidden
+      characters: masked
 legal:
   documents:
   - name: Terms and Conditions
