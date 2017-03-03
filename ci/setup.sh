@@ -5,22 +5,23 @@ CI_DEPS_DIR="$HOME/ci-deps"
 
 mkdir -p "$CI_DEPS_DIR"
 
-# Update the validator if we have it cached
-if [[ -e "$CI_DEPS_DIR/opws-validate" ]]; then
-  cd "$CI_DEPS_DIR/opws-validate"
-  git pull -f
+clone-or-pull () {
+  # Update the repo if we have it cached
+  if [[ -e "$1" ]]; then
+    cd "$1"
+    git pull -f
 
-else # Clone the validator and link it if we don't have it already
-  git clone "https://github.com/opws/opws-validate.git" "$CI_DEPS_DIR/opws-validate"
-  ln -s "$CI_DEPS_DIR/opws-validate/bin/opws-validate" "$HOME/bin/opws-validate"
-fi
+  else # Clone the repo if we don't
+    git clone "$2" "$1"
+  fi
+}
 
-# Update the schemata if we have it cached
-if [[ -e "$CI_DEPS_DIR/opws-schemata" ]]; then
-  cd "$CI_DEPS_DIR/opws-schemata"
-  git pull -f
+# Retrieve all dependencies
+clone-or-pull "$CI_DEPS_DIR/opws-validate" "https://github.com/opws/opws-validate.git"
+clone-or-pull "$CI_DEPS_DIR/opws-schemata" "https://github.com/opws/opws-schemata.git"
 
-else # Clone the schemata if we don't have it already
-  git clone "https://github.com/opws/opws-schemata.git" "$CI_DEPS_DIR/opws-schemata"
-fi
+# Ensure validator's modules are installed
+cd "$CI_DEPS_DIR/opws-validate" && npm install
 
+# Link validator into our path
+ln -s "$CI_DEPS_DIR/opws-validate/bin/opws-validate" "$HOME/bin/opws-validate"
