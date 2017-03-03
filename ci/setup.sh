@@ -1,6 +1,11 @@
 #! /usr/bin/env bash
 set -eo pipefail
 
+if [[ -z "$CI" ]]; then
+  echo "This doesn't appear to be a CI environment; exiting." >&2
+  exit 1
+fi
+
 CI_DEPS_DIR="$HOME/ci-deps"
 
 mkdir -p "$CI_DEPS_DIR"
