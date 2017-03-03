@@ -11,4 +11,4 @@ test:
   - ci/test.sh
 notify:
   webhooks:
-  - url: https://webhooks.gitter.im/e/e5ef05dd71f776407288
+  - url: https://webhooks.gitter.im/e/bc07c4897b357f8566f8
