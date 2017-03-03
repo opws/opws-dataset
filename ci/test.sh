@@ -10,4 +10,4 @@ CANDIDATE_BRANCH="$CIRCLE_BRANCH"
 CANDIDATE_HASH="$CIRCLE_SHA1"
 
 # Always validate everything in CI
-opws-validate profiles/* legacies/*
+OPWS_SCHEMA_VERSION="$(cat SCHEMA_VERSION)" opws-validate profiles/* legacies/*
