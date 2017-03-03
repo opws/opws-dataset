@@ -8,19 +8,6 @@ Profiles of the security support and user account systems of various sites.
 [tests]: https://circleci.com/gh/opws/domainprofiles/tree/master
 [gitter]: https://gitter.im/opws
 
-## Where you would use this
-
-On sites, or in browser extensions, that deal with user accounts across sites.
-For instance, this was originally curated as a component of blot.pw (now
-[Blotpass](https://www.blotpass.com/)).
-
-## Further info
-
-Information on the subject of deleting accounts on sites can be found at
-accountkiller.com and justdelete.me (and the
-[sites.json](https://github.com/rmlewisuk/justdelete.me/blob/master/sites.json)
-it uses).
-
 ## Layout
 
 Entries for domains are in [YAML](http://yaml.org/) files in the "profiles"
@@ -48,22 +35,18 @@ The "legacies" directory contains files with names similar to those of
 "profiles", but the YAML documents it contains describe lists of events noting
 *what happened* to sites at those names, such as a move to a new name.
 
-## Notes on URLs
+## Where you would use this
 
-Where fields include a link, if the site supports HTTPS optionally, the link
-provided will be HTTPS.
+On sites, or in browser extensions, that deal with user accounts across sites.
+For instance, this was originally curated as a component of blot.pw (now
+[Blotpass](https://www.blotpass.com/)).
 
-For pages that contain several sections, only one of which is pertinent to the
-link, the link will include an anchor / fragment for the relevant section
-(where possible).
+## Further info
 
-When URLs include a variable (such as a username), the URL will be separated by
-spaces and plusses (for concatenation).
-
-## Fields
-
-See [docs/fields.md](docs/fields.md) for documentation on the format used to
-describe the profiles for each domain.
+Information on the subject of deleting accounts on sites can be found at
+accountkiller.com and justdelete.me (and the
+[sites.json](https://github.com/rmlewisuk/justdelete.me/blob/master/sites.json)
+it uses).
 
 ## License
 
