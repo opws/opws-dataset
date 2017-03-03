@@ -17,10 +17,10 @@ password:
       change:
         form:
           newpassword:
-            characters: masked
+            masking: masked
           repeat:
             newpassword:
-              characters: masked
+              masking: masked
       submit:
         destination:
           page: home
@@ -39,11 +39,11 @@ registration:
       input: required
     password:
       input: required
-      characters: masked
+      masking: masked
     repeat:
       password:
         input: required
-        characters: masked
+        masking: masked
       email:
         input: none
     firstname:
@@ -60,7 +60,7 @@ login:
     email:
       input: required
     password:
-      characters: masked
+      masking: masked
 legal:
   documents:
   - name: Terms of Service

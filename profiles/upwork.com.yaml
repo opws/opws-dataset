@@ -31,10 +31,10 @@ password:
           challenge:
             input: required
           newpassword:
-            characters: masked
+            masking: masked
           repeat:
             newpassword:
-              characters: masked
+              masking: masked
       submit:
         destination:
           page: login
@@ -47,17 +47,17 @@ password:
       form:
         oldpassword:
           input: required
-          characters: masked
+          masking: masked
     form:
       oldpassword:
         input: required
-        characters: masked
+        masking: masked
       newpassword:
-        characters: masked
+        masking: masked
       repeat:
         newpassword:
           input: required
-          characters: masked
+          masking: masked
     notes:
     - en: Security question answer required to authorize account changes from
           new machine.
@@ -110,7 +110,7 @@ registration:
       input: required
     password:
       input: required
-      characters: masked
+      masking: masked
     repeat:
       email:
         input: none
@@ -132,7 +132,7 @@ login:
     account:
       accepts: [username, email]
     password:
-      characters: masked
+      masking: masked
     persist:
       checkbox: unchecked
 reviewed:

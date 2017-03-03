@@ -25,9 +25,9 @@ password:
     form:
       oldpassword:
         input: required
-        characters: showable
+        masking: revealable
       newpassword:
-        characters: showable
+        masking: revealable
       repeat:
         newpassword:
           input: none
@@ -61,6 +61,6 @@ login:
     username:
       input: required
     password:
-      characters: showable
+      masking: revealable
 reviewed:
   date: 2017-02-14T23:38:19.619Z

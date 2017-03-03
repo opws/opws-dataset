@@ -566,11 +566,11 @@ registration:
       input: required
     password:
       input: required
-      characters: masked
+      masking: masked
     repeat:
       password:
         input: required
-        characters: masked
+        masking: masked
       email:
         input: none
     terms:

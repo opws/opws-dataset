@@ -20,11 +20,11 @@ password:
       change:
         form:
           newpassword:
-            characters: masked
+            masking: masked
           repeat:
             newpassword:
               input: required
-              characters: masked
+              masking: masked
       submit:
         destination:
           page: home
@@ -36,13 +36,13 @@ password:
     form:
       oldpassword:
         input: required
-        characters: masked
+        masking: masked
       newpassword:
-        characters: masked
+        masking: masked
       repeat:
         newpassword:
           input: required
-          characters: masked
+          masking: masked
 registration:
   url: https://www.udemy.com/join/signup-popup/
   form:
@@ -52,7 +52,7 @@ registration:
       input: required
     password:
       input: required
-      characters: masked
+      masking: masked
     repeat:
       email:
         input: none
@@ -66,7 +66,7 @@ login:
     email:
       input: required
     password:
-      characters: masked
+      masking: masked
 thirdparty:
   auth:
     providers:

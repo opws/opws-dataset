@@ -22,13 +22,13 @@ password:
     form:
       oldpassword:
         input: required
-        characters: masked
+        masking: masked
       newpassword:
-        characters: masked
+        masking: masked
       repeat:
         newpassword:
           input: required
-          characters: masked
+          masking: masked
 username:
   value:
     length:
@@ -56,7 +56,7 @@ login:
     username:
       input: required
     password:
-      characters: masked
+      masking: masked
     persist:
       checkbox: unchecked
 reviewed:

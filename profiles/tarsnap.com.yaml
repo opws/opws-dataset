@@ -5,13 +5,13 @@ password:
     form:
       oldpassword:
         input: required
-        characters: masked
+        masking: masked
       newpassword:
-        characters: masked
+        masking: masked
       repeat:
         newpassword:
           input: required
-          characters: masked
+          masking: masked
   reset:
     notes:
     - url: https://www.tarsnap.com/faq.html#forgotten-password
@@ -22,11 +22,11 @@ registration:
       input: required
     password:
       input: required
-      characters: masked
+      masking: masked
     repeat:
       password:
         input: required
-        characters: masked
+        masking: masked
     terms:
       agreement: checkbox
 legal:
@@ -39,6 +39,6 @@ login:
     email:
       input: required
     password:
-      characters: masked
+      masking: masked
 reviewed:
   date: 2017-02-20T17:28:01.297Z

@@ -49,7 +49,7 @@ registration:
       input: required
     password:
       input: required
-      characters: masked
+      masking: masked
     repeat:
       email:
         input: none

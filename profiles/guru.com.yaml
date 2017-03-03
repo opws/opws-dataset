@@ -23,16 +23,16 @@ password:
       oldpassword:
         input: required
       newpassword:
-        characters: showable
+        masking: revealable
       repeat:
         newpassword: # previously described in a comment? TODO: check this
           input: required
-          characters: masked
+          masking: masked
 login:
   url: https://www.guru.com/login.aspx
   form:
     password:
-      characters: showable
+      masking: revealable
 registration:
   url: https://www.guru.com/registeraccount.aspx
 reviewed:

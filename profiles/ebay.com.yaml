@@ -83,7 +83,7 @@ registration:
       input: required
     password:
       input: required
-      characters: showable
+      masking: revealable
     repeat:
       email:
         input: required

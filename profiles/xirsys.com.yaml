@@ -24,11 +24,11 @@ password:
       change:
         form:
           newpassword:
-            characters: masked
+            masking: masked
           repeat:
             newpassword:
               input: required
-              characters: masked
+              masking: masked
       submit:
         sessions:
           own: unchanged
@@ -40,7 +40,7 @@ registration:
       input: required
     password:
       input: required
-      characters: masked
+      masking: masked
     repeat:
       email:
         input: none
@@ -66,6 +66,6 @@ login:
     email:
       input: required
     password:
-      characters: masked
+      masking: masked
 reviewed:
   date: 2017-02-24T22:20:27.499Z

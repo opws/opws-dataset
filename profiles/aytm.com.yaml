@@ -20,7 +20,7 @@ registration:
   form:
     password:
       input: required
-      characters: showable
+      masking: revealable
     repeat:
       password:
         input: none

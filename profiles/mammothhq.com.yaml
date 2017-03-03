@@ -31,7 +31,7 @@ password:
       oldpassword:
         input: none
       newpassword:
-        characters: masked
+        masking: masked
       repeat:
         newpassword:
           input: none
@@ -57,7 +57,7 @@ registration:
       input: required
     password:
       input: required
-      characters: masked
+      masking: masked
     repeat:
       password:
         input: none
@@ -69,6 +69,6 @@ login:
     email:
       input: required
     password:
-      characters: masked
+      masking: masked
 reviewed:
   date: 2017-02-19T12:29:43.753Z

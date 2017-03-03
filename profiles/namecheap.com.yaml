@@ -22,11 +22,11 @@ password:
       change:
         form:
           newpassword:
-            characters: showable
+            masking: revealable
           repeat:
             newpassword:
               input: required
-              characters: showable
+              masking: revealable
       submit:
         destination:
           page: stub
@@ -37,14 +37,14 @@ password:
     url: https://ap.www.namecheap.com/Profile/Security#ChangePassword
     form:
       newpassword:
-        characters: showable
+        masking: revealable
       repeat:
         newpassword:
           input: required
-          characters: showable
+          masking: revealable
       oldpassword:
         input: required
-        characters: showable
+        masking: revealable
 registration:
   url: https://www.namecheap.com/myaccount/signup.aspx
   form:
@@ -52,11 +52,11 @@ registration:
       input: required
     password:
       input: required
-      characters: showable
+      masking: revealable
     repeat:
       password:
         input: required
-        characters: showable
+        masking: revealable
     firstname:
       input: required
     lastname:
@@ -69,6 +69,6 @@ login:
     username:
       input: required
     password:
-      characters: masked
+      masking: masked
 reviewed:
   date: 2017-02-10T20:20:30.602Z

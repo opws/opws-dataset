@@ -20,11 +20,11 @@ password:
       change:
         form:
           newpassword:
-            characters: masked
+            masking: masked
           repeat:
             newpassword:
               input: required
-              characters: masked
+              masking: masked
       submit:
         destination:
           page: home
@@ -42,13 +42,13 @@ password:
     form:
       oldpassword:
         input: required
-        characters: masked
+        masking: masked
       newpassword:
-        characters: masked
+        masking: masked
       repeat:
         newpassword:
           input: required
-          characters: masked
+          masking: masked
 registration:
   url: https://www.crunchbase.com/app/register
   form:
@@ -59,10 +59,10 @@ registration:
     lastname:
       input: required
     password:
-      characters: masked
+      masking: masked
     repeat:
       password:
-        characters: masked
+        masking: masked
       email:
         input: none
     terms:
@@ -79,7 +79,7 @@ login:
     email:
       input: required
     password:
-      characters: masked
+      masking: masked
 legal:
   documents:
   - name: Terms of Service

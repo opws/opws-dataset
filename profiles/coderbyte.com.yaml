@@ -24,14 +24,14 @@ password:
       form:
         oldpassword:
           input: required
-          characters: masked
+          masking: masked
     form:
       newpassword:
-        characters: masked
+        masking: masked
       repeat:
         newpassword:
           input: required
-          characters: masked
+          masking: masked
     sessions:
       own: logout
 username:
@@ -56,13 +56,13 @@ registration:
       input: required
     password:
       input: required
-      characters: masked
+      masking: masked
 login:
   url: https://coderbyte.com/sl/
   form:
     account:
       accepts: [username, email]
     password:
-      characters: masked
+      masking: masked
 reviewed:
   date: 2017-02-25T22:56:14.141Z

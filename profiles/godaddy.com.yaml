@@ -34,7 +34,7 @@ password:
           account:
             accepts: [username, accountno]
           newpassword:
-            characters: showable
+            masking: revealable
           repeat:
             newpassword:
               input: none
@@ -48,9 +48,9 @@ password:
     form:
       oldpassword:
         input: required
-        characters: showable
+        masking: revealable
       newpassword:
-        characters: showable
+        masking: revealable
       repeat:
         newpassword:
           input: none
@@ -82,7 +82,7 @@ registration:
       input: required
     password:
       input: required
-      characters: showable
+      masking: revealable
     repeat:
       email:
         input: none
@@ -105,7 +105,7 @@ login:
     account:
       accepts: [username, accountno]
     password:
-      characters: masked
+      masking: masked
     persist:
       checkbox: unchecked
 thirdparty:

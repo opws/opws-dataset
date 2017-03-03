@@ -21,7 +21,7 @@ password:
       change:
         form:
           newpassword:
-            characters: maskable
+            masking: maskable
           repeat:
             newpassword:
               input: none
@@ -36,13 +36,13 @@ password:
     form:
       oldpassword:
         input: required
-        characters: masked
+        masking: masked
       newpassword:
-        characters: masked
+        masking: masked
       repeat:
         newpassword:
           input: required
-          characters: masked
+          masking: masked
 registration:
   url: https://www.facebook.com/r.php
   form:
@@ -53,7 +53,7 @@ registration:
     email:
       input: required
     password:
-      characters: masked
+      masking: masked
     repeat:
       email:
         input: required
@@ -65,7 +65,7 @@ login:
     account:
       accepts: [email, phone]
     password:
-      characters: masked
+      masking: masked
 sessions:
   management:
     url: https://www.facebook.com/settings?tab=security&section=sessions
