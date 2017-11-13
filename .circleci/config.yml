@@ -1,0 +1,31 @@
+version: 2
+jobs:
+  test:
+    docker:
+    - image: 'circleci/node:7.10.0'
+    steps:
+    - checkout
+    - restore_cache:
+        keys: ['~/ci-deps/DEPS_STATE ']
+    - run:
+        name: Set up home bin directory in PATH
+        command: |
+          mkdir -p "$HOME/bin"
+          echo 'export PATH=$HOME/bin:$PATH' >> "$BASH_ENV"
+    - run:
+        name: Set up test dependencies
+        command: ci/setup.sh
+    - save_cache:
+        key: '~/ci-deps/DEPS_STATE {{ checksum "~/ci-deps/DEPS_STATE" }}'
+        paths: ['~/ci-deps']
+    - run:
+        name: Run tests
+        command: ci/test.sh
+workflows:
+  version: 2
+  validate:
+    jobs:
+    - test
+notify:
+  webhooks:
+  - url: https://webhooks.gitter.im/e/bc07c4897b357f8566f8
