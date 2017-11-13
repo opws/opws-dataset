@@ -1,0 +1,25 @@
+name: Ticketmaster
+password:
+  value:
+    length:
+      min: 6
+      max: 32
+  contents:
+    required:
+      classes:
+      - alpha
+      - digit
+    blacklist:
+      strings: ['`', '"', '[', ']', '{', '}', '<', '>', '\']
+      classes:
+      - space # undocumented
+  reset:
+    flow:
+      request:
+        form:
+          email:
+            input: required
+login:
+  url: https://www.ticketmaster.com/member
+reviewed:
+  date: 2017-07-29T04:06:25.133Z
