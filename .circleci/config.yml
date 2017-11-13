@@ -28,4 +28,4 @@ workflows:
     - test
 notify:
   webhooks:
-  - url: https://webhooks.gitter.im/e/bc07c4897b357f8566f8
+  - url: https://webhooks.gitter.im/e/91a1f4ee1103be6b5d6e
