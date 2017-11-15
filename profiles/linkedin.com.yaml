@@ -30,10 +30,6 @@ password:
           page: stub
         sessions:
           own: login # even though the stub has a "Sign In" link
-          notes:
-          - en: The form to submit the password includes a checkbox
-                to control whether other sessions should be logged
-                out or not.
   change:
     url: https://www.linkedin.com/psettings/change-password
     form:
@@ -48,10 +44,6 @@ password:
           masking: masked
     sessions:
       own: unchanged
-      notes:
-      - en: The form to submit the password includes a checkbox
-            to control whether other sessions should be logged
-            out or not.
 registration:
   url: https://www.linkedin.com/start/join
   form:
