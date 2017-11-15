@@ -10,10 +10,6 @@ username:
       - alpha
       - digit
       strings: ['.']
-  notes:
-  - en: >
-      "Username" here describes the name for Gmail addresses. Users do not have
-      to set up a Gmail account name if they use their own email address.
 password:
   value:
     length:
@@ -83,8 +79,5 @@ registration:
       input: required
     phone:
       input: optional
-  notes:
-  - en: Registration accepts either an existing email address or a new Gmail
-        address to register.
 reviewed:
   date: 2017-02-20T01:51:03.146Z
