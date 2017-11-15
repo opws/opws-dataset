@@ -17,9 +17,6 @@ password:
         form:
           username:
             input: required
-          notes:
-          - en: Also accepts a combination of first name, last
-                name, Social Security number, and date of birth.
   change:
     form:
       oldpassword:
@@ -33,9 +30,6 @@ username:
       form:
         email:
           input: required
-        notes:
-        - en: Also accepts a combination of first name, last
-              name, Social Security number, and date of birth.
 challenge:
   questions:
   - required: 1
