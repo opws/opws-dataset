@@ -21,8 +21,8 @@ password:
     form:
       oldpassword:
         input: required
-    notes:
-    - en: Click "Account Settings" after logging in
+    directions:
+    - en: Click "Account Settings" after logging in.
 username:
   reminder:
     request:

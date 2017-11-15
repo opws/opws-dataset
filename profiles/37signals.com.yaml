@@ -1,5 +1,8 @@
 name: 37signals
 password:
+  errata:
+  - en: Password editing suggests using at least 1 number
+        but does not require it.
   value:
     length:
       min: 8
@@ -9,9 +12,6 @@ password:
       - theme: common
       variables:
       - username
-    notes:
-    - en: Password editing suggests using at least 1 number
-          but does not require it.
   reset:
     flow:
       request:

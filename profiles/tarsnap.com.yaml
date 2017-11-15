@@ -13,8 +13,9 @@ password:
           input: required
           masking: masked
   reset:
-    notes:
-    - url: https://www.tarsnap.com/faq.html#forgotten-password
+    replacement:
+      directions:
+      - url: https://www.tarsnap.com/faq.html#forgotten-password
 registration:
   url: https://www.tarsnap.com/register.cgi
   form:

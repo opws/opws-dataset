@@ -19,9 +19,10 @@ password:
         sessions:
           own: login
         expire: unchanged
-      notes:
-      - en: This is actually a link to be signed in without a password, with
-            which you can then change the password normally.
+      change:
+        directions:
+        - en: After following the link from the email, you are
+              signed in and can change your password normally.
   change:
     url: https://mammothhq.com/user/settings
     form:

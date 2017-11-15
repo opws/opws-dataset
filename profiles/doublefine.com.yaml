@@ -1,11 +1,11 @@
 name: Double Fine
 password:
+  errata:
+  - en: Password input includes a list of what makes a "good" password, but
+        these are not the actual password requirements.
   value:
     length:
       min: 3
-  notes:
-  - en: Password input includes a list of what makes a "good" password, but
-        these are not the actual password requirements.
   reset:
     flow:
       request:
@@ -66,7 +66,8 @@ registration:
         input: none
     captcha:
       type: recaptcha
-      notes:
+    further:
+      requirements:
       - en: Also has a CAPTCHA question ("Name a Double Fine game").
     terms:
       agreement: checkbox

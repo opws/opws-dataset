@@ -1,11 +1,11 @@
 name: Netflix
 password:
+  errata:
+  - en: Registration lists the maximum password length as 50 characters.
   value:
     length:
       min: 4
       max: 60
-    notes:
-    - en: Registration lists the maximum password length as 50 characters.
   reset:
     flow:
       request:

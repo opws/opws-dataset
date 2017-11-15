@@ -22,10 +22,11 @@ password:
       request:
         url: https://orcacard.com/ERG-Seattle/p5_001.do
         form:
-          notes:
-          - en: Requires first name, last name, email address, Orca Card
-                number and three-digit card Verification Number, and answer
-                to a user-knowledge security question.
+          further:
+            requirements:
+            - en: Requires first name, last name, email address, Orca Card
+                  number and three-digit card Verification Number, and answer
+                  to a user-knowledge security question.
       response:
         email:
           sender: contactus@orcacard.com

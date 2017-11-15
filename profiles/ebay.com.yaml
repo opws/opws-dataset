@@ -1,5 +1,7 @@
 name: eBay
 password:
+  documentation:
+  - http://pages.ebay.com/help/new/contextual/create_password.html
   value:
     length:
       min: 6
@@ -9,8 +11,6 @@ password:
       - theme: common
       previous:
         period: forever
-    notes:
-    - url: http://pages.ebay.com/help/new/contextual/create_password.html
   contents:
     required:
     - atleast: 2
@@ -48,6 +48,9 @@ password:
       oldpassword:
         input: required
 username:
+  documentation:
+  - http://pages.ebay.com/help/policies/identity-user-ids.html
+  - http://pages.ebay.com/help/reg/contextual/createuserid.html
   value:
     length:
       min: 6
@@ -57,9 +60,6 @@ username:
     - en: contain consecutive dots, asterisks, underscores or hyphens
     - en: begin with the letter e and multiple digits
     - en: contain a dot followed by a common TLD, or imply web addresses in general
-    notes:
-    - url: http://pages.ebay.com/help/policies/identity-user-ids.html
-    - url: http://pages.ebay.com/help/reg/contextual/createuserid.html
   contents:
     whitelist:
       classes:

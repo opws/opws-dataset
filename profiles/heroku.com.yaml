@@ -1,13 +1,13 @@
 name: Heroku
 password:
-  value:
-    length:
-      min: 8
-  notes:
+  errata:
   - en: Setting a password after registration only accepts passwords that
         contain a combination of letters, numbers, and/or symbols
         (consisting of more than one of these). This restriction is not
         enforced when changing the password after registration.
+  value:
+    length:
+      min: 8
   reset:
     flow:
       request:

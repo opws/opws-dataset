@@ -1,10 +1,10 @@
 name: Yammer
 password:
+  errata:
+  - en: Resetting a password only enforces a length limit of 6.
   value:
     length:
       min: 8
-      notes:
-      - en: Resetting a password only enforces a length limit of 6.
     blacklist:
       dictionaries:
       - theme: common
@@ -239,6 +239,9 @@ password:
           masking: masked
 registration:
   url: https://www.yammer.com/signup
+  directions:
+  - en: Registration starts with an entered email address, then is completed
+        after following a link sent to that email address.
   form:
     email:
       input: required
@@ -256,9 +259,6 @@ registration:
         input: none
     terms:
       agreement: implicit
-  notes:
-  - en: Registration starts with an entered email address, then is completed
-        after following a link sent to that email address.
 legal:
   documents:
   - name: Terms of Use

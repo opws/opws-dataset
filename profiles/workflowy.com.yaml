@@ -30,7 +30,7 @@ password:
         expire: now
   change:
     url: https://workflowy.com/#
-    notes:
+    directions:
     - en: Click the upper-right-hand corner menu, then "Settings", then
           "Change password" in the gray Account box.
     form:

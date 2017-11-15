@@ -1,10 +1,10 @@
 name: Filestack
 password:
+  errata:
+  - en: Password must be at least 6 characters when first registering.
   value:
     length:
       min: 1
-  notes:
-  - en: Password must be at least 6 characters when first registering.
   reset:
     randomize:
       request:

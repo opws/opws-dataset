@@ -1,10 +1,10 @@
 name: Curb
 password:
+  errata:
+  - en: There is a 14-character limit when registering on Android.
   value:
     length:
       min: 8
-    notes:
-    - en: 14-character limit when registering on Android
   contents:
     required:
     - classes:

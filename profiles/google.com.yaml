@@ -17,11 +17,9 @@ password:
     blacklist:
       dictionaries:
       - theme: common
-      notes:
-      - en: >
-          "Recently-used" passwords are rejected as well.
     mustnot:
     - en: start or end with a blank space
+    - en: be a "recently-used" password
   reset:
     flow:
       request:

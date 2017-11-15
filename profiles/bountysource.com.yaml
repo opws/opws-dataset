@@ -21,7 +21,7 @@ password:
     flow:
       request:
         url: https://www.bountysource.com/signin
-        notes:
+        directions:
         - en: Enter email, then a "Forgot?" link will appear
               by the password field.
       response:

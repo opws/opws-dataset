@@ -557,6 +557,9 @@ challenge:
       - en: begin or end with space
 registration:
   url: https://login.verizonwireless.com/accessmanager/public/c/reg/start
+  directions:
+  - en: Registration requires verification by text message first, then
+        presents a form for all other registration data.
   form:
     phone:
       input: required
@@ -575,9 +578,6 @@ registration:
         input: none
     terms:
       agreement: checkbox
-  notes:
-  - en: Registration requires verification by text message first, then
-        presents a form for all other registration data.
 login:
   url: https://www.verizonwireless.com/my-verizon/
   form:

@@ -71,8 +71,6 @@ registration:
       type: ascii
     terms:
       agreement: checkbox
-      notes:
-      - en: Checkbox also agrees that you are over 13 years of age.
 login:
   url: https://store.steampowered.com/login/
   form:

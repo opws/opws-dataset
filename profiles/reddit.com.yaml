@@ -70,7 +70,7 @@ registration:
       masking: unmasked
     captcha:
       type: recaptcha
-      notes:
+      circumstances:
       - en: Captcha is presented after entering email address.
 login:
   url: https://www.reddit.com/login

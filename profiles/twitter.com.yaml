@@ -458,9 +458,9 @@ registration:
       agreement: implicit
     username:
       input: required
-    notes:
-    - en: Username selection comes after entering full name, email address or
-          phone number, and password.
+      circumstances:
+      - en: Username selection comes after entering full name, email address
+            or phone number, and password.
 login:
   url: https://twitter.com/login
   form:

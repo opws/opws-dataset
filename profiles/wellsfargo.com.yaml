@@ -22,7 +22,7 @@ password:
   reset:
     replacement:
       url: https://oam.wellsfargo.com/oamo/identity/help/passwordhelp
-      notes:
+      directions:
       - en: Requires username or Social Security number (or ITIN),
             account/loan/card number (or birthdate, for mortgage or
             employer-sponsored retirement plan customers), and
@@ -49,8 +49,10 @@ username:
   reminder:
     request:
       url: https://oam.wellsfargo.com/oamo/identity/help/usernamehelp
-    notes:
-    - en: Requires Social Security number (or ITIN) and password.
+      form:
+        further:
+          requirements:
+          - en: Requires Social Security number (or ITIN) and password.
 registration:
   url: https://oam.wellsfargo.com/oamo/identity/enrollment
 login:

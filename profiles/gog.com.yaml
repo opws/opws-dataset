@@ -1,12 +1,12 @@
 name: GOG.com
 password:
+  errata:
+  - en: The system accepts passwords longer than 100 characters, but does
+        not recognize them when logging in or changing passwords.
   value:
     length:
       min: 2
       max: 100
-      notes:
-      - en: The system accepts passwords longer than 100 characters, but does
-            not recognize them when logging in or changing passwords.
   reset:
     flow:
       request:
@@ -16,8 +16,8 @@ password:
             input: required
           captcha:
             type: recaptcha
-        notes:
-        - en: Captcha only appears after multiple reset requests.
+            circumstances:
+            - en: Captcha only appears after multiple reset requests.
       response:
         email:
           sender: no-reply@gog.com

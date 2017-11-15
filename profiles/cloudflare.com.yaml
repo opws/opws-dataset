@@ -14,8 +14,8 @@ password:
             input: required
           captcha:
             type: recaptcha
-        notes:
-        - en: Captcha only appears after multiple reset requests.
+            circumstances:
+            - en: Captcha only appears after multiple reset requests.
       response:
         email:
           sender: no-reply@cloudflare.com

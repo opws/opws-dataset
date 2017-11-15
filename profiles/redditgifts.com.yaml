@@ -52,8 +52,9 @@ registration:
       input: required
     terms:
       agreement: checkbox
-    notes:
-    - en: Also requires a shipping address.
+    further:
+      requirements:
+      - en: Also requires a shipping address.
 login:
   url: https://www.redditgifts.com/profiles/login/
   form:

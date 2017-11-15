@@ -24,12 +24,14 @@ password:
         sessions:
           own: login
         expire: now
-      notes:
-      - en: Following the link from the password reset email directs to
-            https://www.pave.com/password-reset, which fails to load with a
-            "Page not found" error. However, as following the reset link also
-            logs you in, and password change does not require the original
-            password, you can use your account settings to change the password.
+      change:
+        directions:
+        - en: Following the link from the password reset email directs to
+              https://www.pave.com/password-reset, which fails to load with a
+              "Page not found" error. However, as following the reset link
+              also logs you in, and password change does not require the
+              original password, you can use your account settings to change
+              the password.
   change:
     url: https://www.pave.com/settings
     form:

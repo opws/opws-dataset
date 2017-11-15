@@ -1,15 +1,15 @@
 name: OkCupid
 password:
+  errata:
+  - en: Registration restricts password length to 5; password reset and
+        changing restricts password length to 6.
+  - en: Trying to change your password to anything longer than 256
+        characters fails with the error message "Update Failed! Could not
+        update database; please try again later."
   value:
     length:
       min: 6
       max: 256
-      notes:
-      - en: Registration restricts password length to 5; password reset and
-            changing restricts password length to 6.
-      - en: Trying to change your password to anything longer than 256
-            characters fails with the error message "Update Failed! Could not
-            update database; please try again later."
   reset:
     flow:
       request:

@@ -1,5 +1,7 @@
 name: Read the Docs
 password:
+  errata:
+  - en: No way to change password once logged in.
   value:
     length:
       min: 6
@@ -21,7 +23,5 @@ registration:
   url: https://readthedocs.org/accounts/signup/
 login:
   url: https://readthedocs.org/accounts/login/
-notes:
-- en: No way to change password once logged in.
 reviewed:
   date: 2015-03-04T09:30:32Z

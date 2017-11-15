@@ -30,6 +30,9 @@ password:
         expire: now
   change:
     url: https://www.fluidui.com/editor/live/
+    directions:
+    - en: Click the "Home" menu in the upper-right corner, then click "Account
+          Settings", then "Password" to open the password change dialog.
     form:
       oldpassword:
         input: required
@@ -39,9 +42,6 @@ password:
       repeat:
         newpassword:
           input: none
-    notes:
-    - en: Click the "Home" menu in the upper-right corner, then click "Account
-          Settings", then "Password" to open the password change dialog.
 registration:
   url: https://www.fluidui.com/editor/live/#signup
   form:
@@ -57,8 +57,9 @@ registration:
       password:
         input: required
         masking: masked
-    notes:
-    - en: Must also specify an initial project name and platform.
+    further:
+      requirements:
+      - en: Must also specify an initial project name and platform.
 login:
   url: https://www.fluidui.com/editor/live/#signin
   form:

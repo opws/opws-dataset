@@ -1,5 +1,8 @@
 name: CodeHS
 password:
+  errata:
+  - en: You can technically set a zero-length password, though the login page
+        treats password input as "required".
   reset:
     flow:
       request:
@@ -33,9 +36,6 @@ password:
         newpassword:
           input: required
           masking: masked
-  notes:
-  - en: You can technically set a zero-length password, though the login page
-        treats password input as "required".
 registration:
   url: https://codehs.com/signup/begin
   form:

@@ -58,17 +58,18 @@ password:
         newpassword:
           input: required
           masking: masked
-    notes:
-    - en: Security question answer required to authorize account changes from
-          new machine.
+      further:
+        requirements:
+        - en: Security question answer required to authorize account changes
+              from new machine.
 username:
+  errata:
+  - en: Starting a username with a hyphen returns the error "Special
+        characters are not allowed."
   value:
     length:
       min: 4
       max: 16
-    notes:
-    - en: Starting a username with a hyphen returns the error "Special
-          characters are not allowed."
   contents:
     whitelist:
       classes:

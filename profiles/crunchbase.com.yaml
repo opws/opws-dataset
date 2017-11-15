@@ -8,7 +8,7 @@ password:
     flow:
       request:
         url: https://www.crunchbase.com/app/login
-        notes:
+        directions:
         - en: Click the "Forgot password?" button.
         form:
           email:
@@ -33,16 +33,17 @@ password:
         expire: now
   change:
     url: https://www.crunchbase.com/app/account
-    notes:
+    directions:
     - en: Click the "Password" button.
-    - en: >
-        "Current password" input is not displayed when the account has no
-        password set (ie. when it was registered via third-party
-        authentication).
     form:
       oldpassword:
         input: required
         masking: masked
+        circumstances:
+        - en: >-
+            "Current password" input is not displayed when the account has no
+            password set (ie. when it was registered via third-party
+            authentication).
       newpassword:
         masking: masked
       repeat:

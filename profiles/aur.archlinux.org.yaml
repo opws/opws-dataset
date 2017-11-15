@@ -66,13 +66,14 @@ registration:
       input: optional
     password:
       input: none
+      circumstances:
+      - en: Registering an account sends a password reset
+            email to set a password.
     repeat:
       password:
         input: none
       email:
         input: none
-  notes:
-  - en: Registering an account sends a password reset email to set a password.
 login:
   url: https://aur.archlinux.org/login/
   form:
