@@ -12,9 +12,6 @@ password:
             input: required
       response:
         email:
-          notes:
-            - en: Sender address is a long random name starting with "bounce"
-                and ending with @email.mammothhq.com
           body: [link]
       submit:
         destination:
