@@ -28,11 +28,8 @@ password:
       submit:
         destination:
           page: stub
-          notes:
-          - en: The stub page includes a "Sign In" link, even though you
-                are signed in after submitting the new password.
         sessions:
-          own: login
+          own: login # even though the stub has a "Sign In" link
           notes:
           - en: The form to submit the password includes a checkbox
                 to control whether other sessions should be logged
