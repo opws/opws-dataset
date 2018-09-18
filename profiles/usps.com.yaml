@@ -1,0 +1,78 @@
+name: USPS.com
+username:
+  # https://reg.usps.com/entreg/assets/html/tooltips/tool-tip-user-name.html
+  value:
+    length:
+      min: 6
+  contents:
+    whitelist:
+      classes:
+      - alpha
+      - digit
+      strings: ['-','.','&','@','?','_',"'",',','/','"']
+password:
+  value:
+    length:
+      min: 8
+      max: 50
+    blacklist:
+      variables:
+      - username
+    mustnot:
+    - en: 'include more than two consecutive identical characters'
+  contents:
+    required:
+    - classes:
+      - upper
+      - lower
+    whitelist:
+      classes:
+      - alpha
+      - digit
+      strings: ['-','(',')','.','&','@','?',"'",'#','/','"','+','!']
+  reset:
+    flow:
+      request:
+        url: https://reg.usps.com/forgotpassword
+        form:
+          username: # (which may be your email address)
+            input: required
+  change:
+    url: https://reg.usps.com/preferences#password-icon
+    form:
+      oldpassword:
+        input: required
+        masking: masked
+      newpassword:
+        input: required
+        masking: masked
+      repeat:
+        newpassword:
+          input: required
+          masking: masked
+registration:
+  url: https://reg.usps.com/register
+  form:
+    username:
+      input: required
+    password:
+      input: required
+      masking: masked
+    email:
+      input: required
+    repeat:
+      password:
+        input: required
+        masking: masked
+      email:
+        input: required
+login:
+  url: https://reg.usps.com/login
+  form:
+    username:
+      input: required
+    password:
+      input: required
+      masking: masked
+reviewed:
+  date: 2018-09-17T23:04:49.902Z
