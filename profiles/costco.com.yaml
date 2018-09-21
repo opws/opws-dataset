@@ -1,0 +1,47 @@
+name: Costco Wholesale
+password:
+  value:
+    length:
+      min: 8
+      max: 20
+  contents:
+    required:
+    - classes:
+      - alpha
+    blacklist:
+      classes:
+      - space
+      strings: ['<','>','"','\\','.',',']
+  reset:
+    flow:
+      request:
+        url: https://www.costco.com/ForgotPasswordView
+        form:
+          email:
+            input: required
+registration:
+  url: https://www.costco.com/RegisterView
+  form:
+    email:
+      input: required
+    password:
+      input: required
+      masking: masked
+    repeat:
+      password:
+        input: required
+        masking: masked
+      email:
+        input: none
+login:
+  url: https://www.costco.com/LogonForm
+  form:
+    email:
+      input: required
+    password:
+      input: required
+      masking: masked
+    persist:
+      checkbox: unchecked
+reviewed:
+  date: 2018-09-19T17:24:23.693Z
