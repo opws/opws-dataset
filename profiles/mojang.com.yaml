@@ -1,0 +1,51 @@
+name: Mojang
+password:
+  value:
+    length:
+      min: 6
+  reset:
+    flow:
+      request:
+        url: https://account.mojang.com/password
+        form:
+          email:
+            input: required
+      response:
+        email:
+          body: [link]
+change:
+  url: https://account.mojang.com/me/settings/password
+  form:
+    oldpassword:
+      masking: masked
+      input: required
+    newpassword:
+      masking: masked
+    repeat:
+      newpassword:
+        masking: masked
+        input: required
+registration:
+  url: https://account.mojang.com/register
+  form:
+    email:
+      input: required
+    password:
+      input: required
+      masking: masked
+    repeat:
+      password:
+        input: none
+      email:
+        input: required
+login:
+  url: https://account.mojang.com/login
+  form:
+    email:
+      input: required
+    password:
+      masking: masked
+    persist:
+      checkbox: unchecked
+reviewed:
+  date: 2019-05-14T02:42:12.395Z
