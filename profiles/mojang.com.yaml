@@ -13,18 +13,18 @@ password:
       response:
         email:
           body: [link]
-change:
-  url: https://account.mojang.com/me/settings/password
-  form:
-    oldpassword:
-      masking: masked
-      input: required
-    newpassword:
-      masking: masked
-    repeat:
-      newpassword:
+  change:
+    url: https://account.mojang.com/me/settings/password
+    form:
+      oldpassword:
         masking: masked
         input: required
+      newpassword:
+        masking: masked
+      repeat:
+        newpassword:
+          masking: masked
+          input: required
 registration:
   url: https://account.mojang.com/register
   form:
